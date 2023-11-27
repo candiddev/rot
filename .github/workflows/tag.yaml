@@ -1,0 +1,41 @@
+name: Tag
+
+concurrency:
+  group: tag_${{ github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  VAULT_ADDR: ${{ secrets.VAULT_ADDR }}
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: write # This is required for actions/checkout and releases
+  id-token: write # This is required for requesting the JWT
+  pull-requests: read # This is required for paths-filter
+
+jobs:
+  release:
+    env:
+      BUILD_SOURCE: tag
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        id: setup
+        uses: ./github/setup
+        with:
+          vault_address: ${{ secrets.VAULT_ADDR }}
+          vault_role: rot
+      - name: Create release
+        run: |
+          ./m tag-github-release
+          ./m release

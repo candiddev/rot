@@ -1,0 +1,8 @@
+go/coverage.out
+go/vendor/github.com/candiddev
+hugo/.hugo_build.lock
+hugo/public
+hugo/resources
+.rot-keys
+rot_*
+rot.jsonnet

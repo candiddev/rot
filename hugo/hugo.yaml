@@ -1,0 +1,28 @@
+baseURL: https://rotx.dev
+menu:
+  main:
+    - name: Get Rot
+      weight: 40
+      url: /docs/guides/install-rot
+    - name: Source Code
+      weight: 50
+      url: https://github.com/candiddev/rot
+      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs"
+        aria-hidden="true"></i></sup>
+params:
+  colorPrimary: gray
+  colorSecondary: blue
+  description: Rot keeps your secrets safe, forever.
+  links:
+    developer:
+      - description: GitHub
+        icon: fab fa-github
+        name: GitHub
+        url: https://github.com/candiddev/rot
+  logo: rot
+  offlineSearch: true
+  search:
+  stripe:
+    buyButtonID: buy_btn_1OLHlXKMTluwLdTd062OoJ1W
+    publishableKey: pk_test_L42ooayfe2Ui3PnUrkKZr3Dk00m8WzYZRD
+title: Rot

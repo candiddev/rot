@@ -1,0 +1,114 @@
+name: Integration
+
+concurrency:
+  group: integration_${{ github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  VAULT_ADDR: ${{ secrets.VAULT_ADDR }}
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write # This is required for actions/checkout and releases
+  id-token: write # This is required for requesting the JWT
+  pages: write # This is required for pages
+  pull-requests: read # This is required for paths-filter
+
+jobs:
+  dependencies:
+    name: Update Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        uses: ./github/setup
+
+  lint:
+    name: Lint
+    needs:
+      - dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        id: setup
+        uses: ./github/setup
+      - name: Lint Go
+        if: steps.setup.outputs.change_go == 'true' || github.ref_name == 'main'
+        run: ./m lint-go
+      - name: Lint Shell
+        if: steps.setup.outputs.change_shell == 'true' || github.ref_name == 'main'
+        run: ./m lint-shell
+
+  test_go:
+    name: Test - Go
+    needs:
+      - dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        id: setup
+        uses: ./github/setup
+      - name: Test Go
+        if: steps.setup.outputs.change_go == 'true' || github.ref_name == 'main'
+        run: ./m test-go
+
+  release_branch:
+    env:
+      BUILD_SOURCE: ${{ github.ref_name == 'main' && 'main' || 'pr' }}
+    name: Release - Branch
+    needs:
+      - lint
+      - test_go
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        id: setup
+        uses: ./github/setup
+        with:
+          vault_address: ${{ github.ref_name == 'main' && secrets.VAULT_ADDR || '' }}
+          vault_role: ${{ github.ref_name == 'main' && 'rot' || '' }}
+      - name: Create tag
+        if: github.ref_name == 'main'
+        run: |
+          ./m tag
+      - name: Create release
+        if: github.ref_name == 'main'
+        run: |
+          ./m tag-github-release
+          ./m release
+      - name: Build hugo
+        if: github.ref_name == 'main'
+        run: ./m build-hugo
+      - name: Setup Pages
+        if: github.ref_name == 'main'
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        if: github.ref_name == 'main'
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'hugo/public'
+      - name: Deploy to GitHub Pages
+        if: github.ref_name == 'main'
+        id: deployment
+        uses: actions/deploy-pages@v2

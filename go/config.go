@@ -24,18 +24,18 @@ var (
 )
 
 type cfg struct {
-	Algorithms  cfgAlgorithms                                         `json:"algorithms"`
-	CLI         cli.Config                                            `json:"cli"`
-	DecryptKeys map[string]cfgDecryptKey                              `json:"decryptKeys"`
-	Keys        []string                                              `json:"keys"`
-	KeyPath     string                                                `json:"keyPath"`
-	PrivateKey  cryptolib.Key[cryptolib.KeyProviderDecryptAsymmetric] `json:"privateKey"`
-	PublicKey   cryptolib.Key[cryptolib.KeyProviderEncryptAsymmetric] `json:"publicKey"`
-	Values      map[string]cfgValue                                   `json:"values"`
+	Algorithms  cfgAlgorithms                               `json:"algorithms"`
+	CLI         cli.Config                                  `json:"cli"`
+	DecryptKeys map[string]cfgDecryptKey                    `json:"decryptKeys"`
+	Keys        []string                                    `json:"keys"`
+	KeyPath     string                                      `json:"keyPath"`
+	PrivateKey  cryptolib.Key[cryptolib.KeyProviderPrivate] `json:"privateKey"`
+	PublicKey   cryptolib.Key[cryptolib.KeyProviderPublic]  `json:"publicKey"`
+	Values      map[string]cfgValue                         `json:"values"`
 
 	keys          []cryptolib.KeyProvider //nolint:revive
 	keysEncrypted cryptolib.EncryptedValues
-	privateKey    cryptolib.Key[cryptolib.KeyProviderDecryptAsymmetric] //nolint:revive
+	privateKey    cryptolib.Key[cryptolib.KeyProviderPrivate] //nolint:revive
 }
 
 type cfgAlgorithms struct {
@@ -45,10 +45,10 @@ type cfgAlgorithms struct {
 }
 
 type cfgDecryptKey struct {
-	Modified   time.Time                                             `json:"modified"`
-	PrivateKey cryptolib.EncryptedValue                              `json:"privateKey"`
-	PublicKey  cryptolib.Key[cryptolib.KeyProviderEncryptAsymmetric] `json:"publicKey"`
-	Signature  cryptolib.Signature                                   `json:"signature"`
+	Modified   time.Time                                  `json:"modified"`
+	PrivateKey cryptolib.EncryptedValue                   `json:"privateKey"`
+	PublicKey  cryptolib.Key[cryptolib.KeyProviderPublic] `json:"publicKey"`
+	Signature  cryptolib.Signature                        `json:"signature"`
 }
 
 type cfgValue struct {
@@ -106,7 +106,7 @@ func (c *cfg) Parse(ctx context.Context, configArgs []string) errs.Err { //nolin
 	}
 
 	for i := range cryptolib.EncryptionAsymmetric {
-		if c.Algorithms.Asymmetric == cryptolib.Encryption(cryptolib.EncryptionAsymmetric[i]) {
+		if string(c.Algorithms.Asymmetric) == cryptolib.EncryptionAsymmetric[i] {
 			break
 		} else if i == len(cryptolib.EncryptionAsymmetric)-1 {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(errUnknownAlgorithmsAsymmetric, fmt.Errorf("%s, valid values are [%s]", c.Algorithms.Asymmetric, strings.Join(cryptolib.EncryptionAsymmetric, " "))))
@@ -170,8 +170,8 @@ func (c *cfg) Parse(ctx context.Context, configArgs []string) errs.Err { //nolin
 	tamper := false
 
 	for i := range c.DecryptKeys {
-		if err := c.DecryptKeys[i].Signature.Verify([]byte(c.DecryptKeys[i].PublicKey.String()), []cryptolib.KeyProviderEncryptAsymmetric{
-			c.PublicKey.Key,
+		if err := c.DecryptKeys[i].Signature.Verify([]byte(c.DecryptKeys[i].PublicKey.String()), cryptolib.Keys[cryptolib.KeyProviderPublic]{
+			c.PublicKey,
 		}); err != nil {
 			tamper = true
 

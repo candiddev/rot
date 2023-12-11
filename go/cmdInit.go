@@ -28,7 +28,7 @@ func cmdInit(ctx context.Context, args []string, c *cfg) errs.Err {
 		}
 	}
 
-	prv, pub, err := cryptolib.NewKeysEncryptAsymmetric(c.Algorithms.Asymmetric)
+	prv, pub, err := cryptolib.NewKeysAsymmetric(c.Algorithms.Asymmetric)
 	if err != nil {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}

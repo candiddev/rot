@@ -48,7 +48,7 @@ func (c *cfg) decryptKeys(ctx context.Context) errs.Err {
 	for i := range c.DecryptKeys {
 		out, err = c.DecryptKeys[i].PrivateKey.Decrypt(c.keys)
 		if err == nil {
-			k, err := cryptolib.ParseKey[cryptolib.KeyProviderDecryptAsymmetric](string(out))
+			k, err := cryptolib.ParseKey[cryptolib.KeyProviderPrivate](string(out))
 			if err == nil {
 				c.privateKey = k
 
@@ -72,7 +72,7 @@ func (c *cfg) decryptValue(ctx context.Context, value string) ([]byte, errs.Err)
 			return nil, logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
 
-		k, err := cryptolib.ParseKey[cryptolib.KeyProviderEncryptSymmetric](string(kb))
+		k, err := cryptolib.ParseKey[cryptolib.KeyProviderSymmetric](string(kb))
 		if err != nil {
 			return nil, logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
@@ -94,7 +94,7 @@ func (c *cfg) encryptvalue(ctx context.Context, value []byte, name, comment stri
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(errors.New("invalid name"), err))
 	}
 
-	key, err := cryptolib.NewKeyEncryptSymmetric(c.Algorithms.Symmetric)
+	key, err := cryptolib.NewKeySymmetric(c.Algorithms.Symmetric)
 	if err != nil {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}

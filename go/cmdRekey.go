@@ -15,7 +15,7 @@ func cmdRekey(ctx context.Context, _ []string, c *cfg) errs.Err {
 		return e
 	}
 
-	prv, pub, err := cryptolib.NewKeysEncryptAsymmetric(c.Algorithms.Asymmetric)
+	prv, pub, err := cryptolib.NewKeysAsymmetric(c.Algorithms.Asymmetric)
 	if err != nil {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}
@@ -28,7 +28,7 @@ func cmdRekey(ctx context.Context, _ []string, c *cfg) errs.Err {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
 
-		sig, err := cryptolib.NewSignature(prv.Key, c.privateKey.ID, []byte(v.PublicKey.String()))
+		sig, err := cryptolib.NewSignature(prv, []byte(v.PublicKey.String()))
 		if err != nil {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}

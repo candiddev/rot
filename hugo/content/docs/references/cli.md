@@ -47,7 +47,7 @@ Perform ad-hoc decryption of a value using the User Private Keys.
 
 Perform ad-hoc encryption of a value using the recipient's key.
 
-### `generate-keys [encrypt-asymmetric, encrypt-symmetric, sign-verify] [name] [algorithm, default: best]` {#generate-keys}
+### `generate-keys [name] [algorithm, default: best]` {#generate-keys}
 
 Generate ad-hoc cryptographic keys.
 

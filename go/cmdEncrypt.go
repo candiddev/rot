@@ -17,7 +17,7 @@ func cmdEncrypt(ctx context.Context, args []string, c *cfg) errs.Err {
 		delimiter = args[2]
 	}
 
-	key, err := cryptolib.ParseKey[cryptolib.KeyProviderEncryptAsymmetric](r)
+	key, err := cryptolib.ParseKey[cryptolib.KeyProviderPublic](r)
 	if err != nil {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}

@@ -25,19 +25,19 @@ func cmdAddKey(ctx context.Context, args []string, c *cfg) errs.Err {
 
 	var p string
 
-	var pub cryptolib.Key[cryptolib.KeyProviderEncryptAsymmetric]
+	var pub cryptolib.Key[cryptolib.KeyProviderPublic]
 
 	n := args[1]
 
 	if len(args) == 3 {
-		pub, err = cryptolib.ParseKey[cryptolib.KeyProviderEncryptAsymmetric](args[2])
+		pub, err = cryptolib.ParseKey[cryptolib.KeyProviderPublic](args[2])
 		if err != nil {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
 	} else {
-		var prv cryptolib.Key[cryptolib.KeyProviderDecryptAsymmetric]
+		var prv cryptolib.Key[cryptolib.KeyProviderPrivate]
 
-		prv, pub, err = cryptolib.NewKeysEncryptAsymmetric(c.Algorithms.Asymmetric)
+		prv, pub, err = cryptolib.NewKeysAsymmetric(c.Algorithms.Asymmetric)
 		if err != nil {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
@@ -45,7 +45,7 @@ func cmdAddKey(ctx context.Context, args []string, c *cfg) errs.Err {
 		prv.ID = n
 		pub.ID = n
 
-		v, err := cryptolib.EncryptKDF(cryptolib.Argon2ID, prv.ID, []byte(prv.String()), c.Algorithms.Symmetric)
+		v, err := cryptolib.KDFSet(cryptolib.Argon2ID, prv.ID, []byte(prv.String()), c.Algorithms.Symmetric)
 		if err != nil {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
@@ -73,7 +73,7 @@ func cmdAddKey(ctx context.Context, args []string, c *cfg) errs.Err {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}
 
-	sig, err := cryptolib.NewSignature(c.privateKey.Key, c.privateKey.ID, []byte(pub.String()))
+	sig, err := cryptolib.NewSignature(c.privateKey, []byte(pub.String()))
 	if err != nil {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}

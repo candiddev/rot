@@ -3,7 +3,7 @@ menu:
   main:
     - name: Get Rot
       weight: 40
-      url: /docs/guides/install-rot
+      url: /docs/guides/get-rot
     - name: Source Code
       weight: 50
       url: https://github.com/candiddev/rot

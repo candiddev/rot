@@ -26,9 +26,9 @@ All configuration keys are camelCase.  Configuration values can be:
 - **map** `{"key": {}}`
 - **string** `"a"`
 
-**For command line values**, every configuration key can be set using `-x <a_config_key1>="a value" -x <a_config_key2>="another value"`, i.e. `-x cli_debug=true -x algorithms_asymmetric=best`.  Config values can also be set using JSON, i.e. `-x algorithms='{"asymmetric": "best"}'`
+**For command line values**, every configuration key can be set using `-x <a_config_key1>="a value" -x <a_config_key2>="another value"`, i.e. `-x cli_logLevel=debug -x algorithms_asymmetric=best`.  Config values can also be set using JSON, i.e. `-x algorithms='{"asymmetric": "best"}'`
 
-**For environment variables**, every configuration key can be set using `ROT_section_key=a value`, i.e. `ROT_cli_debug=true`
+**For environment variables**, every configuration key can be set using `ROT_section_key=a value`, i.e. `ROT_cli_logLevel=debug`
 
 **For configuration files**, they can be formatted using JSON or Jsonnet.  Rot will look for `rot.jsonnet` by default, ascending the directory tree to find it.  See [the Jsonnet reference](../jsonnet/) for more information.  **Configuration files are rendered at startup**, allowing you to use [dynamic Jsonnet functions](../jsonnet#native-functions) to dynamically alter the config, i.e.:
 

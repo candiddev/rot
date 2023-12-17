@@ -116,6 +116,7 @@ func m() errs.Err {
 		HideConfigFields: []string{
 			"key",
 			"keys",
+			"privateKey",
 		},
 		Name: "Rot",
 	}).Run()

@@ -61,6 +61,7 @@ func TestM(t *testing.T) {
 
 	keys := map[string]any{}
 	json.Unmarshal([]byte(out), &keys)
+	pk := keys["publicKey"].(string) //nolint:revive
 
 	// generate-value
 	out, err = cli.RunMain(m, "", "generate-value", "value", "20", "vc")
@@ -127,6 +128,22 @@ func TestM(t *testing.T) {
 	out, err = cli.RunMain(m, "123\n123\n", "run", "env")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, "test=hello world!"), true)
+
+	// remove
+	out, err = cli.RunMain(m, "123\n123\n", "add-key", "remove", pk)
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, "")
+
+	_, err = cli.RunMain(m, "", "remove-key", "remove")
+	assert.HasErr(t, err, nil)
+	_, err = cli.RunMain(m, "", "remove-value", "value")
+	assert.HasErr(t, err, nil)
+
+	c.DecryptKeys = map[string]cfgDecryptKey{}
+	c.Values = map[string]cfgValue{}
+	c.Parse(ctx, nil)
+	assert.Equal(t, len(c.DecryptKeys), 2)
+	assert.Equal(t, len(c.Values), 1)
 
 	// tamper
 	k := n.DecryptKeys["test1"]

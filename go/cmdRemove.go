@@ -26,5 +26,5 @@ func cmdRemove(ctx context.Context, args []string, c *cfg) errs.Err {
 		delete(c.Values, n)
 	}
 
-	return nil
+	return c.save(ctx)
 }

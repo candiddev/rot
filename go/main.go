@@ -103,6 +103,10 @@ func m() errs.Err {
 				Run:   cmdAlgorithms,
 				Usage: "Show algorithms Rot understands",
 			},
+			"show-private-key": {
+				Run:   cmdShowPrivateKey,
+				Usage: "Show the decrypted private key",
+			},
 			"show-value": {
 				ArgumentsRequired: []string{
 					"name",

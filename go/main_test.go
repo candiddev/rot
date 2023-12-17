@@ -88,6 +88,10 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, err, cryptolib.ErrUnknownEncryption)
 	assert.Equal(t, out != "secret", true)
 
+	out, err = cli.RunMain(m, "123\n123\n", "show-private-key")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, "ed25519private"), true)
+
 	// show-value
 	out, err = cli.RunMain(m, "123\n123\n", "show-value", "test")
 	assert.HasErr(t, err, nil)

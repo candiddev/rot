@@ -87,6 +87,10 @@ Show algorithms Rot understands
 
 Show the rendered config from all sources (file, environment variables, and command line arguments).
 
+### `show-private-key`
+
+Show the decrypted Rot Private Key.  Useful for piping into [`rot encrypt`](#encrypt) using a temporary key or combined with the [`privateKey`](../config#privatekey) configuration to provide containers and other tools access to a configuration without compromising User Private Keys.
+
 ### `show-value [name]`
 
 Show a decrypted value from the Rot configuration.  See [Manage Values](../../guides/manage-values) for more information.

@@ -7,7 +7,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowPrivateKey(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdShowPrivateKey(ctx context.Context, _ []string, c *cfg) errs.Err {
 	if err := c.decryptKeys(ctx); err != nil {
 		return logger.Error(ctx, err)
 	}

@@ -31,6 +31,7 @@ func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
 		Command:            args[1],
 		Environment:        env,
 		EnvironmentInherit: true,
+		StreamLogs:         true,
 	})
 
 	logger.Raw(out.String() + "\n")

@@ -133,7 +133,7 @@ func (c *cfg) Parse(ctx context.Context, configArgs []string) errs.Err { //nolin
 		p := c.KeyPath
 
 		if filepath.Base(c.KeyPath) == c.KeyPath {
-			f := config.FindFilenameAscending(ctx, c.KeyPath)
+			f := config.FindPathAscending(ctx, c.KeyPath)
 			if f != "" {
 				p = f
 			}

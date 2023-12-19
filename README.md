@@ -1,9 +1,11 @@
 # <img alt=logo src=rot.png width=40px> Rot
 
-
 > Future proof secrets management
 
 [![Integration](https://github.com/candiddev/rot/actions/workflows/integration.yaml/badge.svg?branch=main)](https://github.com/candiddev/rot/actions/workflows/integration.yaml)
+
+[:book: Docs](https://rotx.dev/docs/)\
+[:motorway: Roadmap](https://github.com/orgs/candiddev/projects/6/views/31)
 
 Rot is an open source command line (CLI) tool for managing secrets.
 

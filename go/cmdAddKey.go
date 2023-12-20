@@ -12,7 +12,7 @@ import (
 )
 
 func cmdAddKey(ctx context.Context, args []string, c *cfg) errs.Err {
-	e := c.decryptKeys(ctx)
+	e := c.decryptPrivateKey(ctx)
 	if e != nil {
 		if e.Is(errNotInitialized) {
 			return cmdInit(ctx, args, c)

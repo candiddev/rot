@@ -91,6 +91,10 @@ Show the rendered config from all sources (file, environment variables, and comm
 
 Show the decrypted Rot Private Key.  Useful for piping into [`rot encrypt`](#encrypt) using a temporary key or combined with the [`privateKey`](../config#privatekey) configuration to provide containers and other tools access to a configuration without compromising User Private Keys.
 
+### `show-public-key [name]`
+
+Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`](../config#keys) or [`keyPath`](../config#keyPath).  Will return the public key of the first key found that matches `name`.
+
 ### `show-value [name]`
 
 Show a decrypted value from the Rot configuration.  See [Manage Values](../../guides/manage-values) for more information.

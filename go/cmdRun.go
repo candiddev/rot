@@ -10,7 +10,7 @@ import (
 )
 
 func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
-	err := c.decryptKeys(ctx)
+	err := c.decryptPrivateKey(ctx)
 	if err != nil {
 		return logger.Error(ctx, err)
 	}

@@ -107,6 +107,13 @@ func m() errs.Err {
 				Run:   cmdShowPrivateKey,
 				Usage: "Show the decrypted private key",
 			},
+			"show-public-key": {
+				ArgumentsRequired: []string{
+					"name",
+				},
+				Run:   cmdShowPublicKey,
+				Usage: "Show the public key of a private key",
+			},
 			"show-value": {
 				ArgumentsRequired: []string{
 					"name",

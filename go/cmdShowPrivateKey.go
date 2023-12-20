@@ -8,7 +8,7 @@ import (
 )
 
 func cmdShowPrivateKey(ctx context.Context, _ []string, c *cfg) errs.Err {
-	if err := c.decryptKeys(ctx); err != nil {
+	if err := c.decryptPrivateKey(ctx); err != nil {
 		return logger.Error(ctx, err)
 	}
 

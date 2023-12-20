@@ -16,11 +16,12 @@ import (
 
 func TestM(t *testing.T) {
 	c := defaultCfg()
-	c.CLI.ConfigPath = "rot.jsonnet"
+	c.CLI.ConfigPath = "./rot.jsonnet"
 	ctx := context.Background()
 
 	t.Setenv("ROT_cli_logFormat", "kv")
 	t.Setenv("ROT_cli_noColor", "true")
+	t.Setenv("ROT_keyPath", "./.rot-keys")
 
 	// init
 	out, err := cli.RunMain(m, "\n\n", "add-key", "test1")
@@ -31,14 +32,25 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, c.Parse(ctx, nil), nil)
 	assert.Equal(t, len(c.DecryptKeys), 1)
 
+	// show-public-key
+	out, err = cli.RunMain(m, "", "show-public-key", "test1")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, c.DecryptKeys["test1"].PublicKey.String())
+
+	_, pub, _ := cryptolib.NewKeysAsymmetric(cryptolib.AlgorithmBest)
+
 	// add-key
-	out, err = cli.RunMain(m, "123\n123\n", "add-key", "test2")
+	out, err = cli.RunMain(m, "", "add-key", "test2", pub.String())
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, "")
+
+	out, err = cli.RunMain(m, "123\n123\n", "add-key", "test3")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "")
 
 	// check config
 	c.Parse(ctx, nil)
-	assert.Equal(t, len(c.DecryptKeys), 2)
+	assert.Equal(t, len(c.DecryptKeys), 3)
 
 	// check keys
 	f, _ := os.ReadFile(".rot-keys")
@@ -52,7 +64,7 @@ func TestM(t *testing.T) {
 	// algorithms
 	out, err = cli.RunMain(m, "", "show-algorithms")
 	assert.HasErr(t, err, nil)
-	assert.Equal(t, len(strings.Split(out, "\n")), 19)
+	assert.Equal(t, len(strings.Split(out, "\n")), 20)
 
 	// generate-key
 	out, err = cli.RunMain(m, "\n\n", "generate-key", "encrypt-asymmetric")
@@ -146,14 +158,14 @@ func TestM(t *testing.T) {
 	c.DecryptKeys = map[string]cfgDecryptKey{}
 	c.Values = map[string]cfgValue{}
 	c.Parse(ctx, nil)
-	assert.Equal(t, len(c.DecryptKeys), 2)
+	assert.Equal(t, len(c.DecryptKeys), 3)
 	assert.Equal(t, len(c.Values), 1)
 
 	// tamper
 	k := n.DecryptKeys["test1"]
 	k.PublicKey.ID = "new"
 	n.DecryptKeys["test1"] = k
-	delete(n.DecryptKeys, "test2")
+	delete(n.DecryptKeys, "test3")
 	n.save(ctx)
 
 	out, err = cli.RunMain(m, "123\n123\n", "show-value", "test")

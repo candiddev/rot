@@ -10,7 +10,7 @@ import (
 )
 
 func cmdRekey(ctx context.Context, _ []string, c *cfg) errs.Err {
-	e := c.decryptKeys(ctx)
+	e := c.decryptPrivateKey(ctx)
 	if e != nil {
 		return e
 	}

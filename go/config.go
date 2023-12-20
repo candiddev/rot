@@ -33,7 +33,7 @@ type cfg struct {
 	PublicKey   cryptolib.Key[cryptolib.KeyProviderPublic]  `json:"publicKey"`
 	Values      map[string]cfgValue                         `json:"values"`
 
-	keys          []cryptolib.KeyProvider //nolint:revive
+	keys          cryptolib.Keys[cryptolib.KeyProviderPrivate] //nolint:revive
 	keysEncrypted cryptolib.EncryptedValues
 	privateKey    cryptolib.Key[cryptolib.KeyProviderPrivate] //nolint:revive
 }
@@ -156,9 +156,9 @@ func (c *cfg) Parse(ctx context.Context, configArgs []string) errs.Err { //nolin
 			c.keysEncrypted = append(c.keysEncrypted, ev)
 		} else {
 			// Try parsing the key
-			k, err := cryptolib.ParseKey[cryptolib.KeyProvider](key)
+			k, err := cryptolib.ParseKey[cryptolib.KeyProviderPrivate](key)
 			if err == nil {
-				c.keys = append(c.keys, k.Key)
+				c.keys = append(c.keys, k)
 			} else {
 				logger.Error(ctx, errs.ErrReceiver.Wrap(fmt.Errorf("error parsing key %d", i+1), err)) //nolint:errcheck
 			}

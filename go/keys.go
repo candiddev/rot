@@ -13,24 +13,18 @@ import (
 
 var errNotInitialized = errs.ErrReceiver.Wrap(errors.New("rot not initialized"))
 
-// decryptKeys will decrypt all cfg.keysEncrypted and use all keys in cfg.keys to decrypt cfg.DecryptKeys until cfg.privateKey is found.
-func (c *cfg) decryptKeys(ctx context.Context) errs.Err {
-	if !c.privateKey.IsNil() {
-		return nil
-	}
-
-	if len(c.DecryptKeys) == 0 {
-		return errNotInitialized
-	}
+// decryptKeysEncrypted will decrypt all cfg.keysEncrypted.
+func (c *cfg) decryptKeysEncrypted(ctx context.Context) {
+	keys := c.keys.Keys()
 
 	for i := range c.keysEncrypted {
-		out, err := c.keysEncrypted[i].Decrypt(c.keys)
+		out, err := c.keysEncrypted[i].Decrypt(keys)
 		if err == nil {
-			var k cryptolib.Key[cryptolib.KeyProvider]
+			var k cryptolib.Key[cryptolib.KeyProviderPrivate]
 
-			k, err = cryptolib.ParseKey[cryptolib.KeyProvider](string(out))
+			k, err = cryptolib.ParseKey[cryptolib.KeyProviderPrivate](string(out))
 			if err == nil {
-				c.keys = append(c.keys, k.Key)
+				c.keys = append(c.keys, k)
 			}
 		}
 
@@ -40,13 +34,28 @@ func (c *cfg) decryptKeys(ctx context.Context) errs.Err {
 	}
 
 	c.keysEncrypted = nil
+}
+
+// decryptPrivateKey will use all keys in cfg.keys to decrypt cfg.DecryptKeys until cfg.privateKey is found.
+func (c *cfg) decryptPrivateKey(ctx context.Context) errs.Err {
+	if !c.privateKey.IsNil() {
+		return nil
+	}
+
+	if len(c.DecryptKeys) == 0 {
+		return errNotInitialized
+	}
+
+	c.decryptKeysEncrypted(ctx)
 
 	var err error
 
 	var out []byte
 
+	keys := c.keys.Keys()
+
 	for i := range c.DecryptKeys {
-		out, err = c.DecryptKeys[i].PrivateKey.Decrypt(c.keys)
+		out, err = c.DecryptKeys[i].PrivateKey.Decrypt(keys)
 		if err == nil {
 			k, err := cryptolib.ParseKey[cryptolib.KeyProviderPrivate](string(out))
 			if err == nil {

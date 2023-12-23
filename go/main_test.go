@@ -86,12 +86,22 @@ func TestM(t *testing.T) {
 	assert.Equal(t, c.Values["test"].Comment, "t")
 	assert.Equal(t, c.Values["value"].Comment, "vc")
 
-	// encrypt
+	// encrypt - asymmetric
 	out, err = cli.RunMain(m, "secret", "encrypt", c.DecryptKeys["test1"].PublicKey.String())
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, string(cryptolib.BestEncryptionAsymmetric)), true)
 
-	// decrypt
+	// decrypt - asymmetric
+	out, err = cli.RunMain(m, "123\n123\n", "decrypt", out)
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, "secret")
+
+	// encrypt - symmetric
+	out, err = cli.RunMain(m, "secret\n123\n123\n", "encrypt")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, string(cryptolib.BestEncryptionSymmetric)), true)
+
+	// decrypt - symmetric
 	out, err = cli.RunMain(m, "123\n123\n", "decrypt", out)
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "secret")

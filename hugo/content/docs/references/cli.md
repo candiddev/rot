@@ -43,9 +43,9 @@ Add a value to a configuration.  See [Manage Values](../../guides/manage-values)
 
 Perform ad-hoc decryption of a value using the User Private Keys.
 
-### `encrypt [recipient key] [delimiter, default: \n]` {#encrypt}
+### `encrypt [recipient key, optional] [delimiter, default: \n]` {#encrypt}
 
-Perform ad-hoc encryption of a value using the recipient's key.
+Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.
 
 ### `generate-keys [name] [algorithm, default: best]` {#generate-keys}
 

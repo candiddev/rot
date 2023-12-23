@@ -43,14 +43,12 @@ func m() errs.Err {
 				Usage: "Decrypt a value and print it to stdout",
 			},
 			"encrypt": {
-				ArgumentsRequired: []string{
-					"recipient key",
-				},
 				ArgumentsOptional: []string{
+					"recipient key, optional",
 					`delimiter, default: \n`,
 				},
 				Run:   cmdEncrypt,
-				Usage: "Encrypt a value and print it to stdout without adding it to the config",
+				Usage: "Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.",
 			},
 			"generate-key": cryptolib.GenerateKeys[*cfg](),
 			"generate-value": {

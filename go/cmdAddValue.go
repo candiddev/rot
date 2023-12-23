@@ -26,7 +26,7 @@ func cmdAddValue(ctx context.Context, args []string, c *cfg) errs.Err {
 		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 	}
 
-	if err := c.encryptvalue(ctx, v[0], name, comment); err != nil {
+	if err := c.encryptvalue(ctx, v, name, comment); err != nil {
 		return logger.Error(ctx, err)
 	}
 

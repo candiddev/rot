@@ -16,7 +16,7 @@ $ ./rot show-value MYSQL_ROOT
 {
   "comment": "MySQL root password",
   "modified": "2023-12-09T08:45:15.844039874-06:00",
-  "value": "hunter123"
+  "value": "hunter2"
 }
 
 # Using ad-hoc keys as Bob

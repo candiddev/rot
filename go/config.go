@@ -31,6 +31,7 @@ type cfg struct {
 	KeyPath     string                                      `json:"keyPath"`
 	PrivateKey  cryptolib.Key[cryptolib.KeyProviderPrivate] `json:"privateKey,omitempty"`
 	PublicKey   cryptolib.Key[cryptolib.KeyProviderPublic]  `json:"publicKey"`
+	Unmask      []string                                    `json:"unmask"`
 	Values      map[string]cfgValue                         `json:"values"`
 
 	keys          cryptolib.Keys[cryptolib.KeyProviderPrivate] //nolint:revive
@@ -75,7 +76,7 @@ func defaultCfg() *cfg {
 
 // save generates a jsonnet string of cfg and writes it to path.
 func (c *cfg) save(ctx context.Context) errs.Err {
-	out, err := config.Mask(ctx, c, []string{"cli", "key", "keys", "keyPath", "privateKey"})
+	out, err := config.Mask(ctx, c, []string{"cli", "key", "keys", "keyPath", "unmask", "privateKey"})
 	if err != nil {
 		return logger.Error(ctx, err)
 	}

@@ -77,7 +77,7 @@ Remove a value from a Rot configuration.  See [Manage Values](../../guides/manag
 
 ### `run [command]` {#run}
 
-Run a command and inject secrets into it via environment variables.  See [Run Commands](../../guides/run-commands) for more information.
+Run a command and inject secrets into it via environment variables.  See [Run Commands](../../guides/run-commands) for more information.  By default, any Value written to stderr/stdout will be masked with `***`.  Values can be unmasked using the [`unmask`](../config#unmask) config.
 
 ### `show-algorithms`
 

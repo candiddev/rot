@@ -16,6 +16,7 @@ The configuration is divided into these sections:
 - <a href="#keys">Keys</a>
 - <a href="#privatekey">PrivateKey</a>
 - <a href="#publickey">PublicKey</a>
+- <a href="#unmask">Unmask</a>
 - <a href="#values">Values</a>
 
 All configuration keys are camelCase.  Configuration values can be:
@@ -144,6 +145,12 @@ String, the decrypted Rot Private Key.  This is used to pass the Rot Private Key
 String, the Rot Public Key.
 
 **Default:** `""`
+
+## `unmask`
+
+A list of Value names to unmask.
+
+**Default:** `[]`
 
 ## `values`
 

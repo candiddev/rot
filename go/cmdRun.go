@@ -16,6 +16,7 @@ func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
 	}
 
 	env := []string{}
+	mask := []string{}
 
 	for k := range c.Values {
 		v, err := c.decryptValue(ctx, k)
@@ -23,15 +24,33 @@ func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
 			return logger.Error(ctx, err)
 		}
 
+		m := true
+
+		for i := range c.Unmask {
+			if k == c.Unmask[i] {
+				m = false
+
+				break
+			}
+		}
+
+		if m {
+			mask = append(mask, string(v))
+		}
+
 		env = append(env, fmt.Sprintf("%s=%s", k, v))
 	}
+
+	stderr := logger.NewMaskLogger(logger.Stderr, mask)
+	stdout := logger.NewMaskLogger(logger.Stdout, mask)
 
 	out, err := c.CLI.Run(ctx, cli.RunOpts{
 		Args:               args[2:],
 		Command:            args[1],
 		Environment:        env,
 		EnvironmentInherit: true,
-		StreamLogs:         true,
+		Stderr:             stderr,
+		Stdout:             stdout,
 	})
 
 	logger.Raw(out.String() + "\n")

@@ -95,7 +95,7 @@ func m() errs.Err {
 					"command",
 				},
 				Run:   cmdRun,
-				Usage: "Run a command and inject values as environment variables",
+				Usage: "Run a command and inject values as environment variables.  Values written to stderr/stdout will be masked with ***.",
 			},
 			"show-algorithms": {
 				Run:   cmdAlgorithms,

@@ -153,7 +153,13 @@ func TestM(t *testing.T) {
 	// run
 	out, err = cli.RunMain(m, "123\n123\n", "run", "env")
 	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, "test=***"), true)
+	assert.Equal(t, strings.Contains(out, "value=***"), true)
+
+	out, err = cli.RunMain(m, "123\n123\n", "-x", `unmask=["test"]`, "run", "env")
+	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, "test=hello world!"), true)
+	assert.Equal(t, strings.Contains(out, "value=***"), true)
 
 	// remove
 	out, err = cli.RunMain(m, "123\n123\n", "add-key", "remove", pk)

@@ -37,7 +37,7 @@ func m() errs.Err {
 			},
 			"decrypt": {
 				ArgumentsRequired: []string{
-					"value",
+					"value, or - for stdin",
 				},
 				Run:   cmdDecrypt,
 				Usage: "Decrypt a value and print it to stdout",

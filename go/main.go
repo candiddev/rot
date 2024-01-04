@@ -101,6 +101,10 @@ func m() errs.Err {
 				Run:   cmdAlgorithms,
 				Usage: "Show algorithms Rot understands",
 			},
+			"show-keys": {
+				Run:   cmdShowKeysValues,
+				Usage: "Show decrypt key names",
+			},
 			"show-private-key": {
 				Run:   cmdShowPrivateKey,
 				Usage: "Show the decrypted private key",
@@ -118,6 +122,10 @@ func m() errs.Err {
 				},
 				Run:   cmdShowValue,
 				Usage: "Show a decrypted value",
+			},
+			"show-values": {
+				Run:   cmdShowKeysValues,
+				Usage: "Show available value names",
 			},
 		},
 		Config:      c,

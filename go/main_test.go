@@ -130,6 +130,23 @@ func TestM(t *testing.T) {
 
 	assert.Equal(t, len(keys["value"].(string)), 20)
 
+	// show-keys
+	out, err = cli.RunMain(m, "", "show-keys", "")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, `[
+  "test1",
+  "test2",
+  "test3"
+]`)
+
+	// show-values
+	out, err = cli.RunMain(m, "", "show-values", "")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, `[
+  "test",
+  "value"
+]`)
+
 	// rekey
 	t.Setenv("ROT_algorithms_asymmetric", string(cryptolib.KDFECDHP256))
 	t.Setenv("ROT_algorithms_symmetric", string(cryptolib.EncryptionAES128GCM))

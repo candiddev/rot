@@ -53,7 +53,10 @@ func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
 		Stdout:             stdout,
 	})
 
-	logger.Raw(out.String() + "\n")
+	o := out.String()
+	if o != "" {
+		logger.Raw(out.String() + "\n")
+	}
 
 	return logger.Error(ctx, err)
 }

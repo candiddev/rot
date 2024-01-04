@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/errs"
@@ -49,6 +50,7 @@ func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
 		Command:            args[1],
 		Environment:        env,
 		EnvironmentInherit: true,
+		Stdin:              os.Stdin,
 		Stderr:             stderr,
 		Stdout:             stdout,
 	})

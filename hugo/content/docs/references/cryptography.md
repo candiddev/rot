@@ -27,7 +27,7 @@ An example KDF encrypted value looks like this:
 
 ### Private Key Format
 
-Sign keys are used for signing [JWTs](../jwt).  In Etcha, these are either RSA, EC, or Ed25519 private keys, in PKCS #8 DER form, standard base64 encoded.
+Rot uses either EC or Ed25519 private keys, in PKCS #8 DER form, standard base64 encoded.
 
 A example private key looks lke this:
 

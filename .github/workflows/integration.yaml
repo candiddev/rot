@@ -48,6 +48,9 @@ jobs:
       - name: Lint Go
         if: steps.setup.outputs.change_go == 'true' || github.ref_name == 'main'
         run: ./m lint-go
+      - name: Lint Hugo
+        if: steps.setup.outputs.change_hugo == 'true' || github.ref_name == 'main'
+        run: ./m lint-hugo
       - name: Lint Shell
         if: steps.setup.outputs.change_shell == 'true' || github.ref_name == 'main'
         run: ./m lint-shell
@@ -71,7 +74,8 @@ jobs:
 
   release_branch:
     env:
-      BUILD_SOURCE: ${{ github.ref_name == 'main' && 'main' || 'pr' }}
+      BUILD_SOURCE: main
+    if: github.ref_name == 'main'
     name: Release - Branch
     needs:
       - lint
@@ -86,29 +90,22 @@ jobs:
         id: setup
         uses: ./github/setup
         with:
-          vault_address: ${{ github.ref_name == 'main' && secrets.VAULT_ADDR || '' }}
-          vault_role: ${{ github.ref_name == 'main' && 'rot' || '' }}
+          vault_address: ${{ secrets.VAULT_ADDR }}
+          vault_role: rot
       - name: Create tag
-        if: github.ref_name == 'main'
-        run: |
-          ./m tag
+        run: ./m tag
       - name: Create release
-        if: github.ref_name == 'main'
         run: |
           ./m tag-github-release
           ./m release
       - name: Build hugo
-        if: github.ref_name == 'main'
         run: ./m build-hugo
       - name: Setup Pages
-        if: github.ref_name == 'main'
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        if: github.ref_name == 'main'
         uses: actions/upload-pages-artifact@v2
         with:
           path: 'hugo/public'
       - name: Deploy to GitHub Pages
-        if: github.ref_name == 'main'
         id: deployment
         uses: actions/deploy-pages@v2

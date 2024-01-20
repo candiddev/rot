@@ -11,7 +11,7 @@ Arguments must be entered before commands.
 
 ### `-c [path]`
 
-Path to the JSON/Jsonnet [configuration file](../config).
+Path to the JSON/Jsonnet [configuration file]({{< ref "/docs/references/config" >}}).
 
 ### `-f [format]`
 
@@ -33,11 +33,11 @@ Set config key=value (can be provided multiple times)
 
 ### `add-key [key name] [public key, default: generate a PBKDF-protected asymmetric key]` {#add-key}
 
-Add a key to a configuration.  See [Manage Keys](../../guides/manage-keys) for more information.
+Add a key to a configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
 ### `add-value [name] [comment, default: ""] [delimiter, default: \n]` {#add-value}
 
-Add a value to a configuration.  See [Manage Values](../../guides/manage-values) for more information.
+Add a value to a configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 ### `decrypt [value]` {#decrypt}
 
@@ -53,11 +53,11 @@ Generate ad-hoc cryptographic keys.
 
 ### `generate-value [name] [length, default=20] [comment]` {#generate-value}
 
-Generate a random string of the length provided, encrypt it, and add it to the configuration.  See [Manage Values](../../guides/manage-values) for more information.
+Generate a random string of the length provided, encrypt it, and add it to the configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 ### `init [initial key name] [initial public key, default: generate a PBKDF symmetric key]` {#init}
 
-Initialize a new Rot configuration.  See [Initialize Rot](../../guides/initialize-rot) for more information.
+Initialize a new Rot configuration.  See [Initialize Rot]({{< ref "/docs/guides/initialize-rot" >}}) for more information.
 
 ### `jq [jq query options]` {#jq}
 
@@ -65,19 +65,19 @@ Query JSON from stdin using jq.  Supports standard JQ queries, and the `-r` flag
 
 ### `rekey`
 
-Rekey a Rot configuration.  See [Rekey Rot](../../guides/rekey-rot) for more information.
+Rekey a Rot configuration.  See [Rekey Rot]({{< ref "/docs/guides/rekey-rot" >}}) for more information.
 
 ### `remove-key [name]` {#remove-key}
 
-Remove a key from a Rot configuration.  See [Manage Keys](../../guides/manage-keys) for more information.
+Remove a key from a Rot configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
 ### `remove-value [name]` {#remove-value}
 
-Remove a value from a Rot configuration.  See [Manage Values](../../guides/manage-values) for more information.
+Remove a value from a Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 ### `run [command]` {#run}
 
-Run a command and inject secrets into it via environment variables.  See [Run Commands](../../guides/run-commands) for more information.  By default, any Value written to stderr/stdout will be masked with `***`.  Values can be unmasked using the [`unmask`](../config#unmask) config.
+Run a command and inject secrets into it via environment variables.  See [Run Commands]({{< ref "/docs/guides/run-commands" >}}) for more information.  By default, any Value written to stderr/stdout will be masked with `***`.  Values can be unmasked using the [`unmask`]({{< ref "/docs/references/config#unmask" >}}) config.
 
 ### `show-algorithms`
 
@@ -89,23 +89,23 @@ Show the rendered config from all sources (file, environment variables, and comm
 
 ### `show-keys`
 
-Show the names of [decryptKeys](../config#decryptKeys) in the configuration.
+Show the names of [decryptKeys]({{< ref "/docs/references/config#decryptKeys" >}}) in the configuration.
 
 ### `show-private-key`
 
-Show the decrypted Rot Private Key.  Useful for piping into [`rot encrypt`](#encrypt) using a temporary key or combined with the [`privateKey`](../config#privatekey) configuration to provide containers and other tools access to a configuration without compromising User Private Keys.
+Show the decrypted Rot Private Key.  Useful for piping into [`rot encrypt`](#encrypt) using a temporary key or combined with the [`privateKey`]({{< ref "/docs/references/config#privatekey" >}}) configuration to provide containers and other tools access to a configuration without compromising User Private Keys.
 
 ### `show-public-key [name]`
 
-Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`](../config#keys) or [`keyPath`](../config#keyPath).  Will return the public key of the first key found that matches `name`.
+Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`]({{< ref "/docs/references/config#keys" >}}) or [`keyPath`]({{< ref "/docs/references/config#keyPath" >}}).  Will return the public key of the first key found that matches `name`.
 
 ### `show-values`
 
-Show the names of [values](../config#values) in the configuration.
+Show the names of [values]({{< ref "/docs/references/config#values" >}}) in the configuration.
 
 ### `show-value [name]`
 
-Show a decrypted value from the Rot configuration.  See [Manage Values](../../guides/manage-values) for more information.
+Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 ### `version`
 

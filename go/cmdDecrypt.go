@@ -15,7 +15,7 @@ func cmdDecrypt(ctx context.Context, args []string, c *cfg) errs.Err {
 	value := args[1]
 
 	if value == "-" {
-		value = cli.ReadStdin()
+		value = string(cli.ReadStdin())
 	}
 
 	ev, err := cryptolib.ParseEncryptedValue(value)

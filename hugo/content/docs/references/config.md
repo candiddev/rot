@@ -5,7 +5,7 @@ description: Reference documentation for Etcha's configuration
 title: Config
 ---
 
-Etcha can be configured using a JSON/Jsonnet configuration file, environment variables, and [command line arguments](../cli#-x-keyvalue).  Configurations from one source will override previous sources, i.e. environment variables override configuration files, command line arguments override environment variables.
+Etcha can be configured using a JSON/Jsonnet configuration file, environment variables, and [command line arguments]({{< ref "/docs/references/cli#-x-keyvalue" >}}).  Configurations from one source will override previous sources, i.e. environment variables override configuration files, command line arguments override environment variables.
 
 The configuration is divided into these sections:
 
@@ -31,7 +31,7 @@ All configuration keys are camelCase.  Configuration values can be:
 
 **For environment variables**, every configuration key can be set using `ROT_section_key=a value`, i.e. `ROT_cli_logLevel=debug`
 
-**For configuration files**, they can be formatted using JSON or Jsonnet.  Rot will look for `rot.jsonnet` by default, ascending the directory tree to find it.  See [the Jsonnet reference](../jsonnet/) for more information.  **Configuration files are rendered at startup**, allowing you to use [dynamic Jsonnet functions](../jsonnet#native-functions) to dynamically alter the config, i.e.:
+**For configuration files**, they can be formatted using JSON or Jsonnet.  Rot will look for `rot.jsonnet` by default, ascending the directory tree to find it.  See [the Jsonnet reference]({{< ref "/docs/references/jsonnet" >}}) for more information.  **Configuration files are rendered at startup**, allowing you to use [dynamic Jsonnet functions]({{< ref "/docs/references/jsonnet#native-functions" >}}) to dynamically alter the config, i.e.:
 
 ```
 local getRecord(type, name, fallback=null) = std.native('getRecord')(type, name, fallback);
@@ -46,23 +46,23 @@ local verifyKey = getRecord('txt', 'server1.candid.dev');
 }
 ```
 
-You can view the rendered configuration by running [`rotshow-config`](../cli#show-config).
+You can view the rendered configuration by running [`rotshow-config`]({{< ref "/docs/references/cli#show-config" >}}).
 
 ## `algorithms`
 
 ### `asymmetric`
 
-Specify the asymmetric encryption algorithm to use.  See [`rot show-algorithms`](../cli#show-algorithms) for options.
+Specify the asymmetric encryption algorithm to use.  See [`rot show-algorithms`]({{< ref "/docs/references/cli#show-algorithms" >}}) for options.
 
 ### `pbkdf`
 
-Specify the Password Based Key Derivation Function (PBKDF) encryption algorithm to use.  See [`rot show-algorithms`](../cli#show-algorithms) for options.
+Specify the Password Based Key Derivation Function (PBKDF) encryption algorithm to use.  See [`rot show-algorithms`]({{< ref "/docs/references/cli#show-algorithms" >}}) for options.
 
 **Default:** `"best"`
 
 ### `symmetric`
 
-Specify the symmetric encryption algorithm to use.  See [`rot show-algorithms`](../cli#show-algorithms) for options.
+Specify the symmetric encryption algorithm to use.  See [`rot show-algorithms`]({{< ref "/docs/references/cli#show-algorithms" >}}) for options.
 
 **Default:** `"best"`
 

@@ -16,4 +16,4 @@ Rot does not have any CVEs.  When a CVE is reported, it will be listed on this p
 
 ## Cryptography
 
-Rot leverages boring, secure cryptographic keys.  See [Cryptography](../../references/cryptography) for more information.
+Rot leverages boring, secure cryptographic keys.  See [Cryptography]({{< ref "/docs/references/cryptography" >}}) for more information.

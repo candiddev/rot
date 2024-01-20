@@ -5,7 +5,7 @@ description: How to use OpenTofu/Terraform with Rot
 title: OpenTofu/Terraform
 ---
 
-Rot can integrate with [OpenTofu](https://opentofu.org/) and [Terraform](https://www.terraform.io/) by wrapping the respective commands using [`rot run`](../../../references/cli#run).
+Rot can integrate with [OpenTofu](https://opentofu.org/) and [Terraform](https://www.terraform.io/) by wrapping the respective commands using [`rot run`]({{< ref "/docs/references/cli#run" >}}).
 
 ## Prerequisites
 

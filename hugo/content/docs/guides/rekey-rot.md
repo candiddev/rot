@@ -14,11 +14,11 @@ Periodic rekeys of Rot's configuration is a non-destructive way to reduce the ri
 
 ## Rekey Process
 
-After Rot has been initialized, rekeying can be performed by running [`rot rekey`](../../references/cli#rekey).  This command performs these actions:
+After Rot has been initialized, rekeying can be performed by running [`rot rekey`]({{< ref "/docs/references/cli#rekey" >}}).  This command performs these actions:
 
-- Decrypt the existing [Rot Private Key](../../references/cryptography#rot-private-key) using the [User Private Key](../../references/cryptography#user-private-key).
-- Generate a new [Rot Private Key](../../references/cryptography#rot-private-key) and [Rot Public Key](../../references/cryptography#rot-public-key).
-- Decrypt each Value and generate a new [Value Key](../../references/cryptography#value-key)
-- Encrypt the Value Key using the new [Rot Public Key](../../references/cryptography#rot-public-key)
-- Encrypt the new Rot Private Key with each User Public Key and create a [signature](../../references/config#signature) of the User Public Key.
-- Populate the [config](../../references/config) with the new keys and values, and save the configuration to [`configPath`](../../references/config#configpath).
+- Decrypt the existing [Rot Private Key]({{< ref "/docs/references/cryptography#rot-private-key" >}}) using the [User Private Key]({{< ref "/docs/references/cryptography#user-private-key" >}}).
+- Generate a new [Rot Private Key]({{< ref "/docs/references/cryptography#rot-private-key" >}}) and [Rot Public Key]({{< ref "/docs/references/cryptography#rot-public-key" >}}).
+- Decrypt each Value and generate a new [Value Key]({{< ref "/docs/references/cryptography#value-key" >}})
+- Encrypt the Value Key using the new [Rot Public Key]({{< ref "/docs/references/cryptography#rot-public-key" >}})
+- Encrypt the new Rot Private Key with each User Public Key and create a [signature]({{< ref "/docs/references/config#signature" >}}) of the User Public Key.
+- Populate the [config](../../references/config) with the new keys and values, and save the configuration to [`configPath`]({{< ref "/docs/references/config#configpath" >}}).

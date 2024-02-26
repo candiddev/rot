@@ -8,7 +8,7 @@ import (
 	"github.com/candiddev/shared/go/errs"
 )
 
-func cmdAlgorithms(_ context.Context, _ []string, _ *cfg) errs.Err {
+func cmdAlgorithms(_ context.Context, _ []string, _ cli.Flags, _ *cfg) errs.Err {
 	return cli.Print(map[string]any{
 		"asymmetric":     cryptolib.EncryptionAsymmetric,
 		"asymmetricBest": cryptolib.BestEncryptionAsymmetric,

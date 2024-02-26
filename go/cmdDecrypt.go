@@ -9,7 +9,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdDecrypt(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdDecrypt(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 	c.decryptKeysEncrypted(ctx)
 
 	value := args[1]

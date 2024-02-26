@@ -9,7 +9,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowKeysValues(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdShowKeysValues(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 	v := []string{}
 
 	if args[0] == "show-keys" {

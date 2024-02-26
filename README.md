@@ -17,6 +17,7 @@ Rot makes encrypting and decrypting secrets easy:
 - One-way encryption for production secrets
 - Run commands and scripts with secrets injected via environment variables
 - Store your secrets securely in git with human-readable diffs
+- Easily generate X.509 certificates and Certificate Authorities
 
 Visit https://rotx.dev for more information.
 

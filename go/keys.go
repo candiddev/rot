@@ -11,7 +11,8 @@ import (
 	"github.com/candiddev/shared/go/types"
 )
 
-var errNotInitialized = errs.ErrReceiver.Wrap(errors.New("rot not initialized"))
+var errNotInitialized = errs.ErrReceiver.Wrap(errors.New("rot not initialized, run rot init"))
+var errNotFound = errs.ErrReceiver.Wrap(errors.New("value not found"))
 
 // decryptKeysEncrypted will decrypt all cfg.keysEncrypted.
 func (c *cfg) decryptKeysEncrypted(ctx context.Context) {
@@ -94,7 +95,7 @@ func (c *cfg) decryptValue(ctx context.Context, value string) ([]byte, errs.Err)
 		return out, logger.Error(ctx, nil)
 	}
 
-	return nil, logger.Error(ctx, errs.ErrReceiver.Wrap(errors.New("value not found")))
+	return nil, logger.Error(ctx, errNotFound)
 }
 
 // encryptValue will encrypt a value and add it to the config.

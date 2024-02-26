@@ -6,16 +6,17 @@ import (
 	"os"
 	"time"
 
+	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdAddKey(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdAddKey(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
 	e := c.decryptPrivateKey(ctx)
 	if e != nil {
 		if e.Is(errNotInitialized) {
-			return cmdInit(ctx, args, c)
+			return cmdInit(ctx, args, f, c)
 		}
 
 		return e

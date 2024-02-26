@@ -9,7 +9,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdRun(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdRun(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 	err := c.decryptPrivateKey(ctx)
 	if err != nil {
 		return logger.Error(ctx, err)

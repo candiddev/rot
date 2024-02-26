@@ -4,11 +4,12 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdRemove(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdRemove(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 	n := args[1]
 
 	switch args[0] {

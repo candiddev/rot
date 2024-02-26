@@ -5,12 +5,13 @@ import (
 	"errors"
 	"strconv"
 
+	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 	"github.com/candiddev/shared/go/types"
 )
 
-func cmdGenerateValue(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdGenerateValue(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
 	name := args[1]
 	length := 20
 	comment := ""
@@ -22,6 +23,12 @@ func cmdGenerateValue(ctx context.Context, args []string, c *cfg) errs.Err {
 		}
 
 		length = l
+	}
+
+	if v, ok := f.Value("l"); ok {
+		if i, err := strconv.Atoi(v); err == nil {
+			length = i
+		}
 	}
 
 	if len(args) >= 4 {

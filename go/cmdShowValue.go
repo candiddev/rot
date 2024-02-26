@@ -8,7 +8,17 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowValue(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdShowValue(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+	if _, ok := f.Value("c"); ok {
+		if v, ok := c.Values[args[1]]; ok {
+			logger.Raw(v.Comment)
+
+			return nil
+		}
+
+		return errNotFound
+	}
+
 	if err := c.decryptPrivateKey(ctx); err != nil {
 		return logger.Error(ctx, err)
 	}
@@ -16,6 +26,12 @@ func cmdShowValue(ctx context.Context, args []string, c *cfg) errs.Err {
 	v, err := c.decryptValue(ctx, args[1])
 	if err != nil {
 		return logger.Error(ctx, err)
+	}
+
+	if _, ok := f.Value("v"); ok {
+		logger.Raw(string(v))
+
+		return nil
 	}
 
 	m := map[string]any{

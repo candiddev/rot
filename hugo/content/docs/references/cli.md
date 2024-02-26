@@ -35,7 +35,11 @@ Set config key=value (can be provided multiple times)
 
 Add a key to a configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `add-value [name] [comment, default: ""] [delimiter, default: \n]` {#add-value}
+### `add-private-key [name]` {#add-private-key}
+
+Generate and add a private key to Rot with the specified name.
+
+### `add-value [-d delimiter, default: \n] [name] [comment, default: ""]` {#add-value}
 
 Add a value to a configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
@@ -43,15 +47,19 @@ Add a value to a configuration.  See [Manage Values]({{< ref "/docs/guides/manag
 
 Perform ad-hoc decryption of a value using the User Private Keys.
 
-### `encrypt [recipient key, optional] [delimiter, default: \n]` {#encrypt}
+### `encrypt [-d delimiter, default: \n] [recipient key, optional]` {#encrypt}
 
 Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.
 
-### `generate-keys [name] [algorithm, default: best]` {#generate-keys}
+### `generate-certificate [-c, create CA] [-d hostname, add DNS hostname] [-e expiration in seconds] [-eu extended key usage] [-i address, add IP address] [-ku key usage] [-n common name] [private key value, name, or - for stdin] [public key] [ca certificate or path]` {#generate-certificate}
+
+Generate X.509 certificates.  Visit [Generating Certificates]({{< ref "/docs/guides/generate-certificates" >}}) for more information.
+
+### `generate-keys [-a algorithm] [name]` {#generate-keys}
 
 Generate ad-hoc cryptographic keys.
 
-### `generate-value [name] [length, default=20] [comment]` {#generate-value}
+### `generate-value [-l length, default 20] [name] [comment]` {#generate-value}
 
 Generate a random string of the length provided, encrypt it, and add it to the configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
@@ -62,6 +70,10 @@ Initialize a new Rot configuration.  See [Initialize Rot]({{< ref "/docs/guides/
 ### `jq [jq query options]` {#jq}
 
 Query JSON from stdin using jq.  Supports standard JQ queries, and the `-r` flag to render raw values.
+
+### `pem [-i id] [key, or - for stdin]` {#pem}
+
+Convert a Rot key to PEM or a PEM key to a Rot key.  Can specify an ID for the key when converting from PEM to Rot.
 
 ### `rekey`
 
@@ -99,13 +111,13 @@ Show the decrypted Rot Private Key.  Useful for piping into [`rot encrypt`](#enc
 
 Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`]({{< ref "/docs/references/config#keys" >}}) or [`keyPath`]({{< ref "/docs/references/config#keyPath" >}}).  Will return the public key of the first key found that matches `name`.
 
+### `show-value [-c, show comment only] [-v, show value only] [name]`
+
+Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
+
 ### `show-values`
 
 Show the names of [values]({{< ref "/docs/references/config#values" >}}) in the configuration.
-
-### `show-value [name]`
-
-Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 ### `version`
 

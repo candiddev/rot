@@ -11,7 +11,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdInit(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdInit(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
 	c.DecryptKeys = map[string]cfgDecryptKey{}
 	c.Values = map[string]cfgValue{}
 
@@ -21,10 +21,49 @@ func cmdInit(ctx context.Context, args []string, c *cfg) errs.Err {
 			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 		}
 
-		if string(b[0]) != "yes" {
+		if string(b) != "yes" {
 			logger.Raw("Canceling...\n")
 
 			return nil
+		}
+	}
+
+	c.decryptKeysEncrypted(ctx)
+
+	var id string
+
+	var key cryptolib.KeyProviderPublic
+
+	var err error
+
+	if len(c.keys) > 0 {
+		if len(args) > 1 {
+			for i := range c.keys {
+				if c.keys[i].ID == args[1] {
+					id = c.keys[i].ID
+					key, err = c.keys[i].Key.Public()
+
+					break
+				}
+			}
+		} else {
+			id = c.keys[0].ID
+			key, err = c.keys[0].Key.Public()
+		}
+
+		if err != nil {
+			return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+		}
+	}
+
+	if key != nil {
+		args = []string{
+			args[0],
+			id,
+			cryptolib.Key[cryptolib.KeyProviderPublic]{
+				ID:  id,
+				Key: key,
+			}.String(),
 		}
 	}
 
@@ -36,5 +75,5 @@ func cmdInit(ctx context.Context, args []string, c *cfg) errs.Err {
 	c.privateKey = prv
 	c.PublicKey = pub
 
-	return logger.Error(ctx, cmdAddKey(ctx, args, c))
+	return logger.Error(ctx, cmdAddKey(ctx, args, f, c))
 }

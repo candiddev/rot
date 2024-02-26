@@ -9,7 +9,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdEncrypt(ctx context.Context, args []string, c *cfg) errs.Err {
+func cmdEncrypt(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
 	r := ""
 	delimiter := ""
 
@@ -17,8 +17,8 @@ func cmdEncrypt(ctx context.Context, args []string, c *cfg) errs.Err {
 		r = args[1]
 	}
 
-	if len(args) == 3 {
-		delimiter = args[2]
+	if v, ok := f.Value("d"); ok {
+		delimiter = v
 	}
 
 	v, err := cli.Prompt("Value:", delimiter, true)

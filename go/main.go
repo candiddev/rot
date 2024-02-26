@@ -3,6 +3,7 @@ package main
 
 import (
 	"os"
+	"strings"
 
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
@@ -24,13 +25,25 @@ func m() errs.Err {
 				Run:   cmdAddKey,
 				Usage: "Add a key to a configuration",
 			},
+			"add-private-key": {
+				ArgumentsRequired: []string{
+					"name",
+				},
+				Run:   cmdAddPrivateKey,
+				Usage: "Add a private key to a configuration",
+			},
 			"add-value": {
 				ArgumentsRequired: []string{
 					"name",
 				},
 				ArgumentsOptional: []string{
 					`comment, default: ""`,
-					`delimiter, default: \n`,
+				},
+				Flags: cli.Flags{
+					"d": {
+						Default: []string{`\n`},
+						Usage:   "Delimiter",
+					},
 				},
 				Run:   cmdAddValue,
 				Usage: "Add a value to a configuration",
@@ -45,10 +58,58 @@ func m() errs.Err {
 			"encrypt": {
 				ArgumentsOptional: []string{
 					"recipient key, optional",
-					`delimiter, default: \n`,
+				},
+				Flags: cli.Flags{
+					"d": {
+						Default: []string{`\n`},
+						Usage:   "Delimiter",
+					},
 				},
 				Run:   cmdEncrypt,
 				Usage: "Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.",
+			},
+			"generate-certificate": {
+				ArgumentsRequired: []string{
+					"private key value, name, or - for stdin",
+				},
+				ArgumentsOptional: []string{
+					"public key",
+					"ca certificate or path",
+				},
+				Flags: cli.Flags{
+					"c": {
+						Usage: "Create a CA certificate",
+					},
+					"d": {
+						Placeholder: "hostname",
+						Usage:       "DNS hostname (can be used multiple times)",
+					},
+					"e": {
+						Default:     []string{"31536000"},
+						Placeholder: "seconds",
+						Usage:       "Expiration in seconds",
+					},
+					"eu": {
+						Default:     []string{"clientAuth", "serverAuth"},
+						Placeholder: "extended key usage",
+						Usage:       "Extended key usage, valid values: " + strings.Join(cryptolib.ValidX509ExtKeyUsages(), ", "),
+					},
+					"i": {
+						Placeholder: "address",
+						Usage:       "IP address (can be used multiple times)",
+					},
+					"ku": {
+						Default:     []string{"digitalSignature"},
+						Placeholder: "key usage",
+						Usage:       "Key usage, valid values: " + strings.Join(cryptolib.ValidX509KeyUsages(), ", "),
+					},
+					"n": {
+						Placeholder: "name",
+						Usage:       "Common Name (CN)",
+					},
+				},
+				Run:   cmdGenerateCertificate,
+				Usage: "Generate X.509 certificates using Private Keys.  Must specify the private key of the signer (for CA signed certificates) or the private key of the certificate (for self-signed certificates).  A public key can be specified, otherwise the public key of the private key will be used.  Outputs a PEM certificate.",
 			},
 			"generate-key": cryptolib.GenerateKeys[*cfg](),
 			"generate-value": {
@@ -56,21 +117,37 @@ func m() errs.Err {
 					"name",
 				},
 				ArgumentsOptional: []string{
-					"length, default=20",
 					"comment",
+				},
+				Flags: cli.Flags{
+					"l": {
+						Default: []string{"20"},
+						Usage:   "Length of value",
+					},
 				},
 				Run:   cmdGenerateValue,
 				Usage: "Generate a random string and encrypt it",
 			},
 			"init": {
-				ArgumentsRequired: []string{
-					"initial key name",
-				},
 				ArgumentsOptional: []string{
+					"key name or id of an existing key",
 					"initial public key, default: generate a PBKDF symmetric key",
 				},
 				Run:   cmdInit,
-				Usage: "Initialize a new Rot configuration",
+				Usage: "Initialize a new Rot configuration.  Will look for a .rot-keys file and use the first available key if none specified as the initial user key.",
+			},
+			"pem": {
+				ArgumentsRequired: []string{
+					"key, or - for stdin",
+				},
+				Flags: cli.Flags{
+					"i": {
+						Placeholder: "id",
+						Usage:       "Add id to the key imported from a PEM",
+					},
+				},
+				Run:   cmdPEM,
+				Usage: "Convert a key to PEM, or a PEM file to a key",
 			},
 			"rekey": {
 				Run:   cmdRekey,
@@ -111,14 +188,22 @@ func m() errs.Err {
 			},
 			"show-public-key": {
 				ArgumentsRequired: []string{
-					"name",
+					"name, private key, or - for stdin",
 				},
 				Run:   cmdShowPublicKey,
-				Usage: "Show the public key of a private key",
+				Usage: "Show the public key of a private key using a name, the private key contents, or - for stdin",
 			},
 			"show-value": {
 				ArgumentsRequired: []string{
 					"name",
+				},
+				Flags: cli.Flags{
+					"c": {
+						Usage: "Show the comment only",
+					},
+					"v": {
+						Usage: "Show the value only",
+					},
 				},
 				Run:   cmdShowValue,
 				Usage: "Show a decrypted value",

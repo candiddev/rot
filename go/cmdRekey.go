@@ -4,12 +4,13 @@ import (
 	"context"
 	"time"
 
+	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdRekey(ctx context.Context, _ []string, c *cfg) errs.Err {
+func cmdRekey(ctx context.Context, _ []string, _ cli.Flags, c *cfg) errs.Err {
 	e := c.decryptPrivateKey(ctx)
 	if e != nil {
 		return e

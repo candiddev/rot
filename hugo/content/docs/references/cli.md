@@ -43,6 +43,10 @@ Generate and add a private key to Rot with the specified name.
 
 Add a value to a configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
+### `autocomplete`
+
+{{< autocomplete name="Rot" >}}
+
 ### `decrypt [value]` {#decrypt}
 
 Perform ad-hoc decryption of a value using the User Private Keys.

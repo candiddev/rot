@@ -14,10 +14,11 @@ type: blog
 
 ### X.509 Certificates
 
-Rot can now create X.%09 certificates.  Visit [Generate Certificates]({{< ref "/docs/guides/generate-certificates" >}}) for more information.
+Rot can now create X.509 certificates.  Visit [Generate Certificates]({{< ref "/docs/guides/generate-certificates" >}}) for more information.
 
 ## Enhancements
 
+- Added [autocomplete]({{< ref "/docs/references/cli#autocomplete" >}}) to enable autocompletion within Rot's CLI using your shell.
 - Added [`rot add-private-key`]({{< ref "/docs/references/cli#add-private-key" >}}) to generate private keys and add them to Rot.
 - Added [`rot pem`]({{< ref "/docs/references/cli#pem" >}}) to import/export PEM formatted keys.
 - Updated all libraries to the latest version.

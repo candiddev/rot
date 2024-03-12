@@ -1,7 +1,7 @@
 ---
 categories:
 - feature
-description: Rot stores your secrets securely
+description: Rot stores your secrets and keys securely
 title: Secret Storage
 type: docs
 ---

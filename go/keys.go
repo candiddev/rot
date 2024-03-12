@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"strings"
 	"time"
 
 	"github.com/candiddev/shared/go/cryptolib"
@@ -96,6 +97,31 @@ func (c *cfg) decryptValue(ctx context.Context, value string) ([]byte, errs.Err)
 	}
 
 	return nil, logger.Error(ctx, errNotFound)
+}
+
+// decryptValuePrivateKey will lookup a PrivateKey using value.
+func (c *cfg) decryptValuePrivateKey(ctx context.Context, privateKey string) (cryptolib.Key[cryptolib.KeyProviderPrivate], errs.Err) {
+	pk := cryptolib.Key[cryptolib.KeyProviderPrivate]{}
+
+	if len(strings.Split(privateKey, ":")) == 1 {
+		if err := c.decryptPrivateKey(ctx); err != nil {
+			return pk, logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+		}
+
+		v, err := c.decryptValue(ctx, privateKey)
+		if err != nil {
+			return pk, logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+		}
+
+		privateKey = string(v)
+	}
+
+	pk, err := cryptolib.ParseKey[cryptolib.KeyProviderPrivate](privateKey)
+	if err != nil {
+		return pk, logger.Error(ctx, errs.ErrReceiver.Wrap(errors.New("error parsing private key"), err))
+	}
+
+	return pk, logger.Error(ctx, nil)
 }
 
 // encryptValue will encrypt a value and add it to the config.

@@ -65,3 +65,7 @@ $ rot add-private-key example_com
 $ rot generate-certificate -c -n 'Rot CA' ca > ca.pem
 $ rot generate-certificate -d www.example.com -n www.example.com ca $(rot show-value -c example_com) ca.pem
 ```
+
+## View Certificates
+
+You can view the contents of an existing X.509 Certificate as JSON using [`rot show-certificate`]({{< ref "/docs/references/cli#show-certificate" >}}), optionally providing a list of CA certificates to verify it against.

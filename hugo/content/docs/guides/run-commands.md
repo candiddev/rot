@@ -3,7 +3,7 @@ categories:
 - guide
 description: How to run commands using Rot
 title: Run Commands
-weight: 50
+weight: 40
 ---
 
 In this guide, we'll go over running commands with injected secrets via environment variables.

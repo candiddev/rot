@@ -9,26 +9,34 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdDecrypt(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
-	c.decryptKeysEncrypted(ctx)
+func cmdDecrypt() cli.Command[*cfg] {
+	return cli.Command[*cfg]{
+		ArgumentsRequired: []string{
+			"value, or - for stdin",
+		},
+		Usage: "Decrypt a value and print it to stdout.",
+		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
+			c.decryptKeysEncrypted(ctx)
 
-	value := args[1]
+			value := args[1]
 
-	if value == "-" {
-		value = string(cli.ReadStdin())
+			if value == "-" {
+				value = string(cli.ReadStdin())
+			}
+
+			ev, err := cryptolib.ParseEncryptedValue(value)
+			if err != nil {
+				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+			}
+
+			v, err := ev.Decrypt(c.keys.Keys())
+			if err != nil {
+				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+			}
+
+			logger.Raw(string(v))
+
+			return logger.Error(ctx, nil)
+		},
 	}
-
-	ev, err := cryptolib.ParseEncryptedValue(value)
-	if err != nil {
-		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-	}
-
-	v, err := ev.Decrypt(c.keys.Keys())
-	if err != nil {
-		return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-	}
-
-	logger.Raw(string(v))
-
-	return logger.Error(ctx, nil)
 }

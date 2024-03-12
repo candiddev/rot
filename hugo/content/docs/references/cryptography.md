@@ -7,7 +7,7 @@ title: Cryptography
 
 ## Format
 
-Rot formats keys and values in this format:
+Rot formats keys and values like this:
 
 `<encryption/algorithm>:<ciphertext/key>:<key id>`
 

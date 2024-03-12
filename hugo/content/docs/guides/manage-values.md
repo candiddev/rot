@@ -19,7 +19,7 @@ After Rot has been initialized, keys can be added using [`rot add-value`]({{< re
 
 ## Generating Values
 
-Rot can generate random, cryptographically secure strings for you (instead of having you provide a value) via [`rot generate-value`]({{< ref "/docs/references/cli#generate-value" >}}).
+Rot can generate random, cryptographically secure strings for you, instead of having you provide a value, via [`rot add-value`]({{< ref "/docs/references/cli#add-value" >}}).
 
 ## Removing Values
 

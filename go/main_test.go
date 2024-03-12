@@ -16,6 +16,7 @@ import (
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
+	"github.com/candiddev/shared/go/jwt"
 )
 
 func TestM(t *testing.T) {
@@ -28,7 +29,14 @@ func TestM(t *testing.T) {
 	t.Setenv("ROT_keyPath", "./.rot-keys")
 
 	// init
-	out, err := cli.RunMain(m, "\n\n", "init", "test1")
+	out, err := cli.RunMain(m, "", "init")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, "")
+
+	os.Remove("./.rot-keys")
+	os.Remove("./rot.jsonnet")
+
+	out, err = cli.RunMain(m, "\n\n", "init", "test1")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "")
 
@@ -77,6 +85,10 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "")
 
+	out, err = cli.RunMain(m, "", "add-value", "-l", "20", "value", "vc")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out, "")
+
 	// algorithms
 	out, err = cli.RunMain(m, "", "show-algorithms")
 	assert.HasErr(t, err, nil)
@@ -90,11 +102,6 @@ func TestM(t *testing.T) {
 	keys := map[string]any{}
 	json.Unmarshal([]byte(out), &keys)
 	pk := keys["publicKey"].(string) //nolint:revive
-
-	// generate-value
-	out, err = cli.RunMain(m, "", "generate-value", "value", "20", "vc")
-	assert.HasErr(t, err, nil)
-	assert.Equal(t, out, "")
 
 	// check config
 	c.Parse(ctx, nil)
@@ -125,10 +132,6 @@ func TestM(t *testing.T) {
 	out, err = cli.RunMain(m, "", "-x", "keyPath=test", "-x", fmt.Sprintf(`keys=["%s"]`, keys["privateKey"]), "decrypt", out)
 	assert.HasErr(t, err, cryptolib.ErrUnknownEncryption)
 	assert.Equal(t, out != "secret", true)
-
-	out, err = cli.RunMain(m, "123\n123\n", "show-private-key")
-	assert.HasErr(t, err, nil)
-	assert.Equal(t, strings.Contains(out, "ed25519private"), true)
 
 	// show-value
 	out, err = cli.RunMain(m, "123\n123\n", "show-value", "test")
@@ -231,6 +234,10 @@ func TestM(t *testing.T) {
 
 	assert.HasErr(t, err, nil)
 
+	out, err = cli.RunMain(m, crtPEM, "show-certificate", "-")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, "localhost"), true)
+
 	os.WriteFile("ca.pem", []byte(crtPEM), 0600)
 
 	cs, err := cli.RunMain(m, crtPEM, "pem", "-")
@@ -280,6 +287,55 @@ func TestM(t *testing.T) {
 	assert.Equal(t, x.Issuer.CommonName, "My CA")
 	assert.Equal(t, x.KeyUsage, x509.KeyUsageDigitalSignature)
 
+	os.WriteFile("crt.pem", []byte(crtPEM), 0600)
+
+	out, err = cli.RunMain(m, crtPEM, "show-certificate", "crt.pem", "ca.pem")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, "My CA"), true)
+
+	crtPEM, _ = cli.RunMain(m, "", "generate-certificate", prv1, pub.String(), "ca.pem")
+	os.WriteFile("ca.pem", []byte(crtPEM), 0600)
+
+	out, err = cli.RunMain(m, crtPEM, "show-certificate", "crt.pem", "ca.pem")
+	assert.HasErr(t, err, errs.ErrReceiver)
+	assert.Equal(t, strings.Contains(out, "My CA"), true)
+
+	// generate-jwt
+	j, err := cli.RunMain(m, prv1, "generate-jwt", "-a", "audience", "-e", "60", "-f", "bool=true", "-f", `string="1"`, "-f", "int=1", "-id", "id", "-is", "issuer", "-s", "subject", "-")
+	assert.HasErr(t, err, nil)
+
+	out, err = cli.RunMain(m, "", "show-jwt", j, pub1)
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Contains(out, `"audience"`), true)
+	assert.Equal(t, strings.Contains(out, `: true`), true)
+	assert.Equal(t, strings.Contains(out, `: 1`), true)
+	assert.Equal(t, strings.Contains(out, `: "1"`), true)
+	assert.Equal(t, strings.Contains(out, `"id"`), true)
+	assert.Equal(t, strings.Contains(out, `"issuer"`), true)
+	assert.Equal(t, strings.Contains(out, `"subject"`), true)
+
+	out, err = cli.RunMain(m, "", "show-jwt", j)
+	assert.HasErr(t, err, jwt.ErrParseNoPublicKeys)
+	assert.Equal(t, strings.Contains(out, `"audience"`), true)
+
+	_, jp, _ := cryptolib.NewKeysAsymmetric(cryptolib.AlgorithmBest)
+
+	out, err = cli.RunMain(m, "", "show-jwt", j, jp.String())
+	assert.HasErr(t, err, cryptolib.ErrVerify)
+	assert.Equal(t, strings.Contains(out, `"audience"`), true)
+
+	j, err = cli.RunMain(m, "", "generate-jwt", "hello")
+	assert.HasErr(t, err, nil)
+
+	_, err = cli.RunMain(m, "", "show-jwt", j, pub1)
+	assert.HasErr(t, err, nil)
+
+	// ssh
+	_, err = cli.RunMain(m, "", "generate-ssh", "-c", "source-address=localhost", "-e", "permit-pty", "-h", "-i", "123", "-p", "root", "-v", "360", "hello", pub1)
+	assert.HasErr(t, err, nil)
+	_, err = cli.RunMain(m, "", "ssh", pub1)
+	assert.HasErr(t, err, nil)
+
 	// remove
 	out, err = cli.RunMain(m, "123\n123\n", "add-key", "remove", pk)
 	assert.HasErr(t, err, nil)
@@ -310,4 +366,5 @@ func TestM(t *testing.T) {
 	os.RemoveAll("rot.jsonnet")
 	os.RemoveAll(".rot-keys")
 	os.RemoveAll("ca.pem")
+	os.RemoveAll("crt.pem")
 }

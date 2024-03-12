@@ -11,7 +11,7 @@ Rot is designed to prevent cryptographic key "rot":
 - Constantly decrypting leading to leakage
 - Encryption algorithms become insecure
 
-Instead of generating secrets once, Rot encourages companies to rekey secrets and reissue keys by making the process as easy as possible:
+Instead of generating secrets once, Rot encourages companies to rekey encrypted values and reissue keys by making the process as easy as possible:
 
 {{< highlight bash >}}
 $ ./rot add-key server1 ed25519public:MCowBQYDK2VwAyEAAYkJzjQGb+4I7bfcaq6TnkI6nWJXolUdYSQDKSZIDZU=:AVvPeIzIHg

@@ -25,7 +25,7 @@ func cmdShowValue() cli.Command[*cfg] {
 		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
 			if _, ok := f.Value("c"); ok {
 				if v, ok := c.Values[args[1]]; ok {
-					logger.Raw(v.Comment)
+					logger.Raw(v.Comment + "\n")
 
 					return nil
 				}
@@ -43,7 +43,7 @@ func cmdShowValue() cli.Command[*cfg] {
 			}
 
 			if _, ok := f.Value("v"); ok {
-				logger.Raw(string(v))
+				logger.Raw(string(v) + "\n")
 
 				return nil
 			}

@@ -10,7 +10,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowPublicKey() cli.Command[*cfg] {
+func cmdShowPK() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"name, private key, or - for stdin",

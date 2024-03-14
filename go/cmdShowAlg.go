@@ -8,7 +8,7 @@ import (
 	"github.com/candiddev/shared/go/errs"
 )
 
-func cmdAlgorithms() cli.Command[*cfg] {
+func cmdShowAlg() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		Usage: "Show algorithms Rot understands.",
 		Run: func(_ context.Context, _ []string, _ cli.Flags, _ *cfg) errs.Err {

@@ -13,13 +13,13 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdGenerateCertificate() cli.Command[*cfg] {
+func cmdGenCrt() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",
 		},
 		ArgumentsOptional: []string{
-			"public key",
+			"public key value, encrypted value name, or path",
 			"ca certificate or path",
 		},
 		Flags: cli.Flags{
@@ -69,7 +69,12 @@ func cmdGenerateCertificate() cli.Command[*cfg] {
 			var publicKey cryptolib.Key[cryptolib.KeyProviderPublic]
 
 			if len(args) >= 3 {
-				publicKey, _ = cryptolib.ParseKey[cryptolib.KeyProviderPublic](args[2])
+				var err error
+
+				publicKey, err = c.publicKey(args[2])
+				if err != nil {
+					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+				}
 			}
 
 			var ca *x509.Certificate

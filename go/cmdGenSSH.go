@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 
@@ -13,7 +12,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdGenerateSSH() cli.Command[*cfg] {
+func cmdGenSSH() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",
@@ -57,14 +56,7 @@ func cmdGenerateSSH() cli.Command[*cfg] {
 				return logger.Error(ctx, errr)
 			}
 
-			k := args[2]
-
-			fi, err := os.ReadFile(k)
-			if err == nil {
-				k = string(fi)
-			}
-
-			publicKey, err := cryptolib.ParseKey[cryptolib.KeyProviderPublic](k)
+			publicKey, err := c.publicKey(args[2])
 			if err != nil {
 				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 			}

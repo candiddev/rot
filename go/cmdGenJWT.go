@@ -14,7 +14,7 @@ import (
 	"github.com/google/uuid"
 )
 
-func cmdGenerateJWT() cli.Command[*cfg] {
+func cmdGenJWT() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",

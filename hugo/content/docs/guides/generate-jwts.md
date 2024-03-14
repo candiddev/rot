@@ -18,13 +18,13 @@ A JSON Web Token (JWT) is a string containing three parts:
 
 ## Add Private Keys
 
-You'll need to generate a private key to sign the JWT.  The easiest way to do this is using [`rot add-private-key`]({{< ref "/docs/references/cli#add-private-key" >}}) (encrypting the keys into Rot) or [`rot generate-keys`]({{< ref "/docs/references/cli#generate-keys" >}}) (printing the keys to stdout).
+You'll need to generate a private key to sign the JWT.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-key`]({{< ref "/docs/references/cli#gen-key" >}}) (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 
 ## Generate a JWT
 
-You can generate a JWT using a private key with [`rot generate-jwt`]({{< ref "/docs/references/cli#generate-jwt" >}}).  This command generates a JWT using the options you provide and prints the token to stdout.
+You can generate a JWT using a private key with [`rot gen-jwt`]({{< ref "/docs/references/cli#gen-jwt" >}}).  This command generates a JWT using the options you provide and prints the token to stdout.
 
 It supports the following flags:
 
@@ -38,7 +38,7 @@ It supports the following flags:
 Here is an example usage:
 
 ```bash
-$ rot generate-jwt -a example -e 4000 -f test=yes -id 123 -is MyIssuer -s Example ed25519private:MC4CAQAwBQYDK2VwBCIEIDp+bj8yxdPB7kSUjsqp4WNoHGnSFKeA9opbwGphFm+F:9scIk9mShr
+$ rot gen-jwt -a example -e 4000 -f test=yes -id 123 -is MyIssuer -s Example ed25519private:MC4CAQAwBQYDK2VwBCIEIDp+bj8yxdPB7kSUjsqp4WNoHGnSFKeA9opbwGphFm+F:9scIk9mShr
 eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtcGxlIiwiZXhwIjoxNzEwMjEyMjE4LCJpYXQiOjE3MTAyMDgyMTgsImlzcyI6Ik15SXNzdWVyIiwianRpIjoiMTIzIiwibmJmIjoxNzEwMjA4MjE4LCJzdWIiOiJFeGFtcGxlIiwidGVzdCI6InllcyJ9.aSPcgRUEmm0g4ak-OjEyyPSn0-_AxRxpFsir_f64UJ_lntR8o6Q3zulUi1IDHDtIYF4hhyutMCzMVIFkS1ufCA
 ```
 

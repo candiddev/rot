@@ -14,7 +14,7 @@ OpenSSH can use SSH certificate authorities (CA) to authorize user access to ser
 
 ## Add Private Keys
 
-You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using [`rot add-private-key`]({{< ref "/docs/references/cli#add-private-key" >}}) (encrypting the keys into Rot) or [`rot generate-keys`]({{< ref "/docs/references/cli#generate-keys" >}}) (printing the keys to stdout).
+You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-key`]({{< ref "/docs/references/cli#gen-key" >}}) (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 
@@ -23,7 +23,7 @@ Rot will store the public key in the comment of the encrypted value, we can grab
 We can use Rot to generate a SSH keypair, similar to `ssh-keygen`:
 
 ```bash
-$ rot generate-keys | tee >(rot jq -r .privateKey | rot ssh - > id_ed25519 && chmod 0400 id_ed25519) | rot jq -r .publicKey | rot ssh - > id_ed25519.pub
+$ rot gen-key | tee >(rot jq -r .privateKey | rot ssh - > id_ed25519 && chmod 0400 id_ed25519) | rot jq -r .publicKey | rot ssh - > id_ed25519.pub
 ```
 
 This will generate two files, id_ed25519 containing the SSH private key, and id_ed25519.pub containing the SSH public key.
@@ -33,7 +33,7 @@ This will generate two files, id_ed25519 containing the SSH private key, and id_
 Lets use Rot to generate another keypair, this time for use as the SSH CA:
 
 ```bash
-$ rot add-private-key SSH_CA
+$ rot add-pk SSH_CA
 $ rot show-value -c SSH_CA | rot ssh -
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+5rkhggPylubB7l9GNhrkuPX+da3iS0g5Vd9ZEhSTf
 ```
@@ -53,7 +53,7 @@ The addition of a SSH CA will vary depending on the operating system.  The basic
 Now we can sign the public key we generated earlier using the SSH CA:
 
 ```bash
-$ rot generate-ssh -e permit-pty -p root SSH_CA id_ed25519.pub > id_ed25519-cert.pub
+$ rot gen-ssh -e permit-pty -p root SSH_CA id_ed25519.pub > id_ed25519-cert.pub
 ```
 
 This command creates a special file, `id_ed25519-cert.pub`, that SSH will automatically present to our server for authentication.  Running this command should get us onto the server:

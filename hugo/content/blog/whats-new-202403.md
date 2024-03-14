@@ -12,6 +12,10 @@ type: blog
 
 ## Features
 
+### Base64
+
+Rot now includes base64 CLI helpers to convert between standard, url encoded, raw and padded base64 strings.  Visit [`rot base64`]({{< ref "/docs/references/cli#base64" >}}) for more information.
+
 ### JWTs
 
 Rot can now create JWTs.  Visit [Generate JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
@@ -19,6 +23,10 @@ Rot can now create JWTs.  Visit [Generate JWTs]({{< ref "/docs/guides/generate-j
 ### SSH
 
 Rot can now create SSH keys and certificates.  Visit [Generate SSH]({{< ref "/docs/guides/generate-ssh" >}}) for more information.
+
+### Signatures
+
+Rot can now create cryptographic signatures.  Visit [Generate Signatures]({{< ref "/docs/guides/generate-signatures" >}}) for more information.
 
 ## Enhancements
 

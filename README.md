@@ -19,6 +19,7 @@ Rot makes cryptography easy:
 - Store your encrypted values securely in git with human-readable diffs
 - Generate and view X.509 certificates and Certificate Authorities
 - Generate and view JWTs
+- Generate and verify signatures
 - Generate SSH keys and certificates
 
 Visit https://rotx.dev for more information.

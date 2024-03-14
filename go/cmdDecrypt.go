@@ -12,9 +12,9 @@ import (
 func cmdDecrypt() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
-			"value, or - for stdin",
+			"value or path",
 		},
-		Usage: "Decrypt a value and print it to stdout.",
+		Usage: "Decrypt a value or unwrap a KDF value and print it to stdout.",
 		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 			c.decryptKeysEncrypted(ctx)
 

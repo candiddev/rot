@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"os"
 	"strings"
 	"time"
 
@@ -153,4 +154,20 @@ func (c *cfg) encryptvalue(ctx context.Context, value []byte, name, comment stri
 	}
 
 	return logger.Error(ctx, nil)
+}
+
+func (c *cfg) publicKey(value string) (cryptolib.Key[cryptolib.KeyProviderPublic], error) {
+	pk := value
+	if !strings.Contains(pk, ":") {
+		pk = c.Values[value].Comment
+
+		if pk == "" {
+			f, err := os.ReadFile(value)
+			if err == nil {
+				pk = string(f)
+			}
+		}
+	}
+
+	return cryptolib.ParseKey[cryptolib.KeyProviderPublic](pk)
 }

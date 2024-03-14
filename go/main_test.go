@@ -57,7 +57,7 @@ func TestM(t *testing.T) {
 	assert.Equal(t, len(c.DecryptKeys), 1)
 
 	// show-public-key
-	out, err = cli.RunMain(m, "", "show-public-key", "test1")
+	out, err = cli.RunMain(m, "", "show-pk", "test1")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, c.DecryptKeys["test1"].PublicKey.String())
 
@@ -90,12 +90,12 @@ func TestM(t *testing.T) {
 	assert.Equal(t, out, "")
 
 	// algorithms
-	out, err = cli.RunMain(m, "", "show-algorithms")
+	out, err = cli.RunMain(m, "", "show-alg")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, len(strings.Split(out, "\n")), 20)
 
-	// generate-key
-	out, err = cli.RunMain(m, "\n\n", "generate-key", "encrypt-asymmetric")
+	// gen-key
+	out, err = cli.RunMain(m, "\n\n", "gen-key", "encrypt-asymmetric")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, string(cryptolib.AlgorithmEd25519Private)), true)
 
@@ -198,7 +198,7 @@ func TestM(t *testing.T) {
 	assert.Equal(t, strings.Contains(out, "value=***"), true)
 
 	// add-private-keys
-	out, err = cli.RunMain(m, "", "add-private-key", "hello")
+	out, err = cli.RunMain(m, "", "add-pk", "hello")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "")
 
@@ -209,11 +209,11 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, err, nil)
 
 	// show-public-key
-	pub2, err := cli.RunMain(m, "", "show-public-key", prv1)
+	pub2, err := cli.RunMain(m, "", "show-pk", prv1)
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, pub1, pub2)
 
-	pub2, err = cli.RunMain(m, prv1, "show-public-key", "-")
+	pub2, err = cli.RunMain(m, prv1, "show-pk", "-")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, pub1, pub2)
 
@@ -230,11 +230,11 @@ func TestM(t *testing.T) {
 
 	// generate-certificate
 	exp := 60 * 60
-	crtPEM, err := cli.RunMain(m, "hello", "generate-certificate", "-c", "-d", "localhost", "-e", strconv.Itoa(exp), "-eu", "ocspSigning", "-eu", "clientAuth", "-ku", "digitalSignature", "-ku", "keyAgreement", "-i", "127.0.0.1", "-n", "My CA", "-")
+	crtPEM, err := cli.RunMain(m, "hello", "gen-crt", "-c", "-d", "localhost", "-e", strconv.Itoa(exp), "-eu", "ocspSigning", "-eu", "clientAuth", "-ku", "digitalSignature", "-ku", "keyAgreement", "-i", "127.0.0.1", "-n", "My CA", "-")
 
 	assert.HasErr(t, err, nil)
 
-	out, err = cli.RunMain(m, crtPEM, "show-certificate", "-")
+	out, err = cli.RunMain(m, crtPEM, "show-crt", "-")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, "localhost"), true)
 
@@ -264,7 +264,7 @@ func TestM(t *testing.T) {
 
 	_, pub, _ = cryptolib.NewKeysAsymmetric(cryptolib.BestEncryptionAsymmetric)
 
-	crtPEM, err = cli.RunMain(m, "", "generate-certificate", prv1, pub.String(), "ca.pem")
+	crtPEM, err = cli.RunMain(m, "", "gen-crt", prv1, pub.String(), "ca.pem")
 
 	assert.HasErr(t, err, nil)
 
@@ -289,19 +289,19 @@ func TestM(t *testing.T) {
 
 	os.WriteFile("crt.pem", []byte(crtPEM), 0600)
 
-	out, err = cli.RunMain(m, crtPEM, "show-certificate", "crt.pem", "ca.pem")
+	out, err = cli.RunMain(m, crtPEM, "show-crt", "crt.pem", "ca.pem")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, "My CA"), true)
 
-	crtPEM, _ = cli.RunMain(m, "", "generate-certificate", prv1, pub.String(), "ca.pem")
+	crtPEM, _ = cli.RunMain(m, "", "gen-crt", prv1, pub.String(), "ca.pem")
 	os.WriteFile("ca.pem", []byte(crtPEM), 0600)
 
-	out, err = cli.RunMain(m, crtPEM, "show-certificate", "crt.pem", "ca.pem")
+	out, err = cli.RunMain(m, crtPEM, "show-crt", "crt.pem", "ca.pem")
 	assert.HasErr(t, err, errs.ErrReceiver)
 	assert.Equal(t, strings.Contains(out, "My CA"), true)
 
 	// generate-jwt
-	j, err := cli.RunMain(m, prv1, "generate-jwt", "-a", "audience", "-e", "60", "-f", "bool=true", "-f", `string="1"`, "-f", "int=1", "-id", "id", "-is", "issuer", "-s", "subject", "-")
+	j, err := cli.RunMain(m, prv1, "gen-jwt", "-a", "audience", "-e", "60", "-f", "bool=true", "-f", `string="1"`, "-f", "int=1", "-id", "id", "-is", "issuer", "-s", "subject", "-")
 	assert.HasErr(t, err, nil)
 
 	out, err = cli.RunMain(m, "", "show-jwt", j, pub1)
@@ -324,14 +324,14 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, err, cryptolib.ErrVerify)
 	assert.Equal(t, strings.Contains(out, `"audience"`), true)
 
-	j, err = cli.RunMain(m, "", "generate-jwt", "hello")
+	j, err = cli.RunMain(m, "", "gen-jwt", "hello")
 	assert.HasErr(t, err, nil)
 
 	_, err = cli.RunMain(m, "", "show-jwt", j, pub1)
 	assert.HasErr(t, err, nil)
 
 	// ssh
-	_, err = cli.RunMain(m, "", "generate-ssh", "-c", "source-address=localhost", "-e", "permit-pty", "-h", "-i", "123", "-p", "root", "-v", "360", "hello", pub1)
+	_, err = cli.RunMain(m, "", "gen-ssh", "-c", "source-address=localhost", "-e", "permit-pty", "-h", "-i", "123", "-p", "root", "-v", "360", "hello", pub1)
 	assert.HasErr(t, err, nil)
 	_, err = cli.RunMain(m, "", "ssh", pub1)
 	assert.HasErr(t, err, nil)
@@ -351,6 +351,22 @@ func TestM(t *testing.T) {
 	c.Parse(ctx, nil)
 	assert.Equal(t, len(c.DecryptKeys), 3)
 	assert.Equal(t, len(c.Values), 2)
+
+	// sig
+	cli.RunMain(m, "", "add-pk", "goodbye")
+	sig, err := cli.RunMain(m, "helloworld", "gen-sig", "hello", "-")
+	assert.HasErr(t, err, nil)
+	_, err = cli.RunMain(m, "helloworld", "verify-sig", "hello", "-", sig)
+	assert.HasErr(t, err, nil)
+	_, err = cli.RunMain(m, "helloworld", "verify-sig", "goodbye", "-", sig)
+	assert.HasErr(t, err, errs.ErrReceiver)
+
+	// base64
+	out1, err := cli.RunMain(m, "helloworld", "base64", "-")
+	assert.HasErr(t, err, nil)
+	out2, err := cli.RunMain(m, out1, "base64", "-d", "-")
+	assert.HasErr(t, err, nil)
+	assert.Equal(t, out2, "helloworld")
 
 	// tamper
 	k := n.DecryptKeys["test1"]

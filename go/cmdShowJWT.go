@@ -16,7 +16,7 @@ func cmdShowJWT() cli.Command[*cfg] {
 			"JWT, or - for stdin",
 		},
 		ArgumentsOptional: []string{
-			"public key value, can be specified multiple times",
+			"public key value, encrypted value name, or path.  Can be specified multiple times",
 		},
 		Usage: "Show a JWT, optionally validating the signature with a public key.",
 		Run: func(ctx context.Context, args []string, flags cli.Flags, config *cfg) errs.Err {
@@ -29,7 +29,7 @@ func cmdShowJWT() cli.Command[*cfg] {
 
 			if len(args) > 2 {
 				for i := range args[2:] {
-					key, err := cryptolib.ParseKey[cryptolib.KeyProviderPublic](args[i+2])
+					key, err := config.publicKey(args[i+2])
 					if err != nil {
 						return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 					}

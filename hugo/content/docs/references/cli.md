@@ -39,7 +39,7 @@ Set config key=value (can be provided multiple times)
 
 Add a key to a configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `add-private-key`
+### `add-pk`
 
 Generate and add a private key to a configuration with the specified name.
 
@@ -51,6 +51,10 @@ Add a value to a configuration.  Can specify an optional length to have Rot rand
 
 {{< autocomplete name="Rot" >}}
 
+### `base64`
+
+Import and export base64 strings in various encodings.  See command line for specific usage.
+
 ### `decrypt`
 
 Perform ad-hoc decryption of a value using the User Private Keys.
@@ -59,21 +63,25 @@ Perform ad-hoc decryption of a value using the User Private Keys.
 
 Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.
 
-### `generate-certificate`
+### `gen-crt`
 
-Generate X.509 certificates.  Visit [Generating Certificates]({{< ref "/docs/guides/generate-certificates" >}}) for more information.
+Generate X.509 certificates.  Visit [Generate Certificates]({{< ref "/docs/guides/generate-certificates" >}}) for more information.
 
-### `generate-jwt`
+### `gen-jwt`
 
-Generate JSON Web Tokens (JWTs).  Visit [Generating JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
+Generate JSON Web Tokens (JWTs).  Visit [Generate JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
 
-### `generate-keys`
+### `gen-key`
 
 Generate ad-hoc cryptographic keys.
 
-### `generate-ssh`
+### `gen-sig`
 
-Generate SSH certificates.  Visit [Generating SSH]({{< ref "/docs/guides/generate-ssh" >}}) for more information.
+Generate signatures.  Visit [Generate Signatures]({{< ref "/docs/guides/generate-signatures" >}}) for more information.
+
+### `gen-ssh`
+
+Generate SSH certificates.  Visit [Generate SSH]({{< ref "/docs/guides/generate-ssh" >}}) for more information.
 
 ### `init`
 
@@ -103,7 +111,7 @@ Remove a value from a Rot configuration.  See [Manage Values]({{< ref "/docs/gui
 
 Run a command and inject secrets into it via environment variables.  See [Run Commands]({{< ref "/docs/guides/run-commands" >}}) for more information.  By default, any Value written to stderr/stdout will be masked with `***`.  Values can be unmasked using the [`unmask`]({{< ref "/docs/references/config#unmask" >}}) config.
 
-### `show-algorithms`
+### `show-alg`
 
 Show algorithms Rot understands
 
@@ -111,7 +119,7 @@ Show algorithms Rot understands
 
 Show the rendered config from all sources (file, environment variables, and command line arguments).
 
-### `show-certificate`
+### `show-crt`
 
 Show the contents of an X.509 certificate and optionally verify it against a CA certificate.
 
@@ -123,7 +131,7 @@ Show the contents of a JWT and optionally verify it against a public key.
 
 Show the names of [decryptKeys]({{< ref "/docs/references/config#decryptKeys" >}}) in the configuration.
 
-### `show-public-key [name]`
+### `show-pk`
 
 Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`]({{< ref "/docs/references/config#keys" >}}) or [`keyPath`]({{< ref "/docs/references/config#keyPath" >}}).  Will return the public key of the first key found that matches `name`.
 
@@ -138,6 +146,10 @@ Show the names of [values]({{< ref "/docs/references/config#values" >}}) in the 
 ### `ssh`
 
 Convert a Rot key to SSH or a SSH key to Rot.
+
+### `verify-sig`
+
+Verify the signature of a message and public key.  Will return an error/exit non-zero if the signature doesn't match, otherwise silently exits 0 on success.
 
 ### `version`
 

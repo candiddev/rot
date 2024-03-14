@@ -13,7 +13,7 @@ import (
 	"github.com/candiddev/shared/go/types"
 )
 
-func cmdShowCertificate() cli.Command[*cfg] {
+func cmdShowCrt() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"Certificate value, path, or - for stdin",

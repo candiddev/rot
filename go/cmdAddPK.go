@@ -9,7 +9,7 @@ import (
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdAddPrivateKey() cli.Command[*cfg] {
+func cmdAddPK() cli.Command[*cfg] {
 	return cli.Command[*cfg]{
 		ArgumentsRequired: []string{
 			"name",

@@ -14,13 +14,13 @@ An X.509 certificate is basically a signed hash of a public key and other fields
 
 ## Add Private Keys
 
-You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using [`rot add-private-key`]({{< ref "/docs/references/cli#add-private-key" >}}) (encrypting the keys into Rot) or [`rot generate-keys`]({{< ref "/docs/references/cli#generate-keys" >}}) (printing the keys to stdout).
+You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-key`]({{< ref "/docs/references/cli#gen-key" >}}) (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we generate certificates.
 
 ## Create a certificate
 
-You can generate a certificate using a private key with [`rot generate-certificate`]({{< ref "/docs/references/cli#generate-certificate" >}}).  This command generates an X.509 certificate using the options you provide and prints a PEM file to stdout for you to save.
+You can generate a certificate using a private key with [`rot gen-crt`]({{< ref "/docs/references/cli#gen-crt" >}}).  This command generates an X.509 certificate using the options you provide and prints a PEM file to stdout for you to save.
 
 It supports the following flags:
 
@@ -37,35 +37,35 @@ Here are some example usages:
 ### Self Signed
 
 ```bash
-$ rot -d localhost -i 127.0.0.1 -n localhost generate-certificate ed25519private:MC4CAQAwBQYDK2VwBCIEIAw1E0///GuHuAsxK/2gAGRRwZkrJD/mxk0HUS1VSN1a:1CjPxcEvDy
+$ rot -d localhost -i 127.0.0.1 -n localhost gen-crt ed25519private:MC4CAQAwBQYDK2VwBCIEIAw1E0///GuHuAsxK/2gAGRRwZkrJD/mxk0HUS1VSN1a:1CjPxcEvDy
 ```
 
 ### Certificate Authority
 
 ```bash
-$ rot add-private-key ca
-$ rot -c -n 'Rot CA' generate-certificate ca
+$ rot add-pk ca
+$ rot -c -n 'Rot CA' gen-crt ca
 ```
 
 ### Intermediate Certificate Authority
 
 
 ```bash
-$ rot add-private-key ca
-$ rot add-private-key intermediate-ca
-$ rot -c -n 'Rot CA' generate-certificate ca > ca.pem
-$ rot -c -n 'Rot Intermediate CA' generate-certificate ca $(rot show-value -c intermediate-ca) ca.pem
+$ rot add-pk ca
+$ rot add-pk intermediate-ca
+$ rot -c -n 'Rot CA' gen-crt ca > ca.pem
+$ rot -c -n 'Rot Intermediate CA' gen-crt ca intermediate-ca ca.pem
 ```
 
 ### Host Certificate
 
 ```bash
-$ rot add-private-key ca
-$ rot add-private-key example_com
-$ rot generate-certificate -c -n 'Rot CA' ca > ca.pem
-$ rot generate-certificate -d www.example.com -n www.example.com ca $(rot show-value -c example_com) ca.pem
+$ rot add-pk ca
+$ rot add-pk example_com
+$ rot gen-crt -c -n 'Rot CA' ca > ca.pem
+$ rot gen-crt -d www.example.com -n www.example.com ca example_com ca.pem
 ```
 
 ## View Certificates
 
-You can view the contents of an existing X.509 Certificate as JSON using [`rot show-certificate`]({{< ref "/docs/references/cli#show-certificate" >}}), optionally providing a list of CA certificates to verify it against.
+You can view the contents of an existing X.509 Certificate as JSON using [`rot show-crt`]({{< ref "/docs/references/cli#show-crt" >}}), optionally providing a list of CA certificates to verify it against.

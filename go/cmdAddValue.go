@@ -21,8 +21,9 @@ func cmdAddValue() cli.Command[*cfg] {
 		},
 		Flags: cli.Flags{
 			"d": {
-				Default: []string{`\n`},
-				Usage:   "Delimiter",
+				Default:     []string{`\n`},
+				Placeholder: "delimiter",
+				Usage:       "Delimiter",
 			},
 			"l": {
 				Placeholder: "length",

@@ -16,8 +16,9 @@ func cmdEncrypt() cli.Command[*cfg] {
 		},
 		Flags: cli.Flags{
 			"d": {
-				Default: []string{`\n`},
-				Usage:   "Delimiter",
+				Default:     []string{`\n`},
+				Placeholder: "delimiter",
+				Usage:       "Delimiter",
 			},
 		},
 		Usage: "Encrypt a value and print it to stdout.  Can specify a recipient key to use asymmetric encryption.",
@@ -25,7 +26,7 @@ func cmdEncrypt() cli.Command[*cfg] {
 			r := ""
 			delimiter := ""
 
-			if len(args) >= 2 {
+			if len(args) == 2 {
 				r = args[1]
 			}
 

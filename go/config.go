@@ -15,6 +15,7 @@ import (
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/jsonnet"
 	"github.com/candiddev/shared/go/logger"
+	"github.com/candiddev/shared/go/types"
 )
 
 var (
@@ -27,11 +28,11 @@ type cfg struct {
 	Algorithms  cfgAlgorithms                               `json:"algorithms"`
 	CLI         cli.Config                                  `json:"cli"`
 	DecryptKeys map[string]cfgDecryptKey                    `json:"decryptKeys"`
-	Keys        []string                                    `json:"keys"`
+	Keys        types.SliceString                           `json:"keys"`
 	KeyPath     string                                      `json:"keyPath"`
 	PrivateKey  cryptolib.Key[cryptolib.KeyProviderPrivate] `json:"privateKey,omitempty"`
 	PublicKey   cryptolib.Key[cryptolib.KeyProviderPublic]  `json:"publicKey"`
-	Unmask      []string                                    `json:"unmask"`
+	Unmask      types.SliceString                           `json:"unmask"`
 	Values      map[string]cfgValue                         `json:"values"`
 
 	keys          cryptolib.Keys[cryptolib.KeyProviderPrivate] //nolint:revive

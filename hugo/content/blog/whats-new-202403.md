@@ -1,14 +1,14 @@
 ---
 author: Mike
-date: 2024-02-06
-description: Release notes for Rot v2024.02.
+date: 2024-03-06
+description: Release notes for Rot v2024.03.
 tags:
   - release
-title: "What's New in Rot: v2024.02"
+title: "What's New in Rot: v2024.03"
 type: blog
 ---
 
-{{< rot-release version="2024.02" >}}
+{{< rot-release version="2024.03" >}}
 
 ## Features
 

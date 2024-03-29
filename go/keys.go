@@ -49,8 +49,6 @@ func (c *cfg) decryptPrivateKey(ctx context.Context) errs.Err {
 		return errNotInitialized
 	}
 
-	c.decryptKeysEncrypted(ctx)
-
 	var err error
 
 	var out []byte
@@ -65,6 +63,23 @@ func (c *cfg) decryptPrivateKey(ctx context.Context) errs.Err {
 				c.privateKey = k
 
 				break
+			}
+		}
+	}
+
+	if c.privateKey.IsNil() {
+		c.decryptKeysEncrypted(ctx)
+		keys := c.keys.Keys()
+
+		for i := range c.DecryptKeys {
+			out, err = c.DecryptKeys[i].PrivateKey.Decrypt(keys)
+			if err == nil {
+				k, err := cryptolib.ParseKey[cryptolib.KeyProviderPrivate](string(out))
+				if err == nil {
+					c.privateKey = k
+
+					break
+				}
 			}
 		}
 	}

@@ -14,6 +14,9 @@ func cmdAddPK() cli.Command[*cfg] {
 		ArgumentsRequired: []string{
 			"name",
 		},
+		ArgumentsOptional: []string{
+			"key ID (default: name)",
+		},
 		Usage: "Generate and add a cryptographic private key to the configuration values.",
 		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 			if c.PublicKey.IsNil() {
@@ -25,8 +28,13 @@ func cmdAddPK() cli.Command[*cfg] {
 				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 			}
 
-			prv.ID = args[1]
-			pub.ID = args[1]
+			id := args[1]
+			if len(args) == 3 {
+				id = args[2]
+			}
+
+			prv.ID = id
+			pub.ID = id
 
 			if err := c.encryptvalue(ctx, []byte(prv.String()), args[1], pub.String()); err != nil {
 				return logger.Error(ctx, err)

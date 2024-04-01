@@ -14,7 +14,7 @@ Cryptographic signatures are signed hashes of a message created by a private key
 
 ## Add Private Keys
 
-You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-key`]({{< ref "/docs/references/cli#gen-key" >}}) (printing the keys to stdout).
+You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-keys`]({{< ref "/docs/references/cli#gen-keys" >}}) (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we generate certificates.
 

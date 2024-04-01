@@ -22,7 +22,7 @@ func m() errs.Err {
 			"encrypt":      cmdEncrypt(),
 			"gen-crt":      cmdGenCrt(),
 			"gen-jwt":      cmdGenJWT(),
-			"gen-key":      cryptolib.GenerateKeys[*cfg](),
+			"gen-keys":     cryptolib.GenKeys[*cfg](),
 			"gen-sig":      cmdGenSig(),
 			"gen-ssh":      cmdGenSSH(),
 			"init":         cmdInit(),

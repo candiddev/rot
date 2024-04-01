@@ -94,8 +94,8 @@ func TestM(t *testing.T) {
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, len(strings.Split(out, "\n")), 20)
 
-	// gen-key
-	out, err = cli.RunMain(m, "\n\n", "gen-key", "encrypt-asymmetric")
+	// gen-keys
+	out, err = cli.RunMain(m, "\n\n", "gen-keys", "encrypt-asymmetric")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, strings.Contains(out, string(cryptolib.AlgorithmEd25519Private)), true)
 
@@ -198,12 +198,13 @@ func TestM(t *testing.T) {
 	assert.Equal(t, strings.Contains(out, "value=***"), true)
 
 	// add-private-keys
-	out, err = cli.RunMain(m, "", "add-pk", "hello")
+	out, err = cli.RunMain(m, "", "add-pk", "hello", "world")
 	assert.HasErr(t, err, nil)
 	assert.Equal(t, out, "")
 
 	prv1, err := cli.RunMain(m, "123\n123\n", "show-value", "-v", "hello")
 	assert.HasErr(t, err, nil)
+	assert.Equal(t, strings.Split(prv1, ":")[2], "world")
 
 	pub1, err := cli.RunMain(m, "123\n123\n", "show-value", "-c", "hello")
 	assert.HasErr(t, err, nil)

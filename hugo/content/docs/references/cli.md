@@ -71,7 +71,7 @@ Generate X.509 certificates.  Visit [Generate Certificates]({{< ref "/docs/guide
 
 Generate JSON Web Tokens (JWTs).  Visit [Generate JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
 
-### `gen-key`
+### `gen-keys`
 
 Generate ad-hoc cryptographic keys.
 

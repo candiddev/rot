@@ -19,7 +19,7 @@ func cmdShowJWT() cli.Command[*cfg] {
 			"public key value, encrypted value name, or path.  Can be specified multiple times",
 		},
 		Usage: "Show a JWT, optionally validating the signature with a public key.",
-		Run: func(ctx context.Context, args []string, flags cli.Flags, config *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, config *cfg) errs.Err {
 			j := args[1]
 			if j == "-" {
 				j = string(cli.ReadStdin())

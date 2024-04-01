@@ -22,7 +22,7 @@ func cmdShowCrt() cli.Command[*cfg] {
 			"CA certificate value or path, can be specified multiple times",
 		},
 		Usage: "Show a certificate, optionally validating the certificate with CA public keys.",
-		Run: func(ctx context.Context, args []string, flags cli.Flags, config *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, _ *cfg) errs.Err {
 			cs := args[1]
 			if cs == "-" {
 				cs = string(cli.ReadStdin())

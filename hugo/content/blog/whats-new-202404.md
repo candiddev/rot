@@ -13,6 +13,7 @@ type: blog
 ## Enhancements
 
 - Changed [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) to allow specifying an ID for the keys
+- Updated Go to 1.22.1.
 
 ## Fixes
 

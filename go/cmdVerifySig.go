@@ -17,7 +17,7 @@ func cmdVerifySig() cli.Command[*cfg] {
 			"signature",
 		},
 		Usage: "Verify a signature for a message using a public key.  Signature must be in the form <hash>:<signature>:<optional key id>.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
 			pk, err := c.publicKey(args[1])
 			if err != nil {
 				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))

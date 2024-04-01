@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"os"
 
 	"github.com/candiddev/shared/go/cli"
@@ -23,7 +22,7 @@ func cmdInit() cli.Command[*cfg] { //nolint:gocognit
 			c.Values = map[string]cfgValue{}
 
 			if _, err := os.ReadFile(c.CLI.ConfigPath); err == nil {
-				b, err := cli.Prompt(fmt.Sprintf("%s aleady exists, overwite (yes/no)?", c.CLI.ConfigPath), "", false)
+				b, err := cli.Prompt(c.CLI.ConfigPath+"%s aleady exists, overwite (yes/no)?", "", false)
 				if err != nil {
 					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 				}

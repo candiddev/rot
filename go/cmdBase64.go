@@ -26,7 +26,7 @@ func cmdBase64() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Encode/decode a base64 value or stdin and output to stdout.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, f cli.Flags, _ *cfg) errs.Err {
 			v := []byte(args[1])
 			if string(v) == "-" {
 				v = cli.ReadStdin()

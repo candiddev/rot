@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/jwt"
@@ -14,8 +15,8 @@ import (
 	"github.com/google/uuid"
 )
 
-func cmdGenJWT() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdGenJWT() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",
 		},
@@ -48,7 +49,7 @@ func cmdGenJWT() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Generate a JWT and output it it to stdout.  Must specify the private key to sign the JWT.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, f cli.Flags, c *config.Config) error {
 			m := map[string]any{}
 
 			aud, _ := f.Values("a")
@@ -108,10 +109,10 @@ func cmdGenJWT() cli.Command[*cfg] {
 
 			pk := args[1]
 			if pk == "-" {
-				pk = string(cli.ReadStdin())
+				pk = string(logger.ReadStdin())
 			}
 
-			privateKey, errr := c.decryptValuePrivateKey(ctx, pk)
+			privateKey, errr := c.GetPrivateKey(ctx, c.GetKeyringName(ctx), pk)
 			if errr != nil {
 				return logger.Error(ctx, errr)
 			}

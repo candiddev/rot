@@ -17,3 +17,9 @@ The command to perform this is [`rot run <command>`]({{< ref "/docs/references/c
 - Decrypt the existing [Rot Private Key]({{< ref "/docs/references/cryptography#rot-private-key" >}}) using the [User Private Key]({{< ref "/docs/references/cryptography#user-private-key" >}}).
 - Decrypt each value
 - Run the specified command with an environment variable set for each value.  The environment variable name will be the values name.
+
+By default, Rot use Values in the current [`keyring`]({{< ref "/docs/references/config#keyring" >}}).  Modify this configuration value permanently or temporarily to specify a different Keyring:
+
+```bash
+$ rot -x keyring=keyring2 run <command>
+```

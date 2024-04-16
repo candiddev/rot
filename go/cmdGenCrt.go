@@ -7,14 +7,15 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdGenCrt() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdGenCrt() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",
 		},
@@ -55,13 +56,13 @@ func cmdGenCrt() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Generate an X.509 certificate and output a PEM-formatted certificate to stdout.  Must specify the private key of the signer (for CA signed certificates) or the private key of the certificate (for self-signed certificates).  A public key can be specified, otherwise the public key of the private key will be used.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, f cli.Flags, c *config.Config) error {
 			pk := args[1]
 			if pk == "-" {
-				pk = string(cli.ReadStdin())
+				pk = string(logger.ReadStdin())
 			}
 
-			privateKey, errr := c.decryptValuePrivateKey(ctx, pk)
+			privateKey, errr := c.GetPrivateKey(ctx, c.GetKeyringName(ctx), pk)
 			if errr != nil {
 				return logger.Error(ctx, errr)
 			}
@@ -71,7 +72,7 @@ func cmdGenCrt() cli.Command[*cfg] {
 			if len(args) >= 3 {
 				var err error
 
-				publicKey, err = c.publicKey(args[2])
+				publicKey, err = c.GetPublicKey(ctx, c.GetKeyringName(ctx), args[2])
 				if err != nil {
 					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 				}

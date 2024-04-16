@@ -2,60 +2,17 @@ package main
 
 import (
 	"context"
-	"time"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
-	"github.com/candiddev/shared/go/cryptolib"
-	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdRekey() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
-		Usage: "Rekey all keys and values in a configuration.",
-		Run: func(ctx context.Context, _ []string, _ cli.Flags, c *cfg) errs.Err {
-			e := c.decryptPrivateKey(ctx)
-			if e != nil {
-				return e
-			}
-
-			prv, pub, err := cryptolib.NewKeysAsymmetric(c.Algorithms.Asymmetric)
-			if err != nil {
-				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-			}
-
-			c.PublicKey = pub
-
-			for k, v := range c.DecryptKeys {
-				p, err := c.DecryptKeys[k].PublicKey.Key.EncryptAsymmetric([]byte(prv.String()), c.DecryptKeys[k].PublicKey.ID, c.Algorithms.Symmetric)
-				if err != nil {
-					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-				}
-
-				sig, err := cryptolib.NewSignature(prv, []byte(v.PublicKey.String()))
-				if err != nil {
-					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-				}
-
-				v.Modified = time.Now()
-				v.PrivateKey = p
-				v.Signature = sig
-
-				c.DecryptKeys[k] = v
-			}
-
-			for k := range c.Values {
-				v, err := c.decryptValue(ctx, k)
-				if err != nil {
-					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-				}
-
-				if err := c.encryptvalue(ctx, v, k, c.Values[k].Comment); err != nil {
-					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
-				}
-			}
-
-			return logger.Error(ctx, c.save(ctx))
+func cmdRekey() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
+		Usage: "Rekey all Keys and Values in a Keyring.",
+		Run: func(ctx context.Context, _ []string, _ cli.Flags, c *config.Config) error {
+			return logger.Error(ctx, c.Rekey(ctx, c.GetKeyringName(ctx)))
 		},
 	}
 }

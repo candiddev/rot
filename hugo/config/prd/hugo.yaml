@@ -1,5 +1,5 @@
 baseURL: https://rotx.dev
 params:
   stripe:
-    buyButtonID: buy_btn_1OLHlvKMTluwLdTdtnsrLBwg
+    buyButtonID: buy_btn_1P6BJcKMTluwLdTdKumWxEYW
     publishableKey: pk_live_U4OxrrDjYD5R5nY8cCdus3Wk00Ai40VV3Q

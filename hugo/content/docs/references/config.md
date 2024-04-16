@@ -104,53 +104,55 @@ String, the UTC time the key was last modified.
 
 **Default:** `""`
 
-### `privateKey` {#userprivatekey}
+### `privateKeys`
 
-String, the Rot Private Key encrypted using the [User's Public Key](#userpublickey).
+A map of Keyring names to Private Keys.
 
-**Default:** `""`
+**Default:** `{}`
 
-### `publicKey` {#userpublickey}
+#### `privateKey` {#decryptprivatekey}
 
-String, the User's Public Key.
+String, the Keyring's Private Key encrypted using the [Decrypt Public Key](#decryptpublickey).
 
 **Default:** `""`
 
 ### `signature`
 
-String, a signature created by the [Rot Private Key](#rotprivatekey) of the User's Public Key.  This is used to prevent tampering of public keys.
+String, a signature created by the [Keyring's Private Key](#keyringprivatekey) of the [Decrypt Public Key]({#decryptpublickey}).  This is used to prevent tampering of public keys.
 
 **Default:** `""`
 
-## `keys`
+### `publicKey` {#decryptpublickey}
 
-A list of strings containing User Private Keys.  This is mostly used to pass User Private Keys via environment variables.  Rot will never save this value to disk.
-
-**Default:** `""`
-
-## `keyPath`
-
-String, the path to a file containing User Private Keys, one per line.  If a filename without a path is specified, Rot will search parent directories for the filename and use the first one found.
-
-**Default:** `".rot-keys"`
-
-## `privateKey`
-
-String, the decrypted Rot Private Key.  This is used to pass the Rot Private Key via environment variables, such as from a external script that decrypts a [decryptKey.privateKey](#userprivatekey) using a HSM or KMS.  Rot will never save this value to disk.
+String, the Decrypt Public Key.
 
 **Default:** `""`
 
-## `publicKey` {#rotpublickey}
+## `keyring`
 
-String, the Rot Public Key.
+String, the name of the currently in use Keyring.  Changing this value will display or modify Values and Keys within other Keyrings, i.e.:
+
+```bash
+$ rot -x keyring=otherkeyring add-value
+```
+
+**Default:** Keyring name Rot was initialized with, typically `"rot"`
+
+## `keyrings`
+
+A map of Keyring names to Keyring details.
+
+### `privateKey`
+
+String, the decrypted Keyring Private Key.  This is used to pass the Keyring Private Key via environment variables, such as from a external script that decrypts a [decryptKey.<keyring name>.privateKey](#decryptprivatekey) using a HSM or KMS.  Rot will never save this value to disk.
 
 **Default:** `""`
 
-## `unmask`
+## `publicKey` {#keyringpublickey}
 
-A list of Value names to unmask.
+String, the Keyring Public Key.
 
-**Default:** `[]`
+**Default:** `""`
 
 ## `values`
 
@@ -179,3 +181,27 @@ String, the UTC time the value was last modified.
 String, a value encrypted using the [`key`](#key).
 
 **Default:** `""`
+
+## `keys`
+
+A list of strings containing Decrypt Private Keys.  This is mostly used to pass Decrypt Private Keys via environment variables.  Rot will never save this value to disk.
+
+**Default:** `""`
+
+## `keyPath`
+
+String, the path to a file containing Decrypt Private Keys, one per line.  If a filename without a path is specified, Rot will search parent directories for the filename and use the first one found.
+
+**Default:** `".rot-keys"`
+
+## `license`
+
+String, the Rot license key provided to your organization.
+
+**Default:** `""`
+
+## `unmask`
+
+A list of Value names to unmask.
+
+**Default:** `[]`

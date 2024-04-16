@@ -1,6 +1,6 @@
 ---
 author: Mike
-date: 2024-04-01
+date: 2024-04-15
 description: Release notes for Rot v2024.04.
 tags:
   - release
@@ -10,11 +10,12 @@ type: blog
 
 {{< rot-release version="2024.04" >}}
 
+## Features
+
+### Keyrings
+
+Rot now supports Keyrings: a way to logically separate your Keys and Values within one Rot configuration.  Visit [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}).
+
 ## Enhancements
 
-- Changed [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) to allow specifying an ID for the keys
-- Updated Go to 1.22.1.
-
-## Fixes
-
-- Fixed `rot gen-keys` having inconsistent documentation and usage
+- Updated the Rot CLI library for better paging navigation.

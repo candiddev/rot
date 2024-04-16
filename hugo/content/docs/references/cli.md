@@ -35,9 +35,18 @@ Set config key=value (can be provided multiple times)
 
 ## Commands
 
-### `add-key`
+### `add-keyprv`
 
-Add a key to a configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+Add an existing Decrypt Key to a Keyring.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+
+### `add-keypub`
+
+Add a new or existing key to Decrypt Keys.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+
+### `add-keyring`
+
+Add a new or modify an existing Keyring.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
+Generate and add a private key to a configuration with the specified name.
 
 ### `add-pk`
 
@@ -55,13 +64,21 @@ Add a value to a configuration.  Can specify an optional length to have Rot rand
 
 Import and export base64 strings in various encodings.  See command line for specific usage.
 
+### `copy-value`
+
+Copy a value between Keyrings, optionally providing a new name and comment for it.  This command can also be used for moving Values.
+
 ### `decrypt`
 
-Perform ad-hoc decryption of a value using the User Private Keys.
+Perform ad-hoc decryption of a value.
 
 ### `encrypt`
 
 Encrypt a value and print it to stdout without adding it to the config.  Can specify a recipient key to use asymmetric encryption.
+
+### `eula`
+
+View the Rot End User License Agreement (EULA).
 
 ### `gen-crt`
 
@@ -71,7 +88,7 @@ Generate X.509 certificates.  Visit [Generate Certificates]({{< ref "/docs/guide
 
 Generate JSON Web Tokens (JWTs).  Visit [Generate JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
 
-### `gen-keys`
+### `gen-key`
 
 Generate ad-hoc cryptographic keys.
 
@@ -97,11 +114,19 @@ Convert a Rot key to PEM or a PEM key to Rot.  Can specify an ID for the key whe
 
 ### `rekey`
 
-Rekey a Rot configuration.  See [Rekey Rot]({{< ref "/docs/guides/rekey-rot" >}}) for more information.
+Rekey a Keyring configuration.  See [Rekey Rot]({{< ref "/docs/guides/rekey-rot" >}}) for more information.
 
-### `remove-key`
+### `remove-keyprv`
 
-Remove a key from a Rot configuration.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+Remove a Decrypt Key from a Keyring.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+
+### `remove-keypub`
+
+Remove a Decrypt Key from Rot.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
+
+### `remove-keyring`
+
+Remove a Keyring from Rot.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 
 ### `remove-value`
 
@@ -127,13 +152,17 @@ Show the contents of an X.509 certificate and optionally verify it against a CA 
 
 Show the contents of a JWT and optionally verify it against a public key.
 
+### `show-keyrings`
+
+Show the names of [keyrings]({{< ref "/docs/references/config#keyrings" >}}) in the configuration.
+
 ### `show-keys`
 
-Show the names of [decryptKeys]({{< ref "/docs/references/config#decryptKeys" >}}) in the configuration.
+Show the names of [decryptKeys]({{< ref "/docs/references/config#decryptKeys" >}}) in the Keyring or configuration.
 
 ### `show-pk`
 
-Show the public key for a User Private Key.  Takes a name of a key that it will lookup from [`keys`]({{< ref "/docs/references/config#keys" >}}) or [`keyPath`]({{< ref "/docs/references/config#keyPath" >}}).  Will return the public key of the first key found that matches `name`.
+Show the public key for a private key.
 
 ### `show-value`
 
@@ -141,7 +170,7 @@ Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref 
 
 ### `show-values`
 
-Show the names of [values]({{< ref "/docs/references/config#values" >}}) in the configuration.
+Show the names of [values]({{< ref "/docs/references/config#values" >}}) in a Keyring.
 
 ### `ssh`
 

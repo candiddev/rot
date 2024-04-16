@@ -5,14 +5,15 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 	"github.com/candiddev/shared/go/types"
 )
 
-func cmdAddValue() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdAddValue() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"name",
 		},
@@ -30,12 +31,8 @@ func cmdAddValue() cli.Command[*cfg] {
 				Usage:       "Generate a random string with this length instead of providing a value",
 			},
 		},
-		Usage: "Add a value to the configuration values.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
-			if c.PublicKey.IsNil() {
-				return logger.Error(ctx, errNotInitialized)
-			}
-
+		Usage: "Add a Value to a Keyring.",
+		Run: func(ctx context.Context, args []string, f cli.Flags, c *config.Config) error {
 			name := args[1]
 			delimiter := ""
 			comment := ""
@@ -60,17 +57,13 @@ func cmdAddValue() cli.Command[*cfg] {
 
 				b = []byte(types.RandString(l))
 			} else {
-				b, err = cli.Prompt("Value:", delimiter, true)
+				b, err = logger.Prompt("Value:", delimiter, true)
 				if err != nil {
 					return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 				}
 			}
 
-			if err := c.encryptvalue(ctx, b, name, comment); err != nil {
-				return logger.Error(ctx, err)
-			}
-
-			return logger.Error(ctx, c.save(ctx))
+			return logger.Error(ctx, c.SetValue(ctx, c.GetKeyringName(ctx), b, name, comment))
 		},
 	}
 }

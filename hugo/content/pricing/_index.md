@@ -1,26 +1,36 @@
 ---
-description: Pricing details for Rot AGPL license exemptions.
+description: Pricing for Rot
 menu: {main}
 title: Pricing
 weight: 30
 ---
 
 {{% blocks/section color="white" height=full %}}
-## Open Source
+{{< cardpane >}}
+{{% card %}}
+### **Free**
 
-Rot is licensed under the [GNU AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).
+- Unlimited Keys
+- Unlimited Values
+- 1 Keyring
+- Community Support
+{{% /card %}}
+{{% card %}}
+### **Unlimited**
 
-## Exemptions
-
-Companies interested in using Rot without the AGPL copyleft requirements can purchase a license exemption.  We sell exemptions to individual companies using Stripe.  You will be emailed a license exemption after checkout.
-
+- Unlimited Keys
+- Unlimited Values
+- Unlimited Keyrings
+- Email Support with best effort response time
+- Prioritized features and bug fixes
 {{% stripe %}}
-
-## Additional Services
+{{% /card %}}
+{{< /cardpane >}}
 
 Please [contact us](mailto:info@candid.dev?subject=Rot%20Pricing) for more information regarding:
-
-- Technical support
-- Implementation and integration assistance
-
+- Solo Dev Pricing
+- Service Level Agreements (SLAs), Support Contracts, and Per-Incident Support
+- Professional Services
+- Reselling and OEM
+- Partnerships
 {{% /blocks/section %}}

@@ -3,13 +3,13 @@ package main
 import (
 	"context"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
-	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowValue() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdShowValue() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"name",
 		},
@@ -22,36 +22,33 @@ func cmdShowValue() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Show a decrypted value.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
-			if _, ok := f.Value("c"); ok {
-				if v, ok := c.Values[args[1]]; ok {
-					logger.Raw(v.Comment + "\n")
-
-					return nil
-				}
-
-				return errNotFound
-			}
-
-			if err := c.decryptPrivateKey(ctx); err != nil {
-				return logger.Error(ctx, err)
-			}
-
-			v, err := c.decryptValue(ctx, args[1])
+		Run: func(ctx context.Context, args []string, f cli.Flags, c *config.Config) error {
+			v, err := c.GetValue(ctx, c.GetKeyringName(ctx), args[1])
 			if err != nil {
 				return logger.Error(ctx, err)
 			}
 
-			if _, ok := f.Value("v"); ok {
-				logger.Raw(string(v) + "\n")
+			if _, ok := f.Value("c"); ok {
+				logger.Raw(v.Comment + "\n")
 
-				return nil
+				return logger.Error(ctx, nil)
+			}
+
+			e, err := c.GetValueDecrypted(ctx, c.GetKeyringName(ctx), args[1])
+			if err != nil {
+				return logger.Error(ctx, nil)
+			}
+
+			if _, ok := f.Value("v"); ok {
+				logger.Raw(string(e) + "\n")
+
+				return logger.Error(ctx, nil)
 			}
 
 			m := map[string]any{
-				"comment":  c.Values[args[1]].Comment,
-				"modified": c.Values[args[1]].Modified,
-				"value":    string(v),
+				"comment":  v.Comment,
+				"modified": v.Modified,
+				"value":    string(e),
 			}
 
 			return logger.Error(ctx, cli.Print(m))

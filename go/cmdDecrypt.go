@@ -2,45 +2,34 @@ package main
 
 import (
 	"context"
-	"os"
-	"strings"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
-	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdDecrypt() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdDecrypt() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
-			"value or path",
+			"value or - for stdin",
 		},
 		Usage: "Decrypt a value or unwrap a KDF value and print it to stdout.",
-		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, c *config.Config) error {
 			value := args[1]
 
 			if value == "-" {
-				value = string(cli.ReadStdin())
-			}
-
-			f, err := os.ReadFile(value)
-			if err == nil {
-				value = strings.TrimSpace(string(f))
+				value = string(logger.ReadStdin())
 			}
 
 			ev, err := cryptolib.ParseEncryptedValue(value)
 			if err != nil {
-				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+				return logger.Error(ctx, err)
 			}
 
-			if ev.KDF == "" {
-				c.decryptKeysEncrypted(ctx)
-			}
-
-			v, err := ev.Decrypt(c.keys.Keys())
+			v, err := c.GetDecrypted(ctx, ev)
 			if err != nil {
-				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
+				return logger.Error(ctx, err)
 			}
 
 			logger.Raw(string(v))

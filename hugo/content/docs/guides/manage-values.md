@@ -6,7 +6,7 @@ title: Manage Values
 weight: 30
 ---
 
-In this guide, we'll go over adding and removing values in a Rot configuration.
+In this guide, we'll go over adding and removing values in a Rot Keyring.
 
 ## Adding Values
 
@@ -14,8 +14,14 @@ After Rot has been initialized, keys can be added using [`rot add-value`]({{< re
 
 - Generate a [Value Key]({{< ref "/docs/references/cryptography#value-key" >}})
 - Encrypt the provided Value using the Value Key
-- Encrypt the Value Key using the [Rot Public Key]({{< ref "/docs/references/cryptography#rot-public-key" >}})
+- Encrypt the Value Key using the [Keyring Public Key]({{< ref "/docs/references/cryptography#keyring-public-key" >}})
 - Populate the [values]({{< ref "/docs/references/config#decryptKeys" >}}) with the new value, and save the configuration to [`configPath`]({{< ref "/docs/references/config#configpath" >}}).
+
+By default, Rot will generate Values in the current [`keyring`]({{< ref "/docs/references/config#keyring" >}}).  Modify this configuration value permanently or temporarily to specify a different Keyring:
+
+```bash
+$ rot -x keyring=keyring2 add-value
+```
 
 ## Generating Values
 

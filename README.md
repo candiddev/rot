@@ -16,7 +16,7 @@ Rot makes cryptography easy:
 - Share your encrypted values with other users and devices
 - One-way encryption for zero-knowledge secrets
 - Run commands and scripts with encrypted values injected via environment variables
-- Store your encrypted values securely in git with human-readable diffs
+- Store your encrypted values securely in git with human-readable diffs and access controlled keyrings
 - Generate and view X.509 certificates and Certificate Authorities
 - Generate and view JWTs
 - Generate and verify signatures
@@ -30,7 +30,7 @@ Aside from the infamous [ROT13 Caeser cipher](https://en.wikipedia.org/wiki/ROT1
 
 ## License
 
-The code in this repository is licensed under the [GNU AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).  Visit https://rotx.dev/pricing/ to purchase a license exemption.
+The code in this repository is licensed under the [Elastic License](./LICENSE.md).  Visit https://rotx.dev/pricing/ for additional licensing options.
 
 ## Development
 

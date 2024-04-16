@@ -6,14 +6,15 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdGenSSH() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdGenSSH() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"private key value, encrypted value name, or - for stdin",
 			"public key value, encrypted value name, or path",
@@ -45,18 +46,18 @@ func cmdGenSSH() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Generate SSH certificate and output a SSH formatted certificate. Must specify a Private Key, a Public Key, and a list of principals.  Can provide additional fields for the certificate",
-		Run: func(ctx context.Context, args []string, f cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, f cli.Flags, c *config.Config) error {
 			pk := args[1]
 			if pk == "-" {
-				pk = string(cli.ReadStdin())
+				pk = string(logger.ReadStdin())
 			}
 
-			privateKey, errr := c.decryptValuePrivateKey(ctx, pk)
-			if errr != nil {
-				return logger.Error(ctx, errr)
+			privateKey, err := c.GetPrivateKey(ctx, c.GetKeyringName(ctx), pk)
+			if err != nil {
+				return logger.Error(ctx, err)
 			}
 
-			publicKey, err := c.publicKey(args[2])
+			publicKey, err := c.GetPublicKey(ctx, c.GetKeyringName(ctx), args[2])
 			if err != nil {
 				return logger.Error(ctx, errs.ErrReceiver.Wrap(err))
 			}

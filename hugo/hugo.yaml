@@ -1,7 +1,7 @@
 baseURL: https://rotx.dev
 menu:
   main:
-    - name: Get Rot
+    - name: Download
       weight: 40
       url: /docs/guides/get-rot
     - name: Source Code
@@ -23,6 +23,6 @@ params:
   offlineSearch: true
   search:
   stripe:
-    buyButtonID: buy_btn_1OLHlXKMTluwLdTd062OoJ1W
+    buyButtonID: buy_btn_1P6BB9KMTluwLdTdnwT1mKIy
     publishableKey: pk_test_L42ooayfe2Ui3PnUrkKZr3Dk00m8WzYZRD
 title: Rot

@@ -4,14 +4,15 @@ import (
 	"context"
 	"strings"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdPEM() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdPEM() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"key, or - for stdin",
 		},
@@ -22,10 +23,10 @@ func cmdPEM() cli.Command[*cfg] {
 			},
 		},
 		Usage: "Convert Rot keys to PEM, or a PEM keys to Rot, and print it to stdout.",
-		Run: func(ctx context.Context, args []string, f cli.Flags, _ *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, f cli.Flags, _ *config.Config) error {
 			s := []byte(args[1])
 			if args[1] == "-" {
-				s = cli.ReadStdin()
+				s = logger.ReadStdin()
 			}
 
 			var out string

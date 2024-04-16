@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
@@ -13,8 +14,8 @@ import (
 	"github.com/candiddev/shared/go/types"
 )
 
-func cmdShowCrt() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdShowCrt() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"Certificate value, path, or - for stdin",
 		},
@@ -22,10 +23,10 @@ func cmdShowCrt() cli.Command[*cfg] {
 			"CA certificate value or path, can be specified multiple times",
 		},
 		Usage: "Show a certificate, optionally validating the certificate with CA public keys.",
-		Run: func(ctx context.Context, args []string, _ cli.Flags, _ *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, _ *config.Config) error {
 			cs := args[1]
 			if cs == "-" {
-				cs = string(cli.ReadStdin())
+				cs = string(logger.ReadStdin())
 			}
 
 			f, err := os.ReadFile(cs)

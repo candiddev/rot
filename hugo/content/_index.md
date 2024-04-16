@@ -8,7 +8,7 @@ title: Rot - Future proof secrets management
 
 {{< highlight bash >}}
 # Initialize rot.jsonnet and a key for Alice
-$ rot init alice
+$ rot init mykeyring alice
 New Password (empty string skips PBKDF):
 Confirm Password (empty string skips PBKDF):
 
@@ -17,7 +17,7 @@ $ cat .rot-keys
 ed25519private:MC4CAQAwBQYDK2VwBCIEINtf2nnktooZJTHfFU5SV0Ten6cmr9Qi/JRy3zAaoHVP:alice
 
 # Add Bob's public key
-$ rot add-key bob ed25519public:MCowBQYDK2VwAyEAAYkJzjQGb+4I7bfcaq6TnkI6nWJXolUdYSQDKSZIDZU=:bob
+$ rot add-keypub bob ed25519public:MCowBQYDK2VwAyEAAYkJzjQGb+4I7bfcaq6TnkI6nWJXolUdYSQDKSZIDZU=:bob
 
 # Add a secret value
 $ rot add-value MYSQL_ROOT 'MySQL root password'
@@ -32,7 +32,7 @@ $ rot show-value MYSQL_ROOT
 }
 
 # See the encrypted value filtered using JSON
-$ rot show-config | rot jq '.values.MYSQL_ROOT'
+$ rot show-config | rot jq '.keyrings.mykeyring.values.MYSQL_ROOT'
 {
   "comment": "MySQL root password",
   "key": "ecdhx25519:MCowBQYDK2VwAyEArXBuejuUQ...",
@@ -44,7 +44,7 @@ $ rot show-config | rot jq '.values.MYSQL_ROOT'
 $ rot -x algorithms_asymmetric=ecdhp256 -x algorithms_symmetric=aes128gcm rekey
 
 # See the encrypted value using new encryption
-$ rot show-config | rot jq '.values.MYSQL_ROOT'
+$ rot show-config | rot jq '.keyrings.mykeyring.values.MYSQL_ROOT'
 {
   "comment": "MySQL root password",
   "key": "ecdhp256:EwLIPFZVXT93JcueT66r...",

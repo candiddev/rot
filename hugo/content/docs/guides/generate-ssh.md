@@ -14,7 +14,7 @@ OpenSSH can use SSH certificate authorities (CA) to authorize user access to ser
 
 ## Add Private Keys
 
-You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-keys`]({{< ref "/docs/references/cli#gen-keys" >}}) (printing the keys to stdout).
+You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using [`rot add-pk`]({{< ref "/docs/references/cli#add-pk" >}}) (encrypting the keys into Rot) or [`rot gen-key`]({{< ref "/docs/references/cli#gen-key" >}}) (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 
@@ -23,7 +23,7 @@ Rot will store the public key in the comment of the encrypted value, we can grab
 We can use Rot to generate a SSH keypair, similar to `ssh-keygen`:
 
 ```bash
-$ rot gen-keys | tee >(rot jq -r .privateKey | rot ssh - > id_ed25519 && chmod 0400 id_ed25519) | rot jq -r .publicKey | rot ssh - > id_ed25519.pub
+$ rot gen-key | tee >(rot jq -r .privateKey | rot ssh - > id_ed25519 && chmod 0400 id_ed25519) | rot jq -r .publicKey | rot ssh - > id_ed25519.pub
 ```
 
 This will generate two files, id_ed25519 containing the SSH private key, and id_ed25519.pub containing the SSH public key.

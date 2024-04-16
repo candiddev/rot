@@ -4,19 +4,20 @@ import (
 	"context"
 	"strings"
 
+	"github.com/candiddev/rot/go/config"
 	"github.com/candiddev/shared/go/cli"
 	"github.com/candiddev/shared/go/cryptolib"
 	"github.com/candiddev/shared/go/errs"
 	"github.com/candiddev/shared/go/logger"
 )
 
-func cmdShowPK() cli.Command[*cfg] {
-	return cli.Command[*cfg]{
+func cmdShowPK() cli.Command[*config.Config] {
+	return cli.Command[*config.Config]{
 		ArgumentsRequired: []string{
 			"name, private key, or - for stdin",
 		},
 		Usage: "Show the public key of a private key.",
-		Run: func(ctx context.Context, args []string, _ cli.Flags, c *cfg) errs.Err {
+		Run: func(ctx context.Context, args []string, _ cli.Flags, c *config.Config) error {
 			var err error
 
 			var key cryptolib.Key[cryptolib.KeyProviderPrivate]
@@ -26,7 +27,7 @@ func cmdShowPK() cli.Command[*cfg] {
 			switch {
 			// Stdin
 			case args[1] == "-":
-				s = string(cli.ReadStdin())
+				s = string(logger.ReadStdin())
 
 				fallthrough
 			// commandline
@@ -42,13 +43,12 @@ func cmdShowPK() cli.Command[*cfg] {
 			}
 
 			if key.Key == nil {
-				c.decryptKeysEncrypted(ctx)
-
+				keys := c.GetKeys(ctx)
 				n := args[1]
 
-				for i := range c.keys {
-					if c.keys[i].ID == n {
-						key = c.keys[i]
+				for i := range keys {
+					if keys[i].ID == n {
+						key = keys[i]
 
 						break
 					}

@@ -2,7 +2,7 @@
 
 > Secure Secrets Management for the Modern Sysadmin
 
-**Latest Release Notes: [v2024.04](https://rotx.dev/blog/whats-new-202404/)**
+**Latest Release Notes: [v2024.05](https://rotx.dev/blog/whats-new-202405/)**
 
 [:speech_balloon: Discussions](https://github.com/candiddev/rot/discussions)\
 [:book: Docs](https://rotx.dev/docs/)\

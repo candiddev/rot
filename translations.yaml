@@ -1,0 +1,2028 @@
+outputs:
+- format: go
+  package: main
+  path: ../go/rot
+translations:
+  AlgUsage:
+    ar: إظهار الخوارزميات التي يفهمها روت.
+    context: Usage for alg command
+    de: Zeigen Sie Algorithmen, die Rot versteht.
+    en: Show algorithms Rot understands.
+    es: Mostrar algoritmos que Rot comprenda.
+    fr: Afficher les algorithmes que Rot comprend.
+    hi: एल्गोरिदम दिखाएँ रोट समझता है.
+    ja: Rot が理解できるアルゴリズムを表示します。
+    nl: Laat algoritmen zien Rot begrijpt het.
+    pt: Mostre algoritmos que Rot entende.
+    ru: Показать алгоритмы, которые понимает Рот.
+    zh: 展示 Rot 理解的算法。
+  Base64Arg:
+    ar: قيمة الإدخال أو - لـ stdin
+    context: Argument for base64
+    de: Eingabewert oder - für stdin
+    en: input value or - for stdin
+    es: valor de entrada o - para stdin
+    fr: valeur d&#39;entrée ou - pour stdin
+    hi: इनपुट मान या - stdin के लिए
+    ja: 入力値または - （stdinの場合）
+    nl: invoerwaarde of - voor stdin
+    pt: valor de entrada ou - para stdin
+    ru: входное значение или - для стандартного ввода
+    zh: 输入值或-用于标准输入
+  Base64FlagsDUsage:
+    ar: 'فك تشفير base64 (الافتراضي: التشفير)'
+    context: Usage for base64 d flag
+    de: 'Base64 dekodieren (Standard: encode)'
+    en: 'Decode base64 (default: encode)'
+    es: 'Decodificar base64 (predeterminado: codificar)'
+    fr: 'Décoder en base64 (par défaut: encoder)'
+    hi: 'बेस64 को डीकोड करें (डिफ़ॉल्ट: एनकोड)'
+    ja: 'base64 をデコード (デフォルト: エンコード)'
+    nl: 'Decodeer base64 (standaard: coderen)'
+    pt: 'Decodificar base64 (padrão: codificar)'
+    ru: 'Декодировать base64 (по умолчанию: кодировать)'
+    zh: 解码 base64（默认值：编码）
+  Base64FlagsRUsage:
+    ar: 'خام/بدون حشوة (الافتراضي: الحشو)'
+    context: Usage for base64 r flag
+    de: 'Roh/keine Polsterung (Standard: Polsterung)'
+    en: 'Raw/no padding (default: padding)'
+    es: 'Sin formato/sin relleno (predeterminado: relleno)'
+    fr: 'Brut/sans remplissage (par défaut: remplissage)'
+    hi: 'कच्चा/कोई पैडिंग नहीं (डिफ़ॉल्ट: पैडिंग)'
+    ja: '生/パディングなし（デフォルト: パディング）'
+    nl: 'Ruwe/geen opvulling (standaard: opvulling)'
+    pt: 'Bruto/sem preenchimento (padrão: preenchimento)'
+    ru: 'Необработанное/без заполнения (по умолчанию: дополнение)'
+    zh: 原始/无填充（默认值：填充）
+  Base64FlagsUUsage:
+    ar: 'ترميز URL (الافتراضي: التشفير القياسي)'
+    context: Usage for base64 u flag
+    de: 'URL-Kodierung (Standard: Standardkodierung)'
+    en: 'URL encoding (default: standard encoding)'
+    es: 'Codificación de URL (predeterminada: codificación estándar)'
+    fr: 'Encodage URL (par défaut: encodage standard)'
+    hi: 'URL एनकोडिंग (डिफ़ॉल्ट: मानक एनकोडिंग)'
+    ja: 'URL エンコーディング (デフォルト: 標準エンコーディング)'
+    nl: 'URL-codering (standaard: standaardcodering)'
+    pt: 'Codificação de URL (padrão: codificação padrão)'
+    ru: 'Кодировка URL-адреса (по умолчанию: стандартная кодировка)'
+    zh: URL 编码（默认：标准编码）
+  Base64Usage:
+    ar: قم بتشفير/فك تشفير قيمة base64 أو stdin وإخراجها إلى stdout.
+    context: Usage for base64
+    de: Kodieren/dekodieren Sie einen Base64-Wert oder stdin und geben Sie ihn an
+      stdout aus.
+    en: Encode/decode a base64 value or stdin and output to stdout.
+    es: Codifique/decodifique un valor base64 o stdin y envíelo a stdout.
+    fr: Encoder/décoder une valeur base64 ou stdin et la sortir sur stdout.
+    hi: एक बेस64 मान या stdin को एनकोड/डिकोड करें और stdout पर आउटपुट करें।
+    ja: base64 値または stdin をエンコード/デコードし、stdout に出力します。
+    nl: Codeer/decodeer een base64-waarde of stdin en voer deze uit naar stdout.
+    pt: Codifique/decodifique um valor base64 ou stdin e envie para stdout.
+    ru: Закодируйте/декодируйте значение base64 или стандартный ввод и выведите его
+      на стандартный вывод.
+    zh: 对 base64 值或 stdin 进行编码/解码并输出到 stdout。
+  DecryptArg1:
+    ar: المسار المشفر أو القيمة أو - لـ stdin
+    context: First argument for decrypt
+    de: verschlüsselter Pfad, Wert oder - für stdin
+    en: encrypted path, value, or - for stdin
+    es: ruta cifrada, valor o - para stdin
+    fr: chemin chiffré, valeur ou - pour stdin
+    hi: एन्क्रिप्टेड पथ, मान, या - stdin के लिए
+    ja: 暗号化されたパス、値、または - （標準入力用）
+    nl: gecodeerd pad, waarde of - voor stdin
+    pt: caminho criptografado, valor ou - para stdin
+    ru: зашифрованный путь, значение или - для стандартного ввода
+    zh: 加密路径、值或 - 用于标准输入
+  DecryptArg2:
+    ar: حلقة مفاتيح/قيمة لاستخدامها في فك التشفير
+    context: Second argument for decrypt
+    de: Schlüsselbund/Wert zur Entschlüsselung
+    en: keyring/value to use for decrypting
+    es: llavero/valor a usar para descifrar
+    fr: trousseau/valeur à utiliser pour le décryptage
+    hi: डिक्रिप्ट करने के लिए उपयोग की जाने वाली कीरिंग/मूल्य
+    ja: 復号化に使用するキーリング/値
+    nl: sleutelhanger/waarde die moet worden gebruikt voor het decoderen
+    pt: chaveiro/valor a ser usado para descriptografar
+    ru: связка ключей/значение, используемое для расшифровки
+    zh: 用于解密的密钥环/值
+  DecryptKeysUsage:
+    ar: مصدر هذه الوسيطة باستخدام _1 لتخزين المفاتيح التي تم فك تشفيرها في الذاكرة
+      وتجنب كتابتها.
+    context: Usage for decrypt-keys
+    de: Verwenden Sie für dieses Argument die Quelle _1, um entschlüsselte Schlüssel
+      im Speicher abzulegen und deren Eingabe zu vermeiden.
+    en: Source this argument using _1 to store decrypted keys in memory and avoid
+      typing them in.
+    es: Obtenga este argumento usando _1 para almacenar claves descifradas en la memoria
+      y evite escribirlas.
+    fr: Sourcez cet argument en utilisant _1 pour stocker les clés déchiffrées en
+      mémoire et éviter de les saisir.
+    hi: इस तर्क को स्रोत के रूप में _1 का उपयोग करके डिक्रिप्ट की गई कुंजियों को मेमोरी
+      में संग्रहीत करें और उन्हें टाइप करने से बचें।
+    ja: _1 を使用してこの引数をソースすると、復号化されたキーがメモリに保存され、入力する必要がなくなります。
+    nl: Bron dit argument met behulp van _1 om gedecodeerde sleutels in het geheugen
+      op te slaan en te voorkomen dat u ze intypt.
+    pt: Obtenha este argumento usando _1 para armazenar chaves descriptografadas na
+      memória e evitar digitá-las.
+    ru: Введите этот аргумент, используя _1, чтобы сохранить расшифрованные ключи
+      в памяти и не вводить их.
+    zh: 使用 _1 作为此参数的来源，将解密的密钥存储在内存中并避免输入它们。
+  DecryptUsage:
+    ar: فك تشفير قيمة أو قم بفك قيمة KDF وطباعتها إلى stdout.
+    context: Usage for decrypt
+    de: Entschlüsseln Sie einen Wert oder entpacken Sie einen KDF-Wert und drucken
+      Sie ihn auf stdout.
+    en: Decrypt a value or unwrap a KDF value and print it to stdout.
+    es: Descifre un valor o desenvuelva un valor KDF e imprímalo en la salida estándar.
+    fr: Décryptez une valeur ou déballez une valeur KDF et imprimez-la sur la sortie
+      standard.
+    hi: किसी मान को डिक्रिप्ट करें या KDF मान को अनरैप करें और उसे stdout पर प्रिंट
+      करें।
+    ja: 値を復号化するか、KDF 値をアンラップして stdout に出力します。
+    nl: Decodeer een waarde of pak een KDF-waarde uit en druk deze af naar stdout.
+    pt: Descriptografe um valor ou desembrulhe um valor KDF e imprima-o em stdout.
+    ru: Расшифруйте значение или разверните значение KDF и выведите его на стандартный
+      вывод.
+    zh: 解密一个值或解开一个 KDF 值并将其打印到标准输出。
+  DelKeyringUsage:
+    ar: قم بإزالة حلقة المفاتيح من التكوين.
+    context: del-keyring usage
+    de: Entfernen Sie einen Schlüsselbund aus der Konfiguration.
+    en: Remove a keyring from the configuration.
+    es: Elimine un llavero de la configuración.
+    fr: Supprimez un trousseau de clés de la configuration.
+    hi: कॉन्फ़िगरेशन से एक कीरिंग निकालें.
+    ja: 構成からキーリングを削除します。
+    nl: Verwijder een sleutelhanger uit de configuratie.
+    pt: Remova um chaveiro da configuração.
+    ru: Удалите брелок из конфигурации.
+    zh: 从配置中删除密钥环。
+  DelPrvUsage:
+    ar: قم بإزالة مفتاح فك تشفير المفتاح الخاص لحلقة المفاتيح من التكوين.
+    context: del-prv usage
+    de: Entfernen Sie einen privaten Entschlüsselungsschlüssel für einen Schlüsselbund
+      aus der Konfiguration.
+    en: Remove a Decrypt Key Private Key for a Keyring from the configuration.
+    es: Elimine una clave privada de clave de descifrado para un conjunto de claves
+      de la configuración.
+    fr: Supprimez une clé privée de clé de déchiffrement pour un trousseau de clés
+      de la configuration.
+    hi: कॉन्फ़िगरेशन से कीरिंग के लिए डिक्रिप्ट कुंजी निजी कुंजी निकालें।
+    ja: 構成からキーリングの復号化キーの秘密キーを削除します。
+    nl: Verwijder een privésleutel voor een decryptiesleutel voor een sleutelhanger
+      uit de configuratie.
+    pt: Remova uma chave privada de descriptografia para um chaveiro da configuração.
+    ru: Удалите закрытый ключ расшифровки для связки ключей из конфигурации.
+    zh: 从配置中删除密钥环的解密密钥私钥。
+  DelPubUsage:
+    ar: قم بإزالة مفتاح فك التشفير من التكوين.
+    context: del-pub usage
+    de: Entfernen Sie einen Entschlüsselungsschlüssel aus der Konfiguration.
+    en: Remove a Decrypt Key from the configuration.
+    es: Elimine una clave de descifrado de la configuración.
+    fr: Supprimez une clé de déchiffrement de la configuration.
+    hi: कॉन्फ़िगरेशन से डिक्रिप्ट कुंजी निकालें.
+    ja: 構成から復号化キーを削除します。
+    nl: Verwijder een decoderingssleutel uit de configuratie.
+    pt: Remova uma chave de descriptografia da configuração.
+    ru: Удалите ключ расшифровки из конфигурации.
+    zh: 从配置中删除解密密钥。
+  DelValueUsage:
+    ar: إزالة قيمة من التكوين.
+    context: del-val usage
+    de: Entfernen Sie einen Wert aus der Konfiguration.
+    en: Remove a Value from the configuration.
+    es: Eliminar un valor de la configuración.
+    fr: Supprimez une valeur de la configuration.
+    hi: कॉन्फ़िगरेशन से मान निकालें.
+    ja: 構成から値を削除します。
+    nl: Verwijder een waarde uit de configuratie.
+    pt: Remova um valor da configuração.
+    ru: Удалите значение из конфигурации.
+    zh: 从配置中删除一个值。
+  Delimiter:
+    ar: محدد
+    context: A delimiter
+    de: Trennzeichen
+    en: delimiter
+    es: delimitador
+    fr: délimiteur
+    hi: परिसीमक
+    ja: デリミタ
+    nl: scheidingsteken
+    pt: delimitador
+    ru: разделитель
+    zh: 分隔符
+  DelimiterUsage:
+    ar: محدد القيمة
+    context: A delimiter usage
+    de: Wertetrennzeichen
+    en: Value delimiter
+    es: Delimitador de valor
+    fr: Délimiteur de valeur
+    hi: मान सीमांकक
+    ja: 値の区切り文字
+    nl: Waardescheidingsteken
+    pt: Delimitador de valor
+    ru: Разделитель значений
+    zh: 值分隔符
+  Description:
+    ar: إدارة الأسرار الآمنة لمسؤول النظام الحديث
+    context: Rot description
+    de: Sicheres Geheimnismanagement für den modernen Systemadministrator
+    en: Secure Secrets Management for the Modern Sysadmin
+    es: Gestión segura de secretos para el administrador de sistemas moderno
+    fr: Gestion sécurisée des secrets pour l&#39;administrateur système moderne
+    hi: आधुनिक सिस्टम एडमिनिस्ट्रेशन के लिए सुरक्षित गोपनीयता प्रबंधन
+    ja: 現代のシステム管理者のための安全な秘密管理
+    nl: Veilig geheimbeheer voor de moderne systeembeheerder
+    pt: Gerenciamento seguro de segredos para o administrador de sistemas moderno
+    ru: Безопасное управление секретами для современного системного администратора
+    zh: 为现代系统管理员提供安全机密管理
+  EditArg:
+    ar: 'المحرر الافتراضي: $EDITOR أو vi'
+    context: Optional argument for edit
+    de: 'Editor, Standard: $EDITOR oder vi'
+    en: 'editor, default: $EDITOR or vi'
+    es: 'editor, predeterminado: $EDITOR o vi'
+    fr: 'éditeur, par défaut: $EDITOR ou vi'
+    hi: 'संपादक, डिफ़ॉल्ट: $EDITOR या vi'
+    ja: 'エディタ、デフォルト: $EDITOR または vi'
+    nl: 'editor, standaard: $EDITOR of vi'
+    pt: 'editor, padrão: $EDITOR ou vi'
+    ru: 'редактор, по умолчанию: $EDITOR или vi'
+    zh: 编辑器，默认：$EDITOR 或 vi
+  EditFlagsPPlaceholder:
+    ar: طريق
+    context: Placeholder for edit -p
+    de: Weg
+    en: Path
+    es: Camino
+    fr: Chemin
+    hi: पथ
+    ja: パス
+    nl: Pad
+    pt: Caminho
+    ru: Путь
+    zh: 小路
+  EditFlagsPUsage:
+    ar: قم بتعيين المسار إلى الملف المؤقت الذي يحتوي على الأسرار. يجب أن تكون قابلة
+      للكتابة. قد يفكر في استخدام قرص ذاكرة الوصول العشوائي (RAM) للاحتفاظ بالأسرار
+      في الذاكرة.
+    context: Usage for edit -p
+    de: Legen Sie den Pfad zur temporären Datei fest, die die Geheimnisse enthält.
+      Muss beschreibbar sein. Sie können eine RAM-Disk verwenden, um Geheimnisse im
+      Speicher zu behalten.
+    en: Set the path to the temporary file holding the secrets.  Must be writable.  May
+      consider using a RAM disk to keep secrets in memory.
+    es: Establezca la ruta al archivo temporal que contiene los secretos. Debe poder
+      escribirse. Puede considerar usar un disco RAM para guardar secretos en la memoria.
+    fr: Définissez le chemin d&#39;accès au fichier temporaire contenant les secrets.
+      Doit être inscriptible. Peut envisager d&#39;utiliser un disque RAM pour garder
+      les secrets en mémoire.
+    hi: गुप्त जानकारी रखने वाली अस्थायी फ़ाइल का पथ सेट करें। लिखने योग्य होना चाहिए।
+      मेमोरी में गुप्त जानकारी रखने के लिए RAM डिस्क का उपयोग करने पर विचार किया जा
+      सकता है।
+    ja: 秘密を保持する一時ファイルへのパスを設定します。書き込み可能である必要があります。秘密をメモリ内に保持するには、RAM ディスクの使用を検討してください。
+    nl: Stel het pad in naar het tijdelijke bestand dat de geheimen bevat. Moet beschrijfbaar
+      zijn. Kan overwegen een RAM-schijf te gebruiken om geheimen in het geheugen
+      te bewaren.
+    pt: Defina o caminho para o arquivo temporário que contém os segredos. Deve ser
+      gravável. Pode considerar o uso de um disco RAM para manter segredos na memória.
+    ru: Укажите путь к временному файлу, содержащему секреты. Должно быть доступно
+      для записи. Можно рассмотреть возможность использования RAM-диска для хранения
+      секретов в памяти.
+    zh: 设置保存机密的临时文件的路径。必须可写。可以考虑使用 RAM 磁盘将机密保存在内存中。
+  EditUsage:
+    ar: تحرير قيم Keyring التي تم فك تشفيرها باستخدام Jsonnet. عند الحفظ، سيتم التوفيق
+      بين القيم المضافة أو المتغيرة أو المحذوفة مع حلقة المفاتيح.
+    context: Usage for edit
+    de: Bearbeiten Sie entschlüsselte Schlüsselbundwerte mit Jsonnet. Beim Speichern
+      werden die hinzugefügten, geänderten oder entfernten Werte mit dem Schlüsselbund
+      abgeglichen.
+    en: Edit decrypted Keyring Values using Jsonnet.  Upon save, will reconcile the
+      added, changed, or removed values with the Keyring.
+    es: Edite los valores del llavero descifrados utilizando Jsonnet. Al guardar,
+      conciliará los valores agregados, modificados o eliminados con el llavero.
+    fr: Modifiez les valeurs du trousseau de clés déchiffrées à l&#39;aide de Jsonnet.
+      Lors de l&#39;enregistrement, réconciliera les valeurs ajoutées, modifiées ou
+      supprimées avec le trousseau de clés.
+    hi: Jsonnet का उपयोग करके डिक्रिप्ट किए गए कीरिंग मानों को संपादित करें। सहेजने
+      पर, जोड़े गए, बदले गए या हटाए गए मानों को कीरिंग के साथ मिला दिया जाएगा।
+    ja: Jsonnet を使用して、復号化されたキーリング値を編集します。保存すると、追加、変更、または削除された値がキーリングと調整されます。
+    nl: Bewerk gedecodeerde sleutelringwaarden met Jsonnet. Bij het opslaan worden
+      de toegevoegde, gewijzigde of verwijderde waarden afgestemd op de sleutelhanger.
+    pt: Edite valores de keyring descriptografados usando Jsonnet. Ao salvar, reconciliará
+      os valores adicionados, alterados ou removidos com o chaveiro.
+    ru: Отредактируйте расшифрованные значения ключей с помощью Jsonnet. После сохранения
+      согласует добавленные, измененные или удаленные значения со связкой ключей.
+    zh: 使用 Jsonnet 编辑解密的 Keyring 值。保存后，将使添加、更改或删除的值与 Keyring 保持一致。
+  EncryptArg:
+    ar: مفتاح المستلم أو حلقة المفاتيح/القيمة، اختيارية
+    context: Argument for encrypt
+    de: Empfängerschlüssel oder Schlüsselbund/Wert, optional
+    en: recipient key or keyring/value, optional
+    es: clave del destinatario o llavero/valor, opcional
+    fr: clé du destinataire ou porte-clés/valeur, facultatif
+    hi: प्राप्तकर्ता कुंजी या कीरिंग/मूल्य, वैकल्पिक
+    ja: 受信者のキーまたはキーリング/値（オプション）
+    nl: sleutel van de ontvanger of sleutelhanger/waarde, optioneel
+    pt: chave do destinatário ou chaveiro/valor, opcional
+    ru: ключ получателя или брелок/значение, необязательно
+    zh: 收件人密钥或密钥环/值，可选
+  EncryptUsage:
+    ar: قم بتشفير القيمة وطباعتها إلى stdout. يمكن تحديد مفتاح المستلم أو مسار المفاتيح/القيمة
+      (مع تعريف المفتاح العام) لاستخدام التشفير غير المتماثل.
+    context: Usage for encrypt
+    de: Verschlüsseln Sie einen Wert und drucken Sie ihn auf stdout. Sie können einen
+      Empfängerschlüssel oder einen Schlüsselbund/Wertpfad (mit publicKey-Metadaten)
+      angeben, um asymmetrische Verschlüsselung zu verwenden.
+    en: Encrypt a value and print it to stdout.  Can specify a recipient key or keyring/value
+      path (with publicKey meta) to use asymmetric encryption.
+    es: Cifre un valor e imprímalo en la salida estándar. Puede especificar una clave
+      de destinatario o una ruta de conjunto de claves/valor (con meta de clave pública)
+      para utilizar cifrado asimétrico.
+    fr: Chiffrez une valeur et imprimez-la sur la sortie standard. Peut spécifier
+      une clé de destinataire ou un chemin de trousseau/valeur (avec la méta publicKey)
+      pour utiliser le chiffrement asymétrique.
+    hi: मान एन्क्रिप्ट करें और इसे stdout पर प्रिंट करें। असममित एन्क्रिप्शन का उपयोग
+      करने के लिए प्राप्तकर्ता कुंजी या कीरिंग/मान पथ (publicKey मेटा के साथ) निर्दिष्ट
+      कर सकते हैं।
+    ja: 値を暗号化し、stdout に出力します。非対称暗号化を使用するには、受信者キーまたはキーリング/値パス (publicKey メタを使用) を指定できます。
+    nl: Versleutel een waarde en druk deze af naar stdout. Kan een sleutel van de
+      ontvanger of een sleutelhanger/waardepad (met publicKey-meta) opgeven om asymmetrische
+      versleuteling te gebruiken.
+    pt: Criptografe um valor e imprima-o em stdout. Pode especificar uma chave de
+      destinatário ou caminho de chaveiro/valor (com meta publicKey) para usar criptografia
+      assimétrica.
+    ru: Зашифруйте значение и выведите его на стандартный вывод. Можно указать ключ
+      получателя или путь к набору ключей/значений (с мета-данными publicKey) для
+      использования асимметричного шифрования.
+    zh: 加密一个值并将其打印到标准输出。可以指定接收方密钥或密钥环/值路径（使用 publicKey 元数据）以使用非对称加密。
+  InitArg2:
+    ar: 'المفتاح العام الأولي، اسم المفتاح أو معرف المفتاح الموجود (الافتراضي: إنشاء
+      مفتاح متماثل جديد لـ PBKDF)'
+    context: 2nd argument for init
+    de: 'anfänglicher öffentlicher Schlüssel, Schlüsselname oder ID eines vorhandenen
+      Schlüssels (Standard: einen neuen symmetrischen PBKDF-Schlüssel generieren)'
+    en: 'initial public key, key name or id of an existing key (default: generate
+      a new PBKDF symmetric key)'
+    es: 'clave pública inicial, nombre de clave o identificación de una clave existente
+      (predeterminado: generar una nueva clave simétrica PBKDF)'
+    fr: 'clé publique initiale, nom de clé ou identifiant d&#39;une clé existante
+      (par défaut: générer une nouvelle clé symétrique PBKDF)'
+    hi: 'प्रारंभिक सार्वजनिक कुंजी, कुंजी नाम या मौजूदा कुंजी की आईडी (डिफ़ॉल्ट: एक
+      नई PBKDF सममित कुंजी उत्पन्न करें)'
+    ja: '初期公開鍵、既存の鍵の名前または ID (デフォルト: 新しい PBKDF 対称鍵を生成)'
+    nl: 'initiële publieke sleutel, sleutelnaam of ID van een bestaande sleutel (standaard:
+      genereer een nieuwe PBKDF symmetrische sleutel)'
+    pt: 'chave pública inicial, nome da chave ou id de uma chave existente (padrão:
+      gerar uma nova chave simétrica PBKDF)'
+    ru: 'исходный открытый ключ, имя ключа или идентификатор существующего ключа (по
+      умолчанию: создать новый симметричный ключ PBKDF)'
+    zh: 初始公钥、密钥名称或现有密钥的 ID（默认：生成新的 PBKDF 对称密钥）
+  InitFlagsEUsage:
+    ar: تشفير أسماء قيمة Keyring وبيانات التعريف
+    context: init -e flag
+    de: Schlüsselbundwertnamen und Metadaten verschlüsseln
+    en: Encrypt Keyring Value names and metadata
+    es: Cifrar nombres y metadatos de valores de llavero
+    fr: Chiffrer les noms et métadonnées des valeurs du trousseau de clés
+    hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
+    ja: キーリング値の名前とメタデータを暗号化する
+    nl: Versleutel sleutelhangerwaardenamen en metagegevens
+    pt: Criptografar nomes e metadados de valores de chaveiro
+    ru: Шифровать имена и метаданные значений ключей
+    zh: 加密密钥环值名称和元数据
+  InitUsage:
+    ar: تهيئة تكوين Rot جديد. سيبحث عن ملف _1 ويستخدم أول مفتاح متاح إذا لم يتم تحديد
+      أي مفتاح كمفتاح المستخدم الأولي.
+    context: Init usage
+    de: Initialisiert eine neue Rot-Konfiguration. Sucht nach einer _1-Datei und verwendet
+      den ersten verfügbaren Schlüssel, wenn keiner als anfänglicher Benutzerschlüssel
+      angegeben ist.
+    en: Initialize a new Rot configuration.  Will look for a _1 file and use the first
+      available key if none specified as the initial user key.
+    es: Inicialice una nueva configuración de Rot. Buscará un archivo _1 y utilizará
+      la primera clave disponible si no se especifica ninguna como clave de usuario
+      inicial.
+    fr: Initialisez une nouvelle configuration Rot. Recherchera un fichier _1 et utilisera
+      la première clé disponible si aucune n&#39;est spécifiée comme clé utilisateur
+      initiale.
+    hi: एक नया Rot कॉन्फ़िगरेशन आरंभ करें। _1 फ़ाइल की तलाश करेगा और यदि आरंभिक उपयोगकर्ता
+      कुंजी के रूप में कोई निर्दिष्ट नहीं है, तो पहली उपलब्ध कुंजी का उपयोग करेगा।
+    ja: 新しい Rot 構成を初期化します。_1 ファイルを検索し、初期ユーザー キーとして指定されていない場合は、使用可能な最初のキーを使用します。
+    nl: Initialiseer een nieuwe Rot-configuratie. Zoekt naar een _1-bestand en gebruikt
+      de eerste beschikbare sleutel als er geen is opgegeven als de initiële gebruikerssleutel.
+    pt: Inicialize uma nova configuração do Rot. Procurará um arquivo _1 e usará a
+      primeira chave disponível se nenhuma for especificada como chave de usuário
+      inicial.
+    ru: Инициализируйте новую конфигурацию Rot. Будет искать файл _1 и использовать
+      первый доступный ключ, если ни один не указан в качестве исходного пользовательского
+      ключа.
+    zh: 初始化新的 Rot 配置。将查找 _1 文件，如果未指定任何可用密钥，则使用第一个可用密钥作为初始用户密钥。
+  JWTDisArg1:
+    ar: JWT، أو - لـ stdin
+    context: Arg 1 for jwt-dis
+    de: JWT oder - für stdin
+    en: JWT, or - for stdin
+    es: JWT, o - para entrada estándar
+    fr: JWT, ou - pour stdin
+    hi: JWT, या - stdin के लिए
+    ja: JWT、またはstdinの場合は-
+    nl: JWT, of - voor stdin
+    pt: JWT, ou - para stdin
+    ru: JWT или - для стандартного ввода
+    zh: JWT，或 - 用于 stdin
+  JWTDisArg2:
+    ar: قيمة المفتاح العام، أو حلقة المفاتيح/الاسم، أو المسار. يمكن تحديدها عدة مرات
+    context: Arg 2 for jwt-dis
+    de: öffentlicher Schlüsselwert, Schlüsselbund/Name oder Pfad. Kann mehrfach angegeben
+      werden
+    en: public key value, keyring/name, or path.  Can be specified multiple times
+    es: valor de clave pública, conjunto de claves/nombre o ruta. Se puede especificar
+      varias veces
+    fr: valeur de clé publique, trousseau/nom ou chemin. Peut être spécifié plusieurs
+      fois
+    hi: सार्वजनिक कुंजी मान, कीरिंग/नाम, या पथ। कई बार निर्दिष्ट किया जा सकता है
+    ja: 公開鍵の値、キーリング/名前、またはパス。複数回指定できます
+    nl: openbare sleutelwaarde, sleutelhanger/naam of pad. Kan meerdere keren worden
+      opgegeven
+    pt: valor de chave pública, chaveiro/nome ou caminho. Pode ser especificado várias
+      vezes
+    ru: Значение открытого ключа, связка ключей/имя или путь. Можно указать несколько
+      раз
+    zh: 公钥值、密钥环/名称或路径。可以指定多次
+  JWTDisUsage:
+    ar: إظهار JWT، والتحقق من صحة التوقيع اختياريًا باستخدام مفتاح عام.
+    context: jwt-dis usage
+    de: Zeigen Sie ein JWT an und validieren Sie die Signatur optional mit einem öffentlichen
+      Schlüssel.
+    en: Show a JWT, optionally validating the signature with a public key.
+    es: Mostrar un JWT, validando opcionalmente la firma con una clave pública.
+    fr: Afficher un JWT, en validant éventuellement la signature avec une clé publique.
+    hi: एक JWT दिखाएँ, वैकल्पिक रूप से सार्वजनिक कुंजी के साथ हस्ताक्षर को मान्य करें।
+    ja: JWT を表示し、オプションで公開キーを使用して署名を検証します。
+    nl: Toon een JWT, waarbij optioneel de handtekening wordt gevalideerd met een
+      openbare sleutel.
+    pt: Mostre um JWT, validando opcionalmente a assinatura com uma chave pública.
+    ru: Покажите JWT, при необходимости проверив подпись с помощью открытого ключа.
+    zh: 显示 JWT，可选择使用公钥验证签名。
+  JWTNewFlagsAPlaceholder:
+    ar: جمهور
+    context: jwt-new -a Placeholder
+    de: Publikum
+    en: audience
+    es: audiencia
+    fr: public
+    hi: श्रोता
+    ja: 観客
+    nl: publiek
+    pt: público
+    ru: аудитория
+    zh: 观众
+  JWTNewFlagsAUsage:
+    ar: الجمهور (_1) لـ JWT. يمكن تقديمها عدة مرات
+    context: jwt-new -a Usage
+    de: Zielgruppe (_1) für JWT. Kann mehrfach angegeben werden
+    en: Audience (_1) for JWT.  Can be provided multiple times
+    es: Audiencia (_1) para JWT. Se puede proporcionar varias veces
+    fr: Audience (_1) pour JWT. Peut être fourni plusieurs fois
+    hi: JWT के लिए दर्शक (_1)। कई बार प्रदान किया जा सकता है
+    ja: JWT のオーディエンス (_1)。複数回指定できます。
+    nl: Doelgroep (_1) voor JWT. Kan meerdere keren verstrekt worden
+    pt: Público (_1) para JWT. Pode ser fornecido várias vezes
+    ru: Аудитория (_1) для JWT. Можно предоставлять несколько раз
+    zh: JWT 的受众（_1）。可以多次提供
+  JWTNewFlagsEUsage:
+    ar: انتهاء الصلاحية (_1) بالثواني
+    context: jwt-new -e Usage
+    de: Ablauf (_1) in Sekunden
+    en: Expiration (_1) in seconds
+    es: Vencimiento (_1) en segundos
+    fr: Expiration (_1) en secondes
+    hi: समाप्ति (_1) सेकंड में
+    ja: 有効期限 (_1) 秒
+    nl: Vervaldatum (_1) in seconden
+    pt: Expiração (_1) em segundos
+    ru: Срок действия (_1) в секундах
+    zh: 到期时间（_1）以秒为单位
+  JWTNewFlagsFUsage:
+    ar: أضف مفتاحًا وقيمة إلى JWT. سيحاول تحليل bools و ints ما لم يتم اقتباسها. يمكن
+      تقديمها عدة مرات.
+    context: jwt-new -f Usage
+    de: Fügt dem JWT einen Schlüssel und einen Wert hinzu. Versucht, boolesche und
+      intellektuelle Werte zu analysieren, sofern sie nicht in Anführungszeichen stehen.
+      Kann mehrfach angegeben werden.
+    en: Add a key and value to the JWT.  Will attempt to parse bools and ints unless
+      they are quoted.  Can be provided multiple times.
+    es: Agregue una clave y un valor al JWT. Intentará analizar bools e ints a menos
+      que estén entrecomillados. Se puede proporcionar varias veces.
+    fr: Ajoutez une clé et une valeur au JWT. Tentera d&#39;analyser les booléens
+      et les entiers à moins qu&#39;ils ne soient cités. Peut être fourni plusieurs
+      fois.
+    hi: JWT में कुंजी और मान जोड़ें। जब तक कि उन्हें उद्धृत न किया जाए, तब तक बूल
+      और इनट्स को पार्स करने का प्रयास किया जाएगा। कई बार प्रदान किया जा सकता है।
+    ja: JWT にキーと値を追加します。引用符で囲まれていない限り、bool と int を解析しようとします。複数回指定できます。
+    nl: Voeg een sleutel en waarde toe aan de JWT. Zal proberen bools en ints te ontleden,
+      tenzij ze tussen aanhalingstekens staan. Kan meerdere keren verstrekt worden.
+    pt: Adicione uma chave e um valor ao JWT. Tentará analisar bools e ints, a menos
+      que sejam citados. Pode ser fornecido várias vezes.
+    ru: Добавьте ключ и значение в JWT. Попытается проанализировать логические и целые
+      числа, если они не заключены в кавычки. Может предоставляться несколько раз.
+    zh: 向 JWT 添加键和值。将尝试解析布尔值和整数（除非它们被引用）。可以多次提供。
+  JWTNewFlagsIDPlaceholder:
+    ar: بطاقة تعريف
+    context: jwt-new -id Placeholder
+    de: Ausweis
+    en: id
+    es: identificación
+    fr: identifiant
+    hi: पहचान
+    ja: id
+    nl: ID kaart
+    pt: eu ia
+    ru: идентификатор
+    zh: ID
+  JWTNewFlagsIDUsage:
+    ar: سيقوم المعرف (_1) الخاص بـ JWT بإنشاء UUID إذا لم يتم توفيره
+    context: jwt-new -id Usage
+    de: ID (_1) des JWT, generiert eine UUID, wenn nicht angegeben
+    en: ID (_1) of the JWT, will generate a UUID if not provided
+    es: ID (_1) del JWT, generará un UUID si no se proporciona
+    fr: L&#39;ID (_1) du JWT générera un UUID s&#39;il n&#39;est pas fourni
+    hi: JWT की ID (_1), यदि प्रदान नहीं की गई है तो UUID उत्पन्न करेगी
+    ja: JWTのID（_1）。指定しない場合はUUIDが生成されます。
+    nl: ID (_1) van de JWT genereert een UUID als deze niet wordt opgegeven
+    pt: ID (_1) do JWT, irá gerar um UUID se não for fornecido
+    ru: Идентификатор (_1) JWT, будет генерировать UUID, если он не указан.
+    zh: JWT 的 ID（_1），如果未提供，将生成 UUID
+  JWTNewFlagsISPlaceholder:
+    ar: المصدر
+    context: jwt-new -is Placeholder
+    de: Aussteller
+    en: issuer
+    es: editor
+    fr: émetteur
+    hi: जारीकर्ता
+    ja: 発行者
+    nl: uitgevende instelling
+    pt: emissor
+    ru: эмитент
+    zh: 發行人
+  JWTNewFlagsISUsage:
+    ar: المُصدر (_1) لـ JWT
+    context: jwt-new -is Usage
+    de: Aussteller (_1) des JWT
+    en: Issuer (_1) of the JWT
+    es: Emisor (_1) del JWT
+    fr: Émetteur (_1) du JWT
+    hi: JWT जारीकर्ता (_1)
+    ja: JWTの発行者（_1）
+    nl: Uitgevende instelling (_1) van het JWT
+    pt: Emissor (_1) do JWT
+    ru: Эмитент (_1) JWT
+    zh: JWT 的发行者（_1）
+  JWTNewFlagsSPlaceholder:
+    ar: موضوع
+    context: jwt-new -s Placeholder
+    de: Thema
+    en: subject
+    es: sujeto
+    fr: sujet
+    hi: विषय
+    ja: 主題
+    nl: onderwerp
+    pt: assunto
+    ru: предмет
+    zh: 主题
+  JWTNewFlagsSUsage:
+    ar: الموضوع (_1) من JWT
+    context: jwt-new -s Usage
+    de: Betreff (_1) des JWT
+    en: Subject (_1) of the JWT
+    es: Asunto (_1) del JWT
+    fr: Objet (_1) du JWT
+    hi: JWT का विषय (_1)
+    ja: JWTの件名（_1）
+    nl: Onderwerp (_1) van het JWT
+    pt: Assunto (_1) do JWT
+    ru: Тема (_1) JWT
+    zh: JWT 的主题（_1）
+  JWTNewUsage:
+    ar: قم بإنشاء JWT وإخراجه إلى stdout. يجب تحديد المفتاح الخاص لتوقيع JWT.
+    context: jwt-new usage
+    de: Generieren Sie ein JWT und geben Sie es an stdout aus. Zum Signieren des JWT
+      muss der private Schlüssel angegeben werden.
+    en: Generate a JWT and output it it to stdout.  Must specify the private key to
+      sign the JWT.
+    es: Genere un JWT y envíelo a la salida estándar. Debe especificar la clave privada
+      para firmar el JWT.
+    fr: Générez un JWT et affichez-le sur la sortie standard. Doit spécifier la clé
+      privée pour signer le JWT.
+    hi: एक JWT जनरेट करें और इसे stdout पर आउटपुट करें। JWT पर हस्ताक्षर करने के लिए
+      निजी कुंजी निर्दिष्ट करना आवश्यक है।
+    ja: JWT を生成し、stdout に出力します。JWT に署名するには秘密鍵を指定する必要があります。
+    nl: Genereer een JWT en voer deze uit naar stdout. Moet de privésleutel opgeven
+      om het JWT te ondertekenen.
+    pt: Gere um JWT e envie-o para stdout. Deve especificar a chave privada para assinar
+      o JWT.
+    ru: Создайте JWT и выведите его на стандартный вывод. Необходимо указать закрытый
+      ключ для подписи JWT.
+    zh: 生成 JWT 并将其输出到 stdout。必须指定私钥来签署 JWT。
+  KeyAddArgKeyName:
+    ar: اسم المفتاح
+    context: key-add key name
+    de: Schlüsselname
+    en: key name
+    es: Nombre clave
+    fr: nom de la clé
+    hi: कुंजी नाम
+    ja: キー名
+    nl: sleutel naam
+    pt: nome da chave
+    ru: имя ключа
+    zh: 键名
+  KeyAddArgKeyringName:
+    ar: اسم حلقة المفاتيح
+    context: key-add keyring name
+    de: Schlüsselanhänger mit Name
+    en: keyring name
+    es: nombre del llavero
+    fr: nom du porte-clés
+    hi: चाबी का छल्ला नाम
+    ja: キーリング名
+    nl: sleutelhanger naam
+    pt: nome do chaveiro
+    ru: имя брелока
+    zh: 密钥环名称
+  KeyAddArgPublicKey:
+    ar: 'المفتاح العام، الافتراضي: إنشاء مفتاح غير متماثل محمي بواسطة PBKDF'
+    context: key-add public key arg
+    de: 'öffentlicher Schlüssel, Standard: Generieren Sie einen PBKDF-geschützten
+      asymmetrischen Schlüssel'
+    en: 'public key, default: generate a PBKDF-protected asymmetric key'
+    es: 'clave pública, predeterminada: generar una clave asimétrica protegida por
+      PBKDF'
+    fr: 'clé publique, par défaut: générer une clé asymétrique protégée par PBKDF'
+    hi: 'सार्वजनिक कुंजी, डिफ़ॉल्ट: PBKDF-संरक्षित असममित कुंजी उत्पन्न करें'
+    ja: '公開鍵、デフォルト: PBKDF で保護された非対称鍵を生成する'
+    nl: 'openbare sleutel, standaard: genereer een met PBKDF beveiligde asymmetrische
+      sleutel'
+    pt: 'chave pública, padrão: gerar uma chave assimétrica protegida por PBKDF'
+    ru: 'открытый ключ, по умолчанию: создать асимметричный ключ, защищенный PBKDF.'
+    zh: 公钥，默认：生成受 PBKDF 保护的非对称密钥
+  KeyAddFlagsSPlaceholder:
+    ar: تشارك
+    context: key-add -s placeholder
+    de: Anteile
+    en: shares
+    es: Comparte
+    fr: actions
+    hi: शेयरों
+    ja: シェア
+    nl: aandelen
+    pt: ações
+    ru: акции
+    zh: 分享
+  KeyAddFlagsSUsage:
+    ar: عدد أسهم شامير السرية (يبدأ هذا الإعداد حفل مفتاح مشاركة شامير السرية)
+    context: key-add -s usage
+    de: Anzahl der Shamir Secret Shares (durch Festlegen dieser Einstellung wird eine
+      Shamir Secret Share-Schlüsselzeremonie gestartet)
+    en: Number of Shamir Secret Shares (setting this start a Shamir Secret Share key
+      ceremony)
+    es: Número de Shamir Secret Shares (estableciendo esto como inicio de una ceremonia
+      de claves de Shamir Secret Share)
+    fr: Nombre de partages secrets Shamir (cela permet de démarrer une cérémonie de
+      remise des clés du partage secret Shamir)
+    hi: शमीर सीक्रेट शेयरों की संख्या (इसे सेट करने से शमीर सीक्रेट शेयर कुंजी समारोह
+      शुरू होता है)
+    ja: シャミア秘密共有の数（これを設定するとシャミア秘密共有の鍵セレモニーが開始されます）
+    nl: Aantal Shamir Secret Shares (waarmee een Shamir Secret Share-sleutelceremonie
+      wordt gestart)
+    pt: Número de Shamir Secret Shares (definindo este início de uma cerimônia de
+      chave do Shamir Secret Share)
+    ru: Количество секретных акций Шамира (настройка этого запуска церемонии вручения
+      ключей секретной акции Шамира)
+    zh: Shamir Secret Share 的数量（设置此项启动 Shamir Secret Share 密钥仪式）
+  KeyAddFlagsTPlaceholder:
+    ar: عتبة
+    context: key-add -t placeholder
+    de: Schwelle
+    en: threshold
+    es: límite
+    fr: seuil
+    hi: सीमा
+    ja: しきい値
+    nl: drempelwaarde
+    pt: limite
+    ru: порог
+    zh: 临界点
+  KeyAddFlagsTUsage:
+    ar: 'عتبة أسهم شامير السرية لاسترداد المفتاح (الافتراضي: نصف الأسهم + 1)'
+    context: key-add -t usage
+    de: 'Schwellenwert der geheimen Shamir-Freigaben zum Abrufen des Schlüssels (Standard:
+      die Hälfte der Freigaben + 1)'
+    en: 'Threshold of Shamir Secret Shares to retrieve key (default: half of shares
+      + 1)'
+    es: 'Umbral de acciones secretas de Shamir para recuperar la clave (predeterminado:
+      la mitad de las acciones + 1)'
+    fr: 'Seuil de partages secrets Shamir pour récupérer la clé (par défaut: la moitié
+      des partages + 1)'
+    hi: 'कुंजी प्राप्त करने के लिए शमीर सीक्रेट शेयरों की सीमा (डिफ़ॉल्ट: शेयरों का
+      आधा + 1)'
+    ja: 'キーを取得するためのシャミア秘密シェアのしきい値（デフォルト: シェアの半分 + 1）'
+    nl: 'Drempel van geheime Shamir-aandelen om sleutel op te halen (standaard: helft
+      van aandelen + 1)'
+    pt: 'Limite de compartilhamentos secretos de Shamir para recuperar a chave (padrão:
+      metade dos compartilhamentos + 1)'
+    ru: 'Порог секретных акций Шамира для получения ключа (по умолчанию: половина
+      акций + 1)'
+    zh: 检索密钥的 Shamir 秘密份额的阈值（默认值：一半份额 + 1）
+  KeyAddUsagePrivate:
+    ar: قم بإضافة مفتاح فك تشفير موجود إلى حلقة المفاتيح.
+    context: key-add usage private
+    de: Fügen Sie einem Schlüsselbund einen vorhandenen Entschlüsselungsschlüssel
+      hinzu.
+    en: Add an existing Decrypt Key to a Keyring.
+    es: Agregue una clave de descifrado existente a un conjunto de claves.
+    fr: Ajoutez une clé de déchiffrement existante à un trousseau de clés.
+    hi: किसी मौजूदा डिक्रिप्ट कुंजी को कीरिंग में जोड़ें.
+    ja: 既存の復号化キーをキーリングに追加します。
+    nl: Voeg een bestaande decoderingssleutel toe aan een sleutelhanger.
+    pt: Adicione uma chave de descriptografia existente a um chaveiro.
+    ru: Добавьте существующий ключ расшифровки в связку ключей.
+    zh: 将现有的解密密钥添加到密钥环。
+  KeyAddUsagePublic:
+    ar: أضف مفتاحًا جديدًا أو موجودًا إلى فك تشفير المفاتيح.
+    context: key-add usage public
+    de: Fügen Sie den Entschlüsselungsschlüsseln einen neuen oder vorhandenen Schlüssel
+      hinzu.
+    en: Add a new or existing key to Decrypt Keys.
+    es: Agregue una clave nueva o existente a Decrypt Keys.
+    fr: Ajoutez une clé nouvelle ou existante à Decrypt Keys.
+    hi: डिक्रिप्ट कुंजी में एक नई या मौजूदा कुंजी जोड़ें।
+    ja: 復号化キーに新しいキーまたは既存のキーを追加します。
+    nl: Voeg een nieuwe of bestaande sleutel toe aan Sleutels decoderen.
+    pt: Adicione uma chave nova ou existente às chaves de descriptografia.
+    ru: Добавьте новый или существующий ключ в Decrypt Keys.
+    zh: 添加新密钥或现有密钥来解密密钥。
+  KeyDisPubArg:
+    ar: الاسم أو المفتاح الخاص أو حلقة المفاتيح/القيمة أو - لـ stdin
+    context: key-dis-pub arg
+    de: Name, privater Schlüssel, Schlüsselbund/Wert oder - für Standardeingabe
+    en: name, private key, keyring/value or - for stdin
+    es: nombre, clave privada, conjunto de claves/valor o - para stdin
+    fr: nom, clé privée, trousseau/valeur ou - pour stdin
+    hi: नाम, निजी कुंजी, कीरिंग/मूल्य या - stdin के लिए
+    ja: 名前、秘密鍵、キーリング/値、または - （標準入力用）
+    nl: naam, privésleutel, sleutelhanger/waarde of - voor stdin
+    pt: nome, chave privada, chaveiro/valor ou - para stdin
+    ru: имя, закрытый ключ, связка ключей/значение или - для стандартного ввода
+    zh: 名称、私钥、密钥环/值或 - 用于标准输入
+  KeyDisPubUsage:
+    ar: عرض المفتاح العام للمفتاح الخاص.
+    context: key-dis-pub usage
+    de: Den öffentlichen Schlüssel eines privaten Schlüssels anzeigen.
+    en: Display the public key of a private key.
+    es: Muestra la clave pública de una clave privada.
+    fr: Afficher la clé publique d&#39;une clé privée.
+    hi: निजी कुंजी की सार्वजनिक कुंजी प्रदर्शित करें.
+    ja: 秘密鍵の公開鍵を表示します。
+    nl: Geef de openbare sleutel van een privésleutel weer.
+    pt: Exiba a chave pública de uma chave privada.
+    ru: Отображение открытого ключа закрытого ключа.
+    zh: 显示私钥的公钥。
+  KeyDisUsage:
+    ar: عرض تفاصيل حول _1
+    context: key-dis usage
+    de: Details zu einem _1 anzeigen
+    en: Display details about a _1
+    es: Mostrar detalles sobre un _1
+    fr: Afficher les détails d&#39;un _1
+    hi: _1 के बारे में विवरण प्रदर्शित करें
+    ja: _1 の詳細を表示する
+    nl: Details weergeven over een _1
+    pt: Exibir detalhes sobre um _1
+    ru: Отображение сведений о _1
+    zh: 显示有关_1的详细信息
+  Keyring:
+    ar: حلقة مفاتيح
+    context: A keyring
+    de: Schlüsselbund
+    en: keyring
+    es: llavero
+    fr: porte-clés
+    hi: चाभी का छल्ला
+    ja: キーホルダー
+    nl: sleutelhanger
+    pt: chaveiro
+    ru: брелок для ключей
+    zh: 钥匙圈
+  KeyringAddArg2:
+    ar: فك تشفير أسماء المفاتيح
+    context: keyring-add arg2
+    de: Schlüsselnamen entschlüsseln
+    en: decrypt key names
+    es: descifrar nombres de claves
+    fr: décrypter les noms de clés
+    hi: कुंजी नामों को डिक्रिप्ट करें
+    ja: キー名を復号化する
+    nl: sleutelnamen ontsleutelen
+    pt: descriptografar nomes de chaves
+    ru: расшифровать имена ключей
+    zh: 解密密钥名称
+  KeyringAddFlagsEUsage:
+    ar: تشفير أسماء قيمة Keyring وبيانات التعريف
+    context: keyring-add -e usage
+    de: Schlüsselbundwertnamen und Metadaten verschlüsseln
+    en: Encrypt Keyring Value names and metadata
+    es: Cifrar nombres y metadatos de valores de llavero
+    fr: Chiffrer les noms et métadonnées des valeurs du trousseau de clés
+    hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
+    ja: キーリング値の名前とメタデータを暗号化する
+    nl: Versleutel sleutelhangerwaardenamen en metagegevens
+    pt: Criptografar nomes e metadados de valores de chaveiro
+    ru: Шифрование имен значений ключей и метаданных
+    zh: 加密密钥环值名称和元数据
+  KeyringAddUsage:
+    ar: أضف حلقة مفاتيح جديدة أو قم بتعديل حلقة مفاتيح موجودة وامنح مفاتيح فك التشفير
+      المتوفرة حق الوصول إليها.
+    context: keyring-add usage
+    de: Fügen Sie einen neuen Schlüsselbund hinzu oder ändern Sie einen vorhandenen
+      und gewähren Sie den bereitgestellten Entschlüsselungsschlüsseln Zugriff darauf.
+    en: Add a new or modify an existing Keyring and give the provided Decrypt Keys
+      access to it.
+    es: Agregue un conjunto de claves nuevo o modifique uno existente y otorgue acceso
+      a él a las claves de descifrado proporcionadas.
+    fr: Ajoutez un nouveau trousseau de clés ou modifiez un trousseau existant et
+      donnez-y accès aux clés de décryptage fournies.
+    hi: एक नया कीरिंग जोड़ें या मौजूदा कीरिंग को संशोधित करें और प्रदान की गई डिक्रिप्ट
+      कुंजियों को उस तक पहुंच प्रदान करें।
+    ja: 新しいキーリングを追加するか、既存のキーリングを変更し、提供された復号化キーにそのキーリングへのアクセス権を付与します。
+    nl: Voeg een nieuwe toe of wijzig een bestaande sleutelhanger en geef de meegeleverde
+      decoderingssleutels er toegang toe.
+    pt: Adicione um novo ou modifique um chaveiro existente e conceda acesso a ele
+      às chaves de descriptografia fornecidas.
+    ru: Добавьте новый или измените существующий набор ключей и предоставьте доступ
+      к нему предоставленным ключам расшифровки.
+    zh: 添加新的或修改现有的密钥环，并授予提供的解密密钥访问它的权限。
+  KeyringName:
+    ar: 'اسم حلقة المفاتيح (الافتراضي: _1)'
+    context: A keyring name value
+    de: 'Schlüsselbundname (Standard: _1)'
+    en: 'keyring name (default: _1)'
+    es: 'nombre del llavero (predeterminado: _1)'
+    fr: 'nom du trousseau (par défaut: _1)'
+    hi: 'कीरिंग नाम (डिफ़ॉल्ट: _1)'
+    ja: 'キーリング名 (デフォルト: _1)'
+    nl: 'naam sleutelhanger (standaard: _1)'
+    pt: 'nome do chaveiro (padrão: _1)'
+    ru: 'имя брелока (по умолчанию: _1)'
+    zh: 密钥环名称（默认值：_1）
+  KeyringRekeyUsage:
+    ar: أعد كتابة جميع المفاتيح والقيم في حلقة المفاتيح.
+    context: keyring-rekey usage
+    de: Alle Schlüssel und Werte in einem Schlüsselbund neu kodieren.
+    en: Rekey all Keys and Values in a Keyring.
+    es: Vuelva a introducir todas las claves y valores en un llavero.
+    fr: Retapez toutes les clés et valeurs d&#39;un trousseau de clés.
+    hi: कुंजी रिंग में सभी कुंजियों और मानों को पुनः दर्ज करें।
+    ja: キーリング内のすべてのキーと値を再キー化します。
+    nl: Hersleutel alle sleutels en waarden in een sleutelhanger.
+    pt: Redigite todas as chaves e valores em um chaveiro.
+    ru: Замените все ключи и значения в связке ключей.
+    zh: 重新设置密钥环中的所有键和值。
+  KeyringValue:
+    ar: كيرينغ/القيمة
+    context: A keyring or value
+    de: Schlüsselring/Wert
+    en: keyring/value
+    es: llavero/valor
+    fr: porte-clés/valeur
+    hi: कीरिंग/मूल्य
+    ja: キーリング/値
+    nl: sleutelhanger/waarde
+    pt: chaveiro/valor
+    ru: брелок/значение
+    zh: 密钥环/值
+  LstFlagsNUsage:
+    ar: طباعة الأسماء/المسارات فقط
+    context: lst -n usage
+    de: Nur die Namen/Pfade drucken
+    en: Print only the names/paths
+    es: Imprime solo los nombres/rutas
+    fr: Imprimer uniquement les noms/chemins
+    hi: केवल नाम/पथ प्रिंट करें
+    ja: 名前/パスのみを印刷する
+    nl: Druk alleen de namen/paden af
+    pt: Imprima apenas os nomes/caminhos
+    ru: Распечатать только имена/пути
+    zh: 仅打印名称/路径
+  LstKeyArg1:
+    ar: مرشح regexp لأسماء حلقة المفاتيح
+    context: key-lst arg1
+    de: Regexp-Filter für Schlüsselbundnamen
+    en: regexp filter for keyring names
+    es: filtro de expresiones regulares para nombres de llaveros
+    fr: filtre d&#39;expression rationnelle pour les noms de trousseaux de clés
+    hi: कीरिंग नामों के लिए regexp फ़िल्टर
+    ja: キーリング名の正規表現フィルター
+    nl: regexp-filter voor sleutelhangernamen
+    pt: filtro regexp para nomes de chaveiros
+    ru: фильтр регулярных выражений для имен связок ключей
+    zh: 密钥环名称的正则表达式过滤器
+  LstKeyUsage:
+    ar: قائمة المفاتيح في التكوين
+    context: key-lst usage
+    de: Auflisten von Schlüsseln in einer Konfiguration
+    en: List Keys in a configuration
+    es: Listar claves en una configuración
+    fr: Liste des clés dans une configuration
+    hi: कॉन्फ़िगरेशन में कुंजियाँ सूचीबद्ध करें
+    ja: 構成内のキーを一覧表示する
+    nl: Lijst met sleutels in een configuratie
+    pt: Listar chaves em uma configuração
+    ru: Список ключей в конфигурации
+    zh: 列出配置中的键
+  LstKeyringUsage:
+    ar: قائمة Keyrings في التكوين
+    context: keyring-lst usage
+    de: Schlüsselbunde in einer Konfiguration auflisten
+    en: List Keyrings in a configuration
+    es: Listar llaveros en una configuración
+    fr: Répertorier les trousseaux de clés dans une configuration
+    hi: कॉन्फ़िगरेशन में कीरिंग की सूची बनाएँ
+    ja: 構成内のキーリングを一覧表示する
+    nl: Lijst met sleutelhangers in een configuratie
+    pt: Listar chaveiros em uma configuração
+    ru: Список брелоков в конфигурации
+    zh: 列出配置中的密钥环
+  LstValArg1:
+    ar: مرشح regexp للقيم
+    context: val-lst arg1
+    de: Regexp-Filter für Werte
+    en: regexp filter for values
+    es: filtro de expresiones regulares para valores
+    fr: filtre d&#39;expression rationnelle pour les valeurs
+    hi: मानों के लिए regexp फ़िल्टर
+    ja: 値の正規表現フィルタ
+    nl: regexp-filter voor waarden
+    pt: filtro regexp para valores
+    ru: фильтр регулярных выражений для значений
+    zh: 正则表达式过滤值
+  LstValUsage:
+    ar: قائمة القيم في التكوين
+    context: val-lst usage
+    de: Auflisten von Werten in einer Konfiguration
+    en: List Values in a configuration
+    es: Listar valores en una configuración
+    fr: Liste des valeurs dans une configuration
+    hi: कॉन्फ़िगरेशन में मान सूचीबद्ध करें
+    ja: 構成内の値をリストする
+    nl: Lijstwaarden in een configuratie
+    pt: Listar valores em uma configuração
+    ru: Список значений в конфигурации
+    zh: 列出配置中的值
+  PEMArg:
+    ar: المفتاح، أو - لـ stdin
+    context: pem arg
+    de: Taste, oder - für stdin
+    en: key, or - for stdin
+    es: clave, o - para stdin
+    fr: clé, ou - pour stdin
+    hi: कुंजी, या - stdin के लिए
+    ja: キー、または標準入力の場合は -
+    nl: toets, of - voor stdin
+    pt: chave, ou - para stdin
+    ru: ключ, или - для стандартного ввода
+    zh: 键，或 - 用于标准输入
+  PEMFlagsIUsage:
+    ar: أضف معرفًا إلى المفتاح المستورد من PEM
+    context: pem -i usage
+    de: Fügen Sie dem aus einem PEM importierten Schlüssel eine ID hinzu
+    en: Add id to the key imported from a PEM
+    es: Agregue id a la clave importada desde un PEM
+    fr: Ajouter un identifiant à la clé importée depuis un PEM
+    hi: PEM से आयातित कुंजी में आईडी जोड़ें
+    ja: PEMからインポートされたキーにIDを追加する
+    nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een PEM
+    pt: Adicione id à chave importada de um PEM
+    ru: Добавьте идентификатор к ключу, импортированному из PEM.
+    zh: 将 ID 添加到从 PEM 导入的密钥中
+  PEMUsage:
+    ar: قم بتحويل مفاتيح _1 إلى PEM، أو مفاتيح PEM إلى _1، ثم قم بطباعتها إلى stdout.
+    context: pem usage
+    de: Konvertieren Sie _1-Schlüssel in PEM oder einen PEM-Schlüssel in _1 und drucken
+      Sie ihn auf stdout.
+    en: Convert _1 keys to PEM, or a PEM keys to _1, and print it to stdout.
+    es: Convierta las claves _1 a PEM, o las claves PEM a _1, e imprímalas en la salida
+      estándar.
+    fr: Convertissez les clés _1 en PEM ou les clés PEM en _1 et imprimez-les sur
+      la sortie standard.
+    hi: _1 कुंजी को PEM में, या PEM कुंजी को _1 में बदलें, और इसे stdout पर प्रिंट
+      करें।
+    ja: _1 キーを PEM に変換するか、PEM キーを _1 に変換し、stdout に出力します。
+    nl: Converteer _1-sleutels naar PEM, of een PEM-sleutel naar _1, en druk deze
+      af naar stdout.
+    pt: Converta chaves _1 em PEM ou chaves PEM em _1 e imprima-as em stdout.
+    ru: Преобразуйте ключи _1 в PEM или ключи PEM в _1 и распечатайте их на стандартный
+      вывод.
+    zh: 将 _1 密钥转换为 PEM，或将 PEM 密钥转换为 _1，并将其打印到标准输出。
+  PrivateKeyArg:
+    ar: قيمة المفتاح الخاص، أو حلقة المفاتيح/القيمة، أو المسار، أو - لـ stdin
+    context: A private key argument
+    de: privater Schlüsselwert, Schlüsselbund/Wert, Pfad oder - für Standardeingabe
+    en: private key value, keyring/value, path, or - for stdin
+    es: valor de clave privada, conjunto de claves/valor, ruta o - para stdin
+    fr: valeur de clé privée, trousseau/valeur, chemin ou - pour stdin
+    hi: निजी कुंजी मान, कीरिंग/मान, पथ, या - stdin के लिए
+    ja: 秘密鍵の値、キーリング/値、パス、または - （標準入力用）
+    nl: privésleutelwaarde, sleutelhanger/waarde, pad, of - voor stdin
+    pt: valor da chave privada, chaveiro/valor, caminho ou - para stdin
+    ru: значение закрытого ключа, связка ключей/значение, путь или - для стандартного
+      ввода
+    zh: 私钥值、密钥环/值、路径或 - 用于标准输入
+  RunArg1:
+    ar: حلقة المفاتيح/التعبير العادي للمسار (يمكن تحديده عدة مرات، مفصولاً بـ &quot;،&quot;)
+    context: run arg1
+    de: Schlüsselbund/Pfad-Regex (kann mehrfach angegeben werden, getrennt durch ,)
+    en: keyring/path regexp (can be specified multiple times, separated by ',')
+    es: expresión regular del conjunto de claves/ruta (se puede especificar varias
+      veces, separadas por &#39;,&#39;)
+    fr: expression rationnelle du trousseau de clés/du chemin (peut être spécifié
+      plusieurs fois, séparés par &#39;,&#39;)
+    hi: कीरिंग/पथ रेगेक्सपी (&#39;,&#39; से अलग करके कई बार निर्दिष्ट किया जा सकता
+      है)
+    ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
+    nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
+      &#39;,&#39;)
+    pt: keyring/path regexp (pode ser especificado várias vezes, separado por &#39;,&#39;)
+    ru: регулярное выражение набора ключей/пути (можно указать несколько раз, разделив
+      их &#39;,&#39;)
+    zh: 密钥环/路径正则表达式（可以指定多次，以“，”分隔）
+  RunArg2:
+    ar: حلقة المفاتيح/التعبير العادي للمسار (يمكن تحديده عدة مرات، مفصولاً بـ &quot;،&quot;)
+    context: run arg1
+    de: Schlüsselbund/Pfad-Regex (kann mehrfach angegeben werden, getrennt durch ,)
+    en: keyring/path regexp (can be specified multiple times, separated by ',')
+    es: expresión regular del conjunto de claves/ruta (se puede especificar varias
+      veces, separadas por &#39;,&#39;)
+    fr: expression rationnelle du trousseau de clés/du chemin (peut être spécifié
+      plusieurs fois, séparés par &#39;,&#39;)
+    hi: कीरिंग/पथ रेगेक्सपी (&#39;,&#39; से अलग करके कई बार निर्दिष्ट किया जा सकता
+      है)
+    ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
+    nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
+      &#39;,&#39;)
+    pt: keyring/path regexp (pode ser especificado várias vezes, separado por &#39;,&#39;)
+    ru: регулярное выражение набора ключей/пути (можно указать несколько раз, разделив
+      их &#39;,&#39;)
+    zh: 密钥环/路径正则表达式（可以指定多次，以“，”分隔）
+  RunUsage:
+    ar: قم بتشغيل أمر وحقن القيم كمتغيرات البيئة. سيتم استخدام القيم فقط إذا كانت
+      ضمن حلقة المفاتيح/المسارات المحددة. عند القراءة من مسارات متعددة، إذا كانت هناك
+      أسماء مكررة، فسيتم استخدام قيمة القراءة الأخيرة. سيتم إخفاء القيم المكتوبة إلى
+      stderr/stdout بـ ***. يمكن استخدام المتغيرات التي تم تجاوزها (\\$) للإشارة إلى
+      القيم في البرامج النصية، وإلا فسيحاول _1 حل متغيرات ${variables} و$variables
+      قبل تنفيذ الأمر.
+    context: run usage
+    de: Führen Sie einen Befehl aus und fügen Sie Werte als Umgebungsvariablen ein.
+      Werte werden nur verwendet, wenn sie sich unter dem angegebenen Schlüsselbund/den
+      angegebenen Pfaden befinden. Beim Lesen aus mehreren Pfaden wird bei doppelten
+      Namen der zuletzt gelesene Wert verwendet. In stderr/stdout geschriebene Werte
+      werden mit *** maskiert. Escape-Variablen (\\$) können verwendet werden, um
+      Werte in Skripten zu referenzieren, andernfalls versucht _1, ${variables} und
+      $variables aufzulösen, bevor der Befehl ausgeführt wird.
+    en: Run a command and inject Values as environment variables.  Values will only
+      be used if under the keyring/paths specified.  When reading from multiple paths,
+      if there are duplicate names, the last read Value will be used.  Values written
+      to stderr/stdout will be masked with ***.  Escaped variables (\\$) can be used
+      to reference values in scripts, otherwise _1 will try and resolve ${variables}
+      and $variables before executing the command.
+    es: Ejecute un comando e inyecte valores como variables de entorno. Los valores
+      solo se utilizarán si se encuentran en el conjunto de claves/rutas especificadas.
+      Al leer desde varias rutas, si hay nombres duplicados, se utilizará el último
+      valor leído. Los valores escritos en stderr/stdout se enmascararán con ***.
+      Las variables de escape (\\$) se pueden usar para hacer referencia a valores
+      en scripts; de lo contrario, _1 intentará resolver ${variables} y $variables
+      antes de ejecutar el comando.
+    fr: Exécutez une commande et injectez des valeurs en tant que variables d&#39;environnement.
+      Les valeurs ne seront utilisées que si elles se trouvent sous le trousseau/chemins
+      d&#39;accès spécifiés. Lors de la lecture à partir de plusieurs chemins, s&#39;il
+      y a des noms en double, la dernière valeur lue sera utilisée. Les valeurs écrites
+      dans stderr/stdout seront masquées par ***. Les variables échappées (\\$) peuvent
+      être utilisées pour référencer des valeurs dans les scripts, sinon _1 essaiera
+      de résoudre ${variables} et $variables avant d&#39;exécuter la commande.
+    hi: कमांड चलाएँ और Values को पर्यावरण चर के रूप में डालें। Values का उपयोग केवल
+      तभी किया जाएगा जब वे निर्दिष्ट कीरिंग/पथ के अंतर्गत हों। कई पथों से पढ़ते समय,
+      यदि डुप्लिकेट नाम हैं, तो अंतिम बार पढ़ा गया Value उपयोग किया जाएगा। stderr/stdout
+      में लिखे गए मान *** से मास्क किए जाएँगे। एस्केप किए गए चर (\\$) का उपयोग स्क्रिप्ट
+      में मानों को संदर्भित करने के लिए किया जा सकता है, अन्यथा _1 कमांड निष्पादित
+      करने से पहले ${variables} और $variables को हल करने का प्रयास करेगा।
+    ja: コマンドを実行し、値を環境変数として挿入します。値は、指定されたキーリング/パスの下にある場合にのみ使用されます。複数のパスから読み取るときに名前が重複している場合は、最後に読み取られた値が使用されます。stderr/stdout
+      に書き込まれる値は *** でマスクされます。エスケープされた変数 (\\$) は、スクリプト内の値を参照するために使用できます。それ以外の場合は、_1
+      はコマンドを実行する前に ${variables} と $variables を解決しようとします。
+    nl: Voer een opdracht uit en injecteer waarden als omgevingsvariabelen. Waarden
+      worden alleen gebruikt als ze onder de opgegeven sleutelring/paden staan. Als
+      er bij het lezen van meerdere paden dubbele namen zijn, wordt de laatst gelezen
+      waarde gebruikt. Waarden die naar stderr/stdout worden geschreven, worden gemaskeerd
+      met ***. Escaped-variabelen (\\$) kunnen worden gebruikt om naar waarden in
+      scripts te verwijzen, anders zal _1 proberen ${variables} en $variables op te
+      lossen voordat de opdracht wordt uitgevoerd.
+    pt: Execute um comando e injete valores como variáveis de ambiente. Os valores
+      só serão usados se estiverem nos chaveiros/caminhos especificados. Ao ler de
+      vários caminhos, se houver nomes duplicados, o último valor lido será usado.
+      Os valores gravados em stderr/stdout serão mascarados com ***. Variáveis de
+      escape (\\$) podem ser usadas para referenciar valores em scripts, caso contrário
+      _1 tentará resolver ${variables} e $variables antes de executar o comando.
+    ru: Запустите команду и введите значения в качестве переменных среды. Значения
+      будут использоваться только в том случае, если они соответствуют указанному
+      набору ключей/путям. При чтении по нескольким путям, если есть повторяющиеся
+      имена, будет использоваться последнее прочитанное значение. Значения, записанные
+      в stderr/stdout, будут замаскированы ***. Экранированные переменные (\\$) можно
+      использовать для ссылки на значения в скриптах, в противном случае _1 попытается
+      разрешить ${variables} и $variables перед выполнением команды.
+    zh: 运行命令并将值作为环境变量注入。仅当在指定的密钥环/路径下时，才会使用值。从多个路径读取时，如果有重复的名称，将使用最后读取的值。写入 stderr/stdout
+      的值将被 *** 屏蔽。转义变量 (\\$) 可用于引用脚本中的值，否则 _1 将在执行命令之前尝试解析 ${variables} 和 $variables。
+  SSHDisArg:
+    ar: المفتاح، أو - لـ stdin
+    context: ssh-dis arg
+    de: Taste, oder - für stdin
+    en: key, or - for stdin
+    es: clave, o - para stdin
+    fr: clé, ou - pour stdin
+    hi: कुंजी, या - stdin के लिए
+    ja: キー、または標準入力の場合は -
+    nl: toets, of - voor stdin
+    pt: chave, ou - para stdin
+    ru: ключ, или - для стандартного ввода
+    zh: 键，或 - 用于标准输入
+  SSHDisFlagsIUsage:
+    ar: أضف معرفًا إلى المفتاح المستورد من مفتاح SSH
+    context: ssh-dis -i usage
+    de: Fügen Sie dem aus einem SSH-Schlüssel importierten Schlüssel eine ID hinzu
+    en: Add id to the key imported from a SSH key
+    es: Agregue identificación a la clave importada desde una clave SSH
+    fr: Ajouter un identifiant à la clé importée depuis une clé SSH
+    hi: SSH कुंजी से आयातित कुंजी में आईडी जोड़ें
+    ja: SSHキーからインポートされたキーにIDを追加する
+    nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een SSH-sleutel
+    pt: Adicione o id à chave importada de uma chave SSH
+    ru: Добавьте идентификатор к ключу, импортированному из ключа SSH.
+    zh: 将 id 添加到从 SSH 密钥导入的密钥中
+  SSHDisUsage:
+    ar: تحويل مفاتيح Rot إلى SSH، أو مفاتيح SSH إلى Rot، وطباعتها إلى stdout.
+    context: ssh-dis usage
+    de: Konvertieren Sie Rot-Schlüssel in SSH oder SSH-Schlüssel in Rot und drucken
+      Sie es auf stdout.
+    en: Convert Rot keys to SSH, or SSH keys to Rot, and print it to stdout.
+    es: Convierta las claves Rot a SSH, o las claves SSH a Rot, e imprímalas en la
+      salida estándar.
+    fr: Convertissez les clés Rot en SSH ou les clés SSH en Rot et imprimez-les sur
+      la sortie standard.
+    hi: Rot कुंजियों को SSH में, या SSH कुंजियों को Rot में बदलें, और इसे stdout पर
+      प्रिंट करें।
+    ja: Rot キーを SSH に変換するか、SSH キーを Rot に変換して、標準出力に出力します。
+    nl: Converteer Rot-sleutels naar SSH, of SSH-sleutels naar Rot, en druk deze af
+      naar stdout.
+    pt: Converta chaves Rot em SSH ou chaves SSH em Rot e imprima-as em stdout.
+    ru: Преобразуйте ключи Rot в SSH или ключи SSH в Rot и распечатайте их на стандартный
+      вывод.
+    zh: 将 Rot 密钥转换为 SSH，或将 SSH 密钥转换为 Rot，并将其打印到标准输出。
+  SSHNewArg1:
+    ar: قيمة المفتاح الخاص أو حلقة المفاتيح/القيمة أو - لـ stdin
+    context: ssh-new arg1
+    de: privater Schlüsselwert, Schlüsselbund/Wert oder - für Standardeingabe
+    en: private key value, keyring/value, or - for stdin
+    es: valor de clave privada, conjunto de claves/valor, o - para stdin
+    fr: valeur de clé privée, trousseau/valeur ou - pour stdin
+    hi: निजी कुंजी मान, कीरिंग/मान, या - stdin के लिए
+    ja: 秘密鍵の値、キーリング/値、または - （標準入力用）
+    nl: privésleutelwaarde, sleutelhanger/waarde, of - voor stdin
+    pt: valor da chave privada, chaveiro/valor ou - para stdin
+    ru: значение закрытого ключа, связка ключей/значение или - для стандартного ввода
+    zh: 私钥值、密钥环/值，或者 - 用于标准输入
+  SSHNewArg2:
+    ar: قيمة المفتاح العام أو حلقة المفاتيح/القيمة أو المسار
+    context: ssh-new arg2
+    de: öffentlicher Schlüsselwert, Schlüsselbund/Wert oder Pfad
+    en: public key value, keyring/value, or path
+    es: valor de clave pública, conjunto de claves/valor o ruta
+    fr: valeur de clé publique, trousseau/valeur ou chemin
+    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
+    ja: 公開鍵の値、キーリング/値、またはパス
+    nl: openbare sleutelwaarde, sleutelring/waarde of pad
+    pt: valor de chave pública, chaveiro/valor ou caminho
+    ru: значение открытого ключа, связка ключей/значение или путь
+    zh: 公钥值、密钥环/值或路径
+  SSHNewFlagsCPlaceholder:
+    ar: الخيار=القيمة
+    context: ssh-new -c placeholder
+    de: Option=Wert
+    en: option=value
+    es: opción=valor
+    fr: option=valeur
+    hi: विकल्प=मूल्य
+    ja: オプション=値
+    nl: optie=waarde
+    pt: opção=valor
+    ru: опция=значение
+    zh: 选项=值
+  SSHNewFlagsCUsage:
+    ar: يمكن تحديد الخيارات المهمة لإضافتها إلى شهادة SSH عدة مرات
+    context: ssh-new -c usage
+    de: Kritische Optionen zum Hinzufügen zum SSH-Zertifikat, können mehrfach angegeben
+      werden
+    en: Critical options to add to SSH certificate, can be specified multiple times
+    es: Las opciones críticas para agregar al certificado SSH se pueden especificar
+      varias veces
+    fr: Les options critiques à ajouter au certificat SSH peuvent être spécifiées
+      plusieurs fois
+    hi: SSH प्रमाणपत्र में जोड़ने के लिए महत्वपूर्ण विकल्प, कई बार निर्दिष्ट किए जा
+      सकते हैं
+    ja: SSH 証明書に追加する重要なオプション。複数回指定できます。
+    nl: Kritieke opties om toe te voegen aan het SSH-certificaat kunnen meerdere keren
+      worden opgegeven
+    pt: Opções críticas para adicionar ao certificado SSH podem ser especificadas
+      várias vezes
+    ru: Критические параметры для добавления в сертификат SSH можно указать несколько
+      раз.
+    zh: 添加到 SSH 证书的关键选项，可以多次指定
+  SSHNewFlagsEPlaceholder:
+    ar: Extension=value
+    context: ssh-new -e placeholder
+    de: Erweiterung=Wert
+    en: extension=value
+    es: extensión=valor
+    fr: extension=valeur
+    hi: विस्तार=मूल्य
+    ja: 拡張子=値
+    nl: extensie=waarde
+    pt: extensão=valor
+    ru: расширение=значение
+    zh: 扩展=值
+  SSHNewFlagsEUsage:
+    ar: يمكن تحديد الامتدادات المراد إضافتها إلى شهادة SSH عدة مرات
+    context: ssh-new -e usage
+    de: Erweiterungen zum SSH-Zertifikat, können mehrfach angegeben werden
+    en: Extensions to add to SSH certificate, can be specified multiple times
+    es: Las extensiones para agregar al certificado SSH se pueden especificar varias
+      veces
+    fr: Les extensions à ajouter au certificat SSH peuvent être spécifiées plusieurs
+      fois
+    hi: SSH प्रमाणपत्र में जोड़े जाने वाले एक्सटेंशन को कई बार निर्दिष्ट किया जा सकता
+      है
+    ja: SSH 証明書に追加する拡張機能。複数回指定できます。
+    nl: Extensies die aan het SSH-certificaat moeten worden toegevoegd, kunnen meerdere
+      keren worden opgegeven
+    pt: Extensões para adicionar ao certificado SSH podem ser especificadas várias
+      vezes
+    ru: Расширения для добавления в сертификат SSH можно указывать несколько раз.
+    zh: 添加到 SSH 证书的扩展，可以多次指定
+  SSHNewFlagsHPlaceholder:
+    ar: 'إنشاء شهادة مضيف (الافتراضي: شهادة المستخدم)'
+    context: ssh-new -h placeholder
+    de: 'Erstellen Sie ein Host-Zertifikat (Standard: Benutzerzertifikat)'
+    en: 'Create a host certificate (default: user certificate)'
+    es: 'Crear un certificado de host (predeterminado: certificado de usuario)'
+    fr: 'Créer un certificat hôte (par défaut: certificat utilisateur)'
+    hi: 'होस्ट प्रमाणपत्र बनाएँ (डिफ़ॉल्ट: उपयोगकर्ता प्रमाणपत्र)'
+    ja: 'ホスト証明書を作成する (デフォルト: ユーザー証明書)'
+    nl: 'Maak een hostcertificaat aan (standaard: gebruikerscertificaat)'
+    pt: 'Crie um certificado de host (padrão: certificado de usuário)'
+    ru: 'Создайте сертификат хоста (по умолчанию: сертификат пользователя)'
+    zh: 创建主机证书（默认：用户证书）
+  SSHNewFlagsIUsage:
+    ar: معرف المفتاح
+    context: ssh-new -iusage
+    de: Schlüssel-ID
+    en: Key ID
+    es: ID de clave
+    fr: ID de clé
+    hi: कुंजी आईडी
+    ja: キーID
+    nl: Sleutel-ID
+    pt: ID da chave
+    ru: Идентификатор ключа
+    zh: 密钥 ID
+  SSHNewFlagsPPlaceholder:
+    ar: رئيسي
+    context: ssh-new -p placeholder
+    de: Rektor
+    en: principal
+    es: principal
+    fr: principal
+    hi: प्रधानाचार्य
+    ja: 主要
+    nl: voornaam
+    pt: diretor
+    ru: главный
+    zh: 主要的
+  SSHNewFlagsPUsage:
+    ar: يمكن تحديد المبادئ الصالحة لإضافتها إلى شهادة SSH عدة مرات
+    context: ssh-new -p usage
+    de: Gültige Principals zum Hinzufügen zum SSH-Zertifikat, können mehrfach angegeben
+      werden
+    en: Valid principals to add to SSH certificate, can be specified multiple times
+    es: Los principios válidos para agregar al certificado SSH se pueden especificar
+      varias veces
+    fr: Principes valides à ajouter au certificat SSH, peuvent être spécifiés plusieurs
+      fois
+    hi: SSH प्रमाणपत्र में जोड़े जाने वाले मान्य प्रिंसिपल, कई बार निर्दिष्ट किए जा
+      सकते हैं
+    ja: SSH 証明書に追加する有効なプリンシパル。複数回指定できます。
+    nl: Geldige principals die aan het SSH-certificaat moeten worden toegevoegd, kunnen
+      meerdere keren worden opgegeven
+    pt: Os principais válidos para adicionar ao certificado SSH podem ser especificados
+      várias vezes
+    ru: Допустимые участники для добавления в сертификат SSH, можно указать несколько
+      раз.
+    zh: 添加到 SSH 证书的有效主体，可以多次指定
+  SSHNewFlagsVUsage:
+    ar: ثواني حتى انتهاء صلاحية الشهادة
+    context: ssh-new -v usage
+    de: Sekunden bis zum Ablauf des Zertifikats
+    en: Seconds until certificate expires
+    es: Segundos hasta que caduque el certificado
+    fr: Secondes jusqu&#39;à l&#39;expiration du certificat
+    hi: प्रमाणपत्र समाप्त होने तक कुछ सेकंड
+    ja: 証明書の有効期限までの秒数
+    nl: Seconden totdat het certificaat verloopt
+    pt: Segundos até o certificado expirar
+    ru: Секунды до истечения срока действия сертификата
+    zh: 证书到期前的秒数
+  SSHNewUsage:
+    ar: إنشاء شهادة SSH وإخراج شهادة بتنسيق SSH. يجب تحديد مفتاح خاص ومفتاح عام وقائمة
+      بالعناصر الأساسية. يمكن توفير حقول إضافية للشهادة.
+    context: ssh-new usage
+    de: SSH-Zertifikat generieren und ein SSH-formatiertes Zertifikat ausgeben. Es
+      müssen ein privater Schlüssel, ein öffentlicher Schlüssel und eine Liste von
+      Auftraggebern angegeben werden. Kann zusätzliche Felder für das Zertifikat bereitstellen.
+    en: Generate SSH certificate and output a SSH formatted certificate. Must specify
+      a Private Key, a Public Key, and a list of principals.  Can provide additional
+      fields for the certificate.
+    es: Genere un certificado SSH y genere un certificado con formato SSH. Debe especificar
+      una clave privada, una clave pública y una lista de principales. Puede proporcionar
+      campos adicionales para el certificado.
+    fr: Générez un certificat SSH et générez un certificat au format SSH. Doit spécifier
+      une clé privée, une clé publique et une liste de principaux. Peut fournir des
+      champs supplémentaires pour le certificat.
+    hi: SSH प्रमाणपत्र जनरेट करें और SSH स्वरूपित प्रमाणपत्र आउटपुट करें। एक निजी
+      कुंजी, एक सार्वजनिक कुंजी और प्रिंसिपल की सूची निर्दिष्ट करनी होगी। प्रमाणपत्र
+      के लिए अतिरिक्त फ़ील्ड प्रदान कर सकते हैं।
+    ja: SSH 証明書を生成し、SSH 形式の証明書を出力します。秘密キー、公開キー、およびプリンシパルのリストを指定する必要があります。証明書に追加のフィールドを提供できます。
+    nl: Genereer een SSH-certificaat en voer een SSH-geformatteerd certificaat uit.
+      Moet een privésleutel, een openbare sleutel en een lijst met opdrachtgevers
+      opgeven. Kan extra velden voor het certificaat opgeven.
+    pt: Gere o certificado SSH e produza um certificado formatado em SSH. Deve especificar
+      uma chave privada, uma chave pública e uma lista de principais. Pode fornecer
+      campos adicionais para o certificado.
+    ru: Создайте сертификат SSH и выведите сертификат в формате SSH. Необходимо указать
+      закрытый ключ, открытый ключ и список участников. Можно предоставить дополнительные
+      поля для сертификата.
+    zh: 生成 SSH 证书并输出 SSH 格式的证书。必须指定私钥、公钥和主体列表。可以为证书提供其他字段。
+  Seconds:
+    ar: ثواني
+    context: Seconds
+    de: Sekunden
+    en: seconds
+    es: segundos
+    fr: secondes
+    hi: सेकंड
+    ja: 秒
+    nl: seconden
+    pt: segundos
+    ru: секунды
+    zh: 秒
+  SigNewArg1:
+    ar: قيمة المفتاح الخاص/القيمة، أو المسار
+    context: sig-new arg1
+    de: privater Schlüsselwert Schlüsselbund/Wert oder Pfad
+    en: private key value keyring/value, or path
+    es: valor de clave privada llavero/valor, o ruta
+    fr: valeur de clé privée, trousseau/valeur, ou chemin
+    hi: निजी कुंजी मान कीरिंग/मान, या पथ
+    ja: 秘密鍵の値キーリング/値、またはパス
+    nl: persoonlijke sleutelwaarde sleutelhanger/waarde of pad
+    pt: valor da chave privada chaveiro/valor ou caminho
+    ru: значение закрытого ключа, связка/значение или путь
+    zh: 私钥值密钥环/值，或路径
+  SigNewArg2:
+    ar: البيانات للتوقيع أو - لـ stdin
+    context: sig-new arg2
+    de: zu signierende Daten oder - für Standardeingabe
+    en: data to sign or - for stdin
+    es: datos para firmar o - para stdin
+    fr: données à signer ou - pour stdin
+    hi: डेटा पर हस्ताक्षर करने के लिए या - stdin के लिए
+    ja: 署名するデータまたは標準入力の -
+    nl: gegevens om te ondertekenen of - voor stdin
+    pt: dados para assinar ou - para stdin
+    ru: данные для подписи или - для стандартного ввода
+    zh: 要签名的数据或 - 用于标准输入
+  SigNewFlagSUsage:
+    ar: إخراج التوقيع فقط
+    context: sig-new -s usage
+    de: Nur die Signatur ausgeben
+    en: Output just the signature
+    es: Salida solo la firma
+    fr: Afficher uniquement la signature
+    hi: केवल हस्ताक्षर आउटपुट करें
+    ja: 署名のみを出力する
+    nl: Voer alleen de handtekening uit
+    pt: Produza apenas a assinatura
+    ru: Выведите только подпись
+    zh: 仅输出签名
+  SigNewUsage:
+    ar: قم بإنشاء توقيع وإخراج سلسلة ترميز Base64 القياسية. يجب تحديد المفتاح الخاص
+      للموقع والبيانات المراد التوقيع عليها. بالنسبة لمفاتيح ECP، سيكون التجزئة SHA256.
+      بالنسبة لـ Ed25519، التجزئة غير مستخدمة.
+    context: sig-new usage
+    de: Generieren Sie eine Signatur und geben Sie eine standardmäßig kodierte Base64-Zeichenfolge
+      aus. Sie müssen den privaten Schlüssel des Unterzeichners und die zu signierenden
+      Daten angeben. Für ECP-Schlüssel ist der Hash SHA256. Für Ed25519 wird der Hash
+      nicht verwendet.
+    en: Generate a signature and output a standard encoding base64 string.  Must specify
+      the private key of the signer and the data to be signed.  For ECP keys, the
+      hash will be SHA256.  For Ed25519, the hash is unused.
+    es: Genere una firma y genere una cadena base64 de codificación estándar. Debe
+      especificar la clave privada del firmante y los datos a firmar. Para las claves
+      ECP, el hash será SHA256. Para Ed25519, el hash no se utiliza.
+    fr: Générez une signature et affichez une chaîne de codage standard en base64.
+      Doit préciser la clé privée du signataire et les données à signer. Pour les
+      clés ECP, le hachage sera SHA256. Pour Ed25519, le hachage n&#39;est pas utilisé.
+    hi: हस्ताक्षर उत्पन्न करें और एक मानक एन्कोडिंग बेस64 स्ट्रिंग आउटपुट करें। हस्ताक्षरकर्ता
+      की निजी कुंजी और हस्ताक्षरित किए जाने वाले डेटा को निर्दिष्ट करना आवश्यक है।
+      ECP कुंजियों के लिए, हैश SHA256 होगा। Ed25519 के लिए, हैश अप्रयुक्त है।
+    ja: 署名を生成し、標準エンコードの base64 文字列を出力します。署名者の秘密キーと署名するデータを指定する必要があります。ECP キーの場合、ハッシュは
+      SHA256 になります。Ed25519 の場合、ハッシュは使用されません。
+    nl: Genereer een handtekening en voer een base64-tekenreeks met standaardcodering
+      uit. Moet de privésleutel van de ondertekenaar en de te ondertekenen gegevens
+      specificeren. Voor ECP-sleutels is de hash SHA256. Voor Ed25519 is de hash ongebruikt.
+    pt: Gere uma assinatura e produza uma string base64 de codificação padrão. Deve
+      especificar a chave privada do signatário e os dados a serem assinados. Para
+      chaves ECP, o hash será SHA256. Para Ed25519, o hash não é utilizado.
+    ru: Создайте подпись и выведите стандартную строку кодировки Base64. Необходимо
+      указать закрытый ключ подписывающей стороны и данные для подписи. Для ключей
+      ECP хэш будет SHA256. Для Ed25519 хэш не используется.
+    zh: 生成签名并输出标准编码的 base64 字符串。必须指定签名者的私钥和要签名的数据。对于 ECP 密钥，哈希将为 SHA256。对于 Ed25519，哈希未使用。
+  SigVerArgs1:
+    ar: قيمة المفتاح العام أو حلقة المفاتيح/القيمة أو المسار
+    context: sig-new arg1
+    de: öffentlicher Schlüsselwert, Schlüsselbund/Wert oder Pfad
+    en: public key value, keyring/value, or path
+    es: valor de clave pública, conjunto de claves/valor o ruta
+    fr: valeur de clé publique, trousseau/valeur ou chemin
+    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
+    ja: 公開鍵の値、キーリング/値、またはパス
+    nl: openbare sleutelwaarde, sleutelring/waarde of pad
+    pt: valor de chave pública, chaveiro/valor ou caminho
+    ru: значение открытого ключа, связка ключей/значение или путь
+    zh: 公钥值、密钥环/值或路径
+  SigVerArgs2:
+    ar: رسالة أو - لـ stdin
+    context: sig-new arg2
+    de: Nachricht oder - für Standardeingabe
+    en: message or - for stdin
+    es: mensaje o - para stdin
+    fr: message ou - pour stdin
+    hi: संदेश या - stdin के लिए
+    ja: メッセージまたは - （標準入力用）
+    nl: bericht of - voor stdin
+    pt: mensagem ou - para stdin
+    ru: сообщение или - для стандартного ввода
+    zh: 消息或-用于标准输入
+  SigVerArgs3:
+    ar: إمضاء
+    context: sig-new arg3
+    de: Unterschrift
+    en: signature
+    es: firma
+    fr: signature
+    hi: हस्ताक्षर
+    ja: サイン
+    nl: handtekening
+    pt: assinatura
+    ru: подпись
+    zh: 签名
+  SigVerUsage:
+    ar: التحقق من توقيع الرسالة باستخدام المفتاح العام. يجب أن يكون التوقيع في النموذج<hash>
+      :<signature> :<optional key id> .
+    context: sig-ver usage
+    de: Überprüfen Sie eine Signatur für eine Nachricht mit einem öffentlichen Schlüssel.
+      Die Signatur muss in der Form<hash> :<signature> :<optional key id> .
+    en: Verify a signature for a message using a public key.  Signature must be in
+      the form <hash>:<signature>:<optional key id>.
+    es: Verificar una firma para un mensaje usando una clave pública. La firma debe
+      estar en el formulario.<hash> :<signature> :<optional key id> .
+    fr: Vérifiez une signature pour un message à l&#39;aide d&#39;une clé publique.
+      La signature doit être sous la forme<hash> :<signature> :<optional key id> .
+    hi: किसी संदेश के लिए सार्वजनिक कुंजी का उपयोग करके हस्ताक्षर सत्यापित करें। हस्ताक्षर
+      इस रूप में होना चाहिए<hash> :<signature> :<optional key id> .
+    ja: 公開鍵を使用してメッセージの署名を検証します。署名は次の形式でなければなりません。<hash> :<signature> :<optional key
+      id> 。
+    nl: Controleer een handtekening voor een bericht met behulp van een openbare sleutel.
+      De handtekening moet in het formulier staan<hash> :<signature> :<optional key
+      id> .
+    pt: Verifique a assinatura de uma mensagem usando uma chave pública. A assinatura
+      deve estar no formulário<hash> :<signature> :<optional key id> .
+    ru: Проверьте подпись сообщения с помощью открытого ключа. Подпись должна быть
+      в форме<hash> :<signature> :<optional key id> .
+    zh: 使用公钥验证消息的签名。签名必须采用以下格式<hash>：<signature> ：<optional key id> 。
+  ValAddArg2:
+    ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
+    context: val-add arg2
+    de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
+    en: meta fields in the format key=value, can be specified multiple times
+    es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
+    fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
+    hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
+    ja: メタフィールドはキー=値の形式で複数回指定できます
+    nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
+    pt: metacampos no formato key=value, podem ser especificados diversas vezes
+    ru: метаполя в формате ключ=значение, можно указывать несколько раз
+    zh: 元字段格式为 key=value，可以多次指定
+  ValAddFlagsLPlaceholder:
+    ar: طول
+    context: val-add -l placeholder
+    de: Länge
+    en: length
+    es: longitud
+    fr: longueur
+    hi: लंबाई
+    ja: 長さ
+    nl: lengte
+    pt: comprimento
+    ru: длина
+    zh: 长度
+  ValAddFlagsLUsage:
+    ar: قم بإنشاء سلسلة عشوائية بهذا الطول بدلاً من توفير قيمة
+    context: val-add -l usage
+    de: Erzeuge eine zufällige Zeichenfolge mit dieser Länge, anstatt einen Wert anzugeben
+    en: Generate a random string with this length instead of providing a value
+    es: Genere una cadena aleatoria con esta longitud en lugar de proporcionar un
+      valor
+    fr: Générez une chaîne aléatoire avec cette longueur au lieu de fournir une valeur
+    hi: मान प्रदान करने के बजाय इस लंबाई के साथ एक यादृच्छिक स्ट्रिंग उत्पन्न करें
+    ja: 値を指定する代わりに、この長さのランダムな文字列を生成します
+    nl: Genereer een willekeurige tekenreeks met deze lengte in plaats van een waarde
+      op te geven
+    pt: Gere uma string aleatória com este comprimento em vez de fornecer um valor
+    ru: Создайте случайную строку этой длины вместо предоставления значения.
+    zh: 生成具有此长度的随机字符串，而不是提供值
+  ValAddPrvArg2:
+    ar: 'معرف المفتاح (الافتراضي: سلسلة عشوائية)'
+    context: val-add-prv arg2
+    de: 'Schlüssel-ID (Standard: zufällige Zeichenfolge)'
+    en: 'key ID (default: random string)'
+    es: 'ID de clave (predeterminado: cadena aleatoria)'
+    fr: 'ID de clé (par défaut: chaîne aléatoire)'
+    hi: 'कुंजी आईडी (डिफ़ॉल्ट: यादृच्छिक स्ट्रिंग)'
+    ja: 'キーID (デフォルト: ランダム文字列)'
+    nl: 'sleutel-ID (standaard: willekeurige reeks)'
+    pt: 'ID da chave (padrão: string aleatória)'
+    ru: 'идентификатор ключа (по умолчанию: случайная строка)'
+    zh: 密钥 ID（默认值：随机字符串）
+  ValAddPrvUsage:
+    ar: قم بإنشاء وإضافة مفتاح خاص مشفر إلى قيم Keyring.
+    context: val-add-prv usage
+    de: Generieren Sie einen kryptografischen privaten Schlüssel und fügen Sie ihn
+      den Schlüsselbundwerten hinzu.
+    en: Generate and add a cryptographic private key to Keyring Values.
+    es: Genere y agregue una clave privada criptográfica a Keyring Values.
+    fr: Générez et ajoutez une clé privée cryptographique aux valeurs du trousseau
+      de clés.
+    hi: क्रिप्टोग्राफिक निजी कुंजी उत्पन्न करें और उसे कीरिंग मानों में जोड़ें।
+    ja: 暗号化秘密キーを生成し、キーリング値に追加します。
+    nl: Genereer een cryptografische privésleutel en voeg deze toe aan sleutelhangerwaarden.
+    pt: Gere e adicione uma chave privada criptográfica aos valores do chaveiro.
+    ru: Создайте и добавьте криптографический закрытый ключ в значения набора ключей.
+    zh: 生成加密私钥并将其添加到 Keyring Values。
+  ValAddUsage:
+    ar: أضف قيمة إلى حلقة مفاتيح (أو قم بالكتابة فوق قيمة موجودة)، مع إضافة حقول تعريف
+      متنوعة إليها بشكل اختياري.
+    context: val-add usage
+    de: Fügen Sie einem Schlüsselbund einen Wert hinzu (oder überschreiben Sie einen
+      vorhandenen Wert) und fügen Sie optional verschiedene Metafelder hinzu.
+    en: Add a Value to a Keyring (or overwrite an existing Value), optionally adding
+      various meta fields to it.
+    es: Agregue un valor a un llavero (o sobrescriba un valor existente), agregando
+      opcionalmente varios metacampos.
+    fr: Ajoutez une valeur à un trousseau de clés (ou écrasez une valeur existante),
+      en y ajoutant éventuellement divers champs méta.
+    hi: किसी कीरिंग में मान जोड़ें (या किसी मौजूदा मान को अधिलेखित करें), वैकल्पिक
+      रूप से उसमें विभिन्न मेटा फ़ील्ड जोड़ें।
+    ja: キーリングに値を追加（または既存の値を上書き）し、オプションでさまざまなメタフィールドを追加します。
+    nl: Voeg een waarde toe aan een sleutelhanger (of overschrijf een bestaande waarde)
+      en voeg eventueel verschillende metavelden toe.
+    pt: Adicione um valor a um chaveiro (ou substitua um valor existente), opcionalmente
+      adicionando vários metacampos a ele.
+    ru: Добавьте значение в связку ключей (или перезапишите существующее значение),
+      при необходимости добавив к нему различные метаполя.
+    zh: 向密钥环添加一个值（或覆盖现有值），可选择向其中添加各种元字段。
+  ValCopyArg1:
+    ar: حلقة مفاتيح المصدر/المسار
+    context: val-copy arg1
+    de: Quellschlüsselbund/-pfad
+    en: source keyring/path
+    es: llavero/ruta de origen
+    fr: trousseau/chemin source
+    hi: स्रोत कीरिंग/पथ
+    ja: ソースキーリング/パス
+    nl: bronsleutelhanger/pad
+    pt: chaveiro/caminho de origem
+    ru: исходный ключ/путь
+    zh: 源密钥环/路径
+  ValCopyArg2:
+    ar: حلقة مفاتيح الوجهة/المسار
+    context: val-copy arg2
+    de: Ziel-Schlüsselring/-Pfad
+    en: destination keyring/path
+    es: llavero/ruta de destino
+    fr: trousseau/chemin de destination
+    hi: गंतव्य कुंजी रिंग/पथ
+    ja: 宛先キーリング/パス
+    nl: bestemming sleutelhanger/pad
+    pt: chaveiro/caminho de destino
+    ru: брелок/путь назначения
+    zh: 目标密钥环/路径
+  ValCopyUsage:
+    ar: انسخ قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة، مع توفير اسم جديد لها بشكل
+      اختياري.
+    context: val-copy usage
+    de: Kopieren Sie einen Wert aus einem Schlüsselbund in einen vorhandenen Schlüsselbund
+      und geben Sie optional einen neuen Namen dafür an.
+    en: Copy a Value from a Keyring to an existing Keyring, optionally providing a
+      new name for it.
+    es: Copie un valor de un conjunto de claves a un conjunto de claves existente
+      y, opcionalmente, proporcione un nuevo nombre.
+    fr: Copiez une valeur d&#39;un trousseau de clés vers un trousseau de clés existant,
+      en lui attribuant éventuellement un nouveau nom.
+    hi: किसी कीरिंग से किसी मान को मौजूदा कीरिंग में कॉपी करें, वैकल्पिक रूप से उसके
+      लिए एक नया नाम प्रदान करें।
+    ja: キーリングの値を既存のキーリングにコピーし、オプションで新しい名前を付けます。
+    nl: Kopieer een waarde van een sleutelhanger naar een bestaande sleutelhanger
+      en geef er optioneel een nieuwe naam aan.
+    pt: Copie um valor de um chaveiro para um chaveiro existente, opcionalmente fornecendo
+      um novo nome para ele.
+    ru: Скопируйте значение из связки ключей в существующую связку ключей, при необходимости
+      указав для него новое имя.
+    zh: 将值从密钥环复制到现有密钥环，可选择为其提供一个新名称。
+  ValDisFlagsMPlaceholder:
+    ar: value أو &quot;all&quot; لإظهار كافة القيم التعريفية)
+    context: val-dis -m placeholder
+    de: Wert oder „alle“, um alle Metawerte anzuzeigen)
+    en: value or 'all' to show all meta values)
+    es: valor o &#39;todos&#39; para mostrar todos los metavalores)
+    fr: value ou &#39;all&#39; pour afficher toutes les méta-valeurs)
+    hi: value या &#39;all&#39; सभी मेटा मान दिखाने के लिए)
+    ja: 値または「all」ですべてのメタ値を表示)
+    nl: waarde of &#39;all&#39; om alle metawaarden weer te geven)
+    pt: value ou &#39;all&#39; para mostrar todos os valores meta)
+    ru: значение или «все», чтобы отобразить все метазначения)
+    zh: 值或“全部”以显示所有元值）
+  ValDisFlagsMUsage:
+    ar: إظهار القيم التعريفية
+    context: val-dis -m usage
+    de: Metawerte anzeigen
+    en: Show meta values
+    es: Mostrar metavalores
+    fr: Afficher les méta-valeurs
+    hi: मेटा मान दिखाएँ
+    ja: メタ値を表示
+    nl: Toon metawaarden
+    pt: Mostrar valores meta
+    ru: Показать метазначения
+    zh: 显示元值
+  ValDisFlagsVUsage:
+    ar: إظهار القيمة فقط
+    context: val-dis -v usage
+    de: Nur den Wert anzeigen
+    en: Show the value only
+    es: Mostrar solo el valor
+    fr: Afficher uniquement la valeur
+    hi: केवल मान दिखाएँ
+    ja: 値のみを表示
+    nl: Toon alleen de waarde
+    pt: Mostrar apenas o valor
+    ru: Показать только значение
+    zh: 仅显示值
+  ValDisUsage:
+    ar: إظهار القيمة التي تم فك تشفيرها.
+    context: val-dis usage
+    de: Zeigt einen entschlüsselten Wert an.
+    en: Show a decrypted value.
+    es: Mostrar un valor descifrado.
+    fr: Afficher une valeur décryptée.
+    hi: डिक्रिप्टेड मान दिखाएँ.
+    ja: 復号化された値を表示します。
+    nl: Toon een gedecodeerde waarde.
+    pt: Mostre um valor descriptografado.
+    ru: Показать расшифрованное значение.
+    zh: 显示解密值。
+  ValSetMetaArg2:
+    ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
+    context: val-set-meta arg2
+    de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
+    en: meta fields in the format key=value, can be specified multiple times
+    es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
+    fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
+    hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
+    ja: メタフィールドはキー=値の形式で複数回指定できます
+    nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
+    pt: metacampos no formato key=value, podem ser especificados diversas vezes
+    ru: метаполя в формате ключ=значение, можно указывать несколько раз
+    zh: 元字段格式为 key=value，可以多次指定
+  ValSetMetaUsage:
+    ar: قم بتعيين حقول التعريف لحلقة مفاتيح/قيمة. يمكن تحديد الحقول عدة مرات بتنسيق
+      المفتاح = القيمة. ستؤدي القيمة (key=) إلى حذف المفتاح.
+    context: val-set-meta usage
+    de: Legen Sie Metafelder für einen Schlüsselbund/Wert fest. Felder können mehrfach
+      im Format Schlüssel=Wert angegeben werden. Ein Wert (Schlüssel=) löscht den
+      Schlüssel.
+    en: Set meta fields for a keyring/value.  Fields can be specified multiple times
+      in the format of key=value.  An value (key=) will delete the key.
+    es: Establezca metacampos para un llavero/valor. Los campos se pueden especificar
+      varias veces en el formato clave=valor. Un valor (key=) eliminará la clave.
+    fr: Définissez des champs méta pour un trousseau/une valeur. Les champs peuvent
+      être spécifiés plusieurs fois au format clé=valeur. Une valeur (key=) supprimera
+      la clé.
+    hi: कीरिंग/वैल्यू के लिए मेटा फ़ील्ड सेट करें। फ़ील्ड को key=value के फ़ॉर्मेट
+      में कई बार निर्दिष्ट किया जा सकता है। एक वैल्यू (key=) कुंजी को हटा देगा।
+    ja: キーリング/値のメタフィールドを設定します。フィールドは、key=value の形式で複数回指定できます。値 (key=) はキーを削除します。
+    nl: Stel metavelden in voor een sleutelhanger/waarde. Velden kunnen meerdere keren
+      worden opgegeven in de notatie sleutel=waarde. Een waarde (key=) verwijdert
+      de sleutel.
+    pt: Defina metacampos para um chaveiro/valor. Os campos podem ser especificados
+      diversas vezes no formato chave=valor. Um valor (key=) excluirá a chave.
+    ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
+      в формате ключ=значение. Значение (key=) удалит ключ.
+    zh: 设置密钥环/值的元字段。字段可以以 key=value 格式多次指定。值 (key=) 将删除密钥。
+  X509DisArg1:
+    ar: قيمة الشهادة أو المسار أو - لـ stdin
+    context: x509-dis arg1
+    de: Zertifikatswert, Pfad oder - für stdin
+    en: Certificate value, path, or - for stdin
+    es: Valor del certificado, ruta o - para stdin
+    fr: Valeur du certificat, chemin ou - pour stdin
+    hi: प्रमाणपत्र मान, पथ, या - stdin के लिए
+    ja: 証明書の値、パス、または - （stdin の場合）
+    nl: Certificaatwaarde, pad of - voor stdin
+    pt: Valor do certificado, caminho ou - para stdin
+    ru: Значение сертификата, путь или - для стандартного ввода
+    zh: 证书值、路径或 - 用于标准输入
+  X509DisArg2:
+    ar: يمكن تحديد قيمة أو مسار شهادة CA عدة مرات
+    context: x509-dis arg2
+    de: CA-Zertifikatswert oder -Pfad, kann mehrfach angegeben werden
+    en: CA certificate value or path, can be specified multiple times
+    es: El valor o la ruta del certificado de CA se pueden especificar varias veces
+    fr: La valeur ou le chemin du certificat CA peut être spécifié plusieurs fois
+    hi: CA प्रमाणपत्र मान या पथ, कई बार निर्दिष्ट किया जा सकता है
+    ja: CA 証明書の値またはパス。複数回指定できます。
+    nl: CA-certificaatwaarde of pad kan meerdere keren worden opgegeven
+    pt: Valor ou caminho do certificado CA, pode ser especificado várias vezes
+    ru: Значение или путь сертификата CA можно указать несколько раз.
+    zh: CA证书值或路径，可指定多次
+  X509DisUsage:
+    ar: إظهار شهادة، والتحقق من صحة الشهادة اختياريًا باستخدام مفاتيح CA العامة.
+    context: x509-dis usage
+    de: Zeigen Sie ein Zertifikat an und validieren Sie das Zertifikat optional mit
+      öffentlichen CA-Schlüsseln.
+    en: Show a certificate, optionally validating the certificate with CA public keys.
+    es: Mostrar un certificado, validando opcionalmente el certificado con claves
+      públicas de CA.
+    fr: Afficher un certificat, en validant éventuellement le certificat avec les
+      clés publiques de l&#39;autorité de certification.
+    hi: प्रमाणपत्र दिखाएँ, वैकल्पिक रूप से CA सार्वजनिक कुंजियों के साथ प्रमाणपत्र
+      को मान्य करें।
+    ja: 証明書を表示し、オプションで CA 公開キーを使用して証明書を検証します。
+    nl: Toon een certificaat en valideer het certificaat optioneel met openbare CA-sleutels.
+    pt: Mostrar um certificado, validando opcionalmente o certificado com chaves públicas
+      da CA.
+    ru: Покажите сертификат, при необходимости проверив сертификат с помощью открытых
+      ключей CA.
+    zh: 显示证书，可选择使用 CA 公钥验证证书。
+  X509NewArg2:
+    ar: قيمة المفتاح العام، أو تعليق المفتاح/القيمة، أو المسار
+    context: x509-new arg2
+    de: öffentlicher Schlüsselwert, Schlüsselbund/Wertkommentar oder Pfad
+    en: public key value, keyring/value comment, or path
+    es: valor de clave pública, comentario de llavero/valor o ruta
+    fr: valeur de clé publique, commentaire de trousseau/valeur ou chemin
+    hi: सार्वजनिक कुंजी मान, कीरिंग/मान टिप्पणी, या पथ
+    ja: 公開鍵の値、キーリング/値のコメント、またはパス
+    nl: openbare sleutelwaarde, sleutelhanger/waardecommentaar of pad
+    pt: valor da chave pública, comentário do chaveiro/valor ou caminho
+    ru: значение открытого ключа, комментарий к связке ключей/значению или путь
+    zh: 公钥值、密钥环/值注释或路径
+  X509NewArg3:
+    ar: شهادة كاليفورنيا أو المسار
+    context: x509-new arg3
+    de: CA-Zertifikat oder -Pfad
+    en: ca certificate or path
+    es: certificado ca o ruta
+    fr: ca certificat ou chemin
+    hi: ca प्रमाणपत्र या पथ
+    ja: ca 証明書またはパス
+    nl: ca-certificaat of pad
+    pt: certificado ou caminho ca
+    ru: сертификат CA или путь
+    zh: ca 证书或路径
+  X509NewFlagsCUsage:
+    ar: إنشاء شهادة CA
+    context: x509-new -c usage
+    de: Erstellen eines CA-Zertifikats
+    en: Create a CA certificate
+    es: Crear un certificado de CA
+    fr: Créer un certificat CA
+    hi: CA प्रमाणपत्र बनाएं
+    ja: CA証明書を作成する
+    nl: Maak een CA-certificaat
+    pt: Crie um certificado CA
+    ru: Создать сертификат ЦС
+    zh: 创建 CA 证书
+  X509NewFlagsDPlaceholder:
+    ar: اسم المضيف
+    context: x509-new -d placeholder
+    de: Hostname
+    en: hostname
+    es: nombre de host
+    fr: nom d&#39;hôte
+    hi: होस्ट का नाम
+    ja: ホスト名
+    nl: hostnaam
+    pt: nome de anfitrião
+    ru: имя хоста
+    zh: 主机名
+  X509NewFlagsDUsage:
+    ar: اسم مضيف DNS (يمكن استخدامه عدة مرات)
+    context: x509-new -d usage
+    de: DNS-Hostname (kann mehrfach verwendet werden)
+    en: DNS hostname (can be used multiple times)
+    es: Nombre de host DNS (se puede utilizar varias veces)
+    fr: Nom d&#39;hôte DNS (peut être utilisé plusieurs fois)
+    hi: DNS होस्टनाम (कई बार उपयोग किया जा सकता है)
+    ja: DNSホスト名（複数回使用可能）
+    nl: DNS-hostnaam (kan meerdere keren worden gebruikt)
+    pt: Nome de host DNS (pode ser usado várias vezes)
+    ru: Имя хоста DNS (можно использовать несколько раз)
+    zh: DNS 主机名（可多次使用）
+  X509NewFlagsEUPlaceholder:
+    ar: استخدام المفتاح الموسع
+    context: x509-new -eu placeholder
+    de: erweiterte Schlüsselverwendung
+    en: extended key usage
+    es: uso extendido de claves
+    fr: utilisation étendue des clés
+    hi: विस्तारित कुंजी उपयोग
+    ja: 拡張キー使用法
+    nl: uitgebreid sleutelgebruik
+    pt: uso estendido de chave
+    ru: расширенное использование ключа
+    zh: 扩展密钥用法
+  X509NewFlagsEUUsage:
+    ar: استخدام المفتاح الموسع، القيم الصالحة
+    context: x509-new -eu usage
+    de: Erweiterte Schlüsselverwendung, gültige Werte
+    en: Extended key usage, valid values
+    es: Uso de clave extendido, valores válidos
+    fr: Utilisation étendue des clés, valeurs valides
+    hi: विस्तारित कुंजी उपयोग, मान्य मान
+    ja: 拡張キーの使用、有効な値
+    nl: Uitgebreid sleutelgebruik, geldige waarden
+    pt: Uso estendido de chave, valores válidos
+    ru: Расширенное использование ключа, допустимые значения
+    zh: 扩展密钥用法、有效值
+  X509NewFlagsEUsage:
+    ar: انتهاء الصلاحية في ثوان
+    context: x509-new -e usage
+    de: Ablauf in Sekunden
+    en: Expiration in seconds
+    es: Caducidad en segundos
+    fr: Expiration en secondes
+    hi: सेकंड में समाप्ति
+    ja: 有効期限は秒単位
+    nl: Vervaldatum in seconden
+    pt: Expiração em segundos
+    ru: Срок действия в секундах
+    zh: 以秒为单位过期
+  X509NewFlagsIPlaceholder:
+    ar: عنوان
+    context: x509-new -i placeholder
+    de: Adresse
+    en: address
+    es: DIRECCIÓN
+    fr: adresse
+    hi: पता
+    ja: 住所
+    nl: adres
+    pt: endereço
+    ru: адрес
+    zh: 地址
+  X509NewFlagsIUsage:
+    ar: عنوان IP (يمكن استخدامه عدة مرات)
+    context: x509-new -i usage
+    de: IP-Adresse (kann mehrfach verwendet werden)
+    en: IP address (can be used multiple times)
+    es: Dirección IP (se puede utilizar varias veces)
+    fr: Adresse IP (peut être utilisée plusieurs fois)
+    hi: आईपी पता (कई बार इस्तेमाल किया जा सकता है)
+    ja: IP アドレス (複数回使用可能)
+    nl: IP-adres (kan meerdere keren gebruikt worden)
+    pt: Endereço IP (pode ser usado várias vezes)
+    ru: IP-адрес (можно использовать несколько раз)
+    zh: IP地址（可多次使用）
+  X509NewFlagsKPlaceholder:
+    ar: استخدام المفتاح
+    context: x509-new -k placeholder
+    de: Schlüsselverwendung
+    en: key usage
+    es: uso de claves
+    fr: utilisation des clés
+    hi: कुंजी उपयोग
+    ja: キーの使用法
+    nl: sleutel gebruik
+    pt: uso de chave
+    ru: использование ключа
+    zh: 密钥用法
+  X509NewFlagsKUsage:
+    ar: استخدام المفتاح، القيم الصالحة
+    context: x509-new -k usage
+    de: Schlüsselverwendung, gültige Werte
+    en: Key usage, valid values
+    es: Uso de claves, valores válidos
+    fr: Utilisation des clés, valeurs valides
+    hi: कुंजी उपयोग, मान्य मान
+    ja: キーの使用法、有効な値
+    nl: Sleutelgebruik, geldige waarden
+    pt: Uso de chave, valores válidos
+    ru: Использование ключа, допустимые значения
+    zh: 密钥用法、有效值
+  X509NewFlagsNUsage:
+    ar: استخدام المفتاح، القيم الصالحة
+    context: x509-new -n usage
+    de: Schlüsselverwendung, gültige Werte
+    en: Key usage, valid values
+    es: Uso de claves, valores válidos
+    fr: Utilisation des clés, valeurs valides
+    hi: कुंजी उपयोग, मान्य मान
+    ja: キーの使用法、有効な値
+    nl: Sleutelgebruik, geldige waarden
+    pt: Uso de chave, valores válidos
+    ru: Использование ключа, допустимые значения
+    zh: 密钥用法、有效值
+  X509NewUsage:
+    ar: أنشئ شهادة X.509 وأخرج شهادة بتنسيق PEM إلى stdout. يجب تحديد المفتاح الخاص
+      للموقع (للشهادات الموقعة من CA) أو المفتاح الخاص للشهادة (للشهادات الموقعة ذاتيًا).
+      يمكن تحديد مفتاح عام، وإلا سيتم استخدام المفتاح العام للمفتاح الخاص.
+    context: x509-new usage
+    de: Erstellen Sie ein X.509-Zertifikat und geben Sie ein PEM-formatiertes Zertifikat
+      an stdout aus. Sie müssen den privaten Schlüssel des Unterzeichners (für von
+      einer Zertifizierungsstelle signierte Zertifikate) oder den privaten Schlüssel
+      des Zertifikats (für selbst signierte Zertifikate) angeben. Es kann ein öffentlicher
+      Schlüssel angegeben werden, andernfalls wird der öffentliche Schlüssel des privaten
+      Schlüssels verwendet.
+    en: Create an X.509 certificate and output a PEM-formatted certificate to stdout.  Must
+      specify the private key of the signer (for CA signed certificates) or the private
+      key of the certificate (for self-signed certificates).  A public key can be
+      specified, otherwise the public key of the private key will be used.
+    es: Cree un certificado X.509 y envíe un certificado con formato PEM a la salida
+      estándar. Debe especificar la clave privada del firmante (para certificados
+      firmados por CA) o la clave privada del certificado (para certificados autofirmados).
+      Se puede especificar una clave pública; de lo contrario, se utilizará la clave
+      pública de la clave privada.
+    fr: Créez un certificat X.509 et envoyez un certificat au format PEM sur la sortie
+      standard. Doit spécifier la clé privée du signataire (pour les certificats signés
+      par une autorité de certification) ou la clé privée du certificat (pour les
+      certificats auto-signés). Une clé publique peut être spécifiée, sinon la clé
+      publique de la clé privée sera utilisée.
+    hi: X.509 प्रमाणपत्र बनाएँ और PEM-स्वरूपित प्रमाणपत्र को stdout पर आउटपुट करें।
+      हस्ताक्षरकर्ता की निजी कुंजी (CA हस्ताक्षरित प्रमाणपत्रों के लिए) या प्रमाणपत्र
+      की निजी कुंजी (स्व-हस्ताक्षरित प्रमाणपत्रों के लिए) निर्दिष्ट करनी होगी। एक
+      सार्वजनिक कुंजी निर्दिष्ट की जा सकती है, अन्यथा निजी कुंजी की सार्वजनिक कुंजी
+      का उपयोग किया जाएगा।
+    ja: X.509 証明書を作成し、PEM 形式の証明書を標準出力に出力します。署名者の秘密鍵 (CA 署名証明書の場合) または証明書の秘密鍵 (自己署名証明書の場合)
+      を指定する必要があります。公開鍵を指定することもできますが、指定しない場合は秘密鍵の公開鍵が使用されます。
+    nl: Maak een X.509-certificaat en voer een PEM-geformatteerd certificaat uit naar
+      stdout. Moet de privésleutel van de ondertekenaar (voor CA-ondertekende certificaten)
+      of de privésleutel van het certificaat (voor zelfondertekende certificaten)
+      opgeven. Er kan een publieke sleutel worden opgegeven, anders wordt de publieke
+      sleutel van de private sleutel gebruikt.
+    pt: Crie um certificado X.509 e envie um certificado no formato PEM para stdout.
+      Deve especificar a chave privada do signatário (para certificados assinados
+      por CA) ou a chave privada do certificado (para certificados autoassinados).
+      Uma chave pública pode ser especificada, caso contrário, a chave pública da
+      chave privada será usada.
+    ru: Создайте сертификат X.509 и выведите сертификат в формате PEM на стандартный
+      вывод. Необходимо указать закрытый ключ подписывающего лица (для сертификатов,
+      подписанных центром сертификации) или закрытый ключ сертификата (для самозаверяющих
+      сертификатов). Можно указать открытый ключ, в противном случае будет использоваться
+      открытый ключ закрытого ключа.
+    zh: 创建 X.509 证书并将 PEM 格式的证书输出到 stdout。必须指定签名者的私钥（对于 CA 签名的证书）或证书的私钥（对于自签名证书）。可以指定公钥，否则将使用私钥的公钥。

@@ -363,6 +363,107 @@ translations:
       получателя или путь к набору ключей/значений (с мета-данными publicKey) для
       использования асимметричного шифрования.
     zh: 加密一个值并将其打印到标准输出。可以指定接收方密钥或密钥环/值路径（使用 publicKey 元数据）以使用非对称加密。
+  HashNewArg1:
+    ar: المسار إلى الملف أو - لـ stdin
+    context: First argument for hash
+    de: Pfad zur Datei oder - für stdin
+    en: path to file or - for stdin
+    es: ruta al archivo o - para stdin
+    fr: chemin d&#39;accès au fichier ou - pour stdin
+    hi: फ़ाइल का पथ या - stdin के लिए
+    ja: ファイルへのパスまたは標準入力の場合は -
+    nl: pad naar bestand of - voor stdin
+    pt: caminho para arquivo ou - para stdin
+    ru: путь к файлу или - для стандартного ввода
+    zh: 文件路径或 - 用于标准输入
+  HashNewFlagsAUsage:
+    ar: خوارزمية للاستخدام
+    context: Usage for the a flag
+    de: Algorithmus, der verwendet werden soll
+    en: algorithm to use
+    es: algoritmo a utilizar
+    fr: algorithme à utiliser
+    hi: उपयोग करने के लिए एल्गोरिदम
+    ja: 使用するアルゴリズム
+    nl: algoritme te gebruiken
+    pt: algoritmo a ser usado
+    ru: алгоритм использования
+    zh: 使用的算法
+  HashNewFlagsSUsage:
+    ar: إخراج التجزئة فقط
+    context: Usage for the s flag
+    de: Nur den Hash ausgeben
+    en: Output just the hash
+    es: Genera solo el hash
+    fr: Afficher uniquement le hachage
+    hi: केवल हैश आउटपुट करें
+    ja: ハッシュのみを出力する
+    nl: Voer alleen de hash uit
+    pt: Produza apenas o hash
+    ru: Выведите только хеш
+    zh: 仅输出哈希值
+  HashNewUsage:
+    ar: أنشئ تجزئة من سلسلة أو ملف وأخرجها إلى stdout.
+    context: Usage for hash
+    de: Erstellen Sie einen Hash aus einer Zeichenfolge oder Datei und geben Sie ihn
+      an stdout aus.
+    en: Create a hash from a string or file and output it to stdout.
+    es: Cree un hash a partir de una cadena o archivo y envíelo a la salida estándar.
+    fr: Créez un hachage à partir d&#39;une chaîne ou d&#39;un fichier et affichez-le
+      sur la sortie standard.
+    hi: किसी स्ट्रिंग या फ़ाइल से हैश बनाएं और उसे stdout पर आउटपुट करें।
+    ja: 文字列またはファイルからハッシュを作成し、stdout に出力します。
+    nl: Maak een hash van een string of bestand en voer deze uit naar stdout.
+    pt: Crie um hash a partir de uma string ou arquivo e envie-o para stdout.
+    ru: Создайте хеш из строки или файла и выведите его на стандартный вывод.
+    zh: 从字符串或文件创建哈希并将其输出到标准输出。
+  HashVerArgs1:
+    ar: مسار الملف أو - لـ stdin
+    context: hash-new arg1
+    de: Dateipfad oder - für stdin
+    en: file path or - for stdin
+    es: ruta del archivo o - para stdin
+    fr: chemin du fichier ou - pour stdin
+    hi: फ़ाइल पथ या - stdin के लिए
+    ja: ファイルパスまたは - （標準入力の場合）
+    nl: bestandspad of - voor stdin
+    pt: caminho do arquivo ou - para stdin
+    ru: путь к файлу или - для стандартного ввода
+    zh: 文件路径或-用于标准输入
+  HashVerArgs2:
+    ar: التجزئة أو الملف أو مسار HTTP
+    context: hash-new arg2
+    de: Hash, Datei oder HTTP-Pfad
+    en: hash, file, or HTTP path
+    es: hash, archivo o ruta HTTP
+    fr: hachage, fichier ou chemin HTTP
+    hi: हैश, फ़ाइल या HTTP पथ
+    ja: ハッシュ、ファイル、または HTTP パス
+    nl: hash-, bestand- of HTTP-pad
+    pt: hash, arquivo ou caminho HTTP
+    ru: хеш, файл или путь HTTP
+    zh: 哈希、文件或 HTTP 路径
+  HashVerUsage:
+    ar: التحقق من التجزئة لملف أو stdin. يجب أن يكون التجزئة في النموذج<algorithm>
+      :<hash> .
+    context: hash-ver usage
+    de: Überprüfen Sie einen Hash für eine Datei oder Standardeingabe. Der Hash sollte
+      in der Form<algorithm> :<hash> .
+    en: Verify a hash for a file or stdin.  Hash should be in the form <algorithm>:<hash>.
+    es: Verifique un hash para un archivo o entrada estándar. El hash debe tener la
+      forma<algorithm> :<hash> .
+    fr: Vérifiez un hachage pour un fichier ou un stdin. Le hachage doit être sous
+      la forme<algorithm> :<hash> .
+    hi: किसी फ़ाइल या stdin के लिए हैश सत्यापित करें। हैश इस रूप में होना चाहिए<algorithm>
+      :<hash> .
+    ja: ファイルまたは標準入力のハッシュを検証します。ハッシュは次の形式である必要があります。<algorithm> :<hash> 。
+    nl: Controleer een hash voor een bestand of stdin. Hasj moet in de vorm zijn<algorithm>
+      :<hash> .
+    pt: Verifique um hash para um arquivo ou stdin. Hash deve estar no formato<algorithm>
+      :<hash> .
+    ru: Проверьте хэш файла или стандартного ввода. Хэш должен быть в форме<algorithm>
+      :<hash> .
+    zh: 验证文件或标准输入的哈希值。哈希值应采用以下格式<algorithm>：<hash> 。
   InitArg2:
     ar: 'المفتاح العام الأولي، اسم المفتاح أو معرف المفتاح الموجود (الافتراضي: إنشاء
       مفتاح متماثل جديد لـ PBKDF)'

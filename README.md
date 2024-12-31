@@ -7,6 +7,7 @@
 [:speech_balloon: Discussions](https://github.com/candiddev/rot/discussions)\
 [:book: Docs](https://rotx.dev/docs/)\
 [:arrow_down: Download](https://rotx.dev/docs/guides/install-rot/)\
+[:eyes: Open Source Details](https://candid.dev/open-source)
 
 Rot is a command line (CLI) tool for managing cryptographic values.
 

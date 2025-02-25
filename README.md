@@ -4,7 +4,7 @@
 
 **Latest Release Notes: [v2025.02](https://rotx.dev/blog/whats-new-202502/)**
 
-[:speech_balloon: Discussions](https://github.com/candiddev/rot/discussions)\
+[:speech_balloon: Mailing Lists](https://rotx.dev/docs/references/mailing-lists/)\
 [:book: Docs](https://rotx.dev/docs/)\
 [:arrow_down: Download](https://rotx.dev/docs/guides/install-rot/)\
 [:eyes: Open Source Details](https://candid.dev/open-source)

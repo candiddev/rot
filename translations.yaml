@@ -974,18 +974,18 @@ translations:
       к нему предоставленным ключам расшифровки.
     zh: 添加新的或修改现有的密钥环，并授予提供的解密密钥访问它的权限。
   KeyringName:
-    ar: 'اسم حلقة المفاتيح (الافتراضي: _1)'
+    ar: اسم سلسلة المفاتيح
     context: A keyring name value
-    de: 'Schlüsselbundname (Standard: _1)'
-    en: 'keyring name (default: _1)'
-    es: 'nombre del llavero (predeterminado: _1)'
-    fr: 'nom du trousseau (par défaut: _1)'
-    hi: 'कीरिंग नाम (डिफ़ॉल्ट: _1)'
-    ja: 'キーリング名 (デフォルト: _1)'
-    nl: 'naam sleutelhanger (standaard: _1)'
-    pt: 'nome do chaveiro (padrão: _1)'
-    ru: 'имя брелока (по умолчанию: _1)'
-    zh: 密钥环名称（默认值：_1）
+    de: Schlüsselanhänger mit Name
+    en: keyring name
+    es: nombre del llavero
+    fr: nom du porte-clés
+    hi: चाबी का छल्ला नाम
+    ja: キーリング名
+    nl: sleutelhanger naam
+    pt: nome do chaveiro
+    ru: имя брелока
+    zh: 密钥环名称
   KeyringRekeyUsage:
     ar: أعد كتابة جميع المفاتيح والقيم في حلقة المفاتيح.
     context: keyring-rekey usage
@@ -1012,19 +1012,32 @@ translations:
     pt: chaveiro/valor
     ru: брелок/значение
     zh: 密钥环/值
-  LstFlagsNUsage:
-    ar: طباعة الأسماء/المسارات فقط
-    context: lst -n usage
-    de: Nur die Namen/Pfade drucken
-    en: Print only the names/paths
-    es: Imprime solo los nombres/rutas
-    fr: Imprimer uniquement les noms/chemins
-    hi: केवल नाम/पथ प्रिंट करें
-    ja: 名前/パスのみを印刷する
-    nl: Druk alleen de namen/paden af
-    pt: Imprima apenas os nomes/caminhos
-    ru: Распечатать только имена/пути
-    zh: 仅打印名称/路径
+  LstFlagsAUsage:
+    ar: قائمة بجميع الإصدارات
+    context: lst -a usage
+    de: Alle Versionen auflisten
+    en: List all versions
+    es: Listar todas las versiones
+    fr: Lister toutes les versions
+    hi: सभी संस्करणों की सूची बनाएं
+    ja: すべてのバージョンを一覧表示する
+    nl: Lijst van alle versies
+    pt: Listar todas as versões
+    ru: Список всех версий
+    zh: 列出所有版本
+  LstFlagsKUsage:
+    ar: قم بإدراج المفاتيح التي يمكنها الوصول إلى حلقة المفاتيح
+    context: lst -k usage
+    de: Schlüssel auflisten, die Zugriff auf den Schlüsselbund haben
+    en: List keys that have access to the keyring
+    es: Listar claves que tienen acceso al llavero
+    fr: Liste des clés qui ont accès au trousseau de clés
+    hi: उन कुंजियों की सूची बनाएं जिनकी कीरिंग तक पहुंच है
+    ja: キーリングにアクセスできるキーを一覧表示する
+    nl: Maak een lijst van sleutels die toegang hebben tot de sleutelhanger
+    pt: Listar chaves que têm acesso ao chaveiro
+    ru: Список ключей, которые имеют доступ к связке ключей
+    zh: 列出有权访问密钥环的密钥
   LstKeyArg1:
     ar: مرشح regexp لأسماء حلقة المفاتيح
     context: key-lst arg1
@@ -1149,6 +1162,19 @@ translations:
     ru: значение закрытого ключа, связка ключей/значение, путь или - для стандартного
       ввода
     zh: 私钥值、密钥环/值、路径或 - 用于标准输入
+  RandUsage:
+    ar: قم بإنشاء سلسلة عشوائية وطباعتها إلى stdout
+    context: rand usage
+    de: Erzeugen Sie eine zufällige Zeichenfolge und drucken Sie sie auf stdout
+    en: Generate a random string and print to stdout
+    es: Genere una cadena aleatoria e imprima en stdout
+    fr: Générer une chaîne aléatoire et imprimer sur la sortie standard
+    hi: एक यादृच्छिक स्ट्रिंग उत्पन्न करें और stdout पर प्रिंट करें
+    ja: ランダムな文字列を生成し、標準出力に出力する
+    nl: Genereer een willekeurige tekenreeks en druk deze af naar stdout
+    pt: Gere uma string aleatória e imprima em stdout
+    ru: Сгенерировать случайную строку и вывести на стандартный вывод
+    zh: 生成随机字符串并打印到标准输出
   RunArg1:
     ar: حلقة المفاتيح/التعبير العادي للمسار (يمكن تحديده عدة مرات، مفصولاً بـ &quot;،&quot;)
     context: run arg1
@@ -1636,6 +1662,33 @@ translations:
     ru: Проверьте подпись сообщения с помощью открытого ключа. Подпись должна быть
       в форме<hash> :<signature> :<optional key id> .
     zh: 使用公钥验证消息的签名。签名必须采用以下格式<hash>：<signature> ：<optional key id> 。
+  SymmetricKeyPlaceholder:
+    ar: مفتاح متماثل
+    context: Symmetric key for encrypt/decrypt
+    de: symmetrischer Schlüssel
+    en: symmetric key
+    es: clave simétrica
+    fr: clé symétrique
+    hi: सममित कुंजी
+    ja: 対称鍵
+    nl: symmetrische sleutel
+    pt: chave simétrica
+    ru: симметричный ключ
+    zh: 对称密钥
+  SymmetricKeyUsage:
+    ar: توفير مفتاح متماثل كعلامة بدلاً من المطالبة
+    context: Symmetric key for encrypt/decrypt
+    de: Geben Sie einen symmetrischen Schlüssel als Flag statt als Eingabeaufforderung
+      an.
+    en: Provide a symmetric key as a flag instead of prompt
+    es: Proporcionar una clave simétrica como bandera en lugar de un mensaje
+    fr: Fournir une clé symétrique comme indicateur au lieu d&#39;une invite
+    hi: प्रॉम्प्ट के बजाय ध्वज के रूप में सममित कुंजी प्रदान करें
+    ja: プロンプトの代わりにフラグとして対称キーを提供する
+    nl: Geef een symmetrische sleutel als vlag in plaats van een prompt
+    pt: Forneça uma chave simétrica como um sinalizador em vez de um prompt
+    ru: Укажите симметричный ключ в качестве флага вместо подсказки
+    zh: 提供对称密钥作为标志而不是提示
   ValAddArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
     context: val-add arg2
@@ -1727,9 +1780,9 @@ translations:
     ru: Добавьте значение в связку ключей (или перезапишите существующее значение),
       при необходимости добавив к нему различные метаполя.
     zh: 向密钥环添加一个值（或覆盖现有值），可选择向其中添加各种元字段。
-  ValCopyArg1:
+  ValCpyArg1:
     ar: حلقة مفاتيح المصدر/المسار
-    context: val-copy arg1
+    context: val-cpy arg1
     de: Quellschlüsselbund/-pfad
     en: source keyring/path
     es: llavero/ruta de origen
@@ -1740,9 +1793,9 @@ translations:
     pt: chaveiro/caminho de origem
     ru: исходный ключ/путь
     zh: 源密钥环/路径
-  ValCopyArg2:
+  ValCpyArg2:
     ar: حلقة مفاتيح الوجهة/المسار
-    context: val-copy arg2
+    context: val-cpy arg2
     de: Ziel-Schlüsselring/-Pfad
     en: destination keyring/path
     es: llavero/ruta de destino
@@ -1753,28 +1806,19 @@ translations:
     pt: chaveiro/caminho de destino
     ru: брелок/путь назначения
     zh: 目标密钥环/路径
-  ValCopyUsage:
-    ar: انسخ قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة، مع توفير اسم جديد لها بشكل
-      اختياري.
-    context: val-copy usage
-    de: Kopieren Sie einen Wert aus einem Schlüsselbund in einen vorhandenen Schlüsselbund
-      und geben Sie optional einen neuen Namen dafür an.
-    en: Copy a Value from a Keyring to an existing Keyring, optionally providing a
-      new name for it.
-    es: Copie un valor de un conjunto de claves a un conjunto de claves existente
-      y, opcionalmente, proporcione un nuevo nombre.
-    fr: Copiez une valeur d&#39;un trousseau de clés vers un trousseau de clés existant,
-      en lui attribuant éventuellement un nouveau nom.
-    hi: किसी कीरिंग से किसी मान को मौजूदा कीरिंग में कॉपी करें, वैकल्पिक रूप से उसके
-      लिए एक नया नाम प्रदान करें।
-    ja: キーリングの値を既存のキーリングにコピーし、オプションで新しい名前を付けます。
-    nl: Kopieer een waarde van een sleutelhanger naar een bestaande sleutelhanger
-      en geef er optioneel een nieuwe naam aan.
-    pt: Copie um valor de um chaveiro para um chaveiro existente, opcionalmente fornecendo
-      um novo nome para ele.
-    ru: Скопируйте значение из связки ключей в существующую связку ключей, при необходимости
-      указав для него новое имя.
-    zh: 将值从密钥环复制到现有密钥环，可选择为其提供一个新名称。
+  ValCpyUsage:
+    ar: انسخ قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة.
+    context: val-cpy usage
+    de: Kopieren Sie einen Wert von einem Schlüsselbund in einen vorhandenen Schlüsselbund.
+    en: Copy a Value from a Keyring to an existing Keyring.
+    es: Copie un valor de un llavero a un llavero existente.
+    fr: Copiez une valeur d&#39;un trousseau de clés vers un trousseau de clés existant.
+    hi: किसी कीरिंग से किसी मौजूदा कीरिंग में मान की प्रतिलिपि बनाएँ।
+    ja: キーリングから既存のキーリングに値をコピーします。
+    nl: Kopieer een waarde van een sleutelhanger naar een bestaande sleutelhanger.
+    pt: Copie um valor de um chaveiro para um chaveiro existente.
+    ru: Скопируйте значение из связки ключей в существующую связку ключей.
+    zh: 将值从密钥环复制到现有密钥环。
   ValDisFlagsMPlaceholder:
     ar: value أو &quot;all&quot; لإظهار كافة القيم التعريفية)
     context: val-dis -m placeholder
@@ -1827,6 +1871,53 @@ translations:
     pt: Mostre um valor descriptografado.
     ru: Показать расшифрованное значение.
     zh: 显示解密值。
+  ValLnkArg2:
+    ar: حلقة مفاتيح/مسار الوجهة (يمكن تحديدها عدة مرات)
+    context: val-lnk arg 2
+    de: Ziel-Schlüsselbund/-Pfad (kann mehrfach angegeben werden)
+    en: destination keyring/path (can be specified multiple times)
+    es: llavero/ruta de destino (se puede especificar varias veces)
+    fr: trousseau/chemin de destination (peut être spécifié plusieurs fois)
+    hi: गंतव्य कुंजी रिंग/पथ (कई बार निर्दिष्ट किया जा सकता है)
+    ja: 宛先キーリング/パス（複数回指定可能）
+    nl: bestemmingssleutelhanger/pad (kan meerdere keren worden opgegeven)
+    pt: chaveiro/caminho de destino (pode ser especificado várias vezes)
+    ru: ключ/путь назначения (можно указать несколько раз)
+    zh: 目标密钥环/路径（可以多次指定）
+  ValLnkUsage:
+    ar: ربط قيمة بقيم أخرى، مع التأكد من تحديث القيم الأخرى عندما تتغير هذه القيمة.
+    context: val-lnk usage
+    de: Verknüpfen Sie einen Wert mit anderen Werten und stellen Sie sicher, dass
+      die anderen Werte aktualisiert werden, wenn sich dieser Wert ändert.
+    en: Link a value to other values, ensuring the other values are updated when this
+      value changes.
+    es: Vincule un valor a otros valores, asegurándose de que los otros valores se
+      actualicen cuando este valor cambie.
+    fr: Liez une valeur à d’autres valeurs, en vous assurant que les autres valeurs
+      sont mises à jour lorsque cette valeur change.
+    hi: किसी मान को अन्य मानों से लिंक करें, यह सुनिश्चित करते हुए कि जब यह मान बदलता
+      है तो अन्य मान भी अपडेट हो जाएं।
+    ja: 値を他の値にリンクし、この値が変更されたときに他の値も更新されるようにします。
+    nl: Koppel een waarde aan andere waarden en zorg ervoor dat de andere waarden
+      worden bijgewerkt wanneer deze waarde verandert.
+    pt: Vincule um valor a outros valores, garantindo que os outros valores sejam
+      atualizados quando esse valor for alterado.
+    ru: Свяжите значение с другими значениями, гарантируя, что другие значения обновляются
+      при изменении этого значения.
+    zh: 将一个值链接到其他值，确保当该值发生变化时其他值也会更新。
+  ValMovUsage:
+    ar: نقل قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة.
+    context: val-mov usage
+    de: Verschieben Sie einen Wert von einem Schlüsselbund zu einem vorhandenen Schlüsselbund.
+    en: Move a Value from a Keyring to an existing Keyring.
+    es: Mueva un valor de un llavero a un llavero existente.
+    fr: Déplacez une valeur d’un trousseau de clés vers un trousseau existant.
+    hi: किसी मान को कीरिंग से मौजूदा कीरिंग में ले जाएं।
+    ja: キーリングから既存のキーリングに値を移動します。
+    nl: Verplaats een waarde van een sleutelhanger naar een bestaande sleutelhanger.
+    pt: Mova um valor de um chaveiro para um chaveiro existente.
+    ru: Переместите значение из связки ключей в существующую связку ключей.
+    zh: 将值从密钥环移动到现有密钥环。
   ValSetMetaArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
     context: val-set-meta arg2

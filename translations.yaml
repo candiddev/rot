@@ -260,14 +260,14 @@ translations:
     ar: طريق
     context: Placeholder for edit -p
     de: Weg
-    en: Path
-    es: Camino
-    fr: Chemin
+    en: path
+    es: camino
+    fr: chemin
     hi: पथ
     ja: パス
-    nl: Pad
-    pt: Caminho
-    ru: Путь
+    nl: pad
+    pt: caminho
+    ru: путь
     zh: 小路
   EditFlagsPUsage:
     ar: قم بتعيين المسار إلى الملف المؤقت الذي يحتوي على الأسرار. يجب أن تكون قابلة
@@ -2080,18 +2080,18 @@ translations:
     ru: расширенное использование ключа
     zh: 扩展密钥用法
   X509NewFlagsEUUsage:
-    ar: استخدام المفتاح الموسع، القيم الصالحة
+    ar: استخدام المفتاح الموسع
     context: x509-new -eu usage
-    de: Erweiterte Schlüsselverwendung, gültige Werte
-    en: Extended key usage, valid values
-    es: Uso de clave extendido, valores válidos
-    fr: Utilisation étendue des clés, valeurs valides
-    hi: विस्तारित कुंजी उपयोग, मान्य मान
-    ja: 拡張キーの使用、有効な値
-    nl: Uitgebreid sleutelgebruik, geldige waarden
-    pt: Uso estendido de chave, valores válidos
-    ru: Расширенное использование ключа, допустимые значения
-    zh: 扩展密钥用法、有效值
+    de: Erweiterte Schlüsselverwendung
+    en: Extended key usage
+    es: Uso extendido de la clave
+    fr: Utilisation étendue des clés
+    hi: विस्तारित कुंजी उपयोग
+    ja: 拡張キーの使用
+    nl: Uitgebreid sleutelgebruik
+    pt: Uso de chave estendido
+    ru: Расширенное использование ключа
+    zh: 扩展密钥用法
   X509NewFlagsEUsage:
     ar: انتهاء الصلاحية في ثوان
     context: x509-new -e usage
@@ -2145,7 +2145,7 @@ translations:
     ru: использование ключа
     zh: 密钥用法
   X509NewFlagsKUsage:
-    ar: استخدام المفتاح، القيم الصالحة
+    ar: استخدام المفتاح والقيم الصالحة
     context: x509-new -k usage
     de: Schlüsselverwendung, gültige Werte
     en: Key usage, valid values

@@ -1,6 +1,6 @@
 # <img alt=logo src=rot.png width=40px> Rot
 
-> Secure Secrets Management for the Modern Sysadmin
+> Boring Cryptography Tooling for Humans
 
 **Latest Release Notes: [v2025.02](https://rotx.dev/blog/whats-new-202502/)**
 

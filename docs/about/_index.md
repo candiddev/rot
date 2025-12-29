@@ -12,6 +12,7 @@ Rot is a command line (CLI) tool for managing cryptographic values.
 Rot makes cryptography easy:
 
 - Generate keys and values using current best encryption
+- Generate post-quantum cryptographic keys and secrets
 - Version and track your secrets
 - Secure secrets among individuals using Shamir Secret Sharing
 - Rekey encrypted values to the latest encryption standards

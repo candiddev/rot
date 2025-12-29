@@ -27,19 +27,21 @@ An example KDF encrypted value looks like this:
 
 ### Private Key Format
 
-Rot uses either EC or Ed25519 private keys, in PKCS #8 DER form, standard base64 encoded.
+Rot uses either EC or Ed25519 private keys, in PKCS #8 DER form, standard base64 encoded.  Rot can also generate post-quantum hybrid private keys, like Ed25519/ML-KEM-768.  These keys are concatenated and standard base64 encoded.
 
-A example private key looks lke this:
+Example private keys:
 
-`ed25519private:MC4CAQAwBQYDK2VwBCIEINr4+TmCQY+rhiEvBJnYhntrfiI2DXfZBx5PQcfHXC2I:alice`
+- `ed25519private:MC4CAQAwBQYDK2VwBCIEINr4+TmCQY+rhiEvBJnYhntrfiI2DXfZBx5PQcfHXC2I:alice`
+- `ed25519mlkem768private:c18A9ENji5DoI3D5EmUYzrA3ElqhLOFiJPdRsUCWVlM+ES7z5D9HFmBs0lzGhqNx0IhJ/j+i8/4QsYdZ6wCTQh7QyJHhEOz0V5B4+V+nF0qmTgexKsg75h4XDw500xNKeudUDmWlOKHl5/e5tbvovV/FeWwxnB6ioDzWkf08L48=:bob`
 
 ### Public Key Format
 
-Rot uses EC or Ed25519 public keys, in PKIX DER form, standard base64 encoded. 
+Rot uses EC or Ed25519 public keys, in PKIX DER form, standard base64 encoded.  Rot can also generate post-quantum hybrid public keys, like Ed25519/ML-KEM-768.  These keys are concatenated and standard base64 encoded.
 
-A public key looks like this:
+Example public keys:
 
-`ed25519public:MCowBQYDK2VwAyEArBbmsC9/nzSGTRqYfBRr2gju+pL6XlO6moJOTU+6flE=:EcpHiptzqr`
+- `ed25519public:MCowBQYDK2VwAyEArBbmsC9/nzSGTRqYfBRr2gju+pL6XlO6moJOTU+6flE=:alice`
+- `ed25519mlkem768public:PhEu8+Q/RxZgbNJcxoajcdCISf4/ovP+ELGHWesAk0L6GoyiYQtepVeDHMzyZ2SvrIJDNDqpoIIVWKWFowRuOxr+QWwWez0++m5+iTAZKoYoRTUijDQD5HL1qyzbklqOqUWt2UKJto2zMwAFQAYgcspu5HhGwqfAgJfDWFth+JNZbHyi/LVfRh8t10zimqgZx7FKfDMWETylIRAVerN4pLHaCqvyUJG71ySf9F8A4Xf/BUbelWMGEpyOUKIF2MyNYzUJa37p4Yd/sE87mEmyIWabEm3l2k2nuC03S7uCq1nb6HzRCabRcZqAKFa+Kwmawa/2+RryerkKuUHW4wjrcjxfqFenc1KZkU1rU5WIUBT/2oasWoSqNiMsoMKAenpZ9LFEaASrhZdC83rIU5XZ2y7hxmPbIy3tcpXUJRlYk3Oe1GVrpIAeG2+WGnoerK49MXOIlwP+YxhByZIv5TgPBHZNwjRn87oAyUhtK0B+nIyDZc6HQ6bVs6l+1SMWgZtEYszjF5j5NC756KLcinvl6Fv9CGQHlq3TJxOD5ST7BE3GeY5MKD2kUKtAMVkQ8h1kgVCduJSbyXU79RprtLWs4VTKs0nZtmoiGg/dFDrnYkG+yDIBppzvcXaLmBl/qK/HWLTz1jJCWw1LpgZpVb8jgMLRPLqPo8VEa6G7i8EirLNg5aLsRRdphRsxZkjkOAr8ELKBeAb12xg0ogmEQGCUCFrYOjqcXMEQEzkrZ7lxpM+7hxWtYGH/YjkurHLsKIhySrO9sEnWqGhpzCt/WW6boGRi2FzWvCaAaLpLIT8lFkhplIxrBTnvNXn1USRWMspXEjjtynx2oD9SNr8es6EHPJVp9WTYMcFb8Rko3LCdyxBY5H+TIb9LYwkhYilIBEzS5JR6MbRpi5S5iCqx43zY61ORozY4RpnZt8OVqUnozHIvZ3TmZ4OT+RQGBiW8KwHd1m/9MqA6w0sHYHZ1osgCA6hnMLFZm1qKhR4BoE97hV0DxKmmshVx6T1/qnCJBXA8Kc35ppA9CaGU1ClZkm7+t3DGsLmUSSLKDC4Md3Jfo7/YTHQMwcGAmWfxBnhtPJiiuFtadi2xWLFmEXvchcumRH9xNoD/+1l/Wb+5dVE1aYaVikoOI82BXBhpsiZKBndjopTnhKF5tozL2XJVuJqYoZD9mFI/HJ396qGkJRgTicz0UqcFSWj696qBYYWJErQtawcucbxAJxHNJDjCqig4/FBfoxNJSJZ9k14xwLbCKLFQ2qZ3sRnkMWOwijwAd4AnhkgMNZADIoo7sQIQkTOZmkfL0ypfFYg0xKtl5829hqoI9ZgO+7Pz9Gf+5w/jZyROLLtHSc7rF7JpW1OA4oa1TL+m9wrvbFZNMGJtejM452V1BKgjo4PuebPitbuORTIgimWCgxDNkX6yIqTGVGxuoVKoAJPNaSG8FoveZhOT+Ieo40k6c2g4g5UY2Vi3qY+0+jrQ1VbsZVV9A1PcN1615yeT8ZcxWi7AHEoc4IKRWldH20a8RcLc9TYHyl91IICNwJ/1x0uvg1nRpCK8+AsL2nqVx4G4VXOuyyrakUB9N3ToXzqTXqRl3TlZI88wc5iVWtLebrj31UCM1DkxIC5mVg==:bob`
 
 ## Library
 

@@ -148,22 +148,9 @@ translations:
     ru: Расшифруйте значение или разверните значение KDF и выведите его на стандартный
       вывод.
     zh: 解密一个值或解开一个 KDF 值并将其打印到标准输出。
-  DelKeyringUsage:
-    ar: قم بإزالة حلقة المفاتيح من التكوين.
-    context: del-keyring usage
-    de: Entfernen Sie einen Schlüsselbund aus der Konfiguration.
-    en: Remove a keyring from the configuration.
-    es: Elimine un llavero de la configuración.
-    fr: Supprimez un trousseau de clés de la configuration.
-    hi: कॉन्फ़िगरेशन से एक कीरिंग निकालें.
-    ja: 構成からキーリングを削除します。
-    nl: Verwijder een sleutelhanger uit de configuratie.
-    pt: Remova um chaveiro da configuração.
-    ru: Удалите брелок из конфигурации.
-    zh: 从配置中删除密钥环。
-  DelPrvUsage:
+  DeleteKeyPrivateUsage:
     ar: قم بإزالة مفتاح فك تشفير المفتاح الخاص لحلقة المفاتيح من التكوين.
-    context: del-prv usage
+    context: delete-private usage
     de: Entfernen Sie einen privaten Entschlüsselungsschlüssel für einen Schlüsselbund
       aus der Konfiguration.
     en: Remove a Decrypt Key Private Key for a Keyring from the configuration.
@@ -178,9 +165,9 @@ translations:
     pt: Remova uma chave privada de descriptografia para um chaveiro da configuração.
     ru: Удалите закрытый ключ расшифровки для связки ключей из конфигурации.
     zh: 从配置中删除密钥环的解密密钥私钥。
-  DelPubUsage:
+  DeleteKeyPublicUsage:
     ar: قم بإزالة مفتاح فك التشفير من التكوين.
-    context: del-pub usage
+    context: delete-public usage
     de: Entfernen Sie einen Entschlüsselungsschlüssel aus der Konfiguration.
     en: Remove a Decrypt Key from the configuration.
     es: Elimine una clave de descifrado de la configuración.
@@ -191,9 +178,22 @@ translations:
     pt: Remova uma chave de descriptografia da configuração.
     ru: Удалите ключ расшифровки из конфигурации.
     zh: 从配置中删除解密密钥。
-  DelValueUsage:
+  DeleteKeyringUsage:
+    ar: قم بإزالة حلقة المفاتيح من التكوين.
+    context: delete-keyring usage
+    de: Entfernen Sie einen Schlüsselbund aus der Konfiguration.
+    en: Remove a keyring from the configuration.
+    es: Elimine un llavero de la configuración.
+    fr: Supprimez un trousseau de clés de la configuration.
+    hi: कॉन्फ़िगरेशन से एक कीरिंग निकालें.
+    ja: 構成からキーリングを削除します。
+    nl: Verwijder een sleutelhanger uit de configuratie.
+    pt: Remova um chaveiro da configuração.
+    ru: Удалите брелок из конфигурации.
+    zh: 从配置中删除密钥环。
+  DeleteValueUsage:
     ar: إزالة قيمة من التكوين.
-    context: del-val usage
+    context: delete-value usage
     de: Entfernen Sie einen Wert aus der Konfiguration.
     en: Remove a Value from the configuration.
     es: Eliminar un valor de la configuración.
@@ -417,9 +417,9 @@ translations:
     pt: Crie um hash a partir de uma string ou arquivo e envie-o para stdout.
     ru: Создайте хеш из строки или файла и выведите его на стандартный вывод.
     zh: 从字符串或文件创建哈希并将其输出到标准输出。
-  HashVerArgs1:
+  HashVerifyArgs1:
     ar: مسار الملف أو - لـ stdin
-    context: hash-new arg1
+    context: hash-verify arg1
     de: Dateipfad oder - für stdin
     en: file path or - for stdin
     es: ruta del archivo o - para stdin
@@ -430,9 +430,9 @@ translations:
     pt: caminho do arquivo ou - para stdin
     ru: путь к файлу или - для стандартного ввода
     zh: 文件路径或-用于标准输入
-  HashVerArgs2:
+  HashVerifyArgs2:
     ar: التجزئة أو الملف أو مسار HTTP
-    context: hash-new arg2
+    context: hash-verify arg2
     de: Hash, Datei oder HTTP-Pfad
     en: hash, file, or HTTP path
     es: hash, archivo o ruta HTTP
@@ -443,10 +443,10 @@ translations:
     pt: hash, arquivo ou caminho HTTP
     ru: хеш, файл или путь HTTP
     zh: 哈希、文件或 HTTP 路径
-  HashVerUsage:
+  HashVerifyUsage:
     ar: التحقق من التجزئة لملف أو stdin. يجب أن يكون التجزئة في النموذج<algorithm>
       :<hash> .
-    context: hash-ver usage
+    context: hash-verify usage
     de: Überprüfen Sie einen Hash für eine Datei oder Standardeingabe. Der Hash sollte
       in der Form<algorithm> :<hash> .
     en: Verify a hash for a file or stdin.  Hash should be in the form <algorithm>:<hash>.
@@ -526,9 +526,9 @@ translations:
       первый доступный ключ, если ни один не указан в качестве исходного пользовательского
       ключа.
     zh: 初始化新的 Rot 配置。将查找 _1 文件，如果未指定任何可用密钥，则使用第一个可用密钥作为初始用户密钥。
-  JWTDisArg1:
+  JWTDisplayArg1:
     ar: JWT، أو - لـ stdin
-    context: Arg 1 for jwt-dis
+    context: Arg 1 for jwt-display
     de: JWT oder - für stdin
     en: JWT, or - for stdin
     es: JWT, o - para entrada estándar
@@ -539,9 +539,9 @@ translations:
     pt: JWT, ou - para stdin
     ru: JWT или - для стандартного ввода
     zh: JWT，或 - 用于 stdin
-  JWTDisArg2:
+  JWTDisplayArg2:
     ar: قيمة المفتاح العام، أو حلقة المفاتيح/الاسم، أو المسار. يمكن تحديدها عدة مرات
-    context: Arg 2 for jwt-dis
+    context: Arg 2 for jwt-display
     de: öffentlicher Schlüsselwert, Schlüsselbund/Name oder Pfad. Kann mehrfach angegeben
       werden
     en: public key value, keyring/name, or path.  Can be specified multiple times
@@ -558,9 +558,9 @@ translations:
     ru: Значение открытого ключа, связка ключей/имя или путь. Можно указать несколько
       раз
     zh: 公钥值、密钥环/名称或路径。可以指定多次
-  JWTDisUsage:
+  JWTDisplayUsage:
     ar: إظهار JWT، والتحقق من صحة التوقيع اختياريًا باستخدام مفتاح عام.
-    context: jwt-dis usage
+    context: jwt-display usage
     de: Zeigen Sie ein JWT an und validieren Sie die Signatur optional mit einem öffentlichen
       Schlüssel.
     en: Show a JWT, optionally validating the signature with a public key.
@@ -873,9 +873,9 @@ translations:
     pt: Adicione uma chave nova ou existente às chaves de descriptografia.
     ru: Добавьте новый или существующий ключ в Decrypt Keys.
     zh: 添加新密钥或现有密钥来解密密钥。
-  KeyDisPubArg:
+  KeyDisplayPublicArg:
     ar: الاسم أو المفتاح الخاص أو حلقة المفاتيح/القيمة أو - لـ stdin
-    context: key-dis-pub arg
+    context: key-display-public arg
     de: Name, privater Schlüssel, Schlüsselbund/Wert oder - für Standardeingabe
     en: name, private key, keyring/value or - for stdin
     es: nombre, clave privada, conjunto de claves/valor o - para stdin
@@ -886,9 +886,9 @@ translations:
     pt: nome, chave privada, chaveiro/valor ou - para stdin
     ru: имя, закрытый ключ, связка ключей/значение или - для стандартного ввода
     zh: 名称、私钥、密钥环/值或 - 用于标准输入
-  KeyDisPubUsage:
+  KeyDisplayPublicUsage:
     ar: عرض المفتاح العام للمفتاح الخاص.
-    context: key-dis-pub usage
+    context: key-display-public usage
     de: Den öffentlichen Schlüssel eines privaten Schlüssels anzeigen.
     en: Display the public key of a private key.
     es: Muestra la clave pública de una clave privada.
@@ -899,9 +899,9 @@ translations:
     pt: Exiba a chave pública de uma chave privada.
     ru: Отображение открытого ключа закрытого ключа.
     zh: 显示私钥的公钥。
-  KeyDisUsage:
+  KeyDisplayUsage:
     ar: عرض تفاصيل حول _1
-    context: key-dis usage
+    context: key-display usage
     de: Details zu einem _1 anzeigen
     en: Display details about a _1
     es: Mostrar detalles sobre un _1
@@ -1012,9 +1012,9 @@ translations:
     pt: chaveiro/valor
     ru: брелок/значение
     zh: 密钥环/值
-  LstFlagsAUsage:
+  ListFlagsAUsage:
     ar: قائمة بجميع الإصدارات
-    context: lst -a usage
+    context: list -a usage
     de: Alle Versionen auflisten
     en: List all versions
     es: Listar todas las versiones
@@ -1025,7 +1025,7 @@ translations:
     pt: Listar todas as versões
     ru: Список всех версий
     zh: 列出所有版本
-  LstFlagsKUsage:
+  ListFlagsKUsage:
     ar: قم بإدراج المفاتيح التي يمكنها الوصول إلى حلقة المفاتيح
     context: lst -k usage
     de: Schlüssel auflisten, die Zugriff auf den Schlüsselbund haben
@@ -1038,7 +1038,7 @@ translations:
     pt: Listar chaves que têm acesso ao chaveiro
     ru: Список ключей, которые имеют доступ к связке ключей
     zh: 列出有权访问密钥环的密钥
-  LstKeyArg1:
+  ListKeyArg1:
     ar: مرشح regexp لأسماء حلقة المفاتيح
     context: key-lst arg1
     de: Regexp-Filter für Schlüsselbundnamen
@@ -1051,9 +1051,9 @@ translations:
     pt: filtro regexp para nomes de chaveiros
     ru: фильтр регулярных выражений для имен связок ключей
     zh: 密钥环名称的正则表达式过滤器
-  LstKeyUsage:
+  ListKeyUsage:
     ar: قائمة المفاتيح في التكوين
-    context: key-lst usage
+    context: key-list usage
     de: Auflisten von Schlüsseln in einer Konfiguration
     en: List Keys in a configuration
     es: Listar claves en una configuración
@@ -1064,9 +1064,9 @@ translations:
     pt: Listar chaves em uma configuração
     ru: Список ключей в конфигурации
     zh: 列出配置中的键
-  LstKeyringUsage:
+  ListKeyringUsage:
     ar: قائمة Keyrings في التكوين
-    context: keyring-lst usage
+    context: keyring-list usage
     de: Schlüsselbunde in einer Konfiguration auflisten
     en: List Keyrings in a configuration
     es: Listar llaveros en una configuración
@@ -1077,9 +1077,9 @@ translations:
     pt: Listar chaveiros em uma configuração
     ru: Список брелоков в конфигурации
     zh: 列出配置中的密钥环
-  LstValArg1:
+  ListValueArg1:
     ar: مرشح regexp للقيم
-    context: val-lst arg1
+    context: value-list arg1
     de: Regexp-Filter für Werte
     en: regexp filter for values
     es: filtro de expresiones regulares para valores
@@ -1090,9 +1090,9 @@ translations:
     pt: filtro regexp para valores
     ru: фильтр регулярных выражений для значений
     zh: 正则表达式过滤值
-  LstValUsage:
+  ListValueUsage:
     ar: قائمة القيم في التكوين
-    context: val-lst usage
+    context: value-list usage
     de: Auflisten von Werten in einer Konfiguration
     en: List Values in a configuration
     es: Listar valores en una configuración
@@ -1162,9 +1162,9 @@ translations:
     ru: значение закрытого ключа, связка ключей/значение, путь или - для стандартного
       ввода
     zh: 私钥值、密钥环/值、路径或 - 用于标准输入
-  RandUsage:
+  RandomUsage:
     ar: قم بإنشاء سلسلة عشوائية وطباعتها إلى stdout
-    context: rand usage
+    context: random usage
     de: Erzeugen Sie eine zufällige Zeichenfolge und drucken Sie sie auf stdout
     en: Generate a random string and print to stdout
     es: Genere una cadena aleatoria e imprima en stdout
@@ -1277,9 +1277,9 @@ translations:
       разрешить ${variables} и $variables перед выполнением команды.
     zh: 运行命令并将值作为环境变量注入。仅当在指定的密钥环/路径下时，才会使用值。从多个路径读取时，如果有重复的名称，将使用最后读取的值。写入 stderr/stdout
       的值将被 *** 屏蔽。转义变量 (\\$) 可用于引用脚本中的值，否则 _1 将在执行命令之前尝试解析 ${variables} 和 $variables。
-  SSHDisArg:
+  SSHDisplayArg:
     ar: المفتاح، أو - لـ stdin
-    context: ssh-dis arg
+    context: ssh-display arg
     de: Taste, oder - für stdin
     en: key, or - for stdin
     es: clave, o - para stdin
@@ -1290,9 +1290,9 @@ translations:
     pt: chave, ou - para stdin
     ru: ключ, или - для стандартного ввода
     zh: 键，或 - 用于标准输入
-  SSHDisFlagsIUsage:
+  SSHDisplayFlagsIUsage:
     ar: أضف معرفًا إلى المفتاح المستورد من مفتاح SSH
-    context: ssh-dis -i usage
+    context: ssh-display -i usage
     de: Fügen Sie dem aus einem SSH-Schlüssel importierten Schlüssel eine ID hinzu
     en: Add id to the key imported from a SSH key
     es: Agregue identificación a la clave importada desde una clave SSH
@@ -1303,9 +1303,9 @@ translations:
     pt: Adicione o id à chave importada de uma chave SSH
     ru: Добавьте идентификатор к ключу, импортированному из ключа SSH.
     zh: 将 id 添加到从 SSH 密钥导入的密钥中
-  SSHDisUsage:
+  SSHDisplayUsage:
     ar: تحويل مفاتيح Rot إلى SSH، أو مفاتيح SSH إلى Rot، وطباعتها إلى stdout.
-    context: ssh-dis usage
+    context: ssh-display usage
     de: Konvertieren Sie Rot-Schlüssel in SSH oder SSH-Schlüssel in Rot und drucken
       Sie es auf stdout.
     en: Convert Rot keys to SSH, or SSH keys to Rot, and print it to stdout.
@@ -1527,9 +1527,9 @@ translations:
     pt: segundos
     ru: секунды
     zh: 秒
-  SigNewArg1:
+  SignatureNewArg1:
     ar: قيمة المفتاح الخاص/القيمة، أو المسار
-    context: sig-new arg1
+    context: signature-new arg1
     de: privater Schlüsselwert Schlüsselbund/Wert oder Pfad
     en: private key value keyring/value, or path
     es: valor de clave privada llavero/valor, o ruta
@@ -1540,9 +1540,9 @@ translations:
     pt: valor da chave privada chaveiro/valor ou caminho
     ru: значение закрытого ключа, связка/значение или путь
     zh: 私钥值密钥环/值，或路径
-  SigNewArg2:
+  SignatureNewArg2:
     ar: البيانات للتوقيع أو - لـ stdin
-    context: sig-new arg2
+    context: signature-new arg2
     de: zu signierende Daten oder - für Standardeingabe
     en: data to sign or - for stdin
     es: datos para firmar o - para stdin
@@ -1553,9 +1553,9 @@ translations:
     pt: dados para assinar ou - para stdin
     ru: данные для подписи или - для стандартного ввода
     zh: 要签名的数据或 - 用于标准输入
-  SigNewFlagSUsage:
+  SignatureNewFlagSUsage:
     ar: إخراج التوقيع فقط
-    context: sig-new -s usage
+    context: signature-new -s usage
     de: Nur die Signatur ausgeben
     en: Output just the signature
     es: Salida solo la firma
@@ -1566,11 +1566,11 @@ translations:
     pt: Produza apenas a assinatura
     ru: Выведите только подпись
     zh: 仅输出签名
-  SigNewUsage:
+  SignatureNewUsage:
     ar: قم بإنشاء توقيع وإخراج سلسلة ترميز Base64 القياسية. يجب تحديد المفتاح الخاص
       للموقع والبيانات المراد التوقيع عليها. بالنسبة لمفاتيح ECP، سيكون التجزئة SHA256.
       بالنسبة لـ Ed25519، التجزئة غير مستخدمة.
-    context: sig-new usage
+    context: signature-new usage
     de: Generieren Sie eine Signatur und geben Sie eine standardmäßig kodierte Base64-Zeichenfolge
       aus. Sie müssen den privaten Schlüssel des Unterzeichners und die zu signierenden
       Daten angeben. Für ECP-Schlüssel ist der Hash SHA256. Für Ed25519 wird der Hash
@@ -1599,9 +1599,9 @@ translations:
       указать закрытый ключ подписывающей стороны и данные для подписи. Для ключей
       ECP хэш будет SHA256. Для Ed25519 хэш не используется.
     zh: 生成签名并输出标准编码的 base64 字符串。必须指定签名者的私钥和要签名的数据。对于 ECP 密钥，哈希将为 SHA256。对于 Ed25519，哈希未使用。
-  SigVerArgs1:
+  SignatureVerifyArgs1:
     ar: قيمة المفتاح العام أو حلقة المفاتيح/القيمة أو المسار
-    context: sig-new arg1
+    context: signature-verify arg1
     de: öffentlicher Schlüsselwert, Schlüsselbund/Wert oder Pfad
     en: public key value, keyring/value, or path
     es: valor de clave pública, conjunto de claves/valor o ruta
@@ -1612,9 +1612,9 @@ translations:
     pt: valor de chave pública, chaveiro/valor ou caminho
     ru: значение открытого ключа, связка ключей/значение или путь
     zh: 公钥值、密钥环/值或路径
-  SigVerArgs2:
+  SignatureVerifyArgs2:
     ar: رسالة أو - لـ stdin
-    context: sig-new arg2
+    context: sigature-verify arg2
     de: Nachricht oder - für Standardeingabe
     en: message or - for stdin
     es: mensaje o - para stdin
@@ -1625,9 +1625,9 @@ translations:
     pt: mensagem ou - para stdin
     ru: сообщение или - для стандартного ввода
     zh: 消息或-用于标准输入
-  SigVerArgs3:
+  SignatureVerifyArgs3:
     ar: إمضاء
-    context: sig-new arg3
+    context: signature-verify arg3
     de: Unterschrift
     en: signature
     es: firma
@@ -1638,10 +1638,10 @@ translations:
     pt: assinatura
     ru: подпись
     zh: 签名
-  SigVerUsage:
+  SignatureVerifyUsage:
     ar: التحقق من توقيع الرسالة باستخدام المفتاح العام. يجب أن يكون التوقيع في النموذج<hash>
       :<signature> :<optional key id> .
-    context: sig-ver usage
+    context: signature-verify usage
     de: Überprüfen Sie eine Signatur für eine Nachricht mit einem öffentlichen Schlüssel.
       Die Signatur muss in der Form<hash> :<signature> :<optional key id> .
     en: Verify a signature for a message using a public key.  Signature must be in
@@ -1689,9 +1689,9 @@ translations:
     pt: Forneça uma chave simétrica como um sinalizador em vez de um prompt
     ru: Укажите симметричный ключ в качестве флага вместо подсказки
     zh: 提供对称密钥作为标志而不是提示
-  ValAddArg2:
+  ValueAddArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
-    context: val-add arg2
+    context: value-add arg2
     de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
     en: meta fields in the format key=value, can be specified multiple times
     es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
@@ -1702,9 +1702,9 @@ translations:
     pt: metacampos no formato key=value, podem ser especificados diversas vezes
     ru: метаполя в формате ключ=значение, можно указывать несколько раз
     zh: 元字段格式为 key=value，可以多次指定
-  ValAddFlagsLPlaceholder:
+  ValueAddFlagsLPlaceholder:
     ar: طول
-    context: val-add -l placeholder
+    context: value-add -l placeholder
     de: Länge
     en: length
     es: longitud
@@ -1715,9 +1715,9 @@ translations:
     pt: comprimento
     ru: длина
     zh: 长度
-  ValAddFlagsLUsage:
+  ValueAddFlagsLUsage:
     ar: قم بإنشاء سلسلة عشوائية بهذا الطول بدلاً من توفير قيمة
-    context: val-add -l usage
+    context: value-add -l usage
     de: Erzeuge eine zufällige Zeichenfolge mit dieser Länge, anstatt einen Wert anzugeben
     en: Generate a random string with this length instead of providing a value
     es: Genere una cadena aleatoria con esta longitud en lugar de proporcionar un
@@ -1730,9 +1730,9 @@ translations:
     pt: Gere uma string aleatória com este comprimento em vez de fornecer um valor
     ru: Создайте случайную строку этой длины вместо предоставления значения.
     zh: 生成具有此长度的随机字符串，而不是提供值
-  ValAddPrvArg2:
+  ValueAddPrivateArg2:
     ar: 'معرف المفتاح (الافتراضي: سلسلة عشوائية)'
-    context: val-add-prv arg2
+    context: value-add-private arg2
     de: 'Schlüssel-ID (Standard: zufällige Zeichenfolge)'
     en: 'key ID (default: random string)'
     es: 'ID de clave (predeterminado: cadena aleatoria)'
@@ -1743,9 +1743,9 @@ translations:
     pt: 'ID da chave (padrão: string aleatória)'
     ru: 'идентификатор ключа (по умолчанию: случайная строка)'
     zh: 密钥 ID（默认值：随机字符串）
-  ValAddPrvUsage:
+  ValueAddPrivateUsage:
     ar: قم بإنشاء وإضافة مفتاح خاص مشفر إلى قيم Keyring.
-    context: val-add-prv usage
+    context: val-add-private usage
     de: Generieren Sie einen kryptografischen privaten Schlüssel und fügen Sie ihn
       den Schlüsselbundwerten hinzu.
     en: Generate and add a cryptographic private key to Keyring Values.
@@ -1758,10 +1758,10 @@ translations:
     pt: Gere e adicione uma chave privada criptográfica aos valores do chaveiro.
     ru: Создайте и добавьте криптографический закрытый ключ в значения набора ключей.
     zh: 生成加密私钥并将其添加到 Keyring Values。
-  ValAddUsage:
+  ValueAddUsage:
     ar: أضف قيمة إلى حلقة مفاتيح (أو قم بالكتابة فوق قيمة موجودة)، مع إضافة حقول تعريف
       متنوعة إليها بشكل اختياري.
-    context: val-add usage
+    context: value-add usage
     de: Fügen Sie einem Schlüsselbund einen Wert hinzu (oder überschreiben Sie einen
       vorhandenen Wert) und fügen Sie optional verschiedene Metafelder hinzu.
     en: Add a Value to a Keyring (or overwrite an existing Value), optionally adding
@@ -1780,9 +1780,9 @@ translations:
     ru: Добавьте значение в связку ключей (или перезапишите существующее значение),
       при необходимости добавив к нему различные метаполя.
     zh: 向密钥环添加一个值（或覆盖现有值），可选择向其中添加各种元字段。
-  ValCpyArg1:
+  ValueCopyArg1:
     ar: حلقة مفاتيح المصدر/المسار
-    context: val-cpy arg1
+    context: value-copy arg1
     de: Quellschlüsselbund/-pfad
     en: source keyring/path
     es: llavero/ruta de origen
@@ -1793,9 +1793,9 @@ translations:
     pt: chaveiro/caminho de origem
     ru: исходный ключ/путь
     zh: 源密钥环/路径
-  ValCpyArg2:
+  ValueCopyArg2:
     ar: حلقة مفاتيح الوجهة/المسار
-    context: val-cpy arg2
+    context: value-copy arg2
     de: Ziel-Schlüsselring/-Pfad
     en: destination keyring/path
     es: llavero/ruta de destino
@@ -1806,9 +1806,9 @@ translations:
     pt: chaveiro/caminho de destino
     ru: брелок/путь назначения
     zh: 目标密钥环/路径
-  ValCpyUsage:
+  ValueCopyUsage:
     ar: انسخ قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة.
-    context: val-cpy usage
+    context: value-copy usage
     de: Kopieren Sie einen Wert von einem Schlüsselbund in einen vorhandenen Schlüsselbund.
     en: Copy a Value from a Keyring to an existing Keyring.
     es: Copie un valor de un llavero a un llavero existente.
@@ -1819,9 +1819,9 @@ translations:
     pt: Copie um valor de um chaveiro para um chaveiro existente.
     ru: Скопируйте значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环复制到现有密钥环。
-  ValDisFlagsMPlaceholder:
+  ValueDisplayFlagsMPlaceholder:
     ar: value أو &quot;all&quot; لإظهار كافة القيم التعريفية)
-    context: val-dis -m placeholder
+    context: value-display -m placeholder
     de: Wert oder „alle“, um alle Metawerte anzuzeigen)
     en: value or 'all' to show all meta values)
     es: valor o &#39;todos&#39; para mostrar todos los metavalores)
@@ -1832,9 +1832,9 @@ translations:
     pt: value ou &#39;all&#39; para mostrar todos os valores meta)
     ru: значение или «все», чтобы отобразить все метазначения)
     zh: 值或“全部”以显示所有元值）
-  ValDisFlagsMUsage:
+  ValueDisplayFlagsMUsage:
     ar: إظهار القيم التعريفية
-    context: val-dis -m usage
+    context: value-display -m usage
     de: Metawerte anzeigen
     en: Show meta values
     es: Mostrar metavalores
@@ -1845,9 +1845,9 @@ translations:
     pt: Mostrar valores meta
     ru: Показать метазначения
     zh: 显示元值
-  ValDisFlagsVUsage:
+  ValueDisplayFlagsVUsage:
     ar: إظهار القيمة فقط
-    context: val-dis -v usage
+    context: value-display -v usage
     de: Nur den Wert anzeigen
     en: Show the value only
     es: Mostrar solo el valor
@@ -1858,9 +1858,9 @@ translations:
     pt: Mostrar apenas o valor
     ru: Показать только значение
     zh: 仅显示值
-  ValDisUsage:
+  ValueDisplayUsage:
     ar: إظهار القيمة التي تم فك تشفيرها.
-    context: val-dis usage
+    context: value-display usage
     de: Zeigt einen entschlüsselten Wert an.
     en: Show a decrypted value.
     es: Mostrar un valor descifrado.
@@ -1871,9 +1871,9 @@ translations:
     pt: Mostre um valor descriptografado.
     ru: Показать расшифрованное значение.
     zh: 显示解密值。
-  ValLnkArg2:
+  ValueLinkArg2:
     ar: حلقة مفاتيح/مسار الوجهة (يمكن تحديدها عدة مرات)
-    context: val-lnk arg 2
+    context: value-link arg 2
     de: Ziel-Schlüsselbund/-Pfad (kann mehrfach angegeben werden)
     en: destination keyring/path (can be specified multiple times)
     es: llavero/ruta de destino (se puede especificar varias veces)
@@ -1884,9 +1884,9 @@ translations:
     pt: chaveiro/caminho de destino (pode ser especificado várias vezes)
     ru: ключ/путь назначения (можно указать несколько раз)
     zh: 目标密钥环/路径（可以多次指定）
-  ValLnkUsage:
+  ValueLinkUsage:
     ar: ربط قيمة بقيم أخرى، مع التأكد من تحديث القيم الأخرى عندما تتغير هذه القيمة.
-    context: val-lnk usage
+    context: value-link usage
     de: Verknüpfen Sie einen Wert mit anderen Werten und stellen Sie sicher, dass
       die anderen Werte aktualisiert werden, wenn sich dieser Wert ändert.
     en: Link a value to other values, ensuring the other values are updated when this
@@ -1905,9 +1905,9 @@ translations:
     ru: Свяжите значение с другими значениями, гарантируя, что другие значения обновляются
       при изменении этого значения.
     zh: 将一个值链接到其他值，确保当该值发生变化时其他值也会更新。
-  ValMovUsage:
+  ValueMoveUsage:
     ar: نقل قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة.
-    context: val-mov usage
+    context: value-move usage
     de: Verschieben Sie einen Wert von einem Schlüsselbund zu einem vorhandenen Schlüsselbund.
     en: Move a Value from a Keyring to an existing Keyring.
     es: Mueva un valor de un llavero a un llavero existente.
@@ -1918,9 +1918,9 @@ translations:
     pt: Mova um valor de um chaveiro para um chaveiro existente.
     ru: Переместите значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环移动到现有密钥环。
-  ValSetMetaArg2:
+  ValueSetMetaArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
-    context: val-set-meta arg2
+    context: value-set-meta arg2
     de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
     en: meta fields in the format key=value, can be specified multiple times
     es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
@@ -1931,10 +1931,10 @@ translations:
     pt: metacampos no formato key=value, podem ser especificados diversas vezes
     ru: метаполя в формате ключ=значение, можно указывать несколько раз
     zh: 元字段格式为 key=value，可以多次指定
-  ValSetMetaUsage:
+  ValueSetMetaUsage:
     ar: قم بتعيين حقول التعريف لحلقة مفاتيح/قيمة. يمكن تحديد الحقول عدة مرات بتنسيق
       المفتاح = القيمة. ستؤدي القيمة (key=) إلى حذف المفتاح.
-    context: val-set-meta usage
+    context: value-set-meta usage
     de: Legen Sie Metafelder für einen Schlüsselbund/Wert fest. Felder können mehrfach
       im Format Schlüssel=Wert angegeben werden. Ein Wert (Schlüssel=) löscht den
       Schlüssel.
@@ -1956,9 +1956,9 @@ translations:
     ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
       в формате ключ=значение. Значение (key=) удалит ключ.
     zh: 设置密钥环/值的元字段。字段可以以 key=value 格式多次指定。值 (key=) 将删除密钥。
-  X509DisArg1:
+  X509DisplayArg1:
     ar: قيمة الشهادة أو المسار أو - لـ stdin
-    context: x509-dis arg1
+    context: x509-display arg1
     de: Zertifikatswert, Pfad oder - für stdin
     en: Certificate value, path, or - for stdin
     es: Valor del certificado, ruta o - para stdin
@@ -1969,9 +1969,9 @@ translations:
     pt: Valor do certificado, caminho ou - para stdin
     ru: Значение сертификата, путь или - для стандартного ввода
     zh: 证书值、路径或 - 用于标准输入
-  X509DisArg2:
+  X509DisplayArg2:
     ar: يمكن تحديد قيمة أو مسار شهادة CA عدة مرات
-    context: x509-dis arg2
+    context: x509-display arg2
     de: CA-Zertifikatswert oder -Pfad, kann mehrfach angegeben werden
     en: CA certificate value or path, can be specified multiple times
     es: El valor o la ruta del certificado de CA se pueden especificar varias veces
@@ -1982,9 +1982,9 @@ translations:
     pt: Valor ou caminho do certificado CA, pode ser especificado várias vezes
     ru: Значение или путь сертификата CA можно указать несколько раз.
     zh: CA证书值或路径，可指定多次
-  X509DisUsage:
+  X509DisplayUsage:
     ar: إظهار شهادة، والتحقق من صحة الشهادة اختياريًا باستخدام مفاتيح CA العامة.
-    context: x509-dis usage
+    context: x509-display usage
     de: Zeigen Sie ein Zertifikat an und validieren Sie das Zertifikat optional mit
       öffentlichen CA-Schlüsseln.
     en: Show a certificate, optionally validating the certificate with CA public keys.

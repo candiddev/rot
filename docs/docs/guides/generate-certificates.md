@@ -14,7 +14,7 @@ An X.509 certificate is basically a signed hash of a public key and other fields
 
 ## Add Private Keys
 
-You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using {{% cli val-add-prv %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
+You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using {{% cli value-add-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we generate certificates.
 
@@ -43,15 +43,15 @@ $ rot x509-new -d localhost -i 127.0.0.1 -n localhost ed25519private:MC4CAQAwBQY
 ### Certificate Authority
 
 {{< highlight bash >}}
-$ rot val-add-prv rot/ca
+$ rot value-add-private rot/ca
 $ rot x509-new -c -n 'Rot CA' rot/ca
 {{< /highlight >}}
 
 ### Intermediate Certificate Authority
 
 {{< highlight bash >}}
-$ rot val-add-prv rot/ca
-$ rot val-add-prv rot/intermediate_ca
+$ rot value-add-private rot/ca
+$ rot value-add-private rot/intermediate_ca
 $ rot x509-new -c -n 'Rot CA' rot/ca > ca.pem
 $ rot x509-new -c -n 'Rot Intermediate CA' rot/ca rot/intermediate_ca ca.pem
 {{< /highlight >}}
@@ -59,12 +59,12 @@ $ rot x509-new -c -n 'Rot Intermediate CA' rot/ca rot/intermediate_ca ca.pem
 ### Host Certificate
 
 {{< highlight bash >}}
-$ rot val-add-prv rot/ca
-$ rot val-add-prv rot/example_com
+$ rot value-add-private rot/ca
+$ rot value-add-private rot/example_com
 $ rot x509-new -c -n 'Rot CA' rot/ca > ca.pem
 $ rot x509-new -d www.example.com -n www.example.com rot/ca rot/example_com ca.pem
 {{< /highlight >}}
 
 ## View Certificates
 
-You can view the contents of an existing X.509 Certificate as JSON using {{% cli x509-dis%}}, optionally providing a list of CA certificates to verify it against.
+You can view the contents of an existing X.509 Certificate as JSON using {{% cli x509-display %}}, optionally providing a list of CA certificates to verify it against.

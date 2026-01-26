@@ -27,9 +27,9 @@ We can also use these same values for the [AWS provider](https://registry.terraf
 You'll have to generate these values on your own.  Once you have them, you can add them to your Rot configuration:
 
 {{< highlight bash >}}
-$ rot val-add rot/tofu/AWS_DEFAULT_REGION
-$ rot val-add rot/tofu/AWS_ACCESS_KEY_ID
-$ rot val-add rot/tofu/AWS_SECRET_ACCESS_KEY
+$ rot value-add rot/tofu/AWS_DEFAULT_REGION
+$ rot value-add rot/tofu/AWS_ACCESS_KEY_ID
+$ rot value-add rot/tofu/AWS_SECRET_ACCESS_KEY
 {{< /highlight >}}
 
 {{% alert title="Note" color="warning" %}}
@@ -76,7 +76,7 @@ Lets add this variable to Rot:
 
 
 {{< highlight bash >}}
-$ rot val-add rot/tofu/TF_VAR_secret
+$ rot value-add rot/tofu/TF_VAR_secret
 {{< /highlight >}}
 
 And now we can run our apply:

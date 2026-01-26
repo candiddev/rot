@@ -9,7 +9,7 @@ title: CLI
 
 {{% snippet cli_commands Rot %}}
 
-### `alg`
+### `algorithms`
 
 Show algorithms Rot understands
 
@@ -45,7 +45,7 @@ Encrypt a value and print it to stdout without adding it to the config.  Can spe
 
 Generate a hash of a file or string.
 
-### `hash-ver`
+### `hash-verify`
 
 Verify the hash of a file or string.  Will return an error/exit non-zero if the hash doesn't match, otherwise silently exits 0 on success.
 
@@ -55,7 +55,7 @@ Initialize a new Rot configuration.  See [Initialize Rot]({{< ref "/docs/guides/
 
 {{% snippet cli_jq %}}
 
-### `jwt-dis`
+### `jwt-display`
 
 Show the contents of a JWT and optionally verify it against a public key.
 
@@ -63,31 +63,31 @@ Show the contents of a JWT and optionally verify it against a public key.
 
 Generate JSON Web Tokens (JWTs).  Visit [Generate JWTs]({{< ref "/docs/guides/generate-jwts" >}}) for more information.
 
-### `key-add-prv`
+### `key-add-private`
 
 Add an existing Decrypt Key to a Keyring.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `key-add-pub`
+### `key-add-public`
 
 Add a new or existing key to Decrypt Keys.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `key-del-prv`
+### `key-delete-private`
 
 Remove a Decrypt Key from a Keyring.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `key-del-pub`
+### `key-delete-public`
 
 Remove a Decrypt Key from Rot.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `key-dis`
+### `key-display`
 
 Show the details of a {{% config decryptKey decryptkeys %}}.
 
-### `key-dis-pub`
+### `key-display-public`
 
 Display the public key of a private key.
 
-### `key-lst`
+### `key-list`
 
 List {{% config decryptKeys decryptkeys %}} in a configuration.
 
@@ -100,11 +100,11 @@ Generate ad-hoc cryptographic keys.
 Add a new or modify an existing Keyring.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 Generate and add a private key to a configuration with the specified name.
 
-### `keyring-del`
+### `keyring-delete`
 
 Remove a Keyring from Rot.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 
-### `keyring-lst`
+### `keyring-list`
 
 Show the names of {{% config keyrings %}} in the configuration, optionally showing `decryptKeys` that can access them.
 
@@ -112,15 +112,11 @@ Show the names of {{% config keyrings %}} in the configuration, optionally showi
 
 Rekey a Keyring configuration.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 
-### `lic-add`
-
-Add or replace the Rot license key.
-
 ### `pem`
 
 Convert a Rot key to PEM or a PEM key to Rot.  Can specify an ID for the key when converting from PEM to Rot.
 
-### `rand`
+### `random`
 
 Generate random strings.
 
@@ -128,15 +124,15 @@ Generate random strings.
 
 Run a command and inject secrets into it via environment variables.  See [Run Commands]({{< ref "/docs/guides/run-commands" >}}) for more information.  By default, any Value written to stderr/stdout will be masked with `***`.  Values can be unmasked using the {{% config unmask %}} config.
 
-### `sig-new`
+### `signature-new`
 
 Generate signatures.  Visit [Generate Signatures]({{< ref "/docs/guides/generate-signatures" >}}) for more information.
 
-### `sig-ver`
+### `signature-verify`
 
 Verify the signature of a message and public key.  Will return an error/exit non-zero if the signature doesn't match, otherwise silently exits 0 on success.
 
-### `ssh-dis`
+### `ssh-display`
 
 Convert a Rot key to SSH or a SSH key to Rot.
 
@@ -144,46 +140,46 @@ Convert a Rot key to SSH or a SSH key to Rot.
 
 Generate SSH certificates.  Visit [Generate SSH]({{< ref "/docs/guides/generate-ssh" >}}) for more information.
 
-### `val-add`
+### `value-add`
 
 Add a value to a configuration.  Can specify an optional length to have Rot randomly generate a value instead of prompting for it.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 
-### `val-add-prv`
+### `value-add-private`
 
 Generate and add a private key to a configuration with the specified name.
 
-### `val-cpy`
+### `value-copy`
 
 Copy a value between Keyrings.
 
-### `val-del`
+### `value-delete`
 
 Remove a value from a Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
-### `val-dis`
+### `value-display`
 
 Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
-### `val-lnk`
+### `value-link`
 
 Link a {{% config keyrings_values value %}} to other values.  When the value is modified, the changes will be copied to the linked values.
 
-### `val-lst`
+### `value-list`
 
 Show the names of {{% config keyrings_values values %}} in a Keyring.
 
-### `val-mov`
+### `value-move`
 
 Move a value between Keyrings.
 
-### `val-set-meta`
+### `value-set-meta`
 
 Modify metadata for an existing Value.
 
 {{% cli_version %}}
 
-### `x509-dis`
+### `x509-display`
 
 Show the contents of an X.509 certificate and optionally verify it against a CA certificate.
 

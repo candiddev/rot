@@ -10,7 +10,7 @@ Rot stores secrets for offline use in a human readable, easily diff-able Jsonnet
 
 {{< highlight bash >}}
 # Replace an existing value
-$ rot val-add mykeyring/MYSQL_ROOT
+$ rot value-add mykeyring/MYSQL_ROOT
 $ git diff rot.jsonnet
 diff --git a/rot.jsonnet b/rot.jsonnet
 --- a/rot.jsonnet

@@ -10,7 +10,7 @@ In this guide, we'll go over adding and removing values in a Rot Keyring.
 
 ## Adding Values
 
-After Rot has been initialized, keys can be added using {{% cli val-add %}}.  This command requires a name for a new key, and can optionally be provided with metadata and delimiter for the value.  This command performs these actions:
+After Rot has been initialized, keys can be added using {{% cli value-add %}}.  This command requires a name for a new key, and can optionally be provided with metadata and delimiter for the value.  This command performs these actions:
 
 - Generate a [Value Key]({{< ref "/docs/references/cryptography#value-key" >}})
 - Encrypt the provided Value using the Value Key
@@ -27,10 +27,10 @@ A valid path looks like this: `keyring1/a/path/VALUE`.
 
 ### Value Filtering
 
-Rot can display and filter Values using `rot val-lst`.  This command supports using regular expressions, so you can easily filter and display Values using regex:
+Rot can display and filter Values using `rot value-list`.  This command supports using regular expressions, so you can easily filter and display Values using regex:
 
 {{< highlight bash >}}
-$ rot val-lst ^[prd|stg]/postgresql`
+$ rot value-list ^[prd|stg]/postgresql`
 {{< /highlight >}}
 
 This command would display all Values that start with `prd/postgresql` or `stg/postgresql`.
@@ -39,20 +39,20 @@ This command would display all Values that start with `prd/postgresql` or `stg/p
 
 Rot Values can optionally be provided with metadata--key/value pairs that can store useful information about the Value, such as where or how the secret was generated, or who owns the secret.
 
-Metadata can be provided using {{% cli val-add %}} and {{% cli val-set-meta %}}.
+Metadata can be provided using {{% cli value-add %}} and {{% cli value-set-meta %}}.
 
 Certain Rot commands may add data to a Value's meta:
 
-- {{% cli val-add-prv %}} will store the public key in the `publicKey` meta field.
+- {{% cli value-add-private %}} will store the public key in the `publicKey` meta field.
 
 ## Versions
 
-Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli val-add %}} or modifying metadata using {{% cli val-set-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli val-add %}}.
+Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli value-add %}} or modifying metadata using {{% cli value-set-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli value-add %}}.
 
-You can view all values and versions using {{% cli val-lst %}}.  Additionally, you can display a specific version in {{% cli val-dis %}} via `@`:
+You can view all values and versions using {{% cli value-list %}}.  Additionally, you can display a specific version in {{% cli value-display %}} via `@`:
 
 {{< highlight bash >}}
-$ rot val-lst mykeyring
+$ rot value-list mykeyring
 {
   "mykeyring/test": [
     "2024-04-26T12:32:52Z",
@@ -60,13 +60,13 @@ $ rot val-lst mykeyring
   ]
 }
 # Display the latest version
-$ rot val-dis mykeyring -v mykeyring/test
+$ rot value-display mykeyring -v mykeyring/test
 123
 # Display a specific version
-$ rot val-dis mykeyring -v mykeyring/test@2024-04-26T10:32:44Z
+$ rot value-display mykeyring -v mykeyring/test@2024-04-26T10:32:44Z
 456
 # Use longest match
-$ rot val-dis mykeyring -v 'mykeyring/test@2024-04-26T10'
+$ rot value-display mykeyring -v 'mykeyring/test@2024-04-26T10'
 456
 {{< /highlight >}}
 
@@ -78,8 +78,8 @@ Any changes made to the Keyring will be committed--Values removed will be remove
 
 ## Generating Values
 
-Rot can generate random, cryptographically secure strings for you, instead of having you provide a value, via {{% cli val-add %}}.
+Rot can generate random, cryptographically secure strings for you, instead of having you provide a value, via {{% cli value-add %}}.
 
 ## Removing Values
 
-Values can be removed by running {{% cli val-del %}}, or editing the configuration and removing the value.
+Values can be removed by running {{% cli value-delete %}}, or editing the configuration and removing the value.

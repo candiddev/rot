@@ -24,9 +24,9 @@ ca:
 This lookup provider can access any environment variable provided to Ansible.  Lets add some Values to Rot and test it out:
 
 {{< highlight bash >}}
-$ echo secret1 | rot val-add rot/ansible/SECRET1
-$ echo secret2 | rot val-add rot/ansible/SECRET2
-$ echo secret3 | rot val-add rot/ansible/SECRET3
+$ echo secret1 | rot value-add rot/ansible/SECRET1
+$ echo secret2 | rot value-add rot/ansible/SECRET2
+$ echo secret3 | rot value-add rot/ansible/SECRET3
 {{< /highlight >}}
 
 We'll create a really basic Ansible example playbook that simply debug logs these values to localhost:

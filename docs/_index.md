@@ -39,25 +39,25 @@ New Password (empty string skips PBKDF):
 Confirm Password (empty string skips PBKDF):
 
 # Add Bob's public key
-$ rot key-add-pub bob ed25519public:MCowBQYDK2VwAyEAAYkJzjQGb+4I7bfcaq6TnkI6nWJXolUdYSQDKSZIDZU=:bob
+$ rot key-add-public bob ed25519public:MCowBQYDK2VwAyEAAYkJzjQGb+4I7bfcaq6TnkI6nWJXolUdYSQDKSZIDZU=:bob
 
 # Grant Bob access to our Keyring
-$ rot key-add-prv bob mykeyring
+$ rot key-add-private bob mykeyring
 {{< /highlight >}}
 
 <h2 style="border-bottom: 2px solid var(--bs-gray); padding-top: 50px"><b>Keep It Safe, and Versioned</b></h2>
 <h3>Values are added with zero-knowledge of the encryption key, and versioned by timestamp</h3>
 {{< highlight bash >}}
 # Add a Value
-$ rot val-add mykeyring/prd/database/secret database=backend1
+$ rot value-add mykeyring/prd/database/secret database=backend1
 Value:
 
 # Replace it
-$ rot val-add mykeyring/prd/database/secret database=backend2
+$ rot value-add mykeyring/prd/database/secret database=backend2
 Value:
 
 # List the Values
-$ rot val-lst mykeyring
+$ rot value-list mykeyring
 {
   "mykeyring/prd/database/secret": [
     "2024-04-26T12:32:44Z",
@@ -66,7 +66,7 @@ $ rot val-lst mykeyring
 }
 
 # View it--need access to decrypt!
-$ rot val-dis mykeyring/prd/database/secret
+$ rot value-display mykeyring/prd/database/secret
 Password for alice:
 {
   "meta": {
@@ -95,11 +95,11 @@ MCowBQYDK2VwAyEAYes5wEXIHi1qaQNCNRKbqcgi3qQ07QAbSx2e7LgOhVo=
 -----END PUBLIC KEY-----
 
 # Convert it to SSH
-$ rot ssh-dis ed25519public:MCowBQYDK2VwAyEAYes5wEXIHi1qaQNCNRKbqcgi3qQ07QAbSx2e7LgOhVo=:q5cnabsnVa
+$ rot ssh-display ed25519public:MCowBQYDK2VwAyEAYes5wEXIHi1qaQNCNRKbqcgi3qQ07QAbSx2e7LgOhVo=:q5cnabsnVa
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGHrOcBFyB4tamkDQjUSm6nIIt6kNO0AG0sdnuy4DoVa
 
 # Generate an X.509 CA
-$ rot x509-new -c -n "My CA" ed25519private:MC4CAQAwBQYDK2VwBCIEIHZm1QM2sOFMWwJpmSptFkb2KsndJzebZZ8V8ogaMB9z:q5cnabsnVa ed25519public:MCowBQYDK2VwAyEAYes5wEXIHi1qaQNCNRKbqcgi3qQ07QAbSx2e7LgOhVo=:q5cnabsnVa | rot x509-dis -
+$ rot x509-new -c -n "My CA" ed25519private:MC4CAQAwBQYDK2VwBCIEIHZm1QM2sOFMWwJpmSptFkb2KsndJzebZZ8V8ogaMB9z:q5cnabsnVa ed25519public:MCowBQYDK2VwAyEAYes5wEXIHi1qaQNCNRKbqcgi3qQ07QAbSx2e7LgOhVo=:q5cnabsnVa | rot x509-display -
 ...
   "CommonName": "My CA",
   "IsCA": true,

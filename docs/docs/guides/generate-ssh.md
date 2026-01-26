@@ -14,7 +14,7 @@ OpenSSH can use SSH certificate authorities (CA) to authorize user access to ser
 
 ## Add Private Keys
 
-You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using {{% cli val-add-prv %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
+You'll need to generate a private key to create a SSH keypair and an SSH CA to sign the certificates.  The easiest way to do this is using {{% cli value-add-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 
@@ -33,8 +33,8 @@ This will generate two files, id_ed25519 containing the SSH private key, and id_
 Lets use Rot to generate another keypair, this time for use as the SSH CA:
 
 {{< highlight bash >}}
-$ rot val-add-prv rot/SSH_CA
-$ rot val-dis -m publicKey rot/SSH_CA | rot ssh -
+$ rot value-add-private rot/SSH_CA
+$ rot value-display -m publicKey rot/SSH_CA | rot ssh -
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+5rkhggPylubB7l9GNhrkuPX+da3iS0g5Vd9ZEhSTf
 {{< /highlight >}}
 

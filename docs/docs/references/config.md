@@ -15,19 +15,19 @@ Configuration values for setting the algorithms Rot will use by default.
 
 {{% snippet config_key "algorithms_asymmetric" %}}
 
-Specify the asymmetric encryption algorithm to use.  See {{< cli alg >}} for options.
+Specify the asymmetric encryption algorithm to use.  See {{< cli algorithms >}} for options.
 
 **Default:** `"best"`
 
 {{% snippet config_key "algorithms_pbkdf" %}}
 
-Specify the Password Based Key Derivation Function (PBKDF) encryption algorithm to use.  See {{< cli alg >}} for options.
+Specify the Password Based Key Derivation Function (PBKDF) encryption algorithm to use.  See {{< cli algorithms >}} for options.
 
 **Default:** `"best"`
 
 {{% snippet config_key "algorithms_symmetric" %}}
 
-Specify the symmetric encryption algorithm to use.  See {{< cli alg >}} for options.
+Specify the symmetric encryption algorithm to use.  See {{< cli algorithms >}} for options.
 
 **Default:** `"best"`
 
@@ -137,7 +137,7 @@ Some special purpose meta keys:
 - `_` Changes the name of the environment variable for the value in [run]({{% ref "/docs/guides/run-commands" %}}).
 - `_links_dst` A comma separated list of paths that will also be updated when this value changes.
 - `_links_src` The path that updates this value.
-- `publicKey` {{% cli val-add-prv %}} will store the public key here.
+- `publicKey` {{% cli value-add-private %}} will store the public key here.
 
 **Default:** `{}`
 

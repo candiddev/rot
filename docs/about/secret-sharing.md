@@ -10,9 +10,9 @@ Users can easily share secrets using Rot either using a shared secrets file, or 
 
 {{< highlight bash >}}
 # Using a shared secrets file
-$ rot val-add mykeyring/MYSQL_ROOT comment='MySQL root password'
+$ rot value-add mykeyring/MYSQL_ROOT comment='MySQL root password'
 Value:
-$ rot val-dis mykeyring/MYSQL_ROOT
+$ rot value-display mykeyring/MYSQL_ROOT
 {
   "comment": "MySQL root password",
   "modified": "2023-12-09T08:45:15.844039874-06:00",

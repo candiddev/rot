@@ -15,7 +15,7 @@ After Rot has been initialized, Keyrings can be added using {{% cli keyring-add 
 - Geenrate private and public keys for the Keyring.
 - Encrypt the Keyring Private Key with the Decrypt Public Keys specified and create the {{% config decryptKeys_privateKeys_signature signature %}} of the Decrypt Public Key.
 
-Repeating this command can be used to grant additional access to the Keyring.  Alternatively, you can run {{% cli key-add-prv %}} to add Decrypt Keys individually to a Keyring, and {{% cli key-del-prv %}} to remove Decrypt Keys from a Keyring.
+Repeating this command can be used to grant additional access to the Keyring.  Alternatively, you can run {{% cli key-add-private %}} to add Decrypt Keys individually to a Keyring, and {{% cli key-delete-private %}} to remove Decrypt Keys from a Keyring.
 
 ### Encrypted Value Names and Metadata
 

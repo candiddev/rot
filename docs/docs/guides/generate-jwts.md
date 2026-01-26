@@ -18,7 +18,7 @@ A JSON Web Token (JWT) is a string containing three parts:
 
 ## Add Private Keys
 
-You'll need to generate a private key to sign the JWT.  The easiest way to do this is using {{% cli val-add-prv %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
+You'll need to generate a private key to sign the JWT.  The easiest way to do this is using {{% cli value-add-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 
@@ -44,10 +44,10 @@ eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtc
 
 ## View JWT
 
-You can view the contents of a JWT as JSON using {{% cli jwt-dis %}}, optionally providing a list of public keys to verify it against:
+You can view the contents of a JWT as JSON using {{% cli jwt-display %}}, optionally providing a list of public keys to verify it against:
 
 {{< highlight bash >}}
-$ rot jwt-dis eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtcGxlIiwiZXhwIjoxNzEwMjEyMjE4LCJpYXQiOjE3MTAyMDgyMTgsImlzcyI6Ik15SXNzdWVyIiwianRpIjoiMTIzIiwibmJmIjoxNzEwMjA4MjE4LCJzdWIiOiJFeGFtcGxlIiwidGVzdCI6InllcyJ9.aSPcgRUEmm0g4ak-OjEyyPSn0-_AxRxpFsir_f64UJ_lntR8o6Q3zulUi1IDHDtIYF4hhyutMCzMVIFkS1ufCA ed25519public:MCowBQYDK2VwAyEASI/qzkRrx2hy3GGX1ereMpSw9+Z8KpGJ1HHjv6H+EXs=:9scIk9mShr
+$ rot jwt-display eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtcGxlIiwiZXhwIjoxNzEwMjEyMjE4LCJpYXQiOjE3MTAyMDgyMTgsImlzcyI6Ik15SXNzdWVyIiwianRpIjoiMTIzIiwibmJmIjoxNzEwMjA4MjE4LCJzdWIiOiJFeGFtcGxlIiwidGVzdCI6InllcyJ9.aSPcgRUEmm0g4ak-OjEyyPSn0-_AxRxpFsir_f64UJ_lntR8o6Q3zulUi1IDHDtIYF4hhyutMCzMVIFkS1ufCA ed25519public:MCowBQYDK2VwAyEASI/qzkRrx2hy3GGX1ereMpSw9+Z8KpGJ1HHjv6H+EXs=:9scIk9mShr
 {
   "header": {
     "alg": "EdDSA",

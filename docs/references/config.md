@@ -9,7 +9,7 @@ title: Config
 
 ## Configuration Values
 
-{{% snippet config_key "algorithms" %}}
+### `algorithms` {#algorithms}
 
 Configuration values for setting the algorithms Rot will use by default.
 
@@ -31,40 +31,39 @@ Specify the symmetric encryption algorithm to use.  See {{< cli algorithms >}} f
 
 **Default:** `"best"`
 
-{{% snippet "config_cli" rot %}}
+{{% snippet "config_cli" rot gray %}}
 
-{{% snippet config_key "decryptKeys" %}}
+### `decryptKeys` {#decryptKeys}
 
 A map of key names to key configurations.
 
 **Default:** `{}`
 
-### `decryptKeys_[name]_modified` {#decryptKeys_modified}
+#### `decryptKeys_[name]_modified` {#decryptKeys_modified}
 
 String, the UTC time the key was last modified.
 
 **Default:** `""`
 
-### `decryptKeys_[name]_privateKeySSS` {#decryptKeys_privateKeySSS}
+#### `decryptKeys_[name]_privateKeySSS` {#decryptKeys_privateKeySSS}
 
 List of encrypted values used by [Shamir Secret Sharing]({{< ref "/docs/guides/manage-keys#shamir-secret-sharing" >}}).
 
 **Default:** `[]`
 
-### `decryptKeys_[name]_privateKeys` {#decryptKeys_privateKeys}
+#### `decryptKeys_[name]_privateKeys` {#decryptKeys_privateKeys}
 
 A map of Keyring names to Private Keys and Signatures.
 
 **Default:** `{}`
 
-
-### `decryptKeys_[name]_privateKeys_[name]_signature` {#decryptKeys_privateKeys_signature}
+#### `decryptKeys_[name]_privateKeys_[name]_signature` {#decryptKeys_privateKeys_signature}
 
 String, a signature created by the [Keyring's Private Key](#keyringprivatekey) of the [Decrypt Public Key]({#decryptpublickey}).  This is used to prevent tampering of public keys.
 
 **Default:** `""`
 
-### `decryptKeys_[name]_privateKeys_[name]_publicKey` {#decryptKeys_privateKeys_publicKey}
+#### `decryptKeys_[name]_privateKeys_[name]_publicKey` {#decryptKeys_privateKeys_publicKey}
 
 String, the Decrypt Public Key.
 
@@ -74,29 +73,29 @@ String, the Decrypt Public Key.
 
 {{% snippet "config_jsonnet" true %}}
 
-{{% snippet config_key "keyrings" %}}
+### `keyrings` {#keyrings}
 
 A map of Keyring names to Keyring details.
 
-### `keyrings_[name]_encryptValues` {#keyrings_encryptValues}
+#### `keyrings_[name]_encryptValues` {#keyrings_encryptValues}
 
 Boolean, controls if the Keyring Values will have their Name and Meta properties encrypted too.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 
 **Default:** `false`
 
-### `keyrings_[name]_privateKey` {#keyrings_privateKey}
+#### `keyrings_[name]_privateKey` {#keyrings_privateKey}
 
 String, the decrypted Keyring Private Key.  This is used to pass the Keyring Private Key via environment variables, such as from a external script that decrypts a [decryptKey.<keyring name>.privateKey](#decryptprivatekey) using a HSM or KMS.  Rot will never save this value to disk.
 
 **Default:** `""`
 
-### `keyrings_[name]_publicKey` {#keyrings_publicKey}
+#### `keyrings_[name]_publicKey` {#keyrings_publicKey}
 
 String, the Keyring Public Key.
 
 **Default:** `""`
 
-### `keyrings_[name]_values` {#keyrings_values}
+#### `keyrings_[name]_values` {#keyrings_values}
 
 A map of Value names to a map of Version Time and Value configurations.
 
@@ -116,13 +115,13 @@ rgnkKo/0IdvXJHerUxusItlGhQns4G7ww+YlNSFDgyrq7UaZFROxAoqMxfe6n9h6HaSrXKxAn9bHdybV
 }
 {{< /highlight >}}
 
-### `keyrings_[name]_values_[name]_key` {#keyrings_values_key}
+#### `keyrings_[name]_values_[name]_key` {#keyrings_values_key}
 
 String, the Rot Public Key encrypted symmetric key, used to encrypt/decrypt the [`value`](#value)
 
 **Default:** `""`
 
-### `keyrings_[name]_values_[name]_meta` {#keyrings_values_meta}
+#### `keyrings_[name]_values_[name]_meta` {#keyrings_values_meta}
 
 A map of strings containing various metadata about the Value.
 
@@ -141,13 +140,13 @@ Some special purpose meta keys:
 
 **Default:** `{}`
 
-### `keyrings_[name]_values_[name]_value` {#keyrings_values_value}
+#### `keyrings_[name]_values_[name]_value` {#keyrings_values_value}
 
 String, a value encrypted using the [`key`](#key).
 
 **Default:** `""`
 
-### `keyrings_[name]_valuesEncrypted` {#keyrings_valuesEncrypted}
+#### `keyrings_[name]_valuesEncrypted` {#keyrings_valuesEncrypted}
 
 A map of encrypted Value Names to Value properties.
 
@@ -162,37 +161,37 @@ A map of encrypted Value Names to Value properties.
 }
 {{< /highlight >}}
 
-### `keyrings_[name]_valuesEncrypted_[name]_key` {#keyrings_valuesEncrypted_key}
+#### `keyrings_[name]_valuesEncrypted_[name]_key` {#keyrings_valuesEncrypted_key}
 
 String, the Rot Public Key encrypted symmetric key, used to encrypt/decrypt the [`value`](#value)
 
 **Default:** `""`
 
-### `keyrings_[name]_valuesEncrypted_[name]_meta` {#keyrings_valuesEncrypted_meta}
+#### `keyrings_[name]_valuesEncrypted_[name]_meta` {#keyrings_valuesEncrypted_meta}
 
 A map of encrypted string keys to encrypted string values.
 
 **Default:** `{}`
 
-### `keyrings_[name]_valuesEncrypted_[name]_modified` {#keyrings_valuesEncrypted_modified}
+#### `keyrings_[name]_valuesEncrypted_[name]_modified` {#keyrings_valuesEncrypted_modified}
 
 String, the encrypted date the value was modified.
 
 **Default:** `{}`
 
-### `keyrings_[name]_valuesEncrypted_[name]_value` {#keyrings_valuesEncrypted_value}
+#### `keyrings_[name]_valuesEncrypted_[name]_value` {#keyrings_valuesEncrypted_value}
 
 String, a value encrypted using the [`key`](#valuesencryptedkey).
 
 **Default:** `""`
 
-{{% snippet config_key "keys" %}}
+### `keys` {#keys}
 
 A list of strings containing Decrypt Private Keys.  This is mostly used to pass Decrypt Private Keys via environment variables.  Rot will never save this value to disk.
 
 **Default:** `""`
 
-{{% snippet config_key "keyPath" %}}
+### `keyPath` {#keypath}
 
 String, the path to a file containing Decrypt Private Keys, one per line.  If a filename without a path is specified, Rot will search parent directories for the filename and use the first one found.
 
@@ -200,13 +199,13 @@ String, the path to a file containing Decrypt Private Keys, one per line.  If a 
 
 {{% snippet config_licenseKey Rot %}}
 
-{{% snippet config_key "unmask" %}}
+### `unmask` {#unmask}
 
 A list of Value names to unmask.
 
 **Default:** `[]`
 
-{{% snippet config_key "version" %}}
+### `version` {#version}
 
 String, the version of the Rot configuration.
 

@@ -13,6 +13,7 @@ translations:
     hi: एल्गोरिदम दिखाएँ रोट समझता है.
     ja: Rot が理解できるアルゴリズムを表示します。
     nl: Laat algoritmen zien Rot begrijpt het.
+    pl: Pokaż algorytmy, które Rot rozumie.
     pt: Mostre algoritmos que Rot entende.
     ru: Показать алгоритмы, которые понимает Рот.
     zh: 展示 Rot 理解的算法。
@@ -26,6 +27,7 @@ translations:
     hi: इनपुट मान या - stdin के लिए
     ja: 入力値または - （stdinの場合）
     nl: invoerwaarde of - voor stdin
+    pl: wartość wejściowa lub - dla wejścia standardowego
     pt: valor de entrada ou - para stdin
     ru: входное значение или - для стандартного ввода
     zh: 输入值或-用于标准输入
@@ -39,6 +41,7 @@ translations:
     hi: 'बेस64 को डीकोड करें (डिफ़ॉल्ट: एनकोड)'
     ja: 'base64 をデコード (デフォルト: エンコード)'
     nl: 'Decodeer base64 (standaard: coderen)'
+    pl: 'Dekodowanie base64 (domyślnie: kodowanie)'
     pt: 'Decodificar base64 (padrão: codificar)'
     ru: 'Декодировать base64 (по умолчанию: кодировать)'
     zh: 解码 base64（默认值：编码）
@@ -52,6 +55,7 @@ translations:
     hi: 'कच्चा/कोई पैडिंग नहीं (डिफ़ॉल्ट: पैडिंग)'
     ja: '生/パディングなし（デフォルト: パディング）'
     nl: 'Ruwe/geen opvulling (standaard: opvulling)'
+    pl: 'Surowe/bez wypełnienia (domyślnie: wypełnienie)'
     pt: 'Bruto/sem preenchimento (padrão: preenchimento)'
     ru: 'Необработанное/без заполнения (по умолчанию: дополнение)'
     zh: 原始/无填充（默认值：填充）
@@ -65,6 +69,7 @@ translations:
     hi: 'URL एनकोडिंग (डिफ़ॉल्ट: मानक एनकोडिंग)'
     ja: 'URL エンコーディング (デフォルト: 標準エンコーディング)'
     nl: 'URL-codering (standaard: standaardcodering)'
+    pl: 'Kodowanie adresu URL (domyślnie: kodowanie standardowe)'
     pt: 'Codificação de URL (padrão: codificação padrão)'
     ru: 'Кодировка URL-адреса (по умолчанию: стандартная кодировка)'
     zh: URL 编码（默认：标准编码）
@@ -79,6 +84,7 @@ translations:
     hi: एक बेस64 मान या stdin को एनकोड/डिकोड करें और stdout पर आउटपुट करें।
     ja: base64 値または stdin をエンコード/デコードし、stdout に出力します。
     nl: Codeer/decodeer een base64-waarde of stdin en voer deze uit naar stdout.
+    pl: Zakoduj/zdekoduj wartość base64 lub stdin i wyślij ją na stdout.
     pt: Codifique/decodifique um valor base64 ou stdin e envie para stdout.
     ru: Закодируйте/декодируйте значение base64 или стандартный ввод и выведите его
       на стандартный вывод.
@@ -93,6 +99,7 @@ translations:
     hi: एन्क्रिप्टेड पथ, मान, या - stdin के लिए
     ja: 暗号化されたパス、値、または - （標準入力用）
     nl: gecodeerd pad, waarde of - voor stdin
+    pl: zaszyfrowana ścieżka, wartość lub - dla wejścia standardowego
     pt: caminho criptografado, valor ou - para stdin
     ru: зашифрованный путь, значение или - для стандартного ввода
     zh: 加密路径、值或 - 用于标准输入
@@ -106,6 +113,7 @@ translations:
     hi: डिक्रिप्ट करने के लिए उपयोग की जाने वाली कीरिंग/मूल्य
     ja: 復号化に使用するキーリング/値
     nl: sleutelhanger/waarde die moet worden gebruikt voor het decoderen
+    pl: pęk kluczy/wartość do wykorzystania przy odszyfrowywaniu
     pt: chaveiro/valor a ser usado para descriptografar
     ru: связка ключей/значение, используемое для расшифровки
     zh: 用于解密的密钥环/值
@@ -126,6 +134,7 @@ translations:
     ja: _1 を使用してこの引数をソースすると、復号化されたキーがメモリに保存され、入力する必要がなくなります。
     nl: Bron dit argument met behulp van _1 om gedecodeerde sleutels in het geheugen
       op te slaan en te voorkomen dat u ze intypt.
+    pl: Użyj _1, aby zapisać odszyfrowane klucze w pamięci i uniknąć ich wpisywania.
     pt: Obtenha este argumento usando _1 para armazenar chaves descriptografadas na
       memória e evitar digitá-las.
     ru: Введите этот аргумент, используя _1, чтобы сохранить расшифрованные ключи
@@ -144,6 +153,7 @@ translations:
       करें।
     ja: 値を復号化するか、KDF 値をアンラップして stdout に出力します。
     nl: Decodeer een waarde of pak een KDF-waarde uit en druk deze af naar stdout.
+    pl: Odszyfruj wartość lub rozpakuj wartość KDF i wydrukuj ją na wyjściu standardowym.
     pt: Descriptografe um valor ou desembrulhe um valor KDF e imprima-o em stdout.
     ru: Расшифруйте значение или разверните значение KDF и выведите его на стандартный
       вывод.
@@ -162,6 +172,7 @@ translations:
     ja: 構成からキーリングの復号化キーの秘密キーを削除します。
     nl: Verwijder een privésleutel voor een decryptiesleutel voor een sleutelhanger
       uit de configuratie.
+    pl: Usuń klucz prywatny odszyfrowujący dla pęku kluczy z konfiguracji.
     pt: Remova uma chave privada de descriptografia para um chaveiro da configuração.
     ru: Удалите закрытый ключ расшифровки для связки ключей из конфигурации.
     zh: 从配置中删除密钥环的解密密钥私钥。
@@ -175,6 +186,7 @@ translations:
     hi: कॉन्फ़िगरेशन से डिक्रिप्ट कुंजी निकालें.
     ja: 構成から復号化キーを削除します。
     nl: Verwijder een decoderingssleutel uit de configuratie.
+    pl: Usuń klucz deszyfrujący z konfiguracji.
     pt: Remova uma chave de descriptografia da configuração.
     ru: Удалите ключ расшифровки из конфигурации.
     zh: 从配置中删除解密密钥。
@@ -188,6 +200,7 @@ translations:
     hi: कॉन्फ़िगरेशन से एक कीरिंग निकालें.
     ja: 構成からキーリングを削除します。
     nl: Verwijder een sleutelhanger uit de configuratie.
+    pl: Usuń pęk kluczy z konfiguracji.
     pt: Remova um chaveiro da configuração.
     ru: Удалите брелок из конфигурации.
     zh: 从配置中删除密钥环。
@@ -201,6 +214,7 @@ translations:
     hi: कॉन्फ़िगरेशन से मान निकालें.
     ja: 構成から値を削除します。
     nl: Verwijder een waarde uit de configuratie.
+    pl: Usuń wartość z konfiguracji.
     pt: Remova um valor da configuração.
     ru: Удалите значение из конфигурации.
     zh: 从配置中删除一个值。
@@ -214,6 +228,7 @@ translations:
     hi: परिसीमक
     ja: デリミタ
     nl: scheidingsteken
+    pl: ogranicznik
     pt: delimitador
     ru: разделитель
     zh: 分隔符
@@ -227,6 +242,7 @@ translations:
     hi: मान सीमांकक
     ja: 値の区切り文字
     nl: Waardescheidingsteken
+    pl: Ogranicznik wartości
     pt: Delimitador de valor
     ru: Разделитель значений
     zh: 值分隔符
@@ -240,6 +256,7 @@ translations:
     hi: आधुनिक सिस्टम एडमिनिस्ट्रेशन के लिए सुरक्षित गोपनीयता प्रबंधन
     ja: 現代のシステム管理者のための安全な秘密管理
     nl: Veilig geheimbeheer voor de moderne systeembeheerder
+    pl: Bezpieczne zarządzanie sekretami dla nowoczesnych administratorów systemów
     pt: Gerenciamento seguro de segredos para o administrador de sistemas moderno
     ru: Безопасное управление секретами для современного системного администратора
     zh: 为现代系统管理员提供安全机密管理
@@ -253,6 +270,7 @@ translations:
     hi: 'संपादक, डिफ़ॉल्ट: $EDITOR या vi'
     ja: 'エディタ、デフォルト: $EDITOR または vi'
     nl: 'editor, standaard: $EDITOR of vi'
+    pl: 'edytor, domyślnie: $EDITOR lub vi'
     pt: 'editor, padrão: $EDITOR ou vi'
     ru: 'редактор, по умолчанию: $EDITOR или vi'
     zh: 编辑器，默认：$EDITOR 或 vi
@@ -266,6 +284,7 @@ translations:
     hi: पथ
     ja: パス
     nl: pad
+    pl: ścieżka
     pt: caminho
     ru: путь
     zh: 小路
@@ -291,6 +310,8 @@ translations:
     nl: Stel het pad in naar het tijdelijke bestand dat de geheimen bevat. Moet beschrijfbaar
       zijn. Kan overwegen een RAM-schijf te gebruiken om geheimen in het geheugen
       te bewaren.
+    pl: Ustaw ścieżkę do pliku tymczasowego zawierającego sekrety. Musi być on zapisywalny.
+      Możesz rozważyć użycie dysku RAM do przechowywania sekretów w pamięci.
     pt: Defina o caminho para o arquivo temporário que contém os segredos. Deve ser
       gravável. Pode considerar o uso de um disco RAM para manter segredos na memória.
     ru: Укажите путь к временному файлу, содержащему секреты. Должно быть доступно
@@ -316,6 +337,8 @@ translations:
     ja: Jsonnet を使用して、復号化されたキーリング値を編集します。保存すると、追加、変更、または削除された値がキーリングと調整されます。
     nl: Bewerk gedecodeerde sleutelringwaarden met Jsonnet. Bij het opslaan worden
       de toegevoegde, gewijzigde of verwijderde waarden afgestemd op de sleutelhanger.
+    pl: Edytuj odszyfrowane wartości pęku kluczy za pomocą Jsonnet. Po zapisaniu,
+      dodane, zmienione lub usunięte wartości zostaną uzgodnione z pękiem kluczy.
     pt: Edite valores de keyring descriptografados usando Jsonnet. Ao salvar, reconciliará
       os valores adicionados, alterados ou removidos com o chaveiro.
     ru: Отредактируйте расшифрованные значения ключей с помощью Jsonnet. После сохранения
@@ -331,6 +354,7 @@ translations:
     hi: प्राप्तकर्ता कुंजी या कीरिंग/मूल्य, वैकल्पिक
     ja: 受信者のキーまたはキーリング/値（オプション）
     nl: sleutel van de ontvanger of sleutelhanger/waarde, optioneel
+    pl: klucz odbiorcy lub pęk kluczy/wartość, opcjonalnie
     pt: chave do destinatário ou chaveiro/valor, opcional
     ru: ключ получателя или брелок/значение, необязательно
     zh: 收件人密钥或密钥环/值，可选
@@ -356,6 +380,9 @@ translations:
     nl: Versleutel een waarde en druk deze af naar stdout. Kan een sleutel van de
       ontvanger of een sleutelhanger/waardepad (met publicKey-meta) opgeven om asymmetrische
       versleuteling te gebruiken.
+    pl: Zaszyfruj wartość i wyświetl ją na stdout. Możesz określić klucz odbiorcy
+      lub ścieżkę do pęku kluczy/wartości (z meta-kluczem publicKey), aby użyć szyfrowania
+      asymetrycznego.
     pt: Criptografe um valor e imprima-o em stdout. Pode especificar uma chave de
       destinatário ou caminho de chaveiro/valor (com meta publicKey) para usar criptografia
       assimétrica.
@@ -373,6 +400,7 @@ translations:
     hi: फ़ाइल का पथ या - stdin के लिए
     ja: ファイルへのパスまたは標準入力の場合は -
     nl: pad naar bestand of - voor stdin
+    pl: ścieżka do pliku lub - dla wejścia standardowego
     pt: caminho para arquivo ou - para stdin
     ru: путь к файлу или - для стандартного ввода
     zh: 文件路径或 - 用于标准输入
@@ -386,6 +414,7 @@ translations:
     hi: उपयोग करने के लिए एल्गोरिदम
     ja: 使用するアルゴリズム
     nl: algoritme te gebruiken
+    pl: algorytm do użycia
     pt: algoritmo a ser usado
     ru: алгоритм использования
     zh: 使用的算法
@@ -399,6 +428,7 @@ translations:
     hi: केवल हैश आउटपुट करें
     ja: ハッシュのみを出力する
     nl: Voer alleen de hash uit
+    pl: Wyjście tylko hasha
     pt: Produza apenas o hash
     ru: Выведите только хеш
     zh: 仅输出哈希值
@@ -414,6 +444,7 @@ translations:
     hi: किसी स्ट्रिंग या फ़ाइल से हैश बनाएं और उसे stdout पर आउटपुट करें।
     ja: 文字列またはファイルからハッシュを作成し、stdout に出力します。
     nl: Maak een hash van een string of bestand en voer deze uit naar stdout.
+    pl: Utwórz skrót z ciągu znaków lub pliku i wyślij go na stdout.
     pt: Crie um hash a partir de uma string ou arquivo e envie-o para stdout.
     ru: Создайте хеш из строки или файла и выведите его на стандартный вывод.
     zh: 从字符串或文件创建哈希并将其输出到标准输出。
@@ -427,6 +458,7 @@ translations:
     hi: फ़ाइल पथ या - stdin के लिए
     ja: ファイルパスまたは - （標準入力の場合）
     nl: bestandspad of - voor stdin
+    pl: ścieżka do pliku lub - dla wejścia standardowego
     pt: caminho do arquivo ou - para stdin
     ru: путь к файлу или - для стандартного ввода
     zh: 文件路径或-用于标准输入
@@ -440,6 +472,7 @@ translations:
     hi: हैश, फ़ाइल या HTTP पथ
     ja: ハッシュ、ファイル、または HTTP パス
     nl: hash-, bestand- of HTTP-pad
+    pl: hash, plik lub ścieżka HTTP
     pt: hash, arquivo ou caminho HTTP
     ru: хеш, файл или путь HTTP
     zh: 哈希、文件或 HTTP 路径
@@ -458,6 +491,8 @@ translations:
       :<hash> .
     ja: ファイルまたは標準入力のハッシュを検証します。ハッシュは次の形式である必要があります。<algorithm> :<hash> 。
     nl: Controleer een hash voor een bestand of stdin. Hasj moet in de vorm zijn<algorithm>
+      :<hash> .
+    pl: Sprawdź skrót dla pliku lub wejścia standardowego. Skrót powinien mieć postać<algorithm>
       :<hash> .
     pt: Verifique um hash para um arquivo ou stdin. Hash deve estar no formato<algorithm>
       :<hash> .
@@ -481,6 +516,8 @@ translations:
     ja: '初期公開鍵、既存の鍵の名前または ID (デフォルト: 新しい PBKDF 対称鍵を生成)'
     nl: 'initiële publieke sleutel, sleutelnaam of ID van een bestaande sleutel (standaard:
       genereer een nieuwe PBKDF symmetrische sleutel)'
+    pl: 'początkowy klucz publiczny, nazwa klucza lub identyfikator istniejącego klucza
+      (domyślnie: wygeneruj nowy klucz symetryczny PBKDF)'
     pt: 'chave pública inicial, nome da chave ou id de uma chave existente (padrão:
       gerar uma nova chave simétrica PBKDF)'
     ru: 'исходный открытый ключ, имя ключа или идентификатор существующего ключа (по
@@ -496,6 +533,7 @@ translations:
     hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
     ja: キーリング値の名前とメタデータを暗号化する
     nl: Versleutel sleutelhangerwaardenamen en metagegevens
+    pl: Szyfruj nazwy wartości i metadane pęku kluczy
     pt: Criptografar nomes e metadados de valores de chaveiro
     ru: Шифровать имена и метаданные значений ключей
     zh: 加密密钥环值名称和元数据
@@ -519,6 +557,8 @@ translations:
     ja: 新しい Rot 構成を初期化します。_1 ファイルを検索し、初期ユーザー キーとして指定されていない場合は、使用可能な最初のキーを使用します。
     nl: Initialiseer een nieuwe Rot-configuratie. Zoekt naar een _1-bestand en gebruikt
       de eerste beschikbare sleutel als er geen is opgegeven als de initiële gebruikerssleutel.
+    pl: Zainicjuje nową konfigurację Rot. Poszuka pliku _1 i użyje pierwszego dostępnego
+      klucza, jeśli żaden nie został określony jako początkowy klucz użytkownika.
     pt: Inicialize uma nova configuração do Rot. Procurará um arquivo _1 e usará a
       primeira chave disponível se nenhuma for especificada como chave de usuário
       inicial.
@@ -536,6 +576,7 @@ translations:
     hi: JWT, या - stdin के लिए
     ja: JWT、またはstdinの場合は-
     nl: JWT, of - voor stdin
+    pl: JWT lub - dla wejścia standardowego
     pt: JWT, ou - para stdin
     ru: JWT или - для стандартного ввода
     zh: JWT，或 - 用于 stdin
@@ -553,6 +594,7 @@ translations:
     ja: 公開鍵の値、キーリング/名前、またはパス。複数回指定できます
     nl: openbare sleutelwaarde, sleutelhanger/naam of pad. Kan meerdere keren worden
       opgegeven
+    pl: Wartość klucza publicznego, nazwa/pęk kluczy lub ścieżka. Można określić wielokrotnie.
     pt: valor de chave pública, chaveiro/nome ou caminho. Pode ser especificado várias
       vezes
     ru: Значение открытого ключа, связка ключей/имя или путь. Можно указать несколько
@@ -570,6 +612,7 @@ translations:
     ja: JWT を表示し、オプションで公開キーを使用して署名を検証します。
     nl: Toon een JWT, waarbij optioneel de handtekening wordt gevalideerd met een
       openbare sleutel.
+    pl: Pokaż JWT, opcjonalnie weryfikując podpis za pomocą klucza publicznego.
     pt: Mostre um JWT, validando opcionalmente a assinatura com uma chave pública.
     ru: Покажите JWT, при необходимости проверив подпись с помощью открытого ключа.
     zh: 显示 JWT，可选择使用公钥验证签名。
@@ -583,6 +626,7 @@ translations:
     hi: श्रोता
     ja: 観客
     nl: publiek
+    pl: publiczność
     pt: público
     ru: аудитория
     zh: 观众
@@ -596,6 +640,7 @@ translations:
     hi: JWT के लिए दर्शक (_1)। कई बार प्रदान किया जा सकता है
     ja: JWT のオーディエンス (_1)。複数回指定できます。
     nl: Doelgroep (_1) voor JWT. Kan meerdere keren verstrekt worden
+    pl: Odbiorcy (_1) dla JWT. Można podać wielokrotnie.
     pt: Público (_1) para JWT. Pode ser fornecido várias vezes
     ru: Аудитория (_1) для JWT. Можно предоставлять несколько раз
     zh: JWT 的受众（_1）。可以多次提供
@@ -609,6 +654,7 @@ translations:
     hi: समाप्ति (_1) सेकंड में
     ja: 有効期限 (_1) 秒
     nl: Vervaldatum (_1) in seconden
+    pl: Wygaśnięcie (_1) w sekundach
     pt: Expiração (_1) em segundos
     ru: Срок действия (_1) в секундах
     zh: 到期时间（_1）以秒为单位
@@ -631,6 +677,8 @@ translations:
     ja: JWT にキーと値を追加します。引用符で囲まれていない限り、bool と int を解析しようとします。複数回指定できます。
     nl: Voeg een sleutel en waarde toe aan de JWT. Zal proberen bools en ints te ontleden,
       tenzij ze tussen aanhalingstekens staan. Kan meerdere keren verstrekt worden.
+    pl: Dodaj klucz i wartość do JWT. Spróbuje przeanalizować wartości typu bool i
+      int, chyba że są ujęte w cudzysłów. Można podać wielokrotnie.
     pt: Adicione uma chave e um valor ao JWT. Tentará analisar bools e ints, a menos
       que sejam citados. Pode ser fornecido várias vezes.
     ru: Добавьте ключ и значение в JWT. Попытается проанализировать логические и целые
@@ -646,6 +694,7 @@ translations:
     hi: पहचान
     ja: id
     nl: ID kaart
+    pl: id
     pt: eu ia
     ru: идентификатор
     zh: ID
@@ -659,6 +708,7 @@ translations:
     hi: JWT की ID (_1), यदि प्रदान नहीं की गई है तो UUID उत्पन्न करेगी
     ja: JWTのID（_1）。指定しない場合はUUIDが生成されます。
     nl: ID (_1) van de JWT genereert een UUID als deze niet wordt opgegeven
+    pl: Identyfikator (_1) JWT wygeneruje UUID, jeśli nie zostanie podany
     pt: ID (_1) do JWT, irá gerar um UUID se não for fornecido
     ru: Идентификатор (_1) JWT, будет генерировать UUID, если он не указан.
     zh: JWT 的 ID（_1），如果未提供，将生成 UUID
@@ -672,6 +722,7 @@ translations:
     hi: जारीकर्ता
     ja: 発行者
     nl: uitgevende instelling
+    pl: emitent
     pt: emissor
     ru: эмитент
     zh: 發行人
@@ -685,6 +736,7 @@ translations:
     hi: JWT जारीकर्ता (_1)
     ja: JWTの発行者（_1）
     nl: Uitgevende instelling (_1) van het JWT
+    pl: Wydawca (_1) JWT
     pt: Emissor (_1) do JWT
     ru: Эмитент (_1) JWT
     zh: JWT 的发行者（_1）
@@ -698,6 +750,7 @@ translations:
     hi: विषय
     ja: 主題
     nl: onderwerp
+    pl: temat
     pt: assunto
     ru: предмет
     zh: 主题
@@ -711,6 +764,7 @@ translations:
     hi: JWT का विषय (_1)
     ja: JWTの件名（_1）
     nl: Onderwerp (_1) van het JWT
+    pl: Temat (_1) JWT
     pt: Assunto (_1) do JWT
     ru: Тема (_1) JWT
     zh: JWT 的主题（_1）
@@ -730,6 +784,8 @@ translations:
     ja: JWT を生成し、stdout に出力します。JWT に署名するには秘密鍵を指定する必要があります。
     nl: Genereer een JWT en voer deze uit naar stdout. Moet de privésleutel opgeven
       om het JWT te ondertekenen.
+    pl: Wygeneruj JWT i wyślij go na standardowe wyjście. Musisz określić klucz prywatny,
+      aby podpisać JWT.
     pt: Gere um JWT e envie-o para stdout. Deve especificar a chave privada para assinar
       o JWT.
     ru: Создайте JWT и выведите его на стандартный вывод. Необходимо указать закрытый
@@ -745,6 +801,7 @@ translations:
     hi: कुंजी नाम
     ja: キー名
     nl: sleutel naam
+    pl: nazwa klucza
     pt: nome da chave
     ru: имя ключа
     zh: 键名
@@ -758,6 +815,7 @@ translations:
     hi: चाबी का छल्ला नाम
     ja: キーリング名
     nl: sleutelhanger naam
+    pl: nazwa breloczka
     pt: nome do chaveiro
     ru: имя брелока
     zh: 密钥环名称
@@ -774,6 +832,7 @@ translations:
     ja: '公開鍵、デフォルト: PBKDF で保護された非対称鍵を生成する'
     nl: 'openbare sleutel, standaard: genereer een met PBKDF beveiligde asymmetrische
       sleutel'
+    pl: 'klucz publiczny, domyślnie: generuj asymetryczny klucz chroniony przez PBKDF'
     pt: 'chave pública, padrão: gerar uma chave assimétrica protegida por PBKDF'
     ru: 'открытый ключ, по умолчанию: создать асимметричный ключ, защищенный PBKDF.'
     zh: 公钥，默认：生成受 PBKDF 保护的非对称密钥
@@ -787,6 +846,7 @@ translations:
     hi: शेयरों
     ja: シェア
     nl: aandelen
+    pl: akcje
     pt: ações
     ru: акции
     zh: 分享
@@ -806,6 +866,8 @@ translations:
     ja: シャミア秘密共有の数（これを設定するとシャミア秘密共有の鍵セレモニーが開始されます）
     nl: Aantal Shamir Secret Shares (waarmee een Shamir Secret Share-sleutelceremonie
       wordt gestart)
+    pl: Liczba udziałów Shamir Secret (ustawienie tego rozpoczyna ceremonię klucza
+      udziałów Shamir Secret)
     pt: Número de Shamir Secret Shares (definindo este início de uma cerimônia de
       chave do Shamir Secret Share)
     ru: Количество секретных акций Шамира (настройка этого запуска церемонии вручения
@@ -821,6 +883,7 @@ translations:
     hi: सीमा
     ja: しきい値
     nl: drempelwaarde
+    pl: próg
     pt: limite
     ru: порог
     zh: 临界点
@@ -840,6 +903,8 @@ translations:
     ja: 'キーを取得するためのシャミア秘密シェアのしきい値（デフォルト: シェアの半分 + 1）'
     nl: 'Drempel van geheime Shamir-aandelen om sleutel op te halen (standaard: helft
       van aandelen + 1)'
+    pl: 'Próg udostępnień Shamir Secret w celu pobrania klucza (domyślnie: połowa
+      udostępnień + 1)'
     pt: 'Limite de compartilhamentos secretos de Shamir para recuperar a chave (padrão:
       metade dos compartilhamentos + 1)'
     ru: 'Порог секретных акций Шамира для получения ключа (по умолчанию: половина
@@ -856,6 +921,7 @@ translations:
     hi: किसी मौजूदा डिक्रिप्ट कुंजी को कीरिंग में जोड़ें.
     ja: 既存の復号化キーをキーリングに追加します。
     nl: Voeg een bestaande decoderingssleutel toe aan een sleutelhanger.
+    pl: Dodaj istniejący klucz deszyfrujący do pęku kluczy.
     pt: Adicione uma chave de descriptografia existente a um chaveiro.
     ru: Добавьте существующий ключ расшифровки в связку ключей.
     zh: 将现有的解密密钥添加到密钥环。
@@ -870,6 +936,7 @@ translations:
     hi: डिक्रिप्ट कुंजी में एक नई या मौजूदा कुंजी जोड़ें।
     ja: 復号化キーに新しいキーまたは既存のキーを追加します。
     nl: Voeg een nieuwe of bestaande sleutel toe aan Sleutels decoderen.
+    pl: Dodaj nowy lub istniejący klucz do Decrypt Keys.
     pt: Adicione uma chave nova ou existente às chaves de descriptografia.
     ru: Добавьте новый или существующий ключ в Decrypt Keys.
     zh: 添加新密钥或现有密钥来解密密钥。
@@ -883,6 +950,7 @@ translations:
     hi: नाम, निजी कुंजी, कीरिंग/मूल्य या - stdin के लिए
     ja: 名前、秘密鍵、キーリング/値、または - （標準入力用）
     nl: naam, privésleutel, sleutelhanger/waarde of - voor stdin
+    pl: nazwa, klucz prywatny, pęk kluczy/wartość lub - dla wejścia standardowego
     pt: nome, chave privada, chaveiro/valor ou - para stdin
     ru: имя, закрытый ключ, связка ключей/значение или - для стандартного ввода
     zh: 名称、私钥、密钥环/值或 - 用于标准输入
@@ -896,6 +964,7 @@ translations:
     hi: निजी कुंजी की सार्वजनिक कुंजी प्रदर्शित करें.
     ja: 秘密鍵の公開鍵を表示します。
     nl: Geef de openbare sleutel van een privésleutel weer.
+    pl: Wyświetl klucz publiczny klucza prywatnego.
     pt: Exiba a chave pública de uma chave privada.
     ru: Отображение открытого ключа закрытого ключа.
     zh: 显示私钥的公钥。
@@ -909,6 +978,7 @@ translations:
     hi: _1 के बारे में विवरण प्रदर्शित करें
     ja: _1 の詳細を表示する
     nl: Details weergeven over een _1
+    pl: Wyświetl szczegóły dotyczące _1
     pt: Exibir detalhes sobre um _1
     ru: Отображение сведений о _1
     zh: 显示有关_1的详细信息
@@ -922,6 +992,7 @@ translations:
     hi: चाभी का छल्ला
     ja: キーホルダー
     nl: sleutelhanger
+    pl: brelok
     pt: chaveiro
     ru: брелок для ключей
     zh: 钥匙圈
@@ -935,6 +1006,7 @@ translations:
     hi: कुंजी नामों को डिक्रिप्ट करें
     ja: キー名を復号化する
     nl: sleutelnamen ontsleutelen
+    pl: odszyfruj nazwy kluczy
     pt: descriptografar nomes de chaves
     ru: расшифровать имена ключей
     zh: 解密密钥名称
@@ -948,6 +1020,7 @@ translations:
     hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
     ja: キーリング値の名前とメタデータを暗号化する
     nl: Versleutel sleutelhangerwaardenamen en metagegevens
+    pl: Szyfruj nazwy wartości i metadane pęku kluczy
     pt: Criptografar nomes e metadados de valores de chaveiro
     ru: Шифрование имен значений ключей и метаданных
     zh: 加密密钥环值名称和元数据
@@ -968,6 +1041,8 @@ translations:
     ja: 新しいキーリングを追加するか、既存のキーリングを変更し、提供された復号化キーにそのキーリングへのアクセス権を付与します。
     nl: Voeg een nieuwe toe of wijzig een bestaande sleutelhanger en geef de meegeleverde
       decoderingssleutels er toegang toe.
+    pl: Dodaj nowy lub zmodyfikuj istniejący pęk kluczy i udziel dostępu do niego
+      przy użyciu dostarczonych kluczy odszyfrowujących.
     pt: Adicione um novo ou modifique um chaveiro existente e conceda acesso a ele
       às chaves de descriptografia fornecidas.
     ru: Добавьте новый или измените существующий набор ключей и предоставьте доступ
@@ -983,6 +1058,7 @@ translations:
     hi: चाबी का छल्ला नाम
     ja: キーリング名
     nl: sleutelhanger naam
+    pl: nazwa breloczka
     pt: nome do chaveiro
     ru: имя брелока
     zh: 密钥环名称
@@ -996,6 +1072,7 @@ translations:
     hi: कुंजी रिंग में सभी कुंजियों और मानों को पुनः दर्ज करें।
     ja: キーリング内のすべてのキーと値を再キー化します。
     nl: Hersleutel alle sleutels en waarden in een sleutelhanger.
+    pl: Zmień wszystkie klucze i wartości w pęku kluczy.
     pt: Redigite todas as chaves e valores em um chaveiro.
     ru: Замените все ключи и значения в связке ключей.
     zh: 重新设置密钥环中的所有键和值。
@@ -1009,6 +1086,7 @@ translations:
     hi: कीरिंग/मूल्य
     ja: キーリング/値
     nl: sleutelhanger/waarde
+    pl: brelok/wartość
     pt: chaveiro/valor
     ru: брелок/значение
     zh: 密钥环/值
@@ -1022,6 +1100,7 @@ translations:
     hi: सभी संस्करणों की सूची बनाएं
     ja: すべてのバージョンを一覧表示する
     nl: Lijst van alle versies
+    pl: Wyświetl wszystkie wersje
     pt: Listar todas as versões
     ru: Список всех версий
     zh: 列出所有版本
@@ -1035,6 +1114,7 @@ translations:
     hi: उन कुंजियों की सूची बनाएं जिनकी कीरिंग तक पहुंच है
     ja: キーリングにアクセスできるキーを一覧表示する
     nl: Maak een lijst van sleutels die toegang hebben tot de sleutelhanger
+    pl: Wypisz klucze, które mają dostęp do pęku kluczy
     pt: Listar chaves que têm acesso ao chaveiro
     ru: Список ключей, которые имеют доступ к связке ключей
     zh: 列出有权访问密钥环的密钥
@@ -1048,6 +1128,7 @@ translations:
     hi: कीरिंग नामों के लिए regexp फ़िल्टर
     ja: キーリング名の正規表現フィルター
     nl: regexp-filter voor sleutelhangernamen
+    pl: filtr wyrażeń regularnych dla nazw pęków kluczy
     pt: filtro regexp para nomes de chaveiros
     ru: фильтр регулярных выражений для имен связок ключей
     zh: 密钥环名称的正则表达式过滤器
@@ -1061,6 +1142,7 @@ translations:
     hi: कॉन्फ़िगरेशन में कुंजियाँ सूचीबद्ध करें
     ja: 構成内のキーを一覧表示する
     nl: Lijst met sleutels in een configuratie
+    pl: Wyświetl klucze w konfiguracji
     pt: Listar chaves em uma configuração
     ru: Список ключей в конфигурации
     zh: 列出配置中的键
@@ -1074,6 +1156,7 @@ translations:
     hi: कॉन्फ़िगरेशन में कीरिंग की सूची बनाएँ
     ja: 構成内のキーリングを一覧表示する
     nl: Lijst met sleutelhangers in een configuratie
+    pl: Wyświetlanie pęków kluczy w konfiguracji
     pt: Listar chaveiros em uma configuração
     ru: Список брелоков в конфигурации
     zh: 列出配置中的密钥环
@@ -1087,6 +1170,7 @@ translations:
     hi: मानों के लिए regexp फ़िल्टर
     ja: 値の正規表現フィルタ
     nl: regexp-filter voor waarden
+    pl: filtr wyrażeń regularnych dla wartości
     pt: filtro regexp para valores
     ru: фильтр регулярных выражений для значений
     zh: 正则表达式过滤值
@@ -1100,6 +1184,7 @@ translations:
     hi: कॉन्फ़िगरेशन में मान सूचीबद्ध करें
     ja: 構成内の値をリストする
     nl: Lijstwaarden in een configuratie
+    pl: Wyświetl wartości w konfiguracji
     pt: Listar valores em uma configuração
     ru: Список значений в конфигурации
     zh: 列出配置中的值
@@ -1113,6 +1198,7 @@ translations:
     hi: कुंजी, या - stdin के लिए
     ja: キー、または標準入力の場合は -
     nl: toets, of - voor stdin
+    pl: klucz lub - dla wejścia standardowego
     pt: chave, ou - para stdin
     ru: ключ, или - для стандартного ввода
     zh: 键，或 - 用于标准输入
@@ -1126,6 +1212,7 @@ translations:
     hi: PEM से आयातित कुंजी में आईडी जोड़ें
     ja: PEMからインポートされたキーにIDを追加する
     nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een PEM
+    pl: Dodaj identyfikator do klucza zaimportowanego z PEM
     pt: Adicione id à chave importada de um PEM
     ru: Добавьте идентификатор к ключу, импортированному из PEM.
     zh: 将 ID 添加到从 PEM 导入的密钥中
@@ -1144,6 +1231,7 @@ translations:
     ja: _1 キーを PEM に変換するか、PEM キーを _1 に変換し、stdout に出力します。
     nl: Converteer _1-sleutels naar PEM, of een PEM-sleutel naar _1, en druk deze
       af naar stdout.
+    pl: Konwertuj klucze _1 na PEM lub klucze PEM na _1 i wydrukuj na stdout.
     pt: Converta chaves _1 em PEM ou chaves PEM em _1 e imprima-as em stdout.
     ru: Преобразуйте ключи _1 в PEM или ключи PEM в _1 и распечатайте их на стандартный
       вывод.
@@ -1158,6 +1246,7 @@ translations:
     hi: निजी कुंजी मान, कीरिंग/मान, पथ, या - stdin के लिए
     ja: 秘密鍵の値、キーリング/値、パス、または - （標準入力用）
     nl: privésleutelwaarde, sleutelhanger/waarde, pad, of - voor stdin
+    pl: wartość klucza prywatnego, pęk kluczy/wartość, ścieżka lub - dla wejścia standardowego
     pt: valor da chave privada, chaveiro/valor, caminho ou - para stdin
     ru: значение закрытого ключа, связка ключей/значение, путь или - для стандартного
       ввода
@@ -1172,6 +1261,7 @@ translations:
     hi: एक यादृच्छिक स्ट्रिंग उत्पन्न करें और stdout पर प्रिंट करें
     ja: ランダムな文字列を生成し、標準出力に出力する
     nl: Genereer een willekeurige tekenreeks en druk deze af naar stdout
+    pl: Wygeneruj losowy ciąg i wydrukuj na stdout
     pt: Gere uma string aleatória e imprima em stdout
     ru: Сгенерировать случайную строку и вывести на стандартный вывод
     zh: 生成随机字符串并打印到标准输出
@@ -1189,6 +1279,8 @@ translations:
     ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
     nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
       &#39;,&#39;)
+    pl: wyrażenie regularne pęku kluczy/ścieżki (można określić wielokrotnie, rozdzielając
+      je znakiem &#39;,&#39;)
     pt: keyring/path regexp (pode ser especificado várias vezes, separado por &#39;,&#39;)
     ru: регулярное выражение набора ключей/пути (можно указать несколько раз, разделив
       их &#39;,&#39;)
@@ -1207,6 +1299,8 @@ translations:
     ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
     nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
       &#39;,&#39;)
+    pl: wyrażenie regularne pęku kluczy/ścieżki (można określić wielokrotnie, rozdzielając
+      je znakiem &#39;,&#39;)
     pt: keyring/path regexp (pode ser especificado várias vezes, separado por &#39;,&#39;)
     ru: регулярное выражение набора ключей/пути (можно указать несколько раз, разделив
       их &#39;,&#39;)
@@ -1262,6 +1356,13 @@ translations:
       met ***. Escaped-variabelen (\\$) kunnen worden gebruikt om naar waarden in
       scripts te verwijzen, anders zal _1 proberen ${variables} en $variables op te
       lossen voordat de opdracht wordt uitgevoerd.
+    pl: Uruchom polecenie i wstrzyknij wartości jako zmienne środowiskowe. Wartości
+      będą używane tylko wtedy, gdy znajdują się w określonym zbiorze kluczy/ścieżkach.
+      Podczas odczytu z wielu ścieżek, jeśli występują duplikaty nazw, zostanie użyta
+      ostatnia odczytana wartość. Wartości zapisane na stderr/stdout zostaną zamaskowane
+      znakiem ***. Zmienne z symbolem ucieczki (\\$) mogą być używane do odwoływania
+      się do wartości w skryptach, w przeciwnym razie _1 spróbuje rozwiązać ${variables}
+      i $variables przed wykonaniem polecenia.
     pt: Execute um comando e injete valores como variáveis de ambiente. Os valores
       só serão usados se estiverem nos chaveiros/caminhos especificados. Ao ler de
       vários caminhos, se houver nomes duplicados, o último valor lido será usado.
@@ -1287,6 +1388,7 @@ translations:
     hi: कुंजी, या - stdin के लिए
     ja: キー、または標準入力の場合は -
     nl: toets, of - voor stdin
+    pl: klucz lub - dla wejścia standardowego
     pt: chave, ou - para stdin
     ru: ключ, или - для стандартного ввода
     zh: 键，或 - 用于标准输入
@@ -1300,6 +1402,7 @@ translations:
     hi: SSH कुंजी से आयातित कुंजी में आईडी जोड़ें
     ja: SSHキーからインポートされたキーにIDを追加する
     nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een SSH-sleutel
+    pl: Dodaj identyfikator do klucza zaimportowanego z klucza SSH
     pt: Adicione o id à chave importada de uma chave SSH
     ru: Добавьте идентификатор к ключу, импортированному из ключа SSH.
     zh: 将 id 添加到从 SSH 密钥导入的密钥中
@@ -1318,6 +1421,7 @@ translations:
     ja: Rot キーを SSH に変換するか、SSH キーを Rot に変換して、標準出力に出力します。
     nl: Converteer Rot-sleutels naar SSH, of SSH-sleutels naar Rot, en druk deze af
       naar stdout.
+    pl: Konwertuj klucze Rot na SSH lub klucze SSH na Rot i wydrukuj je na stdout.
     pt: Converta chaves Rot em SSH ou chaves SSH em Rot e imprima-as em stdout.
     ru: Преобразуйте ключи Rot в SSH или ключи SSH в Rot и распечатайте их на стандартный
       вывод.
@@ -1332,6 +1436,7 @@ translations:
     hi: निजी कुंजी मान, कीरिंग/मान, या - stdin के लिए
     ja: 秘密鍵の値、キーリング/値、または - （標準入力用）
     nl: privésleutelwaarde, sleutelhanger/waarde, of - voor stdin
+    pl: wartość klucza prywatnego, pęk kluczy/wartość lub - dla wejścia standardowego
     pt: valor da chave privada, chaveiro/valor ou - para stdin
     ru: значение закрытого ключа, связка ключей/значение или - для стандартного ввода
     zh: 私钥值、密钥环/值，或者 - 用于标准输入
@@ -1345,6 +1450,7 @@ translations:
     hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
     ja: 公開鍵の値、キーリング/値、またはパス
     nl: openbare sleutelwaarde, sleutelring/waarde of pad
+    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka
     pt: valor de chave pública, chaveiro/valor ou caminho
     ru: значение открытого ключа, связка ключей/значение или путь
     zh: 公钥值、密钥环/值或路径
@@ -1358,6 +1464,7 @@ translations:
     hi: विकल्प=मूल्य
     ja: オプション=値
     nl: optie=waarde
+    pl: opcja=wartość
     pt: opção=valor
     ru: опция=значение
     zh: 选项=值
@@ -1376,6 +1483,7 @@ translations:
     ja: SSH 証明書に追加する重要なオプション。複数回指定できます。
     nl: Kritieke opties om toe te voegen aan het SSH-certificaat kunnen meerdere keren
       worden opgegeven
+    pl: Krytyczne opcje do dodania do certyfikatu SSH, można określić wielokrotnie
     pt: Opções críticas para adicionar ao certificado SSH podem ser especificadas
       várias vezes
     ru: Критические параметры для добавления в сертификат SSH можно указать несколько
@@ -1391,6 +1499,7 @@ translations:
     hi: विस्तार=मूल्य
     ja: 拡張子=値
     nl: extensie=waarde
+    pl: rozszerzenie=wartość
     pt: extensão=valor
     ru: расширение=значение
     zh: 扩展=值
@@ -1408,6 +1517,7 @@ translations:
     ja: SSH 証明書に追加する拡張機能。複数回指定できます。
     nl: Extensies die aan het SSH-certificaat moeten worden toegevoegd, kunnen meerdere
       keren worden opgegeven
+    pl: Rozszerzenia do dodania do certyfikatu SSH można określić wielokrotnie
     pt: Extensões para adicionar ao certificado SSH podem ser especificadas várias
       vezes
     ru: Расширения для добавления в сертификат SSH можно указывать несколько раз.
@@ -1422,6 +1532,7 @@ translations:
     hi: 'होस्ट प्रमाणपत्र बनाएँ (डिफ़ॉल्ट: उपयोगकर्ता प्रमाणपत्र)'
     ja: 'ホスト証明書を作成する (デフォルト: ユーザー証明書)'
     nl: 'Maak een hostcertificaat aan (standaard: gebruikerscertificaat)'
+    pl: 'Utwórz certyfikat hosta (domyślnie: certyfikat użytkownika)'
     pt: 'Crie um certificado de host (padrão: certificado de usuário)'
     ru: 'Создайте сертификат хоста (по умолчанию: сертификат пользователя)'
     zh: 创建主机证书（默认：用户证书）
@@ -1435,6 +1546,7 @@ translations:
     hi: कुंजी आईडी
     ja: キーID
     nl: Sleutel-ID
+    pl: Identyfikator klucza
     pt: ID da chave
     ru: Идентификатор ключа
     zh: 密钥 ID
@@ -1448,6 +1560,7 @@ translations:
     hi: प्रधानाचार्य
     ja: 主要
     nl: voornaam
+    pl: główny
     pt: diretor
     ru: главный
     zh: 主要的
@@ -1466,6 +1579,7 @@ translations:
     ja: SSH 証明書に追加する有効なプリンシパル。複数回指定できます。
     nl: Geldige principals die aan het SSH-certificaat moeten worden toegevoegd, kunnen
       meerdere keren worden opgegeven
+    pl: Ważne dane do dodania do certyfikatu SSH można określić wielokrotnie
     pt: Os principais válidos para adicionar ao certificado SSH podem ser especificados
       várias vezes
     ru: Допустимые участники для добавления в сертификат SSH, можно указать несколько
@@ -1481,6 +1595,7 @@ translations:
     hi: प्रमाणपत्र समाप्त होने तक कुछ सेकंड
     ja: 証明書の有効期限までの秒数
     nl: Seconden totdat het certificaat verloopt
+    pl: Sekundy do wygaśnięcia certyfikatu
     pt: Segundos até o certificado expirar
     ru: Секунды до истечения срока действия сертификата
     zh: 证书到期前的秒数
@@ -1507,6 +1622,9 @@ translations:
     nl: Genereer een SSH-certificaat en voer een SSH-geformatteerd certificaat uit.
       Moet een privésleutel, een openbare sleutel en een lijst met opdrachtgevers
       opgeven. Kan extra velden voor het certificaat opgeven.
+    pl: Wygeneruj certyfikat SSH i wygeneruj certyfikat w formacie SSH. Należy określić
+      klucz prywatny, klucz publiczny i listę podmiotów. Można dodać dodatkowe pola
+      dla certyfikatu.
     pt: Gere o certificado SSH e produza um certificado formatado em SSH. Deve especificar
       uma chave privada, uma chave pública e uma lista de principais. Pode fornecer
       campos adicionais para o certificado.
@@ -1524,6 +1642,7 @@ translations:
     hi: सेकंड
     ja: 秒
     nl: seconden
+    pl: towary drugiej jakości
     pt: segundos
     ru: секунды
     zh: 秒
@@ -1537,6 +1656,7 @@ translations:
     hi: निजी कुंजी मान कीरिंग/मान, या पथ
     ja: 秘密鍵の値キーリング/値、またはパス
     nl: persoonlijke sleutelwaarde sleutelhanger/waarde of pad
+    pl: klucz prywatny, wartość klucza, pęk kluczy lub ścieżka
     pt: valor da chave privada chaveiro/valor ou caminho
     ru: значение закрытого ключа, связка/значение или путь
     zh: 私钥值密钥环/值，或路径
@@ -1550,6 +1670,7 @@ translations:
     hi: डेटा पर हस्ताक्षर करने के लिए या - stdin के लिए
     ja: 署名するデータまたは標準入力の -
     nl: gegevens om te ondertekenen of - voor stdin
+    pl: dane do podpisania lub - dla standardowego wejścia
     pt: dados para assinar ou - para stdin
     ru: данные для подписи или - для стандартного ввода
     zh: 要签名的数据或 - 用于标准输入
@@ -1563,6 +1684,7 @@ translations:
     hi: केवल हस्ताक्षर आउटपुट करें
     ja: 署名のみを出力する
     nl: Voer alleen de handtekening uit
+    pl: Wyświetl tylko podpis
     pt: Produza apenas a assinatura
     ru: Выведите только подпись
     zh: 仅输出签名
@@ -1592,6 +1714,9 @@ translations:
     nl: Genereer een handtekening en voer een base64-tekenreeks met standaardcodering
       uit. Moet de privésleutel van de ondertekenaar en de te ondertekenen gegevens
       specificeren. Voor ECP-sleutels is de hash SHA256. Voor Ed25519 is de hash ongebruikt.
+    pl: Wygeneruj podpis i wygeneruj standardowy ciąg znaków Base64. Należy określić
+      klucz prywatny sygnatariusza oraz dane do podpisania. W przypadku kluczy ECP
+      skrót będzie SHA256. W przypadku kluczy Ed25519 skrót jest nieużywany.
     pt: Gere uma assinatura e produza uma string base64 de codificação padrão. Deve
       especificar a chave privada do signatário e os dados a serem assinados. Para
       chaves ECP, o hash será SHA256. Para Ed25519, o hash não é utilizado.
@@ -1609,6 +1734,7 @@ translations:
     hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
     ja: 公開鍵の値、キーリング/値、またはパス
     nl: openbare sleutelwaarde, sleutelring/waarde of pad
+    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka
     pt: valor de chave pública, chaveiro/valor ou caminho
     ru: значение открытого ключа, связка ключей/значение или путь
     zh: 公钥值、密钥环/值或路径
@@ -1622,6 +1748,7 @@ translations:
     hi: संदेश या - stdin के लिए
     ja: メッセージまたは - （標準入力用）
     nl: bericht of - voor stdin
+    pl: wiadomość lub - dla standardowego wejścia
     pt: mensagem ou - para stdin
     ru: сообщение или - для стандартного ввода
     zh: 消息或-用于标准输入
@@ -1635,6 +1762,7 @@ translations:
     hi: हस्ताक्षर
     ja: サイン
     nl: handtekening
+    pl: podpis
     pt: assinatura
     ru: подпись
     zh: 签名
@@ -1657,6 +1785,8 @@ translations:
     nl: Controleer een handtekening voor een bericht met behulp van een openbare sleutel.
       De handtekening moet in het formulier staan<hash> :<signature> :<optional key
       id> .
+    pl: Zweryfikuj podpis wiadomości za pomocą klucza publicznego. Podpis musi mieć
+      formę<hash> :<signature> :<optional key id> .
     pt: Verifique a assinatura de uma mensagem usando uma chave pública. A assinatura
       deve estar no formulário<hash> :<signature> :<optional key id> .
     ru: Проверьте подпись сообщения с помощью открытого ключа. Подпись должна быть
@@ -1672,6 +1802,7 @@ translations:
     hi: सममित कुंजी
     ja: 対称鍵
     nl: symmetrische sleutel
+    pl: klucz symetryczny
     pt: chave simétrica
     ru: симметричный ключ
     zh: 对称密钥
@@ -1686,6 +1817,7 @@ translations:
     hi: प्रॉम्प्ट के बजाय ध्वज के रूप में सममित कुंजी प्रदान करें
     ja: プロンプトの代わりにフラグとして対称キーを提供する
     nl: Geef een symmetrische sleutel als vlag in plaats van een prompt
+    pl: Podaj klucz symetryczny jako flagę zamiast monitu
     pt: Forneça uma chave simétrica como um sinalizador em vez de um prompt
     ru: Укажите симметричный ключ в качестве флага вместо подсказки
     zh: 提供对称密钥作为标志而不是提示
@@ -1699,6 +1831,7 @@ translations:
     hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
     ja: メタフィールドはキー=値の形式で複数回指定できます
     nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
+    pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
     pt: metacampos no formato key=value, podem ser especificados diversas vezes
     ru: метаполя в формате ключ=значение, можно указывать несколько раз
     zh: 元字段格式为 key=value，可以多次指定
@@ -1712,6 +1845,7 @@ translations:
     hi: लंबाई
     ja: 長さ
     nl: lengte
+    pl: długość
     pt: comprimento
     ru: длина
     zh: 长度
@@ -1727,6 +1861,7 @@ translations:
     ja: 値を指定する代わりに、この長さのランダムな文字列を生成します
     nl: Genereer een willekeurige tekenreeks met deze lengte in plaats van een waarde
       op te geven
+    pl: Zamiast podawać wartość, wygeneruj losowy ciąg o tej długości
     pt: Gere uma string aleatória com este comprimento em vez de fornecer um valor
     ru: Создайте случайную строку этой длины вместо предоставления значения.
     zh: 生成具有此长度的随机字符串，而不是提供值
@@ -1740,6 +1875,7 @@ translations:
     hi: 'कुंजी आईडी (डिफ़ॉल्ट: यादृच्छिक स्ट्रिंग)'
     ja: 'キーID (デフォルト: ランダム文字列)'
     nl: 'sleutel-ID (standaard: willekeurige reeks)'
+    pl: 'identyfikator klucza (domyślnie: losowy ciąg)'
     pt: 'ID da chave (padrão: string aleatória)'
     ru: 'идентификатор ключа (по умолчанию: случайная строка)'
     zh: 密钥 ID（默认值：随机字符串）
@@ -1755,6 +1891,7 @@ translations:
     hi: क्रिप्टोग्राफिक निजी कुंजी उत्पन्न करें और उसे कीरिंग मानों में जोड़ें।
     ja: 暗号化秘密キーを生成し、キーリング値に追加します。
     nl: Genereer een cryptografische privésleutel en voeg deze toe aan sleutelhangerwaarden.
+    pl: Wygeneruj i dodaj kryptograficzny klucz prywatny do wartości pęku kluczy.
     pt: Gere e adicione uma chave privada criptográfica aos valores do chaveiro.
     ru: Создайте и добавьте криптографический закрытый ключ в значения набора ключей.
     zh: 生成加密私钥并将其添加到 Keyring Values。
@@ -1775,6 +1912,8 @@ translations:
     ja: キーリングに値を追加（または既存の値を上書き）し、オプションでさまざまなメタフィールドを追加します。
     nl: Voeg een waarde toe aan een sleutelhanger (of overschrijf een bestaande waarde)
       en voeg eventueel verschillende metavelden toe.
+    pl: Dodaj wartość do pęku kluczy (lub nadpisz istniejącą wartość), opcjonalnie
+      dodając do niej różne pola meta.
     pt: Adicione um valor a um chaveiro (ou substitua um valor existente), opcionalmente
       adicionando vários metacampos a ele.
     ru: Добавьте значение в связку ключей (или перезапишите существующее значение),
@@ -1790,6 +1929,7 @@ translations:
     hi: स्रोत कीरिंग/पथ
     ja: ソースキーリング/パス
     nl: bronsleutelhanger/pad
+    pl: ścieżka/klucz źródłowy
     pt: chaveiro/caminho de origem
     ru: исходный ключ/путь
     zh: 源密钥环/路径
@@ -1803,6 +1943,7 @@ translations:
     hi: गंतव्य कुंजी रिंग/पथ
     ja: 宛先キーリング/パス
     nl: bestemming sleutelhanger/pad
+    pl: ścieżka/kółko kluczy docelowych
     pt: chaveiro/caminho de destino
     ru: брелок/путь назначения
     zh: 目标密钥环/路径
@@ -1816,6 +1957,7 @@ translations:
     hi: किसी कीरिंग से किसी मौजूदा कीरिंग में मान की प्रतिलिपि बनाएँ।
     ja: キーリングから既存のキーリングに値をコピーします。
     nl: Kopieer een waarde van een sleutelhanger naar een bestaande sleutelhanger.
+    pl: Kopiowanie wartości z pęku kluczy do istniejącego pęku kluczy.
     pt: Copie um valor de um chaveiro para um chaveiro existente.
     ru: Скопируйте значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环复制到现有密钥环。
@@ -1829,6 +1971,7 @@ translations:
     hi: value या &#39;all&#39; सभी मेटा मान दिखाने के लिए)
     ja: 値または「all」ですべてのメタ値を表示)
     nl: waarde of &#39;all&#39; om alle metawaarden weer te geven)
+    pl: wartość lub „wszystkie”, aby wyświetlić wszystkie wartości meta)
     pt: value ou &#39;all&#39; para mostrar todos os valores meta)
     ru: значение или «все», чтобы отобразить все метазначения)
     zh: 值或“全部”以显示所有元值）
@@ -1842,6 +1985,7 @@ translations:
     hi: मेटा मान दिखाएँ
     ja: メタ値を表示
     nl: Toon metawaarden
+    pl: Pokaż wartości meta
     pt: Mostrar valores meta
     ru: Показать метазначения
     zh: 显示元值
@@ -1855,6 +1999,7 @@ translations:
     hi: केवल मान दिखाएँ
     ja: 値のみを表示
     nl: Toon alleen de waarde
+    pl: Pokaż tylko wartość
     pt: Mostrar apenas o valor
     ru: Показать только значение
     zh: 仅显示值
@@ -1868,6 +2013,7 @@ translations:
     hi: डिक्रिप्टेड मान दिखाएँ.
     ja: 復号化された値を表示します。
     nl: Toon een gedecodeerde waarde.
+    pl: Pokaż odszyfrowaną wartość.
     pt: Mostre um valor descriptografado.
     ru: Показать расшифрованное значение.
     zh: 显示解密值。
@@ -1881,6 +2027,7 @@ translations:
     hi: गंतव्य कुंजी रिंग/पथ (कई बार निर्दिष्ट किया जा सकता है)
     ja: 宛先キーリング/パス（複数回指定可能）
     nl: bestemmingssleutelhanger/pad (kan meerdere keren worden opgegeven)
+    pl: ścieżka/pęk kluczy docelowych (można określić wielokrotnie)
     pt: chaveiro/caminho de destino (pode ser especificado várias vezes)
     ru: ключ/путь назначения (можно указать несколько раз)
     zh: 目标密钥环/路径（可以多次指定）
@@ -1900,6 +2047,8 @@ translations:
     ja: 値を他の値にリンクし、この値が変更されたときに他の値も更新されるようにします。
     nl: Koppel een waarde aan andere waarden en zorg ervoor dat de andere waarden
       worden bijgewerkt wanneer deze waarde verandert.
+    pl: Powiąż wartość z innymi wartościami, upewniając się, że inne wartości zostaną
+      zaktualizowane, gdy zmieni się ta wartość.
     pt: Vincule um valor a outros valores, garantindo que os outros valores sejam
       atualizados quando esse valor for alterado.
     ru: Свяжите значение с другими значениями, гарантируя, что другие значения обновляются
@@ -1915,6 +2064,7 @@ translations:
     hi: किसी मान को कीरिंग से मौजूदा कीरिंग में ले जाएं।
     ja: キーリングから既存のキーリングに値を移動します。
     nl: Verplaats een waarde van een sleutelhanger naar een bestaande sleutelhanger.
+    pl: Przenieś wartość z pęku kluczy do istniejącego pęku kluczy.
     pt: Mova um valor de um chaveiro para um chaveiro existente.
     ru: Переместите значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环移动到现有密钥环。
@@ -1928,6 +2078,7 @@ translations:
     hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
     ja: メタフィールドはキー=値の形式で複数回指定できます
     nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
+    pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
     pt: metacampos no formato key=value, podem ser especificados diversas vezes
     ru: метаполя в формате ключ=значение, можно указывать несколько раз
     zh: 元字段格式为 key=value，可以多次指定
@@ -1951,6 +2102,8 @@ translations:
     nl: Stel metavelden in voor een sleutelhanger/waarde. Velden kunnen meerdere keren
       worden opgegeven in de notatie sleutel=waarde. Een waarde (key=) verwijdert
       de sleutel.
+    pl: Ustaw pola meta dla pęku kluczy/wartości. Pola można określać wielokrotnie
+      w formacie klucz=wartość. Wartość (klucz=) usunie klucz.
     pt: Defina metacampos para um chaveiro/valor. Os campos podem ser especificados
       diversas vezes no formato chave=valor. Um valor (key=) excluirá a chave.
     ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
@@ -1966,6 +2119,7 @@ translations:
     hi: प्रमाणपत्र मान, पथ, या - stdin के लिए
     ja: 証明書の値、パス、または - （stdin の場合）
     nl: Certificaatwaarde, pad of - voor stdin
+    pl: Wartość certyfikatu, ścieżka lub - dla wejścia standardowego
     pt: Valor do certificado, caminho ou - para stdin
     ru: Значение сертификата, путь или - для стандартного ввода
     zh: 证书值、路径或 - 用于标准输入
@@ -1979,6 +2133,7 @@ translations:
     hi: CA प्रमाणपत्र मान या पथ, कई बार निर्दिष्ट किया जा सकता है
     ja: CA 証明書の値またはパス。複数回指定できます。
     nl: CA-certificaatwaarde of pad kan meerdere keren worden opgegeven
+    pl: Wartość lub ścieżka certyfikatu CA, można określić wielokrotnie
     pt: Valor ou caminho do certificado CA, pode ser especificado várias vezes
     ru: Значение или путь сертификата CA можно указать несколько раз.
     zh: CA证书值或路径，可指定多次
@@ -1996,6 +2151,8 @@ translations:
       को मान्य करें।
     ja: 証明書を表示し、オプションで CA 公開キーを使用して証明書を検証します。
     nl: Toon een certificaat en valideer het certificaat optioneel met openbare CA-sleutels.
+    pl: Wyświetl certyfikat, opcjonalnie weryfikując go przy użyciu publicznych kluczy
+      urzędu certyfikacji.
     pt: Mostrar um certificado, validando opcionalmente o certificado com chaves públicas
       da CA.
     ru: Покажите сертификат, при необходимости проверив сертификат с помощью открытых
@@ -2011,6 +2168,7 @@ translations:
     hi: सार्वजनिक कुंजी मान, कीरिंग/मान टिप्पणी, या पथ
     ja: 公開鍵の値、キーリング/値のコメント、またはパス
     nl: openbare sleutelwaarde, sleutelhanger/waardecommentaar of pad
+    pl: wartość klucza publicznego, komentarz do pęku kluczy/wartości lub ścieżka
     pt: valor da chave pública, comentário do chaveiro/valor ou caminho
     ru: значение открытого ключа, комментарий к связке ключей/значению или путь
     zh: 公钥值、密钥环/值注释或路径
@@ -2024,6 +2182,7 @@ translations:
     hi: ca प्रमाणपत्र या पथ
     ja: ca 証明書またはパス
     nl: ca-certificaat of pad
+    pl: certyfikat lub ścieżka CA
     pt: certificado ou caminho ca
     ru: сертификат CA или путь
     zh: ca 证书或路径
@@ -2037,6 +2196,7 @@ translations:
     hi: CA प्रमाणपत्र बनाएं
     ja: CA証明書を作成する
     nl: Maak een CA-certificaat
+    pl: Utwórz certyfikat CA
     pt: Crie um certificado CA
     ru: Создать сертификат ЦС
     zh: 创建 CA 证书
@@ -2050,6 +2210,7 @@ translations:
     hi: होस्ट का नाम
     ja: ホスト名
     nl: hostnaam
+    pl: nazwa hosta
     pt: nome de anfitrião
     ru: имя хоста
     zh: 主机名
@@ -2063,6 +2224,7 @@ translations:
     hi: DNS होस्टनाम (कई बार उपयोग किया जा सकता है)
     ja: DNSホスト名（複数回使用可能）
     nl: DNS-hostnaam (kan meerdere keren worden gebruikt)
+    pl: Nazwa hosta DNS (może być używana wielokrotnie)
     pt: Nome de host DNS (pode ser usado várias vezes)
     ru: Имя хоста DNS (можно использовать несколько раз)
     zh: DNS 主机名（可多次使用）
@@ -2076,6 +2238,7 @@ translations:
     hi: विस्तारित कुंजी उपयोग
     ja: 拡張キー使用法
     nl: uitgebreid sleutelgebruik
+    pl: rozszerzone użycie klucza
     pt: uso estendido de chave
     ru: расширенное использование ключа
     zh: 扩展密钥用法
@@ -2089,6 +2252,7 @@ translations:
     hi: विस्तारित कुंजी उपयोग
     ja: 拡張キーの使用
     nl: Uitgebreid sleutelgebruik
+    pl: Rozszerzone użycie klucza
     pt: Uso de chave estendido
     ru: Расширенное использование ключа
     zh: 扩展密钥用法
@@ -2102,6 +2266,7 @@ translations:
     hi: सेकंड में समाप्ति
     ja: 有効期限は秒単位
     nl: Vervaldatum in seconden
+    pl: Wygaśnięcie w sekundach
     pt: Expiração em segundos
     ru: Срок действия в секундах
     zh: 以秒为单位过期
@@ -2115,6 +2280,7 @@ translations:
     hi: पता
     ja: 住所
     nl: adres
+    pl: adres
     pt: endereço
     ru: адрес
     zh: 地址
@@ -2128,6 +2294,7 @@ translations:
     hi: आईपी पता (कई बार इस्तेमाल किया जा सकता है)
     ja: IP アドレス (複数回使用可能)
     nl: IP-adres (kan meerdere keren gebruikt worden)
+    pl: Adres IP (może być używany wielokrotnie)
     pt: Endereço IP (pode ser usado várias vezes)
     ru: IP-адрес (можно использовать несколько раз)
     zh: IP地址（可多次使用）
@@ -2141,6 +2308,7 @@ translations:
     hi: कुंजी उपयोग
     ja: キーの使用法
     nl: sleutel gebruik
+    pl: użycie klucza
     pt: uso de chave
     ru: использование ключа
     zh: 密钥用法
@@ -2154,6 +2322,7 @@ translations:
     hi: कुंजी उपयोग, मान्य मान
     ja: キーの使用法、有効な値
     nl: Sleutelgebruik, geldige waarden
+    pl: Użycie klucza, prawidłowe wartości
     pt: Uso de chave, valores válidos
     ru: Использование ключа, допустимые значения
     zh: 密钥用法、有效值
@@ -2167,6 +2336,7 @@ translations:
     hi: कुंजी उपयोग, मान्य मान
     ja: キーの使用法、有効な値
     nl: Sleutelgebruik, geldige waarden
+    pl: Użycie klucza, prawidłowe wartości
     pt: Uso de chave, valores válidos
     ru: Использование ключа, допустимые значения
     zh: 密钥用法、有效值
@@ -2207,6 +2377,11 @@ translations:
       of de privésleutel van het certificaat (voor zelfondertekende certificaten)
       opgeven. Er kan een publieke sleutel worden opgegeven, anders wordt de publieke
       sleutel van de private sleutel gebruikt.
+    pl: Utwórz certyfikat X.509 i wyślij certyfikat w formacie PEM na wyjście standardowe.
+      Należy określić klucz prywatny sygnatariusza (w przypadku certyfikatów podpisanych
+      przez urząd certyfikacji) lub klucz prywatny certyfikatu (w przypadku certyfikatów
+      podpisanych samodzielnie). Można określić klucz publiczny, w przeciwnym razie
+      zostanie użyty klucz publiczny klucza prywatnego.
     pt: Crie um certificado X.509 e envie um certificado no formato PEM para stdout.
       Deve especificar a chave privada do signatário (para certificados assinados
       por CA) ou a chave privada do certificado (para certificados autoassinados).

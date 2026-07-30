@@ -34,7 +34,7 @@ Lets use Rot to generate another keypair, this time for use as the SSH CA:
 
 {{< highlight bash >}}
 $ rot value-add-private rot/SSH_CA
-$ rot value-display -m publicKey rot/SSH_CA | rot ssh -
+$ rot value-get -m publicKey rot/SSH_CA | rot ssh -
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+5rkhggPylubB7l9GNhrkuPX+da3iS0g5Vd9ZEhSTf
 {{< /highlight >}}
 

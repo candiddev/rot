@@ -9,6 +9,34 @@ title: Config
 
 ## Configuration Values
 
+### `acme` {#acme}
+
+Configuration values for setting the defaults to the various `acme-` CLI commands.
+
+{{% snippet config_key "acme_directoryURL" %}}
+
+String, the URL of the ACME directory server.
+
+**Default:** `"https://acme-v02.api.letsencrypt.org/directory"`
+
+{{% snippet config_key "acme_emailAddresses" %}}
+
+List of strings, email addresses to register ACME accounts with.
+
+**Default:** `[]`
+
+{{% snippet config_key "acme_letsEncryptStaging" %}}
+
+Boolean, if set to true, will set the {{% config acme_directoryURL %}} to Let's Encrypt staging.
+
+**Default:** `false`
+
+{{% snippet config_key "acme_privateKey" %}}
+
+String, the private key value, path, or keyring/path.
+
+**Default:** `""`
+
 ### `algorithms` {#algorithms}
 
 Configuration values for setting the algorithms Rot will use by default.
@@ -30,6 +58,12 @@ Specify the Password Based Key Derivation Function (PBKDF) encryption algorithm 
 Specify the symmetric encryption algorithm to use.  See {{< cli algorithms >}} for options.
 
 **Default:** `"best"`
+
+{{% snippet config_key "algorithms_x509" %}}
+
+Specify the algorithm to use for generating X.509 private keys and certificates.  See {{< cli algorithms >}} for options.
+
+**Default:** `"ecp256"`
 
 {{% snippet "config_cli" rot gray %}}
 

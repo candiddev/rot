@@ -3,6 +3,303 @@ outputs:
   package: main
   path: ../go/rot
 translations:
+  ACMEAccountDeleteUsage:
+    ar: حذف حساب ACME
+    context: acme-account-delete usage
+    de: Ein ACME-Konto löschen
+    en: Delete an ACME account
+    es: Eliminar una cuenta de ACME
+    fr: Supprimer un compte ACME
+    hi: एक ACME खाता हटाएं
+    ja: ACMEアカウントを削除する
+    nl: Een ACME-account verwijderen
+    pl: Usuń konto ACME
+    pt: Excluir uma conta ACME
+    ru: Удалить учетную запись ACME
+    zh: 删除 ACME 帐户
+  ACMEAccountGetUsage:
+    ar: استرجاع تفاصيل حساب ACME
+    context: acme-account-get usage
+    de: ACME-Kontodetails abrufen
+    en: Retrieve ACME account details
+    es: Recuperar los detalles de la cuenta de ACME
+    fr: Récupérer les détails du compte ACME
+    hi: ACME खाते की जानकारी प्राप्त करें
+    ja: ACMEアカウントの詳細を取得する
+    nl: ACME-accountgegevens ophalen
+    pl: Pobierz dane konta ACME
+    pt: Recuperar detalhes da conta ACME
+    ru: Получить данные учетной записи ACME
+    zh: 获取ACME账户详情
+  ACMEAccountSetArg1:
+    ar: عناوين البريد الإلكتروني...
+    context: acme-account-set arg1
+    de: E-Mail-Adressen...
+    en: email addresses...
+    es: direcciones de correo electrónico...
+    fr: adresses e-mail...
+    hi: ईमेल पते...
+    ja: メールアドレス...
+    nl: e-mailadressen...
+    pl: adresy e-mail...
+    pt: endereços de e-mail...
+    ru: адреса электронной почты...
+    zh: 电子邮件地址……
+  ACMEAccountSetUsage:
+    ar: أنشئ حسابًا جديدًا على ACME، أو قم بتعيين عناوين البريد الإلكتروني لحساب موجود.
+    context: acme-account-set usage
+    de: Erstellen Sie ein neues ACME-Konto oder legen Sie die E-Mail-Adressen eines
+      bestehenden Kontos fest.
+    en: Create a new ACME account, or set the email addresses of an existing account
+    es: Crea una nueva cuenta de ACME o configura las direcciones de correo electrónico
+      de una cuenta existente.
+    fr: Créez un nouveau compte ACME ou configurez les adresses e-mail d&#39;un compte
+      existant.
+    hi: एक नया ACME खाता बनाएँ, या मौजूदा खाते के ईमेल पते सेट करें।
+    ja: 新しいACMEアカウントを作成するか、既存のアカウントのメールアドレスを設定します。
+    nl: Maak een nieuw ACME-account aan of stel de e-mailadressen van een bestaand
+      account in.
+    pl: Utwórz nowe konto ACME lub ustaw adresy e-mail istniejącego konta
+    pt: Crie uma nova conta ACME ou defina os endereços de e-mail de uma conta existente.
+    ru: Создайте новую учетную запись ACME или укажите адреса электронной почты существующей
+      учетной записи.
+    zh: 创建新的 ACME 帐户，或设置现有帐户的电子邮件地址
+  ACMEAuthzGetUsage:
+    ar: استرجاع تفاصيل تفويض ACME
+    context: acme-authz-get usage
+    de: ACME-Autorisierungsdetails abrufen
+    en: Retrieve ACME authorization details
+    es: Recuperar los detalles de autorización de ACME
+    fr: Récupérer les détails d&#39;autorisation ACME
+    hi: ACME प्राधिकरण विवरण प्राप्त करें
+    ja: ACMEの承認詳細を取得する
+    nl: ACME-autorisatiegegevens ophalen
+    pl: Pobierz szczegóły autoryzacji ACME
+    pt: Recuperar detalhes de autorização da ACME
+    ru: Получить данные об авторизации ACME
+    zh: 获取ACME授权详情
+  ACMEAuthzTestUsage:
+    ar: اختبر تحديات تفويض ACME لمعرفة ما إذا كانت ستتم الموافقة عليها من خادم ACME
+    context: acme-authz-test usage
+    de: Testen Sie die ACME-Autorisierungsherausforderungen, um zu sehen, ob sie von
+      einem ACME-Server validiert werden können.
+    en: Test ACME authorization challenges to see if they will validate from an ACME
+      server
+    es: Pruebe los desafíos de autorización de ACME para ver si se validan desde un
+      servidor ACME.
+    fr: Tester les défis d&#39;autorisation ACME pour vérifier s&#39;ils sont validés
+      par un serveur ACME
+    hi: यह देखने के लिए ACME प्राधिकरण चुनौतियों का परीक्षण करें कि क्या वे ACME सर्वर
+      से मान्य होंगी।
+    ja: ACME認証チャレンジをテストして、ACMEサーバーから検証できるかどうかを確認します。
+    nl: Test de ACME-autorisatie-uitdagingen om te zien of ze gevalideerd worden door
+      een ACME-server.
+    pl: Przetestuj wyzwania autoryzacyjne ACME, aby sprawdzić, czy zostaną one zweryfikowane
+      na serwerze ACME
+    pt: Teste os desafios de autorização ACME para verificar se eles serão validados
+      a partir de um servidor ACME.
+    ru: Проверьте, будут ли запросы авторизации ACME подтверждены сервером ACME.
+    zh: 测试 ACME 授权挑战，以查看它们是否能从 ACME 服务器验证通过。
+  ACMEAuthzWaitUsage:
+    ar: انتظر حتى يتم الانتهاء من عملية تفويض طلب ACME
+    context: acme-authz-new usage
+    de: Warten Sie, bis die Autorisierung der ACME-Bestellung abgeschlossen ist.
+    en: Wait for an ACME order authorization to finish
+    es: Espere a que finalice la autorización de la orden de ACME.
+    fr: Attendez que l&#39;autorisation de commande ACME soit finalisée.
+    hi: ACME ऑर्डर प्राधिकरण की प्रक्रिया पूरी होने तक प्रतीक्षा करें
+    ja: ACMEの注文承認が完了するまでお待ちください。
+    nl: Wacht tot de orderautorisatie van ACME is voltooid.
+    pl: Poczekaj na zakończenie autoryzacji zamówienia ACME
+    pt: Aguarde a conclusão da autorização do pedido ACME.
+    ru: Дождитесь завершения авторизации заказа ACME.
+    zh: 等待 ACME 订单授权完成
+  ACMEChallengeArg1:
+    ar: dns01URL أو http01URL أو dnsPersist01URL
+    context: acme-challenge arg1
+    de: dns01URL, http01URL oder dnsPersist01URL
+    en: dns01URL, http01URL, or dnsPersist01URL
+    es: dns01URL, http01URL o dnsPersist01URL
+    fr: URL DNS01, URL HTTP01 ou URL de persistance DNS01
+    hi: dns01URL, http01URL, या dnsPersist01URL
+    ja: dns01URL、http01URL、またはdnsPersist01URL
+    nl: dns01URL, http01URL of dnsPersist01URL
+    pl: dns01URL, http01URL lub dnsPersist01URL
+    pt: dns01URL, http01URL ou dnsPersist01URL
+    ru: dns01URL, http01URL или dnsPersist01URL
+    zh: dns01URL、http01URL 或 dnsPersist01URL
+  ACMEChallengeGetUsage:
+    ar: استرجاع تفاصيل تحدي ACME
+    context: acme-challenge-get usage
+    de: Details zur ACME-Herausforderung abrufen
+    en: Retrieve ACME challenge details
+    es: Recuperar detalles del desafío ACME
+    fr: Récupérer les détails du défi ACME
+    hi: ACME चुनौती के विवरण प्राप्त करें
+    ja: ACMEチャレンジの詳細を取得する
+    nl: Details van de ACME-uitdaging ophalen
+    pl: Pobierz szczegóły wyzwania ACME
+    pt: Obtenha detalhes do desafio ACME
+    ru: Получить подробную информацию о конкурсе ACME
+    zh: 获取 ACME 挑战详情
+  ACMEChallengeValidateUsage:
+    ar: اطلب من خادم ACME التحقق من صحة التحدي
+    context: acme-challenge-validate usage
+    de: Fordern Sie den ACME-Server auf, eine Herausforderung zu validieren.
+    en: Request the ACME server to validate a challenge
+    es: Solicitar al servidor ACME que valide un desafío.
+    fr: Demander au serveur ACME de valider un défi
+    hi: ACME सर्वर से चुनौती को मान्य करने का अनुरोध करें
+    ja: ACMEサーバーにチャレンジの検証を要求します。
+    nl: Verzoek aan de ACME-server om een uitdaging te valideren.
+    pl: Poproś serwer ACME o sprawdzenie wyzwania
+    pt: Solicite ao servidor ACME que valide um desafio.
+    ru: Запросите у сервера ACME подтверждение запроса.
+    zh: 请求 ACME 服务器验证挑战
+  ACMEDomainIPArg:
+    ar: النطاقات و/أو عناوين IPv4/IPv6
+    context: acme domain or IP argument
+    de: Domänen und/oder IPv4/IPv6-Adressen
+    en: domains and/or IPv4/IPv6 addresses
+    es: dominios y/o direcciones IPv4/IPv6
+    fr: domaines et/ou adresses IPv4/IPv6
+    hi: डोमेन और/या IPv4/IPv6 पते
+    ja: ドメインおよび/またはIPv4/IPv6アドレス
+    nl: domeinen en/of IPv4/IPv6-adressen
+    pl: domeny i/lub adresy IPv4/IPv6
+    pt: domínios e/ou endereços IPv4/IPv6
+    ru: домены и/или адреса IPv4/IPv6
+    zh: 域名和/或 IPv4/IPv6 地址
+  ACMEFlagDPlaceholder:
+    ar: رابط الدليل
+    context: acme -d placeholder
+    de: Verzeichnis-URL
+    en: directory URL
+    es: URL del directorio
+    fr: URL du répertoire
+    hi: निर्देशिका यूआरएल
+    ja: ディレクトリURL
+    nl: URL van de map
+    pl: adres URL katalogu
+    pt: URL do diretório
+    ru: URL каталога
+    zh: 目录 URL
+  ACMEFlagDUsage:
+    ar: خادم ACME
+    context: acme -d usage
+    de: ACME-Server
+    en: ACME server
+    es: Servidor ACME
+    fr: Serveur ACME
+    hi: एसीएमई सर्वर
+    ja: ACMEサーバー
+    nl: ACME-server
+    pl: Serwer ACME
+    pt: Servidor ACME
+    ru: Сервер ACME
+    zh: ACME服务器
+  ACMEFlagPPlaceholder:
+    ar: طريق
+    context: acme -p placeholder
+    de: Weg
+    en: path
+    es: camino
+    fr: chemin
+    hi: पथ
+    ja: パス
+    nl: pad
+    pl: ścieżka
+    pt: caminho
+    ru: путь
+    zh: 小路
+  ACMEFlagPUsage:
+    ar: قيمة المفتاح الخاص، أو keyring/value، أو المسار، أو - للإدخال القياسي (stdin).
+    context: acme -p usage
+    de: Privater Schlüsselwert, Schlüsselring/Wert, Pfad oder - für stdin
+    en: Private key value, keyring/value, path, or - for stdin
+    es: Valor de clave privada, llavero/valor, ruta o - para stdin
+    fr: valeur de la clé privée, trousseau/valeur, chemin, ou - pour l&#39;entrée
+      standard
+    hi: निजी कुंजी का मान, कीरिंग/मान, पथ, या - stdin के लिए
+    ja: 秘密鍵の値、キーリング/値、パス、または標準入力の場合は「-」
+    nl: Waarde van de privésleutel, sleutelring/waarde, pad, of - voor stdin
+    pl: Wartość klucza prywatnego, pęk kluczy/wartość, ścieżka lub - dla wejścia standardowego
+    pt: Valor da chave privada, chaveiro/valor, caminho ou - para entrada padrão
+    ru: Значение закрытого ключа, связка ключей/значение, путь или - для стандартного
+      ввода
+    zh: 私钥值、密钥环/值、路径，或 - 表示标准输入
+  ACMEFlagSUsage:
+    ar: استخدم بيئة اختبار Let&#39;s Encrypt
+    context: acme -s usage
+    de: Verwenden Sie die Let&#39;s Encrypt-Staging-Umgebung
+    en: Use Let's Encrypt staging environment
+    es: Utilice el entorno de prueba de Let&#39;s Encrypt
+    fr: Utilisez l&#39;environnement de test de Let&#39;s Encrypt
+    hi: Let&#39;s Encrypt स्टेजिंग वातावरण का उपयोग करें
+    ja: Let&#39;s Encryptのステージング環境を使用する
+    nl: Gebruik de Let&#39;s Encrypt-testomgeving.
+    pl: Użyj środowiska przejściowego Let&#39;s Encrypt
+    pt: Utilize o ambiente de teste do Let&#39;s Encrypt
+    ru: Используйте тестовую среду Let&#39;s Encrypt.
+    zh: 使用 Let&#39;s Encrypt 测试环境
+  ACMEOrderFinalizeArg2:
+    ar: خوارزمية الشهادة
+    context: acme-order-finalize arg2
+    de: Zertifikatsalgorithmus
+    en: certificate algorithm
+    es: algoritmo de certificado
+    fr: algorithme de certificat
+    hi: प्रमाणपत्र एल्गोरिथम
+    ja: 証明書アルゴリズム
+    nl: certificaatalgoritme
+    pl: algorytm certyfikatu
+    pt: algoritmo de certificado
+    ru: алгоритм сертификата
+    zh: 证书算法
+  ACMEOrderFinalizeUsage:
+    ar: قم بإنشاء شهادة ومفتاح من طلب معتمد من شركة ACME
+    context: acme-order-finalize usage
+    de: Generieren Sie ein Zertifikat und einen Schlüssel aus einer autorisierten
+      ACME-Bestellung.
+    en: Generate a certificate and key from an authorized ACME order
+    es: Genere un certificado y una clave a partir de un pedido autorizado de ACME.
+    fr: Générer un certificat et une clé à partir d&#39;une commande ACME autorisée
+    hi: अधिकृत ACME ऑर्डर से प्रमाणपत्र और कुंजी जनरेट करें
+    ja: 承認されたACME注文から証明書とキーを生成する
+    nl: Genereer een certificaat en sleutel op basis van een geautoriseerde ACME-bestelling.
+    pl: Wygeneruj certyfikat i klucz z autoryzowanego zamówienia ACME
+    pt: Gere um certificado e uma chave a partir de um pedido autorizado da ACME.
+    ru: Сгенерируйте сертификат и ключ на основе авторизованного заказа ACME.
+    zh: 根据授权的 ACME 订单生成证书和密钥
+  ACMEOrderGetUsage:
+    ar: استرجاع تفاصيل طلب ACME
+    context: acme-order-get usage
+    de: ACME-Bestelldetails abrufen
+    en: Retrieve ACME order details
+    es: Recuperar detalles del pedido de ACME
+    fr: Récupérer les détails de la commande ACME
+    hi: ACME ऑर्डर विवरण प्राप्त करें
+    ja: ACMEの注文詳細を取得する
+    nl: ACME-bestelgegevens ophalen
+    pl: Pobierz szczegóły zamówienia ACME
+    pt: Recuperar detalhes do pedido ACME
+    ru: Получить сведения о заказе ACME
+    zh: 获取ACME订单详情
+  ACMEOrderNewUsage:
+    ar: إنشاء طلب شهادة ACME جديد لنطاق أو عنوان IP
+    context: acme-order-new usage
+    de: Erstellen Sie eine neue ACME-Zertifikatsbestellung für eine Domain oder IP-Adresse.
+    en: Create a new ACME certificate order for a domain or IP
+    es: Cree un nuevo pedido de certificado ACME para un dominio o IP.
+    fr: Créez une nouvelle commande de certificat ACME pour un domaine ou une adresse
+      IP.
+    hi: किसी डोमेन या आईपी के लिए नया एसीएमई प्रमाणपत्र ऑर्डर बनाएं
+    ja: ドメインまたはIPアドレスに対して新しいACME証明書の注文を作成する
+    nl: Maak een nieuwe ACME-certificaatbestelling aan voor een domein of IP-adres.
+    pl: Utwórz nowe zamówienie na certyfikat ACME dla domeny lub adresu IP
+    pt: Criar um novo pedido de certificado ACME para um domínio ou IP.
+    ru: Создайте новый заказ на сертификат ACME для домена или IP-адреса.
+    zh: 为域名或IP地址创建新的ACME证书订单
   AlgUsage:
     ar: إظهار الخوارزميات التي يفهمها روت.
     context: Usage for alg command
@@ -18,19 +315,19 @@ translations:
     ru: Показать алгоритмы, которые понимает Рот.
     zh: 展示 Rot 理解的算法。
   Base64Arg:
-    ar: قيمة الإدخال أو - لـ stdin
+    ar: مسار ملف الإدخال، أو قيمته، أو - للإدخال القياسي (stdin).
     context: Argument for base64
-    de: Eingabewert oder - für stdin
-    en: input value or - for stdin
-    es: valor de entrada o - para stdin
-    fr: valeur d&#39;entrée ou - pour stdin
-    hi: इनपुट मान या - stdin के लिए
-    ja: 入力値または - （stdinの場合）
-    nl: invoerwaarde of - voor stdin
-    pl: wartość wejściowa lub - dla wejścia standardowego
-    pt: valor de entrada ou - para stdin
-    ru: входное значение или - для стандартного ввода
-    zh: 输入值或-用于标准输入
+    de: Eingabedateipfad, Wert oder - für stdin
+    en: input file path, value, or - for stdin
+    es: ruta del archivo de entrada, valor o - para stdin
+    fr: chemin du fichier d&#39;entrée, valeur ou tiret pour l&#39;entrée standard
+    hi: इनपुट फ़ाइल पथ, मान, या - stdin के लिए
+    ja: 入力ファイルパス、値、または標準入力の場合は「-」
+    nl: pad naar het invoerbestand, waarde, of - voor stdin
+    pl: ścieżka do pliku wejściowego, wartość lub - dla wejścia standardowego
+    pt: Caminho do arquivo de entrada, valor ou - para entrada padrão
+    ru: путь к входному файлу, значение или - для стандартного ввода
+    zh: 输入文件路径、值，或 - 表示标准输入
   Base64FlagsDUsage:
     ar: 'فك تشفير base64 (الافتراضي: التشفير)'
     context: Usage for base64 d flag
@@ -90,19 +387,20 @@ translations:
       на стандартный вывод.
     zh: 对 base64 值或 stdin 进行编码/解码并输出到 stdout。
   DecryptArg1:
-    ar: المسار المشفر أو القيمة أو - لـ stdin
+    ar: مسار الملف المشفر، أو قيمته، أو - للإدخال القياسي
     context: First argument for decrypt
-    de: verschlüsselter Pfad, Wert oder - für stdin
-    en: encrypted path, value, or - for stdin
-    es: ruta cifrada, valor o - para stdin
-    fr: chemin chiffré, valeur ou - pour stdin
-    hi: एन्क्रिप्टेड पथ, मान, या - stdin के लिए
-    ja: 暗号化されたパス、値、または - （標準入力用）
-    nl: gecodeerd pad, waarde of - voor stdin
-    pl: zaszyfrowana ścieżka, wartość lub - dla wejścia standardowego
-    pt: caminho criptografado, valor ou - para stdin
-    ru: зашифрованный путь, значение или - для стандартного ввода
-    zh: 加密路径、值或 - 用于标准输入
+    de: Verschlüsselter Dateipfad, Wert oder - für stdin
+    en: encrypted file path, value, or - for stdin
+    es: Ruta de archivo cifrada, valor o - para entrada estándar
+    fr: Chemin d&#39;accès, valeur ou tiret (-) du fichier chiffré pour l&#39;entrée
+      standard
+    hi: एन्क्रिप्टेड फ़ाइल पथ, मान, या - stdin के लिए
+    ja: 暗号化されたファイルパス、値、または標準入力の場合は「-」
+    nl: versleuteld bestandspad, waarde of - voor stdin
+    pl: zaszyfrowana ścieżka do pliku, wartość lub - dla wejścia standardowego
+    pt: caminho de arquivo criptografado, valor ou - para stdin
+    ru: зашифрованный путь к файлу, значение или - для стандартного ввода
+    zh: 加密文件路径、值或 - 表示标准输入
   DecryptArg2:
     ar: حلقة مفاتيح/قيمة لاستخدامها في فك التشفير
     context: Second argument for decrypt
@@ -391,19 +689,19 @@ translations:
       использования асимметричного шифрования.
     zh: 加密一个值并将其打印到标准输出。可以指定接收方密钥或密钥环/值路径（使用 publicKey 元数据）以使用非对称加密。
   HashNewArg1:
-    ar: المسار إلى الملف أو - لـ stdin
+    ar: مسار الملف أو - للإدخال القياسي
     context: First argument for hash
-    de: Pfad zur Datei oder - für stdin
-    en: path to file or - for stdin
-    es: ruta al archivo o - para stdin
-    fr: chemin d&#39;accès au fichier ou - pour stdin
-    hi: फ़ाइल का पथ या - stdin के लिए
-    ja: ファイルへのパスまたは標準入力の場合は -
-    nl: pad naar bestand of - voor stdin
+    de: Dateipfad oder - für stdin
+    en: file path or - for stdin
+    es: ruta de archivo o - para stdin
+    fr: chemin de fichier ou - pour l&#39;entrée standard
+    hi: फ़ाइल पथ या - stdin के लिए
+    ja: ファイルパス、または標準入力の場合は「-」
+    nl: bestandspad of - voor stdin
     pl: ścieżka do pliku lub - dla wejścia standardowego
-    pt: caminho para arquivo ou - para stdin
+    pt: caminho do arquivo ou - para entrada padrão
     ru: путь к файлу или - для стандартного ввода
-    zh: 文件路径或 - 用于标准输入
+    zh: 文件路径或 - 表示标准输入
   HashNewFlagsAUsage:
     ar: خوارزمية للاستخدام
     context: Usage for the a flag
@@ -448,34 +746,20 @@ translations:
     pt: Crie um hash a partir de uma string ou arquivo e envie-o para stdout.
     ru: Создайте хеш из строки или файла и выведите его на стандартный вывод.
     zh: 从字符串或文件创建哈希并将其输出到标准输出。
-  HashVerifyArgs1:
-    ar: مسار الملف أو - لـ stdin
-    context: hash-verify arg1
-    de: Dateipfad oder - für stdin
-    en: file path or - for stdin
-    es: ruta del archivo o - para stdin
-    fr: chemin du fichier ou - pour stdin
-    hi: फ़ाइल पथ या - stdin के लिए
-    ja: ファイルパスまたは - （標準入力の場合）
-    nl: bestandspad of - voor stdin
-    pl: ścieżka do pliku lub - dla wejścia standardowego
-    pt: caminho do arquivo ou - para stdin
-    ru: путь к файлу или - для стандартного ввода
-    zh: 文件路径或-用于标准输入
   HashVerifyArgs2:
-    ar: التجزئة أو الملف أو مسار HTTP
+    ar: قيمة التجزئة، أو مسار الملف، أو عنوان URL الخاص بـ HTTP
     context: hash-verify arg2
-    de: Hash, Datei oder HTTP-Pfad
-    en: hash, file, or HTTP path
-    es: hash, archivo o ruta HTTP
-    fr: hachage, fichier ou chemin HTTP
-    hi: हैश, फ़ाइल या HTTP पथ
-    ja: ハッシュ、ファイル、または HTTP パス
-    nl: hash-, bestand- of HTTP-pad
-    pl: hash, plik lub ścieżka HTTP
-    pt: hash, arquivo ou caminho HTTP
-    ru: хеш, файл или путь HTTP
-    zh: 哈希、文件或 HTTP 路径
+    de: Hashwert, Dateipfad oder HTTP-URL
+    en: hash value, file path, or HTTP URL
+    es: valor hash, ruta de archivo o URL HTTP
+    fr: valeur de hachage, chemin de fichier ou URL HTTP
+    hi: हैश मान, फ़ाइल पथ, या HTTP URL
+    ja: ハッシュ値、ファイルパス、またはHTTP URL
+    nl: hashwaarde, bestandspad of HTTP-URL
+    pl: wartość skrótu, ścieżka do pliku lub adres URL HTTP
+    pt: valor de hash, caminho do arquivo ou URL HTTP
+    ru: хеш-значение, путь к файлу или HTTP-URL
+    zh: 哈希值、文件路径或 HTTP URL
   HashVerifyUsage:
     ar: التحقق من التجزئة لملف أو stdin. يجب أن يكون التجزئة في النموذج<algorithm>
       :<hash> .
@@ -566,43 +850,46 @@ translations:
       первый доступный ключ, если ни один не указан в качестве исходного пользовательского
       ключа.
     zh: 初始化新的 Rot 配置。将查找 _1 文件，如果未指定任何可用密钥，则使用第一个可用密钥作为初始用户密钥。
-  JWTDisplayArg1:
-    ar: JWT، أو - لـ stdin
-    context: Arg 1 for jwt-display
-    de: JWT oder - für stdin
-    en: JWT, or - for stdin
-    es: JWT, o - para entrada estándar
-    fr: JWT, ou - pour stdin
-    hi: JWT, या - stdin के लिए
-    ja: JWT、またはstdinの場合は-
-    nl: JWT, of - voor stdin
-    pl: JWT lub - dla wejścia standardowego
-    pt: JWT, ou - para stdin
-    ru: JWT или - для стандартного ввода
-    zh: JWT，或 - 用于 stdin
-  JWTDisplayArg2:
-    ar: قيمة المفتاح العام، أو حلقة المفاتيح/الاسم، أو المسار. يمكن تحديدها عدة مرات
-    context: Arg 2 for jwt-display
-    de: öffentlicher Schlüsselwert, Schlüsselbund/Name oder Pfad. Kann mehrfach angegeben
-      werden
-    en: public key value, keyring/name, or path.  Can be specified multiple times
-    es: valor de clave pública, conjunto de claves/nombre o ruta. Se puede especificar
-      varias veces
-    fr: valeur de clé publique, trousseau/nom ou chemin. Peut être spécifié plusieurs
-      fois
-    hi: सार्वजनिक कुंजी मान, कीरिंग/नाम, या पथ। कई बार निर्दिष्ट किया जा सकता है
-    ja: 公開鍵の値、キーリング/名前、またはパス。複数回指定できます
-    nl: openbare sleutelwaarde, sleutelhanger/naam of pad. Kan meerdere keren worden
-      opgegeven
-    pl: Wartość klucza publicznego, nazwa/pęk kluczy lub ścieżka. Można określić wielokrotnie.
-    pt: valor de chave pública, chaveiro/nome ou caminho. Pode ser especificado várias
-      vezes
-    ru: Значение открытого ключа, связка ключей/имя или путь. Можно указать несколько
-      раз
-    zh: 公钥值、密钥环/名称或路径。可以指定多次
-  JWTDisplayUsage:
+  JWTGetArg1:
+    ar: مسار ملف JWT أو قيمته أو - للإدخال القياسي
+    context: Arg 1 for jwt-get
+    de: JWT-Dateipfad, Wert oder - für stdin
+    en: JWT file path, value, or - for stdin
+    es: Ruta de archivo JWT, valor o - para entrada estándar
+    fr: Chemin d&#39;accès au fichier JWT, valeur ou tiret pour l&#39;entrée standard
+    hi: JWT फ़ाइल पथ, मान, या - stdin के लिए
+    ja: JWTファイルのパス、値、または標準入力の場合は「-」
+    nl: JWT-bestandspad, waarde of - voor stdin
+    pl: Ścieżka do pliku JWT, wartość lub - dla wejścia standardowego
+    pt: Caminho do arquivo JWT, valor ou - para entrada padrão
+    ru: Путь к JWT-файлу, значение или - для стандартного ввода
+    zh: JWT 文件路径、值或 - 表示标准输入
+  JWTGetArg2:
+    ar: قيمة المفتاح العام، أو اسم سلسلة المفاتيح، أو مسار الملف. يمكن تحديده عدة
+      مرات
+    context: Arg 2 for jwt-get werden
+    de: Wert des öffentlichen Schlüssels, Schlüsselringname oder Dateipfad. Kann mehrfach
+      angegeben werden.
+    en: public key value, keyring/name, or file path.  Can be specified multiple times
+    es: Valor de clave pública, nombre/llavero o ruta de archivo. Se puede especificar
+      varias veces.
+    fr: Valeur de la clé publique, nom/porte-clés ou chemin d&#39;accès au fichier.
+      Peut être spécifié plusieurs fois.
+    hi: सार्वजनिक कुंजी का मान, कीरिंग/नाम, या फ़ाइल पथ। इसे एकाधिक बार निर्दिष्ट
+      किया जा सकता है।
+    ja: 公開鍵の値、キーリング/名前、またはファイルパス。複数回指定可能。
+    nl: De waarde van de openbare sleutel, de naam van de sleutelring of het bestandspad.
+      Kan meerdere keren worden opgegeven.
+    pl: Wartość klucza publicznego, nazwa/pęk kluczy lub ścieżka do pliku. Można określić
+      wielokrotnie.
+    pt: Valor da chave pública, nome do chaveiro ou caminho do arquivo. Pode ser especificado
+      várias vezes.
+    ru: Значение открытого ключа, имя/связка ключей или путь к файлу. Может быть указано
+      несколько раз.
+    zh: 公钥值、密钥环/名称或文件路径。可以多次指定。
+  JWTGetUsage:
     ar: إظهار JWT، والتحقق من صحة التوقيع اختياريًا باستخدام مفتاح عام.
-    context: jwt-display usage
+    context: jwt-get usage
     de: Zeigen Sie ein JWT an und validieren Sie die Signatur optional mit einem öffentlichen
       Schlüssel.
     en: Show a JWT, optionally validating the signature with a public key.
@@ -940,9 +1227,9 @@ translations:
     pt: Adicione uma chave nova ou existente às chaves de descriptografia.
     ru: Добавьте новый или существующий ключ в Decrypt Keys.
     zh: 添加新密钥或现有密钥来解密密钥。
-  KeyDisplayPublicArg:
+  KeyGetPublicArg:
     ar: الاسم أو المفتاح الخاص أو حلقة المفاتيح/القيمة أو - لـ stdin
-    context: key-display-public arg
+    context: key-get-public arg
     de: Name, privater Schlüssel, Schlüsselbund/Wert oder - für Standardeingabe
     en: name, private key, keyring/value or - for stdin
     es: nombre, clave privada, conjunto de claves/valor o - para stdin
@@ -954,34 +1241,34 @@ translations:
     pt: nome, chave privada, chaveiro/valor ou - para stdin
     ru: имя, закрытый ключ, связка ключей/значение или - для стандартного ввода
     zh: 名称、私钥、密钥环/值或 - 用于标准输入
-  KeyDisplayPublicUsage:
-    ar: عرض المفتاح العام للمفتاح الخاص.
-    context: key-display-public usage
-    de: Den öffentlichen Schlüssel eines privaten Schlüssels anzeigen.
-    en: Display the public key of a private key.
-    es: Muestra la clave pública de una clave privada.
-    fr: Afficher la clé publique d&#39;une clé privée.
-    hi: निजी कुंजी की सार्वजनिक कुंजी प्रदर्शित करें.
-    ja: 秘密鍵の公開鍵を表示します。
-    nl: Geef de openbare sleutel van een privésleutel weer.
-    pl: Wyświetl klucz publiczny klucza prywatnego.
-    pt: Exiba a chave pública de uma chave privada.
-    ru: Отображение открытого ключа закрытого ключа.
-    zh: 显示私钥的公钥。
-  KeyDisplayUsage:
-    ar: عرض تفاصيل حول _1
-    context: key-display usage
-    de: Details zu einem _1 anzeigen
-    en: Display details about a _1
-    es: Mostrar detalles sobre un _1
-    fr: Afficher les détails d&#39;un _1
-    hi: _1 के बारे में विवरण प्रदर्शित करें
-    ja: _1 の詳細を表示する
-    nl: Details weergeven over een _1
-    pl: Wyświetl szczegóły dotyczące _1
-    pt: Exibir detalhes sobre um _1
-    ru: Отображение сведений о _1
-    zh: 显示有关_1的详细信息
+  KeyGetPublicUsage:
+    ar: احصل على المفتاح العام للمفتاح الخاص.
+    context: key-get-public usage
+    de: Ermitteln Sie den öffentlichen Schlüssel eines privaten Schlüssels.
+    en: Get the public key of a private key.
+    es: Obtener la clave pública de una clave privada.
+    fr: Obtenir la clé publique d&#39;une clé privée.
+    hi: किसी निजी कुंजी की सार्वजनिक कुंजी प्राप्त करें।
+    ja: 秘密鍵の公開鍵を取得します。
+    nl: De publieke sleutel van een privésleutel verkrijgen.
+    pl: Uzyskaj klucz publiczny klucza prywatnego.
+    pt: Obtenha a chave pública de uma chave privada.
+    ru: Получить открытый ключ закрытого ключа.
+    zh: 获取私钥的公钥。
+  KeyGetUsage:
+    ar: احصل على تفاصيل حول _1
+    context: key-get usage
+    de: Details zu einem _1 abrufen
+    en: get details about a _1
+    es: obtener detalles sobre un _1
+    fr: obtenir des détails sur un _1
+    hi: _1 के बारे में विवरण प्राप्त करें
+    ja: _1 の詳細を取得する
+    nl: details verkrijgen over een _1
+    pl: uzyskaj szczegóły dotyczące _1
+    pt: Obtenha detalhes sobre um _1
+    ru: получить подробную информацию о _1
+    zh: 获取有关_1的详细信息
   Keyring:
     ar: حلقة مفاتيح
     context: A keyring
@@ -1189,19 +1476,19 @@ translations:
     ru: Список значений в конфигурации
     zh: 列出配置中的值
   PEMArg:
-    ar: المفتاح، أو - لـ stdin
+    ar: القيمة، مسار الملف، أو - للإدخال القياسي
     context: pem arg
-    de: Taste, oder - für stdin
-    en: key, or - for stdin
-    es: clave, o - para stdin
-    fr: clé, ou - pour stdin
-    hi: कुंजी, या - stdin के लिए
-    ja: キー、または標準入力の場合は -
-    nl: toets, of - voor stdin
-    pl: klucz lub - dla wejścia standardowego
-    pt: chave, ou - para stdin
-    ru: ключ, или - для стандартного ввода
-    zh: 键，或 - 用于标准输入
+    de: Wert, Dateipfad oder - für stdin
+    en: value, file path, or - for stdin
+    es: valor, ruta de archivo o - para stdin
+    fr: valeur, chemin de fichier ou - pour l&#39;entrée standard
+    hi: मान, फ़ाइल पथ, या - stdin के लिए
+    ja: 値、ファイルパス、または標準入力の場合は「-」
+    nl: waarde, bestandspad of - voor stdin
+    pl: wartość, ścieżka do pliku lub - dla wejścia standardowego
+    pt: valor, caminho do arquivo ou - para entrada padrão
+    ru: значение, путь к файлу или - для стандартного ввода
+    zh: 值、文件路径或 - 表示标准输入
   PEMFlagsIUsage:
     ar: أضف معرفًا إلى المفتاح المستورد من PEM
     context: pem -i usage
@@ -1237,20 +1524,24 @@ translations:
       вывод.
     zh: 将 _1 密钥转换为 PEM，或将 PEM 密钥转换为 _1，并将其打印到标准输出。
   PrivateKeyArg:
-    ar: قيمة المفتاح الخاص، أو حلقة المفاتيح/القيمة، أو المسار، أو - لـ stdin
+    ar: قيمة المفتاح الخاص، أو سلسلة المفاتيح/القيمة، أو مسار الملف، أو - للإدخال
+      القياسي
     context: A private key argument
-    de: privater Schlüsselwert, Schlüsselbund/Wert, Pfad oder - für Standardeingabe
-    en: private key value, keyring/value, path, or - for stdin
-    es: valor de clave privada, conjunto de claves/valor, ruta o - para stdin
-    fr: valeur de clé privée, trousseau/valeur, chemin ou - pour stdin
-    hi: निजी कुंजी मान, कीरिंग/मान, पथ, या - stdin के लिए
-    ja: 秘密鍵の値、キーリング/値、パス、または - （標準入力用）
-    nl: privésleutelwaarde, sleutelhanger/waarde, pad, of - voor stdin
-    pl: wartość klucza prywatnego, pęk kluczy/wartość, ścieżka lub - dla wejścia standardowego
-    pt: valor da chave privada, chaveiro/valor, caminho ou - para stdin
-    ru: значение закрытого ключа, связка ключей/значение, путь или - для стандартного
+    de: privater Schlüsselwert, Schlüsselring/Wert, Dateipfad oder - für stdin
+    en: private key value, keyring/value, file path, or - for stdin
+    es: valor de clave privada, llavero/valor, ruta de archivo o - para stdin
+    fr: valeur de la clé privée, trousseau/valeur de clé, chemin de fichier ou - pour
+      l&#39;entrée standard
+    hi: निजी कुंजी का मान, कीरिंग/मान, फ़ाइल पथ, या - मानक दिनांतर के लिए
+    ja: 秘密鍵の値、キーリング/値、ファイルパス、または標準入力の場合は「-」
+    nl: privésleutelwaarde, sleutelring/waarde, bestandspad of - voor stdin
+    pl: wartość klucza prywatnego, pęk kluczy/wartość, ścieżka do pliku lub - dla
+      wejścia standardowego
+    pt: valor da chave privada, chaveiro/valor, caminho do arquivo ou - para entrada
+      padrão
+    ru: значение закрытого ключа, связку ключей/значение, путь к файлу или - для стандартного
       ввода
-    zh: 私钥值、密钥环/值、路径或 - 用于标准输入
+    zh: 私钥值、密钥环/值、文件路径，或 - 表示标准输入
   RandomUsage:
     ar: قم بإنشاء سلسلة عشوائية وطباعتها إلى stdout
     context: random usage
@@ -1378,37 +1669,37 @@ translations:
       разрешить ${variables} и $variables перед выполнением команды.
     zh: 运行命令并将值作为环境变量注入。仅当在指定的密钥环/路径下时，才会使用值。从多个路径读取时，如果有重复的名称，将使用最后读取的值。写入 stderr/stdout
       的值将被 *** 屏蔽。转义变量 (\\$) 可用于引用脚本中的值，否则 _1 将在执行命令之前尝试解析 ${variables} 和 $variables。
-  SSHDisplayArg:
-    ar: المفتاح، أو - لـ stdin
-    context: ssh-display arg
-    de: Taste, oder - für stdin
+  SSHGetArg:
+    ar: مفتاح، أو - للإدخال القياسي
+    context: ssh-get arg
+    de: Taste oder - für stdin
     en: key, or - for stdin
-    es: clave, o - para stdin
-    fr: clé, ou - pour stdin
+    es: tecla, o - para entrada estándar
+    fr: touche, ou - pour l&#39;entrée standard
     hi: कुंजी, या - stdin के लिए
-    ja: キー、または標準入力の場合は -
+    ja: キー、または標準入力の場合は「-」
     nl: toets, of - voor stdin
     pl: klucz lub - dla wejścia standardowego
-    pt: chave, ou - para stdin
-    ru: ключ, или - для стандартного ввода
-    zh: 键，或 - 用于标准输入
-  SSHDisplayFlagsIUsage:
-    ar: أضف معرفًا إلى المفتاح المستورد من مفتاح SSH
-    context: ssh-display -i usage
-    de: Fügen Sie dem aus einem SSH-Schlüssel importierten Schlüssel eine ID hinzu
+    pt: tecla, ou - para stdin
+    ru: клавиша или - для стандартного ввода
+    zh: 键，或 - 表示标准输入
+  SSHGetFlagsIUsage:
+    ar: أضف المعرّف إلى المفتاح المستورد من مفتاح SSH
+    context: ssh-get -i usage
+    de: Füge dem aus einem SSH-Schlüssel importierten Schlüssel eine ID hinzu.
     en: Add id to the key imported from a SSH key
-    es: Agregue identificación a la clave importada desde una clave SSH
+    es: Agregar ID a la clave importada desde una clave SSH.
     fr: Ajouter un identifiant à la clé importée depuis une clé SSH
     hi: SSH कुंजी से आयातित कुंजी में आईडी जोड़ें
-    ja: SSHキーからインポートされたキーにIDを追加する
-    nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een SSH-sleutel
+    ja: SSHキーからインポートしたキーにIDを追加する
+    nl: Voeg een ID toe aan de sleutel die is geïmporteerd vanuit een SSH-sleutel.
     pl: Dodaj identyfikator do klucza zaimportowanego z klucza SSH
-    pt: Adicione o id à chave importada de uma chave SSH
-    ru: Добавьте идентификатор к ключу, импортированному из ключа SSH.
-    zh: 将 id 添加到从 SSH 密钥导入的密钥中
-  SSHDisplayUsage:
+    pt: Adicionar ID à chave importada de uma chave SSH
+    ru: Добавьте идентификатор к ключу, импортированному из SSH-ключа.
+    zh: 为从 SSH 密钥导入的密钥添加 ID
+  SSHGetUsage:
     ar: تحويل مفاتيح Rot إلى SSH، أو مفاتيح SSH إلى Rot، وطباعتها إلى stdout.
-    context: ssh-display usage
+    context: ssh-get usage
     de: Konvertieren Sie Rot-Schlüssel in SSH oder SSH-Schlüssel in Rot und drucken
       Sie es auf stdout.
     en: Convert Rot keys to SSH, or SSH keys to Rot, and print it to stdout.
@@ -1441,19 +1732,19 @@ translations:
     ru: значение закрытого ключа, связка ключей/значение или - для стандартного ввода
     zh: 私钥值、密钥环/值，或者 - 用于标准输入
   SSHNewArg2:
-    ar: قيمة المفتاح العام أو حلقة المفاتيح/القيمة أو المسار
+    ar: قيمة المفتاح العام، أو قيمة سلسلة المفاتيح، أو مسار الملف
     context: ssh-new arg2
-    de: öffentlicher Schlüsselwert, Schlüsselbund/Wert oder Pfad
-    en: public key value, keyring/value, or path
-    es: valor de clave pública, conjunto de claves/valor o ruta
-    fr: valeur de clé publique, trousseau/valeur ou chemin
-    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
-    ja: 公開鍵の値、キーリング/値、またはパス
-    nl: openbare sleutelwaarde, sleutelring/waarde of pad
-    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka
-    pt: valor de chave pública, chaveiro/valor ou caminho
-    ru: значение открытого ключа, связка ключей/значение или путь
-    zh: 公钥值、密钥环/值或路径
+    de: öffentlicher Schlüsselwert, Schlüsselring/Wert oder Dateipfad
+    en: public key value, keyring/value, or file path
+    es: valor de clave pública, llavero/valor o ruta de archivo
+    fr: valeur de clé publique, trousseau de clés/valeur ou chemin de fichier
+    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या फ़ाइल पथ
+    ja: 公開鍵の値、キーリング/値、またはファイルパス
+    nl: openbare sleutelwaarde, sleutelring/waarde of bestandspad
+    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka do pliku
+    pt: valor da chave pública, chaveiro/valor ou caminho do arquivo
+    ru: значение открытого ключа, связка ключей/значение или путь к файлу
+    zh: 公钥值、密钥环/值或文件路径
   SSHNewFlagsCPlaceholder:
     ar: الخيار=القيمة
     context: ssh-new -c placeholder
@@ -1647,19 +1938,19 @@ translations:
     ru: секунды
     zh: 秒
   SignatureNewArg1:
-    ar: قيمة المفتاح الخاص/القيمة، أو المسار
+    ar: قيمة المفتاح الخاص keyring/value، أو مسار الملف
     context: signature-new arg1
-    de: privater Schlüsselwert Schlüsselbund/Wert oder Pfad
-    en: private key value keyring/value, or path
-    es: valor de clave privada llavero/valor, o ruta
-    fr: valeur de clé privée, trousseau/valeur, ou chemin
-    hi: निजी कुंजी मान कीरिंग/मान, या पथ
-    ja: 秘密鍵の値キーリング/値、またはパス
-    nl: persoonlijke sleutelwaarde sleutelhanger/waarde of pad
-    pl: klucz prywatny, wartość klucza, pęk kluczy lub ścieżka
-    pt: valor da chave privada chaveiro/valor ou caminho
-    ru: значение закрытого ключа, связка/значение или путь
-    zh: 私钥值密钥环/值，或路径
+    de: privater Schlüsselwert, Schlüsselring/Wert oder Dateipfad
+    en: private key value keyring/value, or file path
+    es: Valor de clave privada, llavero/valor o ruta de archivo
+    fr: valeur de la clé privée trousseau/valeur, ou chemin de fichier
+    hi: निजी कुंजी मान कीरिंग/मान, या फ़ाइल पथ
+    ja: 秘密鍵の値、キーリング/値、またはファイルパス
+    nl: privésleutelwaarde sleutelring/waarde, of bestandspad
+    pl: klucz prywatny, pęk kluczy/wartość lub ścieżka do pliku
+    pt: valor da chave privada (chaveiro/valor) ou caminho do arquivo
+    ru: закрытый ключ значение связкой ключей/значением или путем к файлу
+    zh: 私钥值密钥环/值，或文件路径
   SignatureNewArg2:
     ar: البيانات للتوقيع أو - لـ stdin
     context: signature-new arg2
@@ -1725,19 +2016,19 @@ translations:
       ECP хэш будет SHA256. Для Ed25519 хэш не используется.
     zh: 生成签名并输出标准编码的 base64 字符串。必须指定签名者的私钥和要签名的数据。对于 ECP 密钥，哈希将为 SHA256。对于 Ed25519，哈希未使用。
   SignatureVerifyArgs1:
-    ar: قيمة المفتاح العام أو حلقة المفاتيح/القيمة أو المسار
+    ar: قيمة المفتاح العام، أو قيمة سلسلة المفاتيح، أو مسار الملف
     context: signature-verify arg1
-    de: öffentlicher Schlüsselwert, Schlüsselbund/Wert oder Pfad
-    en: public key value, keyring/value, or path
-    es: valor de clave pública, conjunto de claves/valor o ruta
-    fr: valeur de clé publique, trousseau/valeur ou chemin
-    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या पथ
-    ja: 公開鍵の値、キーリング/値、またはパス
-    nl: openbare sleutelwaarde, sleutelring/waarde of pad
-    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka
-    pt: valor de chave pública, chaveiro/valor ou caminho
-    ru: значение открытого ключа, связка ключей/значение или путь
-    zh: 公钥值、密钥环/值或路径
+    de: öffentlicher Schlüsselwert, Schlüsselring/Wert oder Dateipfad
+    en: public key value, keyring/value, or file path
+    es: valor de clave pública, llavero/valor o ruta de archivo
+    fr: valeur de clé publique, trousseau de clés/valeur ou chemin de fichier
+    hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या फ़ाइल पथ
+    ja: 公開鍵の値、キーリング/値、またはファイルパス
+    nl: openbare sleutelwaarde, sleutelring/waarde of bestandspad
+    pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka do pliku
+    pt: valor da chave pública, chaveiro/valor ou caminho do arquivo
+    ru: значение открытого ключа, связка ключей/значение или путь к файлу
+    zh: 公钥值、密钥环/值或文件路径
   SignatureVerifyArgs2:
     ar: رسالة أو - لـ stdin
     context: sigature-verify arg2
@@ -1961,9 +2252,9 @@ translations:
     pt: Copie um valor de um chaveiro para um chaveiro existente.
     ru: Скопируйте значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环复制到现有密钥环。
-  ValueDisplayFlagsMPlaceholder:
+  ValueGetFlagsMPlaceholder:
     ar: value أو &quot;all&quot; لإظهار كافة القيم التعريفية)
-    context: value-display -m placeholder
+    context: value-get -m placeholder
     de: Wert oder „alle“, um alle Metawerte anzuzeigen)
     en: value or 'all' to show all meta values)
     es: valor o &#39;todos&#39; para mostrar todos los metavalores)
@@ -1975,9 +2266,9 @@ translations:
     pt: value ou &#39;all&#39; para mostrar todos os valores meta)
     ru: значение или «все», чтобы отобразить все метазначения)
     zh: 值或“全部”以显示所有元值）
-  ValueDisplayFlagsMUsage:
+  ValueGetFlagsMUsage:
     ar: إظهار القيم التعريفية
-    context: value-display -m usage
+    context: value-get -m usage
     de: Metawerte anzeigen
     en: Show meta values
     es: Mostrar metavalores
@@ -1989,9 +2280,9 @@ translations:
     pt: Mostrar valores meta
     ru: Показать метазначения
     zh: 显示元值
-  ValueDisplayFlagsVUsage:
+  ValueGetFlagsVUsage:
     ar: إظهار القيمة فقط
-    context: value-display -v usage
+    context: value-get -v usage
     de: Nur den Wert anzeigen
     en: Show the value only
     es: Mostrar solo el valor
@@ -2003,9 +2294,9 @@ translations:
     pt: Mostrar apenas o valor
     ru: Показать только значение
     zh: 仅显示值
-  ValueDisplayUsage:
+  ValueGetUsage:
     ar: إظهار القيمة التي تم فك تشفيرها.
-    context: value-display usage
+    context: value-get usage
     de: Zeigt einen entschlüsselten Wert an.
     en: Show a decrypted value.
     es: Mostrar un valor descifrado.
@@ -2068,6 +2359,20 @@ translations:
     pt: Mova um valor de um chaveiro para um chaveiro existente.
     ru: Переместите значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环移动到现有密钥环。
+  ValuePathStdinArg:
+    ar: القيمة، مسار الملف، أو - للإدخال القياسي
+    context: Value path or stdin argument
+    de: Wert, Dateipfad oder - für stdin
+    en: value, file path, or - for stdin
+    es: valor, ruta de archivo o - para stdin
+    fr: valeur, chemin de fichier ou - pour l&#39;entrée standard
+    hi: मान, फ़ाइल पथ, या - stdin के लिए
+    ja: 値、ファイルパス、または標準入力の場合は「-」
+    nl: waarde, bestandspad of - voor stdin
+    pl: wartość, ścieżka do pliku lub - dla wejścia standardowego
+    pt: valor, caminho do arquivo ou - para entrada padrão
+    ru: значение, путь к файлу или - для стандартного ввода
+    zh: 值、文件路径或 - 表示标准输入
   ValueSetMetaArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
     context: value-set-meta arg2
@@ -2109,37 +2414,126 @@ translations:
     ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
       в формате ключ=значение. Значение (key=) удалит ключ.
     zh: 设置密钥环/值的元字段。字段可以以 key=value 格式多次指定。值 (key=) 将删除密钥。
-  X509DisplayArg1:
-    ar: قيمة الشهادة أو المسار أو - لـ stdin
-    context: x509-display arg1
-    de: Zertifikatswert, Pfad oder - für stdin
-    en: Certificate value, path, or - for stdin
-    es: Valor del certificado, ruta o - para stdin
-    fr: Valeur du certificat, chemin ou - pour stdin
-    hi: प्रमाणपत्र मान, पथ, या - stdin के लिए
-    ja: 証明書の値、パス、または - （stdin の場合）
-    nl: Certificaatwaarde, pad of - voor stdin
-    pl: Wartość certyfikatu, ścieżka lub - dla wejścia standardowego
-    pt: Valor do certificado, caminho ou - para stdin
-    ru: Значение сертификата, путь или - для стандартного ввода
-    zh: 证书值、路径或 - 用于标准输入
-  X509DisplayArg2:
-    ar: يمكن تحديد قيمة أو مسار شهادة CA عدة مرات
-    context: x509-display arg2
-    de: CA-Zertifikatswert oder -Pfad, kann mehrfach angegeben werden
-    en: CA certificate value or path, can be specified multiple times
-    es: El valor o la ruta del certificado de CA se pueden especificar varias veces
-    fr: La valeur ou le chemin du certificat CA peut être spécifié plusieurs fois
-    hi: CA प्रमाणपत्र मान या पथ, कई बार निर्दिष्ट किया जा सकता है
-    ja: CA 証明書の値またはパス。複数回指定できます。
-    nl: CA-certificaatwaarde of pad kan meerdere keren worden opgegeven
-    pl: Wartość lub ścieżka certyfikatu CA, można określić wielokrotnie
-    pt: Valor ou caminho do certificado CA, pode ser especificado várias vezes
-    ru: Значение или путь сертификата CA можно указать несколько раз.
-    zh: CA证书值或路径，可指定多次
-  X509DisplayUsage:
+  X509CSRGetArg1:
+    ar: قيمة CSR، أو مسار الملف، أو - للإدخال القياسي
+    context: x509-csr-get arg1
+    de: CSR-Wert, Dateipfad oder - für stdin
+    en: CSR value, file path, or - for stdin
+    es: Valor CSR, ruta de archivo o - para stdin
+    fr: Valeur CSR, chemin de fichier ou - pour l&#39;entrée standard
+    hi: CSR मान, फ़ाइल पथ, या - stdin के लिए
+    ja: CSR値、ファイルパス、または標準入力の場合は「-」
+    nl: CSR-waarde, bestandspad of - voor stdin
+    pl: Wartość CSR, ścieżka do pliku lub - dla wejścia standardowego
+    pt: Valor CSR, caminho do arquivo ou - para entrada padrão
+    ru: Значение CSR, путь к файлу или - для стандартного ввода.
+    zh: CSR 值、文件路径或 - 表示标准输入
+  X509CSRGetUsage:
+    ar: عرض طلب الشهادة
+    context: x509-csr-get usage
+    de: Eine Zertifikatsanforderung anzeigen
+    en: Show a certificate request
+    es: Mostrar una solicitud de certificado
+    fr: Afficher une demande de certificat
+    hi: प्रमाणपत्र अनुरोध दिखाएँ
+    ja: 証明書要求を表示する
+    nl: Een certificaatverzoek weergeven
+    pl: Pokaż prośbę o certyfikat
+    pt: Exibir um pedido de certificado
+    ru: Показать запрос на сертификат
+    zh: 显示证书请求
+  X509CSRNewUsage:
+    ar: أنشئ طلب توقيع شهادة X.509 (CSR) وأخرج طلب توقيع الشهادة بتنسيق PEM إلى الإخراج
+      القياسي. يجب تحديد المفتاح الخاص للشهادة.
+    context: x509-csr-new usage
+    de: Erstellen Sie eine X.509-Zertifikatsignierungsanforderung (CSR) und geben
+      Sie eine CSR im PEM-Format auf stdout aus. Der private Schlüssel des Zertifikats
+      muss angegeben werden.
+    en: Create an X.509 certificate signing request (CSR) and output a PEM-formatted
+      CSR to stdout.  Must specify the private key of the certificate
+    es: Crea una solicitud de firma de certificado (CSR) X.509 y genera una CSR en
+      formato PEM en la salida estándar. Debes especificar la clave privada del certificado.
+    fr: Créez une demande de signature de certificat X.509 (CSR) et générez une CSR
+      au format PEM sur la sortie standard. Vous devez spécifier la clé privée du
+      certificat.
+    hi: एक X.509 प्रमाणपत्र हस्ताक्षर अनुरोध (CSR) बनाएं और PEM प्रारूप में CSR को
+      stdout पर आउटपुट करें। प्रमाणपत्र की निजी कुंजी निर्दिष्ट करना आवश्यक है।
+    ja: X.509証明書署名要求（CSR）を作成し、PEM形式のCSRを標準出力に出力します。証明書の秘密鍵を指定する必要があります。
+    nl: Maak een X.509-certificaatondertekeningsverzoek (CSR) aan en voer een CSR
+      in PEM-formaat uit naar de standaarduitvoer. De privésleutel van het certificaat
+      moet worden opgegeven.
+    pl: Utwórz żądanie podpisania certyfikatu X.509 (CSR) i wyślij CSR w formacie
+      PEM na standardowe wyjście. Należy określić klucz prywatny certyfikatu.
+    pt: Crie uma solicitação de assinatura de certificado (CSR) X.509 e gere uma CSR
+      formatada em PEM na saída padrão. É necessário especificar a chave privada do
+      certificado.
+    ru: Создайте запрос на подписание сертификата X.509 (CSR) и выведите CSR в формате
+      PEM в стандартный поток вывода. Необходимо указать закрытый ключ сертификата.
+    zh: 创建 X.509 证书签名请求 (CSR) 并将 PEM 格式的 CSR 输出到标准输出 (stdout)。必须指定证书的私钥。
+  X509CSRSignArg2:
+    ar: قيمة CSR أو مسار الملف
+    context: x509-csr-sign arg1
+    de: CSR-Wert oder Dateipfad
+    en: CSR value or file path
+    es: Valor CSR o ruta de archivo
+    fr: valeur CSR ou chemin du fichier
+    hi: सीएसआर मान या फ़ाइल पथ
+    ja: CSR値またはファイルパス
+    nl: CSR-waarde of bestandspad
+    pl: Wartość CSR lub ścieżka do pliku
+    pt: Valor CSR ou caminho do arquivo
+    ru: Значение CSR или путь к файлу
+    zh: CSR 值或文件路径
+  X509CSRSignUsage:
+    ar: قم بتوقيع طلب توقيع الشهادة (CSR) باستخدام مفتاح خاص
+    context: x509-csr-sign usage
+    de: Signieren Sie eine CSR mit einem privaten Schlüssel
+    en: Sign a CSR using a private key
+    es: Firma una CSR usando una clave privada.
+    fr: Signer une CSR à l&#39;aide d&#39;une clé privée
+    hi: एक निजी कुंजी का उपयोग करके सीएसआर पर हस्ताक्षर करें
+    ja: 秘密鍵を使用してCSRに署名する
+    nl: Onderteken een CSR met een privésleutel.
+    pl: Podpisz CSR używając klucza prywatnego
+    pt: Assinar um CSR usando uma chave privada
+    ru: Подпишите запрос на подписание сертификата (CSR), используя закрытый ключ.
+    zh: 使用私钥签署 CSR
+  X509GetArg1:
+    ar: قيمة الشهادة، أو مسار الملف، أو - للإدخال القياسي
+    context: x509-get arg1
+    de: Zertifikatwert, Dateipfad oder - für stdin
+    en: Certificate value, file path, or - for stdin
+    es: Valor del certificado, ruta del archivo o - para stdin
+    fr: Valeur du certificat, chemin du fichier ou - pour l&#39;entrée standard
+    hi: प्रमाणपत्र मान, फ़ाइल पथ, या - मानक दिन के लिए
+    ja: 証明書の値、ファイルパス、または標準入力の場合は「-」
+    nl: Certificaatwaarde, bestandspad of - voor stdin
+    pl: Wartość certyfikatu, ścieżka do pliku lub - dla wejścia standardowego
+    pt: Valor do certificado, caminho do arquivo ou - para entrada padrão
+    ru: Значение сертификата, путь к файлу или - для стандартного ввода
+    zh: 证书值、文件路径或 - 表示标准输入
+  X509GetArg2:
+    ar: يمكن تحديد قيمة شهادة المرجع المصدق أو مسار الملف عدة مرات
+    context: x509-get arg2
+    de: Der Wert des CA-Zertifikats oder der Dateipfad kann mehrfach angegeben werden.
+    en: CA certificate value or file path, can be specified multiple times
+    es: El valor del certificado CA o la ruta del archivo se pueden especificar varias
+      veces.
+    fr: La valeur du certificat d&#39;autorité de certification ou le chemin d&#39;accès
+      au fichier peuvent être spécifiés plusieurs fois.
+    hi: सीए प्रमाणपत्र का मान या फ़ाइल पथ, कई बार निर्दिष्ट किया जा सकता है
+    ja: CA証明書の値またはファイルパスは、複数回指定できます。
+    nl: De waarde van het CA-certificaat of het bestandspad kan meerdere keren worden
+      opgegeven.
+    pl: Wartość certyfikatu CA lub ścieżka do pliku, można określić wielokrotnie
+    pt: O valor do certificado CA ou o caminho do arquivo podem ser especificados
+      várias vezes.
+    ru: Значение сертификата центра сертификации или путь к файлу, может быть указано
+      несколько раз.
+    zh: CA证书值或文件路径可以多次指定
+  X509GetUsage:
     ar: إظهار شهادة، والتحقق من صحة الشهادة اختياريًا باستخدام مفاتيح CA العامة.
-    context: x509-display usage
+    context: x509-get usage
     de: Zeigen Sie ein Zertifikat an und validieren Sie das Zertifikat optional mit
       öffentlichen CA-Schlüsseln.
     en: Show a certificate, optionally validating the certificate with CA public keys.
@@ -2159,33 +2553,37 @@ translations:
       ключей CA.
     zh: 显示证书，可选择使用 CA 公钥验证证书。
   X509NewArg2:
-    ar: قيمة المفتاح العام، أو تعليق المفتاح/القيمة، أو المسار
+    ar: قيمة المفتاح العام، أو تعليق سلسلة المفاتيح/القيمة، أو مسار الملف
     context: x509-new arg2
-    de: öffentlicher Schlüsselwert, Schlüsselbund/Wertkommentar oder Pfad
-    en: public key value, keyring/value comment, or path
-    es: valor de clave pública, comentario de llavero/valor o ruta
-    fr: valeur de clé publique, commentaire de trousseau/valeur ou chemin
-    hi: सार्वजनिक कुंजी मान, कीरिंग/मान टिप्पणी, या पथ
-    ja: 公開鍵の値、キーリング/値のコメント、またはパス
-    nl: openbare sleutelwaarde, sleutelhanger/waardecommentaar of pad
+    de: Wert des öffentlichen Schlüssels, Kommentar zum Schlüsselring/Wert oder Dateipfad
+    en: public key value, keyring/value comment, or file path
+    es: Valor de clave pública, comentario de valor/llavero o ruta de archivo
+    fr: valeur de la clé publique, commentaire sur le trousseau/la valeur ou chemin
+      d&#39;accès au fichier
+    hi: सार्वजनिक कुंजी का मान, कीरिंग/मान पर टिप्पणी, या फ़ाइल पथ
+    ja: 公開鍵の値、キーリング/値のコメント、またはファイルパス
+    nl: openbare sleutelwaarde, sleutelring/waarde-opmerking of bestandspad
     pl: wartość klucza publicznego, komentarz do pęku kluczy/wartości lub ścieżka
-    pt: valor da chave pública, comentário do chaveiro/valor ou caminho
-    ru: значение открытого ключа, комментарий к связке ключей/значению или путь
-    zh: 公钥值、密钥环/值注释或路径
+      do pliku
+    pt: valor da chave pública, comentário sobre o valor do chaveiro ou caminho do
+      arquivo
+    ru: значение открытого ключа, комментарий к связке ключей/значению или путь к
+      файлу.
+    zh: 公钥值、密钥环/值注释或文件路径
   X509NewArg3:
-    ar: شهادة كاليفورنيا أو المسار
+    ar: شهادة المرجع المصدق أو مسار الملف
     context: x509-new arg3
-    de: CA-Zertifikat oder -Pfad
-    en: ca certificate or path
-    es: certificado ca o ruta
-    fr: ca certificat ou chemin
-    hi: ca प्रमाणपत्र या पथ
-    ja: ca 証明書またはパス
-    nl: ca-certificaat of pad
-    pl: certyfikat lub ścieżka CA
-    pt: certificado ou caminho ca
-    ru: сертификат CA или путь
-    zh: ca 证书或路径
+    de: CA-Zertifikat oder Dateipfad
+    en: ca certificate or file path
+    es: Ruta del certificado o archivo de CA
+    fr: chemin d&#39;accès au certificat ou au fichier de l&#39;autorité de certification
+    hi: सीए प्रमाणपत्र या फ़ाइल पथ
+    ja: CA証明書またはファイルパス
+    nl: CA-certificaat of bestandspad
+    pl: certyfikat CA lub ścieżka do pliku
+    pt: certificado CA ou caminho do arquivo
+    ru: Сертификат CA или путь к файлу
+    zh: CA证书或文件路径
   X509NewFlagsCUsage:
     ar: إنشاء شهادة CA
     context: x509-new -c usage

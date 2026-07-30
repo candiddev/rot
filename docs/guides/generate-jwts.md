@@ -44,10 +44,10 @@ eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtc
 
 ## View JWT
 
-You can view the contents of a JWT as JSON using {{% cli jwt-display %}}, optionally providing a list of public keys to verify it against:
+You can view the contents of a JWT as JSON using {{% cli jwt-get %}}, optionally providing a list of public keys to verify it against:
 
 {{< highlight bash >}}
-$ rot jwt-display eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtcGxlIiwiZXhwIjoxNzEwMjEyMjE4LCJpYXQiOjE3MTAyMDgyMTgsImlzcyI6Ik15SXNzdWVyIiwianRpIjoiMTIzIiwibmJmIjoxNzEwMjA4MjE4LCJzdWIiOiJFeGFtcGxlIiwidGVzdCI6InllcyJ9.aSPcgRUEmm0g4ak-OjEyyPSn0-_AxRxpFsir_f64UJ_lntR8o6Q3zulUi1IDHDtIYF4hhyutMCzMVIFkS1ufCA ed25519public:MCowBQYDK2VwAyEASI/qzkRrx2hy3GGX1ereMpSw9+Z8KpGJ1HHjv6H+EXs=:9scIk9mShr
+$ rot jwt-get eyJhbGciOiJFZERTQSIsImtpZCI6IjlzY0lrOW1TaHIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJleGFtcGxlIiwiZXhwIjoxNzEwMjEyMjE4LCJpYXQiOjE3MTAyMDgyMTgsImlzcyI6Ik15SXNzdWVyIiwianRpIjoiMTIzIiwibmJmIjoxNzEwMjA4MjE4LCJzdWIiOiJFeGFtcGxlIiwidGVzdCI6InllcyJ9.aSPcgRUEmm0g4ak-OjEyyPSn0-_AxRxpFsir_f64UJ_lntR8o6Q3zulUi1IDHDtIYF4hhyutMCzMVIFkS1ufCA ed25519public:MCowBQYDK2VwAyEASI/qzkRrx2hy3GGX1ereMpSw9+Z8KpGJ1HHjv6H+EXs=:9scIk9mShr
 {
   "header": {
     "alg": "EdDSA",

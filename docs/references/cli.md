@@ -9,6 +9,50 @@ title: CLI
 
 {{% snippet cli_commands Rot %}}
 
+### `acme-account-delete`
+
+Delete or Deactivate an ACME account.
+
+### `acme-account-get`
+
+Retrieve ACME account details
+
+### `acme-account-new`
+
+Create a new ACME account, or set the email addresses of an existing account
+
+### `acme-authz-get`
+
+Retrieve ACME authorization details
+
+### `acme-authz-test`
+
+Test ACME authorization challenges to see if they will validate from an ACME server
+
+### `acme-authz-wait`
+
+Wait for an ACME order authorization to finish
+
+### `acme-challenge-get`
+
+Retrieve ACME challenge details
+
+### `acme-challenge-validate`
+
+Request the ACME server to validate a challenge
+
+### `acme-order-finalize`
+
+Generate a certificate and key from an authorized ACME order
+
+### `acme-order-get`
+
+Retrieve ACME order details
+
+### `acme-order-new`
+
+Create a new ACME certificate order for a domain or IP
+
 ### `algorithms`
 
 Show algorithms Rot understands
@@ -55,7 +99,7 @@ Initialize a new Rot configuration.  See [Initialize Rot]({{< ref "/docs/guides/
 
 {{% snippet cli_jq %}}
 
-### `jwt-display`
+### `jwt-get`
 
 Show the contents of a JWT and optionally verify it against a public key.
 
@@ -79,11 +123,11 @@ Remove a Decrypt Key from a Keyring.  See [Manage Keys]({{< ref "/docs/guides/ma
 
 Remove a Decrypt Key from Rot.  See [Manage Keys]({{< ref "/docs/guides/manage-keys" >}}) for more information.
 
-### `key-display`
+### `key-get`
 
 Show the details of a {{% config decryptKey decryptkeys %}}.
 
-### `key-display-public`
+### `key-get-public`
 
 Display the public key of a private key.
 
@@ -132,7 +176,7 @@ Generate signatures.  Visit [Generate Signatures]({{< ref "/docs/guides/generate
 
 Verify the signature of a message and public key.  Will return an error/exit non-zero if the signature doesn't match, otherwise silently exits 0 on success.
 
-### `ssh-display`
+### `ssh-get`
 
 Convert a Rot key to SSH or a SSH key to Rot.
 
@@ -157,7 +201,7 @@ Copy a value between Keyrings.
 
 Remove a value from a Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
-### `value-display`
+### `value-get`
 
 Show a decrypted value from the Rot configuration.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
@@ -179,7 +223,19 @@ Modify metadata for an existing Value.
 
 {{% cli_version %}}
 
-### `x509-display`
+### `x509-csr-get`
+
+Show the contents of an X.509 certificate signing request.
+
+### `x509-csr-new`
+
+Create a new X.509 certificate signing request.
+
+### `x509-csr-sign`
+
+Sign an X.509 certificate signing request using a private key.
+
+### `x509-get`
 
 Show the contents of an X.509 certificate and optionally verify it against a CA certificate.
 

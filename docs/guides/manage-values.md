@@ -49,7 +49,7 @@ Certain Rot commands may add data to a Value's meta:
 
 Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli value-add %}} or modifying metadata using {{% cli value-set-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli value-add %}}.
 
-You can view all values and versions using {{% cli value-list %}}.  Additionally, you can display a specific version in {{% cli value-display %}} via `@`:
+You can view all values and versions using {{% cli value-list %}}.  Additionally, you can display a specific version in {{% cli value-get %}} via `@`:
 
 {{< highlight bash >}}
 $ rot value-list mykeyring
@@ -59,14 +59,15 @@ $ rot value-list mykeyring
     "2024-04-26T10:32:44Z"
   ]
 }
-# Display the latest version
-$ rot value-display mykeyring -v mykeyring/test
+# Get the latest version
+$ rot value-get mykeyring -v mykeyring/test
 123
-# Display a specific version
-$ rot value-display mykeyring -v mykeyring/test@2024-04-26T10:32:44Z
+# Get a specific version
+$ rot value-get mykeyring -v mykeyring/test@2024-04-26T10:32:44Z
 456
+
 # Use longest match
-$ rot value-display mykeyring -v 'mykeyring/test@2024-04-26T10'
+$ rot value-get mykeyring -v 'mykeyring/test@2024-04-26T10'
 456
 {{< /highlight >}}
 

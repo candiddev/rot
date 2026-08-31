@@ -11,6 +11,7 @@ translations:
     es: Eliminar una cuenta de ACME
     fr: Supprimer un compte ACME
     hi: एक ACME खाता हटाएं
+    it: Elimina un account ACME
     ja: ACMEアカウントを削除する
     nl: Een ACME-account verwijderen
     pl: Usuń konto ACME
@@ -25,6 +26,7 @@ translations:
     es: Recuperar los detalles de la cuenta de ACME
     fr: Récupérer les détails du compte ACME
     hi: ACME खाते की जानकारी प्राप्त करें
+    it: Recupera i dettagli dell&#39;account ACME
     ja: ACMEアカウントの詳細を取得する
     nl: ACME-accountgegevens ophalen
     pl: Pobierz dane konta ACME
@@ -39,6 +41,7 @@ translations:
     es: direcciones de correo electrónico...
     fr: adresses e-mail...
     hi: ईमेल पते...
+    it: indirizzi email...
     ja: メールアドレス...
     nl: e-mailadressen...
     pl: adresy e-mail...
@@ -56,6 +59,8 @@ translations:
     fr: Créez un nouveau compte ACME ou configurez les adresses e-mail d&#39;un compte
       existant.
     hi: एक नया ACME खाता बनाएँ, या मौजूदा खाते के ईमेल पते सेट करें।
+    it: Crea un nuovo account ACME oppure imposta gli indirizzi email di un account
+      esistente.
     ja: 新しいACMEアカウントを作成するか、既存のアカウントのメールアドレスを設定します。
     nl: Maak een nieuw ACME-account aan of stel de e-mailadressen van een bestaand
       account in.
@@ -72,6 +77,7 @@ translations:
     es: Recuperar los detalles de autorización de ACME
     fr: Récupérer les détails d&#39;autorisation ACME
     hi: ACME प्राधिकरण विवरण प्राप्त करें
+    it: Recupera i dettagli dell&#39;autorizzazione ACME
     ja: ACMEの承認詳細を取得する
     nl: ACME-autorisatiegegevens ophalen
     pl: Pobierz szczegóły autoryzacji ACME
@@ -91,6 +97,8 @@ translations:
       par un serveur ACME
     hi: यह देखने के लिए ACME प्राधिकरण चुनौतियों का परीक्षण करें कि क्या वे ACME सर्वर
       से मान्य होंगी।
+    it: Esegui dei test sulle richieste di autorizzazione ACME per verificare se vengono
+      validate da un server ACME.
     ja: ACME認証チャレンジをテストして、ACMEサーバーから検証できるかどうかを確認します。
     nl: Test de ACME-autorisatie-uitdagingen om te zien of ze gevalideerd worden door
       een ACME-server.
@@ -108,6 +116,7 @@ translations:
     es: Espere a que finalice la autorización de la orden de ACME.
     fr: Attendez que l&#39;autorisation de commande ACME soit finalisée.
     hi: ACME ऑर्डर प्राधिकरण की प्रक्रिया पूरी होने तक प्रतीक्षा करें
+    it: Attendi il completamento dell&#39;autorizzazione dell&#39;ordine ACME.
     ja: ACMEの注文承認が完了するまでお待ちください。
     nl: Wacht tot de orderautorisatie van ACME is voltooid.
     pl: Poczekaj na zakończenie autoryzacji zamówienia ACME
@@ -122,6 +131,7 @@ translations:
     es: dns01URL, http01URL o dnsPersist01URL
     fr: URL DNS01, URL HTTP01 ou URL de persistance DNS01
     hi: dns01URL, http01URL, या dnsPersist01URL
+    it: dns01URL, http01URL o dnsPersist01URL
     ja: dns01URL、http01URL、またはdnsPersist01URL
     nl: dns01URL, http01URL of dnsPersist01URL
     pl: dns01URL, http01URL lub dnsPersist01URL
@@ -136,6 +146,7 @@ translations:
     es: Recuperar detalles del desafío ACME
     fr: Récupérer les détails du défi ACME
     hi: ACME चुनौती के विवरण प्राप्त करें
+    it: Recupera i dettagli della sfida ACME
     ja: ACMEチャレンジの詳細を取得する
     nl: Details van de ACME-uitdaging ophalen
     pl: Pobierz szczegóły wyzwania ACME
@@ -150,6 +161,7 @@ translations:
     es: Solicitar al servidor ACME que valide un desafío.
     fr: Demander au serveur ACME de valider un défi
     hi: ACME सर्वर से चुनौती को मान्य करने का अनुरोध करें
+    it: Richiedi al server ACME di convalidare una sfida
     ja: ACMEサーバーにチャレンジの検証を要求します。
     nl: Verzoek aan de ACME-server om een uitdaging te valideren.
     pl: Poproś serwer ACME o sprawdzenie wyzwania
@@ -164,6 +176,7 @@ translations:
     es: dominios y/o direcciones IPv4/IPv6
     fr: domaines et/ou adresses IPv4/IPv6
     hi: डोमेन और/या IPv4/IPv6 पते
+    it: domini e/o indirizzi IPv4/IPv6
     ja: ドメインおよび/またはIPv4/IPv6アドレス
     nl: domeinen en/of IPv4/IPv6-adressen
     pl: domeny i/lub adresy IPv4/IPv6
@@ -178,6 +191,7 @@ translations:
     es: URL del directorio
     fr: URL du répertoire
     hi: निर्देशिका यूआरएल
+    it: directoryURL
     ja: ディレクトリURL
     nl: URL van de map
     pl: adres URL katalogu
@@ -192,6 +206,7 @@ translations:
     es: Servidor ACME
     fr: Serveur ACME
     hi: एसीएमई सर्वर
+    it: server ACME
     ja: ACMEサーバー
     nl: ACME-server
     pl: Serwer ACME
@@ -206,6 +221,7 @@ translations:
     es: camino
     fr: chemin
     hi: पथ
+    it: sentiero
     ja: パス
     nl: pad
     pl: ścieżka
@@ -221,6 +237,7 @@ translations:
     fr: valeur de la clé privée, trousseau/valeur, chemin, ou - pour l&#39;entrée
       standard
     hi: निजी कुंजी का मान, कीरिंग/मान, पथ, या - stdin के लिए
+    it: Valore della chiave privata, portachiavi/valore, percorso o - per stdin
     ja: 秘密鍵の値、キーリング/値、パス、または標準入力の場合は「-」
     nl: Waarde van de privésleutel, sleutelring/waarde, pad, of - voor stdin
     pl: Wartość klucza prywatnego, pęk kluczy/wartość, ścieżka lub - dla wejścia standardowego
@@ -236,6 +253,7 @@ translations:
     es: Utilice el entorno de prueba de Let&#39;s Encrypt
     fr: Utilisez l&#39;environnement de test de Let&#39;s Encrypt
     hi: Let&#39;s Encrypt स्टेजिंग वातावरण का उपयोग करें
+    it: Utilizzare l&#39;ambiente di staging di Let&#39;s Encrypt.
     ja: Let&#39;s Encryptのステージング環境を使用する
     nl: Gebruik de Let&#39;s Encrypt-testomgeving.
     pl: Użyj środowiska przejściowego Let&#39;s Encrypt
@@ -250,6 +268,7 @@ translations:
     es: algoritmo de certificado
     fr: algorithme de certificat
     hi: प्रमाणपत्र एल्गोरिथम
+    it: algoritmo di certificazione
     ja: 証明書アルゴリズム
     nl: certificaatalgoritme
     pl: algorytm certyfikatu
@@ -265,6 +284,7 @@ translations:
     es: Genere un certificado y una clave a partir de un pedido autorizado de ACME.
     fr: Générer un certificat et une clé à partir d&#39;une commande ACME autorisée
     hi: अधिकृत ACME ऑर्डर से प्रमाणपत्र और कुंजी जनरेट करें
+    it: Genera un certificato e una chiave da un ordine ACME autorizzato
     ja: 承認されたACME注文から証明書とキーを生成する
     nl: Genereer een certificaat en sleutel op basis van een geautoriseerde ACME-bestelling.
     pl: Wygeneruj certyfikat i klucz z autoryzowanego zamówienia ACME
@@ -279,6 +299,7 @@ translations:
     es: Recuperar detalles del pedido de ACME
     fr: Récupérer les détails de la commande ACME
     hi: ACME ऑर्डर विवरण प्राप्त करें
+    it: Recupera i dettagli dell&#39;ordine ACME
     ja: ACMEの注文詳細を取得する
     nl: ACME-bestelgegevens ophalen
     pl: Pobierz szczegóły zamówienia ACME
@@ -294,6 +315,7 @@ translations:
     fr: Créez une nouvelle commande de certificat ACME pour un domaine ou une adresse
       IP.
     hi: किसी डोमेन या आईपी के लिए नया एसीएमई प्रमाणपत्र ऑर्डर बनाएं
+    it: Crea un nuovo ordine di certificati ACME per un dominio o un indirizzo IP
     ja: ドメインまたはIPアドレスに対して新しいACME証明書の注文を作成する
     nl: Maak een nieuwe ACME-certificaatbestelling aan voor een domein of IP-adres.
     pl: Utwórz nowe zamówienie na certyfikat ACME dla domeny lub adresu IP
@@ -308,6 +330,7 @@ translations:
     es: Mostrar algoritmos que Rot comprenda.
     fr: Afficher les algorithmes que Rot comprend.
     hi: एल्गोरिदम दिखाएँ रोट समझता है.
+    it: Mostra gli algoritmi che Rot comprende.
     ja: Rot が理解できるアルゴリズムを表示します。
     nl: Laat algoritmen zien Rot begrijpt het.
     pl: Pokaż algorytmy, które Rot rozumie.
@@ -322,6 +345,7 @@ translations:
     es: ruta del archivo de entrada, valor o - para stdin
     fr: chemin du fichier d&#39;entrée, valeur ou tiret pour l&#39;entrée standard
     hi: इनपुट फ़ाइल पथ, मान, या - stdin के लिए
+    it: percorso del file di input, valore o - per stdin
     ja: 入力ファイルパス、値、または標準入力の場合は「-」
     nl: pad naar het invoerbestand, waarde, of - voor stdin
     pl: ścieżka do pliku wejściowego, wartość lub - dla wejścia standardowego
@@ -336,6 +360,7 @@ translations:
     es: 'Decodificar base64 (predeterminado: codificar)'
     fr: 'Décoder en base64 (par défaut: encoder)'
     hi: 'बेस64 को डीकोड करें (डिफ़ॉल्ट: एनकोड)'
+    it: 'Decodifica base64 (impostazione predefinita: codifica)'
     ja: 'base64 をデコード (デフォルト: エンコード)'
     nl: 'Decodeer base64 (standaard: coderen)'
     pl: 'Dekodowanie base64 (domyślnie: kodowanie)'
@@ -350,6 +375,7 @@ translations:
     es: 'Sin formato/sin relleno (predeterminado: relleno)'
     fr: 'Brut/sans remplissage (par défaut: remplissage)'
     hi: 'कच्चा/कोई पैडिंग नहीं (डिफ़ॉल्ट: पैडिंग)'
+    it: 'Grezzo/senza imbottitura (impostazione predefinita: imbottitura)'
     ja: '生/パディングなし（デフォルト: パディング）'
     nl: 'Ruwe/geen opvulling (standaard: opvulling)'
     pl: 'Surowe/bez wypełnienia (domyślnie: wypełnienie)'
@@ -364,6 +390,7 @@ translations:
     es: 'Codificación de URL (predeterminada: codificación estándar)'
     fr: 'Encodage URL (par défaut: encodage standard)'
     hi: 'URL एनकोडिंग (डिफ़ॉल्ट: मानक एनकोडिंग)'
+    it: 'Codifica URL (predefinita: codifica standard)'
     ja: 'URL エンコーディング (デフォルト: 標準エンコーディング)'
     nl: 'URL-codering (standaard: standaardcodering)'
     pl: 'Kodowanie adresu URL (domyślnie: kodowanie standardowe)'
@@ -379,6 +406,7 @@ translations:
     es: Codifique/decodifique un valor base64 o stdin y envíelo a stdout.
     fr: Encoder/décoder une valeur base64 ou stdin et la sortir sur stdout.
     hi: एक बेस64 मान या stdin को एनकोड/डिकोड करें और stdout पर आउटपुट करें।
+    it: Codifica/decodifica un valore base64 o stdin e invia l&#39;output a stdout.
     ja: base64 値または stdin をエンコード/デコードし、stdout に出力します。
     nl: Codeer/decodeer een base64-waarde of stdin en voer deze uit naar stdout.
     pl: Zakoduj/zdekoduj wartość base64 lub stdin i wyślij ją na stdout.
@@ -395,6 +423,7 @@ translations:
     fr: Chemin d&#39;accès, valeur ou tiret (-) du fichier chiffré pour l&#39;entrée
       standard
     hi: एन्क्रिप्टेड फ़ाइल पथ, मान, या - stdin के लिए
+    it: percorso del file crittografato, valore o - per stdin
     ja: 暗号化されたファイルパス、値、または標準入力の場合は「-」
     nl: versleuteld bestandspad, waarde of - voor stdin
     pl: zaszyfrowana ścieżka do pliku, wartość lub - dla wejścia standardowego
@@ -409,6 +438,7 @@ translations:
     es: llavero/valor a usar para descifrar
     fr: trousseau/valeur à utiliser pour le décryptage
     hi: डिक्रिप्ट करने के लिए उपयोग की जाने वाली कीरिंग/मूल्य
+    it: portachiavi/valore da utilizzare per la decrittazione
     ja: 復号化に使用するキーリング/値
     nl: sleutelhanger/waarde die moet worden gebruikt voor het decoderen
     pl: pęk kluczy/wartość do wykorzystania przy odszyfrowywaniu
@@ -429,6 +459,8 @@ translations:
       mémoire et éviter de les saisir.
     hi: इस तर्क को स्रोत के रूप में _1 का उपयोग करके डिक्रिप्ट की गई कुंजियों को मेमोरी
       में संग्रहीत करें और उन्हें टाइप करने से बचें।
+    it: Utilizza _1 come argomento per memorizzare le chiavi decrittografate in memoria
+      ed evitare di digitarle.
     ja: _1 を使用してこの引数をソースすると、復号化されたキーがメモリに保存され、入力する必要がなくなります。
     nl: Bron dit argument met behulp van _1 om gedecodeerde sleutels in het geheugen
       op te slaan en te voorkomen dat u ze intypt.
@@ -449,6 +481,8 @@ translations:
       standard.
     hi: किसी मान को डिक्रिप्ट करें या KDF मान को अनरैप करें और उसे stdout पर प्रिंट
       करें।
+    it: Decifra un valore o estrai il contenuto di un valore KDF e stampalo sullo
+      standard output.
     ja: 値を復号化するか、KDF 値をアンラップして stdout に出力します。
     nl: Decodeer een waarde of pak een KDF-waarde uit en druk deze af naar stdout.
     pl: Odszyfruj wartość lub rozpakuj wartość KDF i wydrukuj ją na wyjściu standardowym.
@@ -467,6 +501,7 @@ translations:
     fr: Supprimez une clé privée de clé de déchiffrement pour un trousseau de clés
       de la configuration.
     hi: कॉन्फ़िगरेशन से कीरिंग के लिए डिक्रिप्ट कुंजी निजी कुंजी निकालें।
+    it: Rimuovere dalla configurazione la chiave privata di decrittazione per un portachiavi.
     ja: 構成からキーリングの復号化キーの秘密キーを削除します。
     nl: Verwijder een privésleutel voor een decryptiesleutel voor een sleutelhanger
       uit de configuratie.
@@ -482,6 +517,7 @@ translations:
     es: Elimine una clave de descifrado de la configuración.
     fr: Supprimez une clé de déchiffrement de la configuration.
     hi: कॉन्फ़िगरेशन से डिक्रिप्ट कुंजी निकालें.
+    it: Rimuovere una chiave di decrittazione dalla configurazione.
     ja: 構成から復号化キーを削除します。
     nl: Verwijder een decoderingssleutel uit de configuratie.
     pl: Usuń klucz deszyfrujący z konfiguracji.
@@ -496,6 +532,7 @@ translations:
     es: Elimine un llavero de la configuración.
     fr: Supprimez un trousseau de clés de la configuration.
     hi: कॉन्फ़िगरेशन से एक कीरिंग निकालें.
+    it: Rimuovere un portachiavi dalla configurazione.
     ja: 構成からキーリングを削除します。
     nl: Verwijder een sleutelhanger uit de configuratie.
     pl: Usuń pęk kluczy z konfiguracji.
@@ -510,6 +547,7 @@ translations:
     es: Eliminar un valor de la configuración.
     fr: Supprimez une valeur de la configuration.
     hi: कॉन्फ़िगरेशन से मान निकालें.
+    it: Rimuovere un valore dalla configurazione.
     ja: 構成から値を削除します。
     nl: Verwijder een waarde uit de configuratie.
     pl: Usuń wartość z konfiguracji.
@@ -524,6 +562,7 @@ translations:
     es: delimitador
     fr: délimiteur
     hi: परिसीमक
+    it: delimitatore
     ja: デリミタ
     nl: scheidingsteken
     pl: ogranicznik
@@ -538,6 +577,7 @@ translations:
     es: Delimitador de valor
     fr: Délimiteur de valeur
     hi: मान सीमांकक
+    it: Delimitatore di valore
     ja: 値の区切り文字
     nl: Waardescheidingsteken
     pl: Ogranicznik wartości
@@ -552,6 +592,7 @@ translations:
     es: Gestión segura de secretos para el administrador de sistemas moderno
     fr: Gestion sécurisée des secrets pour l&#39;administrateur système moderne
     hi: आधुनिक सिस्टम एडमिनिस्ट्रेशन के लिए सुरक्षित गोपनीयता प्रबंधन
+    it: Gestione sicura delle credenziali per l&#39;amministratore di sistema moderno
     ja: 現代のシステム管理者のための安全な秘密管理
     nl: Veilig geheimbeheer voor de moderne systeembeheerder
     pl: Bezpieczne zarządzanie sekretami dla nowoczesnych administratorów systemów
@@ -566,6 +607,7 @@ translations:
     es: 'editor, predeterminado: $EDITOR o vi'
     fr: 'éditeur, par défaut: $EDITOR ou vi'
     hi: 'संपादक, डिफ़ॉल्ट: $EDITOR या vi'
+    it: 'editor, predefinito: $EDITOR o vi'
     ja: 'エディタ、デフォルト: $EDITOR または vi'
     nl: 'editor, standaard: $EDITOR of vi'
     pl: 'edytor, domyślnie: $EDITOR lub vi'
@@ -580,6 +622,7 @@ translations:
     es: camino
     fr: chemin
     hi: पथ
+    it: sentiero
     ja: パス
     nl: pad
     pl: ścieżka
@@ -604,6 +647,9 @@ translations:
     hi: गुप्त जानकारी रखने वाली अस्थायी फ़ाइल का पथ सेट करें। लिखने योग्य होना चाहिए।
       मेमोरी में गुप्त जानकारी रखने के लिए RAM डिस्क का उपयोग करने पर विचार किया जा
       सकता है।
+    it: Imposta il percorso del file temporaneo contenente i segreti. Il file deve
+      essere scrivibile. Potresti valutare l&#39;utilizzo di un disco RAM per memorizzare
+      i segreti in memoria.
     ja: 秘密を保持する一時ファイルへのパスを設定します。書き込み可能である必要があります。秘密をメモリ内に保持するには、RAM ディスクの使用を検討してください。
     nl: Stel het pad in naar het tijdelijke bestand dat de geheimen bevat. Moet beschrijfbaar
       zijn. Kan overwegen een RAM-schijf te gebruiken om geheimen in het geheugen
@@ -632,6 +678,9 @@ translations:
       supprimées avec le trousseau de clés.
     hi: Jsonnet का उपयोग करके डिक्रिप्ट किए गए कीरिंग मानों को संपादित करें। सहेजने
       पर, जोड़े गए, बदले गए या हटाए गए मानों को कीरिंग के साथ मिला दिया जाएगा।
+    it: Modifica i valori decrittografati del portachiavi utilizzando Jsonnet. Al
+      salvataggio, i valori aggiunti, modificati o rimossi verranno confrontati con
+      quelli presenti nel portachiavi.
     ja: Jsonnet を使用して、復号化されたキーリング値を編集します。保存すると、追加、変更、または削除された値がキーリングと調整されます。
     nl: Bewerk gedecodeerde sleutelringwaarden met Jsonnet. Bij het opslaan worden
       de toegevoegde, gewijzigde of verwijderde waarden afgestemd op de sleutelhanger.
@@ -650,6 +699,7 @@ translations:
     es: clave del destinatario o llavero/valor, opcional
     fr: clé du destinataire ou porte-clés/valeur, facultatif
     hi: प्राप्तकर्ता कुंजी या कीरिंग/मूल्य, वैकल्पिक
+    it: chiave del destinatario o portachiavi/valore, facoltativo
     ja: 受信者のキーまたはキーリング/値（オプション）
     nl: sleutel van de ontvanger of sleutelhanger/waarde, optioneel
     pl: klucz odbiorcy lub pęk kluczy/wartość, opcjonalnie
@@ -674,6 +724,9 @@ translations:
     hi: मान एन्क्रिप्ट करें और इसे stdout पर प्रिंट करें। असममित एन्क्रिप्शन का उपयोग
       करने के लिए प्राप्तकर्ता कुंजी या कीरिंग/मान पथ (publicKey मेटा के साथ) निर्दिष्ट
       कर सकते हैं।
+    it: Crittografa un valore e stampalo su stdout. È possibile specificare una chiave
+      del destinatario o un percorso portachiavi/valore (con il metadato publicKey)
+      per utilizzare la crittografia asimmetrica.
     ja: 値を暗号化し、stdout に出力します。非対称暗号化を使用するには、受信者キーまたはキーリング/値パス (publicKey メタを使用) を指定できます。
     nl: Versleutel een waarde en druk deze af naar stdout. Kan een sleutel van de
       ontvanger of een sleutelhanger/waardepad (met publicKey-meta) opgeven om asymmetrische
@@ -696,6 +749,7 @@ translations:
     es: ruta de archivo o - para stdin
     fr: chemin de fichier ou - pour l&#39;entrée standard
     hi: फ़ाइल पथ या - stdin के लिए
+    it: percorso file o - per stdin
     ja: ファイルパス、または標準入力の場合は「-」
     nl: bestandspad of - voor stdin
     pl: ścieżka do pliku lub - dla wejścia standardowego
@@ -710,6 +764,7 @@ translations:
     es: algoritmo a utilizar
     fr: algorithme à utiliser
     hi: उपयोग करने के लिए एल्गोरिदम
+    it: Algoritmo da utilizzare
     ja: 使用するアルゴリズム
     nl: algoritme te gebruiken
     pl: algorytm do użycia
@@ -724,6 +779,7 @@ translations:
     es: Genera solo el hash
     fr: Afficher uniquement le hachage
     hi: केवल हैश आउटपुट करें
+    it: Visualizza solo l&#39;hash
     ja: ハッシュのみを出力する
     nl: Voer alleen de hash uit
     pl: Wyjście tylko hasha
@@ -740,6 +796,7 @@ translations:
     fr: Créez un hachage à partir d&#39;une chaîne ou d&#39;un fichier et affichez-le
       sur la sortie standard.
     hi: किसी स्ट्रिंग या फ़ाइल से हैश बनाएं और उसे stdout पर आउटपुट करें।
+    it: Crea un hash da una stringa o da un file e invialo allo standard output.
     ja: 文字列またはファイルからハッシュを作成し、stdout に出力します。
     nl: Maak een hash van een string of bestand en voer deze uit naar stdout.
     pl: Utwórz skrót z ciągu znaków lub pliku i wyślij go na stdout.
@@ -754,6 +811,7 @@ translations:
     es: valor hash, ruta de archivo o URL HTTP
     fr: valeur de hachage, chemin de fichier ou URL HTTP
     hi: हैश मान, फ़ाइल पथ, या HTTP URL
+    it: valore hash, percorso del file o URL HTTP
     ja: ハッシュ値、ファイルパス、またはHTTP URL
     nl: hashwaarde, bestandspad of HTTP-URL
     pl: wartość skrótu, ścieżka do pliku lub adres URL HTTP
@@ -772,6 +830,8 @@ translations:
     fr: Vérifiez un hachage pour un fichier ou un stdin. Le hachage doit être sous
       la forme<algorithm> :<hash> .
     hi: किसी फ़ाइल या stdin के लिए हैश सत्यापित करें। हैश इस रूप में होना चाहिए<algorithm>
+      :<hash> .
+    it: Verifica l&#39;hash di un file o dello stdin. L&#39;hash deve essere nel formato<algorithm>
       :<hash> .
     ja: ファイルまたは標準入力のハッシュを検証します。ハッシュは次の形式である必要があります。<algorithm> :<hash> 。
     nl: Controleer een hash voor een bestand of stdin. Hasj moet in de vorm zijn<algorithm>
@@ -797,6 +857,8 @@ translations:
       (par défaut: générer une nouvelle clé symétrique PBKDF)'
     hi: 'प्रारंभिक सार्वजनिक कुंजी, कुंजी नाम या मौजूदा कुंजी की आईडी (डिफ़ॉल्ट: एक
       नई PBKDF सममित कुंजी उत्पन्न करें)'
+    it: 'Chiave pubblica iniziale, nome della chiave o ID di una chiave esistente
+      (impostazione predefinita: genera una nuova chiave simmetrica PBKDF)'
     ja: '初期公開鍵、既存の鍵の名前または ID (デフォルト: 新しい PBKDF 対称鍵を生成)'
     nl: 'initiële publieke sleutel, sleutelnaam of ID van een bestaande sleutel (standaard:
       genereer een nieuwe PBKDF symmetrische sleutel)'
@@ -815,6 +877,7 @@ translations:
     es: Cifrar nombres y metadatos de valores de llavero
     fr: Chiffrer les noms et métadonnées des valeurs du trousseau de clés
     hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
+    it: Crittografa i nomi dei valori del portachiavi e i metadati
     ja: キーリング値の名前とメタデータを暗号化する
     nl: Versleutel sleutelhangerwaardenamen en metagegevens
     pl: Szyfruj nazwy wartości i metadane pęku kluczy
@@ -838,6 +901,9 @@ translations:
       initiale.
     hi: एक नया Rot कॉन्फ़िगरेशन आरंभ करें। _1 फ़ाइल की तलाश करेगा और यदि आरंभिक उपयोगकर्ता
       कुंजी के रूप में कोई निर्दिष्ट नहीं है, तो पहली उपलब्ध कुंजी का उपयोग करेगा।
+    it: Inizializza una nuova configurazione Rot. Cercherà un file _1 e utilizzerà
+      la prima chiave disponibile se non ne viene specificata alcuna come chiave utente
+      iniziale.
     ja: 新しい Rot 構成を初期化します。_1 ファイルを検索し、初期ユーザー キーとして指定されていない場合は、使用可能な最初のキーを使用します。
     nl: Initialiseer een nieuwe Rot-configuratie. Zoekt naar een _1-bestand en gebruikt
       de eerste beschikbare sleutel als er geen is opgegeven als de initiële gebruikerssleutel.
@@ -858,6 +924,7 @@ translations:
     es: Ruta de archivo JWT, valor o - para entrada estándar
     fr: Chemin d&#39;accès au fichier JWT, valeur ou tiret pour l&#39;entrée standard
     hi: JWT फ़ाइल पथ, मान, या - stdin के लिए
+    it: Percorso del file JWT, valore o - per stdin
     ja: JWTファイルのパス、値、または標準入力の場合は「-」
     nl: JWT-bestandspad, waarde of - voor stdin
     pl: Ścieżka do pliku JWT, wartość lub - dla wejścia standardowego
@@ -877,6 +944,8 @@ translations:
       Peut être spécifié plusieurs fois.
     hi: सार्वजनिक कुंजी का मान, कीरिंग/नाम, या फ़ाइल पथ। इसे एकाधिक बार निर्दिष्ट
       किया जा सकता है।
+    it: Valore della chiave pubblica, nome del portachiavi o percorso del file. Può
+      essere specificato più volte.
     ja: 公開鍵の値、キーリング/名前、またはファイルパス。複数回指定可能。
     nl: De waarde van de openbare sleutel, de naam van de sleutelring of het bestandspad.
       Kan meerdere keren worden opgegeven.
@@ -896,6 +965,7 @@ translations:
     es: Mostrar un JWT, validando opcionalmente la firma con una clave pública.
     fr: Afficher un JWT, en validant éventuellement la signature avec une clé publique.
     hi: एक JWT दिखाएँ, वैकल्पिक रूप से सार्वजनिक कुंजी के साथ हस्ताक्षर को मान्य करें।
+    it: Mostra un JWT, convalidando facoltativamente la firma con una chiave pubblica.
     ja: JWT を表示し、オプションで公開キーを使用して署名を検証します。
     nl: Toon een JWT, waarbij optioneel de handtekening wordt gevalideerd met een
       openbare sleutel.
@@ -911,6 +981,7 @@ translations:
     es: audiencia
     fr: public
     hi: श्रोता
+    it: pubblico
     ja: 観客
     nl: publiek
     pl: publiczność
@@ -925,6 +996,7 @@ translations:
     es: Audiencia (_1) para JWT. Se puede proporcionar varias veces
     fr: Audience (_1) pour JWT. Peut être fourni plusieurs fois
     hi: JWT के लिए दर्शक (_1)। कई बार प्रदान किया जा सकता है
+    it: Pubblico (_1) per JWT. Può essere fornito più volte
     ja: JWT のオーディエンス (_1)。複数回指定できます。
     nl: Doelgroep (_1) voor JWT. Kan meerdere keren verstrekt worden
     pl: Odbiorcy (_1) dla JWT. Można podać wielokrotnie.
@@ -939,6 +1011,7 @@ translations:
     es: Vencimiento (_1) en segundos
     fr: Expiration (_1) en secondes
     hi: समाप्ति (_1) सेकंड में
+    it: Scadenza (_1) in secondi
     ja: 有効期限 (_1) 秒
     nl: Vervaldatum (_1) in seconden
     pl: Wygaśnięcie (_1) w sekundach
@@ -961,6 +1034,9 @@ translations:
       fois.
     hi: JWT में कुंजी और मान जोड़ें। जब तक कि उन्हें उद्धृत न किया जाए, तब तक बूल
       और इनट्स को पार्स करने का प्रयास किया जाएगा। कई बार प्रदान किया जा सकता है।
+    it: Aggiunge una chiave e un valore al JWT. Tenterà di analizzare valori booleani
+      e interi a meno che non siano racchiusi tra virgolette. Può essere specificato
+      più volte.
     ja: JWT にキーと値を追加します。引用符で囲まれていない限り、bool と int を解析しようとします。複数回指定できます。
     nl: Voeg een sleutel en waarde toe aan de JWT. Zal proberen bools en ints te ontleden,
       tenzij ze tussen aanhalingstekens staan. Kan meerdere keren verstrekt worden.
@@ -979,6 +1055,7 @@ translations:
     es: identificación
     fr: identifiant
     hi: पहचान
+    it: id
     ja: id
     nl: ID kaart
     pl: id
@@ -993,6 +1070,7 @@ translations:
     es: ID (_1) del JWT, generará un UUID si no se proporciona
     fr: L&#39;ID (_1) du JWT générera un UUID s&#39;il n&#39;est pas fourni
     hi: JWT की ID (_1), यदि प्रदान नहीं की गई है तो UUID उत्पन्न करेगी
+    it: ID (_1) del JWT, genererà un UUID se non fornito
     ja: JWTのID（_1）。指定しない場合はUUIDが生成されます。
     nl: ID (_1) van de JWT genereert een UUID als deze niet wordt opgegeven
     pl: Identyfikator (_1) JWT wygeneruje UUID, jeśli nie zostanie podany
@@ -1007,6 +1085,7 @@ translations:
     es: editor
     fr: émetteur
     hi: जारीकर्ता
+    it: emittente
     ja: 発行者
     nl: uitgevende instelling
     pl: emitent
@@ -1021,6 +1100,7 @@ translations:
     es: Emisor (_1) del JWT
     fr: Émetteur (_1) du JWT
     hi: JWT जारीकर्ता (_1)
+    it: Emittente (_1) del JWT
     ja: JWTの発行者（_1）
     nl: Uitgevende instelling (_1) van het JWT
     pl: Wydawca (_1) JWT
@@ -1035,6 +1115,7 @@ translations:
     es: sujeto
     fr: sujet
     hi: विषय
+    it: soggetto
     ja: 主題
     nl: onderwerp
     pl: temat
@@ -1049,6 +1130,7 @@ translations:
     es: Asunto (_1) del JWT
     fr: Objet (_1) du JWT
     hi: JWT का विषय (_1)
+    it: Soggetto (_1) del JWT
     ja: JWTの件名（_1）
     nl: Onderwerp (_1) van het JWT
     pl: Temat (_1) JWT
@@ -1068,6 +1150,8 @@ translations:
       privée pour signer le JWT.
     hi: एक JWT जनरेट करें और इसे stdout पर आउटपुट करें। JWT पर हस्ताक्षर करने के लिए
       निजी कुंजी निर्दिष्ट करना आवश्यक है।
+    it: Genera un JWT e invialo allo standard output. È necessario specificare la
+      chiave privata per firmare il JWT.
     ja: JWT を生成し、stdout に出力します。JWT に署名するには秘密鍵を指定する必要があります。
     nl: Genereer een JWT en voer deze uit naar stdout. Moet de privésleutel opgeven
       om het JWT te ondertekenen.
@@ -1086,6 +1170,7 @@ translations:
     es: Nombre clave
     fr: nom de la clé
     hi: कुंजी नाम
+    it: nome chiave
     ja: キー名
     nl: sleutel naam
     pl: nazwa klucza
@@ -1100,6 +1185,7 @@ translations:
     es: nombre del llavero
     fr: nom du porte-clés
     hi: चाबी का छल्ला नाम
+    it: nome del portachiavi
     ja: キーリング名
     nl: sleutelhanger naam
     pl: nazwa breloczka
@@ -1116,6 +1202,7 @@ translations:
       PBKDF'
     fr: 'clé publique, par défaut: générer une clé asymétrique protégée par PBKDF'
     hi: 'सार्वजनिक कुंजी, डिफ़ॉल्ट: PBKDF-संरक्षित असममित कुंजी उत्पन्न करें'
+    it: 'chiave pubblica, predefinita: genera una chiave asimmetrica protetta da PBKDF'
     ja: '公開鍵、デフォルト: PBKDF で保護された非対称鍵を生成する'
     nl: 'openbare sleutel, standaard: genereer een met PBKDF beveiligde asymmetrische
       sleutel'
@@ -1131,6 +1218,7 @@ translations:
     es: Comparte
     fr: actions
     hi: शेयरों
+    it: azioni
     ja: シェア
     nl: aandelen
     pl: akcje
@@ -1150,6 +1238,8 @@ translations:
       remise des clés du partage secret Shamir)
     hi: शमीर सीक्रेट शेयरों की संख्या (इसे सेट करने से शमीर सीक्रेट शेयर कुंजी समारोह
       शुरू होता है)
+    it: Numero di azioni segrete Shamir (impostando questo si avvia una cerimonia
+      chiave per le azioni segrete Shamir)
     ja: シャミア秘密共有の数（これを設定するとシャミア秘密共有の鍵セレモニーが開始されます）
     nl: Aantal Shamir Secret Shares (waarmee een Shamir Secret Share-sleutelceremonie
       wordt gestart)
@@ -1168,6 +1258,7 @@ translations:
     es: límite
     fr: seuil
     hi: सीमा
+    it: soglia
     ja: しきい値
     nl: drempelwaarde
     pl: próg
@@ -1187,6 +1278,8 @@ translations:
       des partages + 1)'
     hi: 'कुंजी प्राप्त करने के लिए शमीर सीक्रेट शेयरों की सीमा (डिफ़ॉल्ट: शेयरों का
       आधा + 1)'
+    it: 'Soglia di azioni segrete Shamir per recuperare la chiave (predefinita: metà
+      delle azioni + 1)'
     ja: 'キーを取得するためのシャミア秘密シェアのしきい値（デフォルト: シェアの半分 + 1）'
     nl: 'Drempel van geheime Shamir-aandelen om sleutel op te halen (standaard: helft
       van aandelen + 1)'
@@ -1206,6 +1299,7 @@ translations:
     es: Agregue una clave de descifrado existente a un conjunto de claves.
     fr: Ajoutez une clé de déchiffrement existante à un trousseau de clés.
     hi: किसी मौजूदा डिक्रिप्ट कुंजी को कीरिंग में जोड़ें.
+    it: Aggiungi una chiave di decrittazione esistente a un portachiavi.
     ja: 既存の復号化キーをキーリングに追加します。
     nl: Voeg een bestaande decoderingssleutel toe aan een sleutelhanger.
     pl: Dodaj istniejący klucz deszyfrujący do pęku kluczy.
@@ -1221,6 +1315,7 @@ translations:
     es: Agregue una clave nueva o existente a Decrypt Keys.
     fr: Ajoutez une clé nouvelle ou existante à Decrypt Keys.
     hi: डिक्रिप्ट कुंजी में एक नई या मौजूदा कुंजी जोड़ें।
+    it: Aggiungi una chiave nuova o esistente a Decrypt Keys.
     ja: 復号化キーに新しいキーまたは既存のキーを追加します。
     nl: Voeg een nieuwe of bestaande sleutel toe aan Sleutels decoderen.
     pl: Dodaj nowy lub istniejący klucz do Decrypt Keys.
@@ -1235,6 +1330,7 @@ translations:
     es: nombre, clave privada, conjunto de claves/valor o - para stdin
     fr: nom, clé privée, trousseau/valeur ou - pour stdin
     hi: नाम, निजी कुंजी, कीरिंग/मूल्य या - stdin के लिए
+    it: nome, chiave privata, portachiavi/valore o - per stdin
     ja: 名前、秘密鍵、キーリング/値、または - （標準入力用）
     nl: naam, privésleutel, sleutelhanger/waarde of - voor stdin
     pl: nazwa, klucz prywatny, pęk kluczy/wartość lub - dla wejścia standardowego
@@ -1249,6 +1345,7 @@ translations:
     es: Obtener la clave pública de una clave privada.
     fr: Obtenir la clé publique d&#39;une clé privée.
     hi: किसी निजी कुंजी की सार्वजनिक कुंजी प्राप्त करें।
+    it: Ottenere la chiave pubblica di una chiave privata.
     ja: 秘密鍵の公開鍵を取得します。
     nl: De publieke sleutel van een privésleutel verkrijgen.
     pl: Uzyskaj klucz publiczny klucza prywatnego.
@@ -1263,6 +1360,7 @@ translations:
     es: obtener detalles sobre un _1
     fr: obtenir des détails sur un _1
     hi: _1 के बारे में विवरण प्राप्त करें
+    it: ottenere dettagli su un _1
     ja: _1 の詳細を取得する
     nl: details verkrijgen over een _1
     pl: uzyskaj szczegóły dotyczące _1
@@ -1277,6 +1375,7 @@ translations:
     es: llavero
     fr: porte-clés
     hi: चाभी का छल्ला
+    it: portachiavi
     ja: キーホルダー
     nl: sleutelhanger
     pl: brelok
@@ -1291,6 +1390,7 @@ translations:
     es: descifrar nombres de claves
     fr: décrypter les noms de clés
     hi: कुंजी नामों को डिक्रिप्ट करें
+    it: decifra i nomi delle chiavi
     ja: キー名を復号化する
     nl: sleutelnamen ontsleutelen
     pl: odszyfruj nazwy kluczy
@@ -1305,6 +1405,7 @@ translations:
     es: Cifrar nombres y metadatos de valores de llavero
     fr: Chiffrer les noms et métadonnées des valeurs du trousseau de clés
     hi: कुंजीरिंग मान नाम और मेटाडेटा एन्क्रिप्ट करें
+    it: Crittografa i nomi dei valori del portachiavi e i metadati
     ja: キーリング値の名前とメタデータを暗号化する
     nl: Versleutel sleutelhangerwaardenamen en metagegevens
     pl: Szyfruj nazwy wartości i metadane pęku kluczy
@@ -1325,6 +1426,8 @@ translations:
       donnez-y accès aux clés de décryptage fournies.
     hi: एक नया कीरिंग जोड़ें या मौजूदा कीरिंग को संशोधित करें और प्रदान की गई डिक्रिप्ट
       कुंजियों को उस तक पहुंच प्रदान करें।
+    it: Aggiungi un nuovo portachiavi o modificane uno esistente e concedi l&#39;accesso
+      alle chiavi di decrittazione fornite.
     ja: 新しいキーリングを追加するか、既存のキーリングを変更し、提供された復号化キーにそのキーリングへのアクセス権を付与します。
     nl: Voeg een nieuwe toe of wijzig een bestaande sleutelhanger en geef de meegeleverde
       decoderingssleutels er toegang toe.
@@ -1343,6 +1446,7 @@ translations:
     es: nombre del llavero
     fr: nom du porte-clés
     hi: चाबी का छल्ला नाम
+    it: nome del portachiavi
     ja: キーリング名
     nl: sleutelhanger naam
     pl: nazwa breloczka
@@ -1357,6 +1461,7 @@ translations:
     es: Vuelva a introducir todas las claves y valores en un llavero.
     fr: Retapez toutes les clés et valeurs d&#39;un trousseau de clés.
     hi: कुंजी रिंग में सभी कुंजियों और मानों को पुनः दर्ज करें।
+    it: Reimpostare tutti i tasti e i valori in un portachiavi.
     ja: キーリング内のすべてのキーと値を再キー化します。
     nl: Hersleutel alle sleutels en waarden in een sleutelhanger.
     pl: Zmień wszystkie klucze i wartości w pęku kluczy.
@@ -1371,6 +1476,7 @@ translations:
     es: llavero/valor
     fr: porte-clés/valeur
     hi: कीरिंग/मूल्य
+    it: portachiavi/valore
     ja: キーリング/値
     nl: sleutelhanger/waarde
     pl: brelok/wartość
@@ -1385,6 +1491,7 @@ translations:
     es: Listar todas las versiones
     fr: Lister toutes les versions
     hi: सभी संस्करणों की सूची बनाएं
+    it: Elenca tutte le versioni
     ja: すべてのバージョンを一覧表示する
     nl: Lijst van alle versies
     pl: Wyświetl wszystkie wersje
@@ -1399,6 +1506,7 @@ translations:
     es: Listar claves que tienen acceso al llavero
     fr: Liste des clés qui ont accès au trousseau de clés
     hi: उन कुंजियों की सूची बनाएं जिनकी कीरिंग तक पहुंच है
+    it: Elenca le chiavi che hanno accesso al portachiavi
     ja: キーリングにアクセスできるキーを一覧表示する
     nl: Maak een lijst van sleutels die toegang hebben tot de sleutelhanger
     pl: Wypisz klucze, które mają dostęp do pęku kluczy
@@ -1413,6 +1521,7 @@ translations:
     es: filtro de expresiones regulares para nombres de llaveros
     fr: filtre d&#39;expression rationnelle pour les noms de trousseaux de clés
     hi: कीरिंग नामों के लिए regexp फ़िल्टर
+    it: Filtro regexp per i nomi dei portachiavi
     ja: キーリング名の正規表現フィルター
     nl: regexp-filter voor sleutelhangernamen
     pl: filtr wyrażeń regularnych dla nazw pęków kluczy
@@ -1427,6 +1536,7 @@ translations:
     es: Listar claves en una configuración
     fr: Liste des clés dans une configuration
     hi: कॉन्फ़िगरेशन में कुंजियाँ सूचीबद्ध करें
+    it: Elenca le chiavi in una configurazione
     ja: 構成内のキーを一覧表示する
     nl: Lijst met sleutels in een configuratie
     pl: Wyświetl klucze w konfiguracji
@@ -1441,6 +1551,7 @@ translations:
     es: Listar llaveros en una configuración
     fr: Répertorier les trousseaux de clés dans une configuration
     hi: कॉन्फ़िगरेशन में कीरिंग की सूची बनाएँ
+    it: Elenca i portachiavi in una configurazione
     ja: 構成内のキーリングを一覧表示する
     nl: Lijst met sleutelhangers in een configuratie
     pl: Wyświetlanie pęków kluczy w konfiguracji
@@ -1455,6 +1566,7 @@ translations:
     es: filtro de expresiones regulares para valores
     fr: filtre d&#39;expression rationnelle pour les valeurs
     hi: मानों के लिए regexp फ़िल्टर
+    it: filtro regexp per i valori
     ja: 値の正規表現フィルタ
     nl: regexp-filter voor waarden
     pl: filtr wyrażeń regularnych dla wartości
@@ -1469,6 +1581,7 @@ translations:
     es: Listar valores en una configuración
     fr: Liste des valeurs dans une configuration
     hi: कॉन्फ़िगरेशन में मान सूचीबद्ध करें
+    it: Elenco dei valori in una configurazione
     ja: 構成内の値をリストする
     nl: Lijstwaarden in een configuratie
     pl: Wyświetl wartości w konfiguracji
@@ -1483,6 +1596,7 @@ translations:
     es: valor, ruta de archivo o - para stdin
     fr: valeur, chemin de fichier ou - pour l&#39;entrée standard
     hi: मान, फ़ाइल पथ, या - stdin के लिए
+    it: valore, percorso file o - per stdin
     ja: 値、ファイルパス、または標準入力の場合は「-」
     nl: waarde, bestandspad of - voor stdin
     pl: wartość, ścieżka do pliku lub - dla wejścia standardowego
@@ -1497,6 +1611,7 @@ translations:
     es: Agregue id a la clave importada desde un PEM
     fr: Ajouter un identifiant à la clé importée depuis un PEM
     hi: PEM से आयातित कुंजी में आईडी जोड़ें
+    it: Aggiungi l&#39;ID alla chiave importata da un file PEM
     ja: PEMからインポートされたキーにIDを追加する
     nl: Voeg een ID toe aan de sleutel die is geïmporteerd uit een PEM
     pl: Dodaj identyfikator do klucza zaimportowanego z PEM
@@ -1515,6 +1630,8 @@ translations:
       la sortie standard.
     hi: _1 कुंजी को PEM में, या PEM कुंजी को _1 में बदलें, और इसे stdout पर प्रिंट
       करें।
+    it: Converti le chiavi _1 in PEM, o le chiavi PEM in _1, e stampa il risultato
+      sullo standard output.
     ja: _1 キーを PEM に変換するか、PEM キーを _1 に変換し、stdout に出力します。
     nl: Converteer _1-sleutels naar PEM, of een PEM-sleutel naar _1, en druk deze
       af naar stdout.
@@ -1533,6 +1650,8 @@ translations:
     fr: valeur de la clé privée, trousseau/valeur de clé, chemin de fichier ou - pour
       l&#39;entrée standard
     hi: निजी कुंजी का मान, कीरिंग/मान, फ़ाइल पथ, या - मानक दिनांतर के लिए
+    it: valore della chiave privata, portachiavi/valore, percorso del file o - per
+      stdin
     ja: 秘密鍵の値、キーリング/値、ファイルパス、または標準入力の場合は「-」
     nl: privésleutelwaarde, sleutelring/waarde, bestandspad of - voor stdin
     pl: wartość klucza prywatnego, pęk kluczy/wartość, ścieżka do pliku lub - dla
@@ -1550,6 +1669,7 @@ translations:
     es: Genere una cadena aleatoria e imprima en stdout
     fr: Générer une chaîne aléatoire et imprimer sur la sortie standard
     hi: एक यादृच्छिक स्ट्रिंग उत्पन्न करें और stdout पर प्रिंट करें
+    it: Genera una stringa casuale e stampala sullo standard output.
     ja: ランダムな文字列を生成し、標準出力に出力する
     nl: Genereer een willekeurige tekenreeks en druk deze af naar stdout
     pl: Wygeneruj losowy ciąg i wydrukuj na stdout
@@ -1567,6 +1687,8 @@ translations:
       plusieurs fois, séparés par &#39;,&#39;)
     hi: कीरिंग/पथ रेगेक्सपी (&#39;,&#39; से अलग करके कई बार निर्दिष्ट किया जा सकता
       है)
+    it: Espressione regolare per portachiavi/percorso (può essere specificata più
+      volte, separata da &#39;,&#39;)
     ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
     nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
       &#39;,&#39;)
@@ -1587,6 +1709,8 @@ translations:
       plusieurs fois, séparés par &#39;,&#39;)
     hi: कीरिंग/पथ रेगेक्सपी (&#39;,&#39; से अलग करके कई बार निर्दिष्ट किया जा सकता
       है)
+    it: Espressione regolare per portachiavi/percorso (può essere specificata più
+      volte, separata da &#39;,&#39;)
     ja: キーリング/パス正規表現（&#39;,&#39;で区切って複数回指定可能）
     nl: keyring/path regexp (kan meerdere keren worden opgegeven, gescheiden door
       &#39;,&#39;)
@@ -1637,6 +1761,13 @@ translations:
       में लिखे गए मान *** से मास्क किए जाएँगे। एस्केप किए गए चर (\\$) का उपयोग स्क्रिप्ट
       में मानों को संदर्भित करने के लिए किया जा सकता है, अन्यथा _1 कमांड निष्पादित
       करने से पहले ${variables} और $variables को हल करने का प्रयास करेगा।
+    it: Esegui un comando e inietta i valori come variabili d&#39;ambiente. I valori
+      verranno utilizzati solo se presenti nel portachiavi/nei percorsi specificati.
+      Quando si legge da più percorsi, se sono presenti nomi duplicati, verrà utilizzato
+      l&#39;ultimo valore letto. I valori scritti su stderr/stdout verranno mascherati
+      con ***. Le variabili con escape (\\$) possono essere utilizzate per fare riferimento
+      ai valori negli script, altrimenti _1 tenterà di risolvere ${variabili} e $variabili
+      prima di eseguire il comando.
     ja: コマンドを実行し、値を環境変数として挿入します。値は、指定されたキーリング/パスの下にある場合にのみ使用されます。複数のパスから読み取るときに名前が重複している場合は、最後に読み取られた値が使用されます。stderr/stdout
       に書き込まれる値は *** でマスクされます。エスケープされた変数 (\\$) は、スクリプト内の値を参照するために使用できます。それ以外の場合は、_1
       はコマンドを実行する前に ${variables} と $variables を解決しようとします。
@@ -1677,6 +1808,7 @@ translations:
     es: tecla, o - para entrada estándar
     fr: touche, ou - pour l&#39;entrée standard
     hi: कुंजी, या - stdin के लिए
+    it: tasto, o - per stdin
     ja: キー、または標準入力の場合は「-」
     nl: toets, of - voor stdin
     pl: klucz lub - dla wejścia standardowego
@@ -1691,6 +1823,7 @@ translations:
     es: Agregar ID a la clave importada desde una clave SSH.
     fr: Ajouter un identifiant à la clé importée depuis une clé SSH
     hi: SSH कुंजी से आयातित कुंजी में आईडी जोड़ें
+    it: Aggiungi l&#39;ID alla chiave importata da una chiave SSH
     ja: SSHキーからインポートしたキーにIDを追加する
     nl: Voeg een ID toe aan de sleutel die is geïmporteerd vanuit een SSH-sleutel.
     pl: Dodaj identyfikator do klucza zaimportowanego z klucza SSH
@@ -1709,6 +1842,8 @@ translations:
       la sortie standard.
     hi: Rot कुंजियों को SSH में, या SSH कुंजियों को Rot में बदलें, और इसे stdout पर
       प्रिंट करें।
+    it: Converti le chiavi Rot in chiavi SSH, o le chiavi SSH in chiavi Rot, e stampa
+      il risultato sullo standard output.
     ja: Rot キーを SSH に変換するか、SSH キーを Rot に変換して、標準出力に出力します。
     nl: Converteer Rot-sleutels naar SSH, of SSH-sleutels naar Rot, en druk deze af
       naar stdout.
@@ -1725,6 +1860,7 @@ translations:
     es: valor de clave privada, conjunto de claves/valor, o - para stdin
     fr: valeur de clé privée, trousseau/valeur ou - pour stdin
     hi: निजी कुंजी मान, कीरिंग/मान, या - stdin के लिए
+    it: valore della chiave privata, portachiavi/valore o - per stdin
     ja: 秘密鍵の値、キーリング/値、または - （標準入力用）
     nl: privésleutelwaarde, sleutelhanger/waarde, of - voor stdin
     pl: wartość klucza prywatnego, pęk kluczy/wartość lub - dla wejścia standardowego
@@ -1739,6 +1875,7 @@ translations:
     es: valor de clave pública, llavero/valor o ruta de archivo
     fr: valeur de clé publique, trousseau de clés/valeur ou chemin de fichier
     hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या फ़ाइल पथ
+    it: valore della chiave pubblica, portachiavi/valore o percorso del file
     ja: 公開鍵の値、キーリング/値、またはファイルパス
     nl: openbare sleutelwaarde, sleutelring/waarde of bestandspad
     pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka do pliku
@@ -1753,6 +1890,7 @@ translations:
     es: opción=valor
     fr: option=valeur
     hi: विकल्प=मूल्य
+    it: opzione=valore
     ja: オプション=値
     nl: optie=waarde
     pl: opcja=wartość
@@ -1771,6 +1909,7 @@ translations:
       plusieurs fois
     hi: SSH प्रमाणपत्र में जोड़ने के लिए महत्वपूर्ण विकल्प, कई बार निर्दिष्ट किए जा
       सकते हैं
+    it: Opzioni critiche da aggiungere al certificato SSH, specificabili più volte
     ja: SSH 証明書に追加する重要なオプション。複数回指定できます。
     nl: Kritieke opties om toe te voegen aan het SSH-certificaat kunnen meerdere keren
       worden opgegeven
@@ -1788,6 +1927,7 @@ translations:
     es: extensión=valor
     fr: extension=valeur
     hi: विस्तार=मूल्य
+    it: estensione=valore
     ja: 拡張子=値
     nl: extensie=waarde
     pl: rozszerzenie=wartość
@@ -1805,6 +1945,7 @@ translations:
       fois
     hi: SSH प्रमाणपत्र में जोड़े जाने वाले एक्सटेंशन को कई बार निर्दिष्ट किया जा सकता
       है
+    it: Estensioni da aggiungere al certificato SSH, specificabili più volte
     ja: SSH 証明書に追加する拡張機能。複数回指定できます。
     nl: Extensies die aan het SSH-certificaat moeten worden toegevoegd, kunnen meerdere
       keren worden opgegeven
@@ -1821,6 +1962,7 @@ translations:
     es: 'Crear un certificado de host (predeterminado: certificado de usuario)'
     fr: 'Créer un certificat hôte (par défaut: certificat utilisateur)'
     hi: 'होस्ट प्रमाणपत्र बनाएँ (डिफ़ॉल्ट: उपयोगकर्ता प्रमाणपत्र)'
+    it: 'Crea un certificato host (impostazione predefinita: certificato utente)'
     ja: 'ホスト証明書を作成する (デフォルト: ユーザー証明書)'
     nl: 'Maak een hostcertificaat aan (standaard: gebruikerscertificaat)'
     pl: 'Utwórz certyfikat hosta (domyślnie: certyfikat użytkownika)'
@@ -1835,6 +1977,7 @@ translations:
     es: ID de clave
     fr: ID de clé
     hi: कुंजी आईडी
+    it: ID chiave
     ja: キーID
     nl: Sleutel-ID
     pl: Identyfikator klucza
@@ -1849,6 +1992,7 @@ translations:
     es: principal
     fr: principal
     hi: प्रधानाचार्य
+    it: principale
     ja: 主要
     nl: voornaam
     pl: główny
@@ -1867,6 +2011,7 @@ translations:
       fois
     hi: SSH प्रमाणपत्र में जोड़े जाने वाले मान्य प्रिंसिपल, कई बार निर्दिष्ट किए जा
       सकते हैं
+    it: Principali validi da aggiungere al certificato SSH, specificabili più volte
     ja: SSH 証明書に追加する有効なプリンシパル。複数回指定できます。
     nl: Geldige principals die aan het SSH-certificaat moeten worden toegevoegd, kunnen
       meerdere keren worden opgegeven
@@ -1884,6 +2029,7 @@ translations:
     es: Segundos hasta que caduque el certificado
     fr: Secondes jusqu&#39;à l&#39;expiration du certificat
     hi: प्रमाणपत्र समाप्त होने तक कुछ सेकंड
+    it: Pochi secondi alla scadenza del certificato
     ja: 証明書の有効期限までの秒数
     nl: Seconden totdat het certificaat verloopt
     pl: Sekundy do wygaśnięcia certyfikatu
@@ -1909,6 +2055,9 @@ translations:
     hi: SSH प्रमाणपत्र जनरेट करें और SSH स्वरूपित प्रमाणपत्र आउटपुट करें। एक निजी
       कुंजी, एक सार्वजनिक कुंजी और प्रिंसिपल की सूची निर्दिष्ट करनी होगी। प्रमाणपत्र
       के लिए अतिरिक्त फ़ील्ड प्रदान कर सकते हैं।
+    it: Genera un certificato SSH e invia un certificato in formato SSH. È necessario
+      specificare una chiave privata, una chiave pubblica e un elenco di principal.
+      È possibile fornire campi aggiuntivi per il certificato.
     ja: SSH 証明書を生成し、SSH 形式の証明書を出力します。秘密キー、公開キー、およびプリンシパルのリストを指定する必要があります。証明書に追加のフィールドを提供できます。
     nl: Genereer een SSH-certificaat en voer een SSH-geformatteerd certificaat uit.
       Moet een privésleutel, een openbare sleutel en een lijst met opdrachtgevers
@@ -1931,6 +2080,7 @@ translations:
     es: segundos
     fr: secondes
     hi: सेकंड
+    it: secondi
     ja: 秒
     nl: seconden
     pl: towary drugiej jakości
@@ -1945,6 +2095,7 @@ translations:
     es: Valor de clave privada, llavero/valor o ruta de archivo
     fr: valeur de la clé privée trousseau/valeur, ou chemin de fichier
     hi: निजी कुंजी मान कीरिंग/मान, या फ़ाइल पथ
+    it: valore della chiave privata portachiavi/valore o percorso del file
     ja: 秘密鍵の値、キーリング/値、またはファイルパス
     nl: privésleutelwaarde sleutelring/waarde, of bestandspad
     pl: klucz prywatny, pęk kluczy/wartość lub ścieżka do pliku
@@ -1959,6 +2110,7 @@ translations:
     es: datos para firmar o - para stdin
     fr: données à signer ou - pour stdin
     hi: डेटा पर हस्ताक्षर करने के लिए या - stdin के लिए
+    it: dati da firmare o - per stdin
     ja: 署名するデータまたは標準入力の -
     nl: gegevens om te ondertekenen of - voor stdin
     pl: dane do podpisania lub - dla standardowego wejścia
@@ -1973,6 +2125,7 @@ translations:
     es: Salida solo la firma
     fr: Afficher uniquement la signature
     hi: केवल हस्ताक्षर आउटपुट करें
+    it: Visualizza solo la firma
     ja: 署名のみを出力する
     nl: Voer alleen de handtekening uit
     pl: Wyświetl tylko podpis
@@ -2000,6 +2153,10 @@ translations:
     hi: हस्ताक्षर उत्पन्न करें और एक मानक एन्कोडिंग बेस64 स्ट्रिंग आउटपुट करें। हस्ताक्षरकर्ता
       की निजी कुंजी और हस्ताक्षरित किए जाने वाले डेटा को निर्दिष्ट करना आवश्यक है।
       ECP कुंजियों के लिए, हैश SHA256 होगा। Ed25519 के लिए, हैश अप्रयुक्त है।
+    it: Genera una firma e restituisce una stringa base64 con codifica standard. È
+      necessario specificare la chiave privata del firmatario e i dati da firmare.
+      Per le chiavi ECP, l&#39;hash sarà SHA256. Per Ed25519, l&#39;hash non viene
+      utilizzato.
     ja: 署名を生成し、標準エンコードの base64 文字列を出力します。署名者の秘密キーと署名するデータを指定する必要があります。ECP キーの場合、ハッシュは
       SHA256 になります。Ed25519 の場合、ハッシュは使用されません。
     nl: Genereer een handtekening en voer een base64-tekenreeks met standaardcodering
@@ -2023,6 +2180,7 @@ translations:
     es: valor de clave pública, llavero/valor o ruta de archivo
     fr: valeur de clé publique, trousseau de clés/valeur ou chemin de fichier
     hi: सार्वजनिक कुंजी मान, कीरिंग/मान, या फ़ाइल पथ
+    it: valore della chiave pubblica, portachiavi/valore o percorso del file
     ja: 公開鍵の値、キーリング/値、またはファイルパス
     nl: openbare sleutelwaarde, sleutelring/waarde of bestandspad
     pl: wartość klucza publicznego, pęk kluczy/wartość lub ścieżka do pliku
@@ -2037,6 +2195,7 @@ translations:
     es: mensaje o - para stdin
     fr: message ou - pour stdin
     hi: संदेश या - stdin के लिए
+    it: messaggio o - per stdin
     ja: メッセージまたは - （標準入力用）
     nl: bericht of - voor stdin
     pl: wiadomość lub - dla standardowego wejścia
@@ -2051,6 +2210,7 @@ translations:
     es: firma
     fr: signature
     hi: हस्ताक्षर
+    it: firma
     ja: サイン
     nl: handtekening
     pl: podpis
@@ -2071,6 +2231,8 @@ translations:
       La signature doit être sous la forme<hash> :<signature> :<optional key id> .
     hi: किसी संदेश के लिए सार्वजनिक कुंजी का उपयोग करके हस्ताक्षर सत्यापित करें। हस्ताक्षर
       इस रूप में होना चाहिए<hash> :<signature> :<optional key id> .
+    it: Verifica la firma di un messaggio utilizzando una chiave pubblica. La firma
+      deve essere nel formato<hash> :<signature> :<optional key id> .
     ja: 公開鍵を使用してメッセージの署名を検証します。署名は次の形式でなければなりません。<hash> :<signature> :<optional key
       id> 。
     nl: Controleer een handtekening voor een bericht met behulp van een openbare sleutel.
@@ -2091,6 +2253,7 @@ translations:
     es: clave simétrica
     fr: clé symétrique
     hi: सममित कुंजी
+    it: chiave simmetrica
     ja: 対称鍵
     nl: symmetrische sleutel
     pl: klucz symetryczny
@@ -2106,6 +2269,7 @@ translations:
     es: Proporcionar una clave simétrica como bandera en lugar de un mensaje
     fr: Fournir une clé symétrique comme indicateur au lieu d&#39;une invite
     hi: प्रॉम्प्ट के बजाय ध्वज के रूप में सममित कुंजी प्रदान करें
+    it: Fornire una chiave simmetrica come flag invece di prompt
     ja: プロンプトの代わりにフラグとして対称キーを提供する
     nl: Geef een symmetrische sleutel als vlag in plaats van een prompt
     pl: Podaj klucz symetryczny jako flagę zamiast monitu
@@ -2120,6 +2284,7 @@ translations:
     es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
     fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
     hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
+    it: I campi meta, nel formato chiave=valore, possono essere specificati più volte
     ja: メタフィールドはキー=値の形式で複数回指定できます
     nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
     pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
@@ -2134,6 +2299,7 @@ translations:
     es: longitud
     fr: longueur
     hi: लंबाई
+    it: lunghezza
     ja: 長さ
     nl: lengte
     pl: długość
@@ -2149,6 +2315,7 @@ translations:
       valor
     fr: Générez une chaîne aléatoire avec cette longueur au lieu de fournir une valeur
     hi: मान प्रदान करने के बजाय इस लंबाई के साथ एक यादृच्छिक स्ट्रिंग उत्पन्न करें
+    it: Genera una stringa casuale di questa lunghezza invece di fornire un valore
     ja: 値を指定する代わりに、この長さのランダムな文字列を生成します
     nl: Genereer een willekeurige tekenreeks met deze lengte in plaats van een waarde
       op te geven
@@ -2164,6 +2331,7 @@ translations:
     es: 'ID de clave (predeterminado: cadena aleatoria)'
     fr: 'ID de clé (par défaut: chaîne aléatoire)'
     hi: 'कुंजी आईडी (डिफ़ॉल्ट: यादृच्छिक स्ट्रिंग)'
+    it: 'ID chiave (predefinito: stringa casuale)'
     ja: 'キーID (デフォルト: ランダム文字列)'
     nl: 'sleutel-ID (standaard: willekeurige reeks)'
     pl: 'identyfikator klucza (domyślnie: losowy ciąg)'
@@ -2180,6 +2348,7 @@ translations:
     fr: Générez et ajoutez une clé privée cryptographique aux valeurs du trousseau
       de clés.
     hi: क्रिप्टोग्राफिक निजी कुंजी उत्पन्न करें और उसे कीरिंग मानों में जोड़ें।
+    it: Genera e aggiungi una chiave privata crittografica ai valori del portachiavi.
     ja: 暗号化秘密キーを生成し、キーリング値に追加します。
     nl: Genereer een cryptografische privésleutel en voeg deze toe aan sleutelhangerwaarden.
     pl: Wygeneruj i dodaj kryptograficzny klucz prywatny do wartości pęku kluczy.
@@ -2200,6 +2369,8 @@ translations:
       en y ajoutant éventuellement divers champs méta.
     hi: किसी कीरिंग में मान जोड़ें (या किसी मौजूदा मान को अधिलेखित करें), वैकल्पिक
       रूप से उसमें विभिन्न मेटा फ़ील्ड जोड़ें।
+    it: Aggiungi un valore a un portachiavi (o sovrascrivi un valore esistente), aggiungendo
+      facoltativamente vari campi meta.
     ja: キーリングに値を追加（または既存の値を上書き）し、オプションでさまざまなメタフィールドを追加します。
     nl: Voeg een waarde toe aan een sleutelhanger (of overschrijf een bestaande waarde)
       en voeg eventueel verschillende metavelden toe.
@@ -2218,6 +2389,7 @@ translations:
     es: llavero/ruta de origen
     fr: trousseau/chemin source
     hi: स्रोत कीरिंग/पथ
+    it: portachiavi/percorso sorgente
     ja: ソースキーリング/パス
     nl: bronsleutelhanger/pad
     pl: ścieżka/klucz źródłowy
@@ -2232,6 +2404,7 @@ translations:
     es: llavero/ruta de destino
     fr: trousseau/chemin de destination
     hi: गंतव्य कुंजी रिंग/पथ
+    it: portachiavi/percorso di destinazione
     ja: 宛先キーリング/パス
     nl: bestemming sleutelhanger/pad
     pl: ścieżka/kółko kluczy docelowych
@@ -2246,6 +2419,7 @@ translations:
     es: Copie un valor de un llavero a un llavero existente.
     fr: Copiez une valeur d&#39;un trousseau de clés vers un trousseau de clés existant.
     hi: किसी कीरिंग से किसी मौजूदा कीरिंग में मान की प्रतिलिपि बनाएँ।
+    it: Copiare un valore da un portachiavi a un portachiavi esistente.
     ja: キーリングから既存のキーリングに値をコピーします。
     nl: Kopieer een waarde van een sleutelhanger naar een bestaande sleutelhanger.
     pl: Kopiowanie wartości z pęku kluczy do istniejącego pęku kluczy.
@@ -2260,6 +2434,7 @@ translations:
     es: valor o &#39;todos&#39; para mostrar todos los metavalores)
     fr: value ou &#39;all&#39; pour afficher toutes les méta-valeurs)
     hi: value या &#39;all&#39; सभी मेटा मान दिखाने के लिए)
+    it: valore o &#39;all&#39; per mostrare tutti i metadati)
     ja: 値または「all」ですべてのメタ値を表示)
     nl: waarde of &#39;all&#39; om alle metawaarden weer te geven)
     pl: wartość lub „wszystkie”, aby wyświetlić wszystkie wartości meta)
@@ -2274,6 +2449,7 @@ translations:
     es: Mostrar metavalores
     fr: Afficher les méta-valeurs
     hi: मेटा मान दिखाएँ
+    it: Mostra i valori meta
     ja: メタ値を表示
     nl: Toon metawaarden
     pl: Pokaż wartości meta
@@ -2288,6 +2464,7 @@ translations:
     es: Mostrar solo el valor
     fr: Afficher uniquement la valeur
     hi: केवल मान दिखाएँ
+    it: Mostra solo il valore
     ja: 値のみを表示
     nl: Toon alleen de waarde
     pl: Pokaż tylko wartość
@@ -2302,6 +2479,7 @@ translations:
     es: Mostrar un valor descifrado.
     fr: Afficher une valeur décryptée.
     hi: डिक्रिप्टेड मान दिखाएँ.
+    it: Mostra il valore decrittografato.
     ja: 復号化された値を表示します。
     nl: Toon een gedecodeerde waarde.
     pl: Pokaż odszyfrowaną wartość.
@@ -2316,6 +2494,7 @@ translations:
     es: llavero/ruta de destino (se puede especificar varias veces)
     fr: trousseau/chemin de destination (peut être spécifié plusieurs fois)
     hi: गंतव्य कुंजी रिंग/पथ (कई बार निर्दिष्ट किया जा सकता है)
+    it: Portachiavi/percorso di destinazione (può essere specificato più volte)
     ja: 宛先キーリング/パス（複数回指定可能）
     nl: bestemmingssleutelhanger/pad (kan meerdere keren worden opgegeven)
     pl: ścieżka/pęk kluczy docelowych (można określić wielokrotnie)
@@ -2335,6 +2514,8 @@ translations:
       sont mises à jour lorsque cette valeur change.
     hi: किसी मान को अन्य मानों से लिंक करें, यह सुनिश्चित करते हुए कि जब यह मान बदलता
       है तो अन्य मान भी अपडेट हो जाएं।
+    it: Collega un valore ad altri valori, assicurandoti che questi ultimi vengano
+      aggiornati quando il valore in questione cambia.
     ja: 値を他の値にリンクし、この値が変更されたときに他の値も更新されるようにします。
     nl: Koppel een waarde aan andere waarden en zorg ervoor dat de andere waarden
       worden bijgewerkt wanneer deze waarde verandert.
@@ -2353,6 +2534,7 @@ translations:
     es: Mueva un valor de un llavero a un llavero existente.
     fr: Déplacez une valeur d’un trousseau de clés vers un trousseau existant.
     hi: किसी मान को कीरिंग से मौजूदा कीरिंग में ले जाएं।
+    it: Spostare un valore da un portachiavi a un portachiavi esistente.
     ja: キーリングから既存のキーリングに値を移動します。
     nl: Verplaats een waarde van een sleutelhanger naar een bestaande sleutelhanger.
     pl: Przenieś wartość z pęku kluczy do istniejącego pęku kluczy.
@@ -2367,6 +2549,7 @@ translations:
     es: valor, ruta de archivo o - para stdin
     fr: valeur, chemin de fichier ou - pour l&#39;entrée standard
     hi: मान, फ़ाइल पथ, या - stdin के लिए
+    it: valore, percorso file o - per stdin
     ja: 値、ファイルパス、または標準入力の場合は「-」
     nl: waarde, bestandspad of - voor stdin
     pl: wartość, ścieżka do pliku lub - dla wejścia standardowego
@@ -2381,6 +2564,7 @@ translations:
     es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
     fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
     hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
+    it: I campi meta, nel formato chiave=valore, possono essere specificati più volte
     ja: メタフィールドはキー=値の形式で複数回指定できます
     nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
     pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
@@ -2403,6 +2587,8 @@ translations:
       la clé.
     hi: कीरिंग/वैल्यू के लिए मेटा फ़ील्ड सेट करें। फ़ील्ड को key=value के फ़ॉर्मेट
       में कई बार निर्दिष्ट किया जा सकता है। एक वैल्यू (key=) कुंजी को हटा देगा।
+    it: Imposta i metadati per un portachiavi/valore. I campi possono essere specificati
+      più volte nel formato chiave=valore. Un valore (chiave=) eliminerà la chiave.
     ja: キーリング/値のメタフィールドを設定します。フィールドは、key=value の形式で複数回指定できます。値 (key=) はキーを削除します。
     nl: Stel metavelden in voor een sleutelhanger/waarde. Velden kunnen meerdere keren
       worden opgegeven in de notatie sleutel=waarde. Een waarde (key=) verwijdert
@@ -2422,6 +2608,7 @@ translations:
     es: Valor CSR, ruta de archivo o - para stdin
     fr: Valeur CSR, chemin de fichier ou - pour l&#39;entrée standard
     hi: CSR मान, फ़ाइल पथ, या - stdin के लिए
+    it: Valore CSR, percorso file o - per stdin
     ja: CSR値、ファイルパス、または標準入力の場合は「-」
     nl: CSR-waarde, bestandspad of - voor stdin
     pl: Wartość CSR, ścieżka do pliku lub - dla wejścia standardowego
@@ -2436,6 +2623,7 @@ translations:
     es: Mostrar una solicitud de certificado
     fr: Afficher une demande de certificat
     hi: प्रमाणपत्र अनुरोध दिखाएँ
+    it: Mostra una richiesta di certificato
     ja: 証明書要求を表示する
     nl: Een certificaatverzoek weergeven
     pl: Pokaż prośbę o certyfikat
@@ -2458,6 +2646,9 @@ translations:
       certificat.
     hi: एक X.509 प्रमाणपत्र हस्ताक्षर अनुरोध (CSR) बनाएं और PEM प्रारूप में CSR को
       stdout पर आउटपुट करें। प्रमाणपत्र की निजी कुंजी निर्दिष्ट करना आवश्यक है।
+    it: Crea una richiesta di firma del certificato (CSR) X.509 e invia un output
+      CSR in formato PEM allo standard output. È necessario specificare la chiave
+      privata del certificato.
     ja: X.509証明書署名要求（CSR）を作成し、PEM形式のCSRを標準出力に出力します。証明書の秘密鍵を指定する必要があります。
     nl: Maak een X.509-certificaatondertekeningsverzoek (CSR) aan en voer een CSR
       in PEM-formaat uit naar de standaarduitvoer. De privésleutel van het certificaat
@@ -2478,6 +2669,7 @@ translations:
     es: Valor CSR o ruta de archivo
     fr: valeur CSR ou chemin du fichier
     hi: सीएसआर मान या फ़ाइल पथ
+    it: Valore CSR o percorso del file
     ja: CSR値またはファイルパス
     nl: CSR-waarde of bestandspad
     pl: Wartość CSR lub ścieżka do pliku
@@ -2492,6 +2684,7 @@ translations:
     es: Firma una CSR usando una clave privada.
     fr: Signer une CSR à l&#39;aide d&#39;une clé privée
     hi: एक निजी कुंजी का उपयोग करके सीएसआर पर हस्ताक्षर करें
+    it: Firma un CSR utilizzando una chiave privata
     ja: 秘密鍵を使用してCSRに署名する
     nl: Onderteken een CSR met een privésleutel.
     pl: Podpisz CSR używając klucza prywatnego
@@ -2506,6 +2699,7 @@ translations:
     es: Valor del certificado, ruta del archivo o - para stdin
     fr: Valeur du certificat, chemin du fichier ou - pour l&#39;entrée standard
     hi: प्रमाणपत्र मान, फ़ाइल पथ, या - मानक दिन के लिए
+    it: Valore del certificato, percorso del file o - per stdin
     ja: 証明書の値、ファイルパス、または標準入力の場合は「-」
     nl: Certificaatwaarde, bestandspad of - voor stdin
     pl: Wartość certyfikatu, ścieżka do pliku lub - dla wejścia standardowego
@@ -2522,6 +2716,8 @@ translations:
     fr: La valeur du certificat d&#39;autorité de certification ou le chemin d&#39;accès
       au fichier peuvent être spécifiés plusieurs fois.
     hi: सीए प्रमाणपत्र का मान या फ़ाइल पथ, कई बार निर्दिष्ट किया जा सकता है
+    it: Il valore del certificato CA o il percorso del file possono essere specificati
+      più volte.
     ja: CA証明書の値またはファイルパスは、複数回指定できます。
     nl: De waarde van het CA-certificaat of het bestandspad kan meerdere keren worden
       opgegeven.
@@ -2543,6 +2739,8 @@ translations:
       clés publiques de l&#39;autorité de certification.
     hi: प्रमाणपत्र दिखाएँ, वैकल्पिक रूप से CA सार्वजनिक कुंजियों के साथ प्रमाणपत्र
       को मान्य करें।
+    it: Mostra un certificato, eventualmente convalidandolo con le chiavi pubbliche
+      dell&#39;autorità di certificazione (CA).
     ja: 証明書を表示し、オプションで CA 公開キーを使用して証明書を検証します。
     nl: Toon een certificaat en valideer het certificaat optioneel met openbare CA-sleutels.
     pl: Wyświetl certyfikat, opcjonalnie weryfikując go przy użyciu publicznych kluczy
@@ -2561,6 +2759,8 @@ translations:
     fr: valeur de la clé publique, commentaire sur le trousseau/la valeur ou chemin
       d&#39;accès au fichier
     hi: सार्वजनिक कुंजी का मान, कीरिंग/मान पर टिप्पणी, या फ़ाइल पथ
+    it: valore della chiave pubblica, commento del portachiavi/valore o percorso del
+      file
     ja: 公開鍵の値、キーリング/値のコメント、またはファイルパス
     nl: openbare sleutelwaarde, sleutelring/waarde-opmerking of bestandspad
     pl: wartość klucza publicznego, komentarz do pęku kluczy/wartości lub ścieżka
@@ -2578,6 +2778,7 @@ translations:
     es: Ruta del certificado o archivo de CA
     fr: chemin d&#39;accès au certificat ou au fichier de l&#39;autorité de certification
     hi: सीए प्रमाणपत्र या फ़ाइल पथ
+    it: Certificato CA o percorso del file
     ja: CA証明書またはファイルパス
     nl: CA-certificaat of bestandspad
     pl: certyfikat CA lub ścieżka do pliku
@@ -2592,6 +2793,7 @@ translations:
     es: Crear un certificado de CA
     fr: Créer un certificat CA
     hi: CA प्रमाणपत्र बनाएं
+    it: Creare un certificato CA
     ja: CA証明書を作成する
     nl: Maak een CA-certificaat
     pl: Utwórz certyfikat CA
@@ -2606,6 +2808,7 @@ translations:
     es: nombre de host
     fr: nom d&#39;hôte
     hi: होस्ट का नाम
+    it: host
     ja: ホスト名
     nl: hostnaam
     pl: nazwa hosta
@@ -2620,6 +2823,7 @@ translations:
     es: Nombre de host DNS (se puede utilizar varias veces)
     fr: Nom d&#39;hôte DNS (peut être utilisé plusieurs fois)
     hi: DNS होस्टनाम (कई बार उपयोग किया जा सकता है)
+    it: Nome host DNS (utilizzabile più volte)
     ja: DNSホスト名（複数回使用可能）
     nl: DNS-hostnaam (kan meerdere keren worden gebruikt)
     pl: Nazwa hosta DNS (może być używana wielokrotnie)
@@ -2634,6 +2838,7 @@ translations:
     es: uso extendido de claves
     fr: utilisation étendue des clés
     hi: विस्तारित कुंजी उपयोग
+    it: utilizzo esteso dei tasti
     ja: 拡張キー使用法
     nl: uitgebreid sleutelgebruik
     pl: rozszerzone użycie klucza
@@ -2648,6 +2853,7 @@ translations:
     es: Uso extendido de la clave
     fr: Utilisation étendue des clés
     hi: विस्तारित कुंजी उपयोग
+    it: Utilizzo esteso dei tasti
     ja: 拡張キーの使用
     nl: Uitgebreid sleutelgebruik
     pl: Rozszerzone użycie klucza
@@ -2662,6 +2868,7 @@ translations:
     es: Caducidad en segundos
     fr: Expiration en secondes
     hi: सेकंड में समाप्ति
+    it: Scadenza in secondi
     ja: 有効期限は秒単位
     nl: Vervaldatum in seconden
     pl: Wygaśnięcie w sekundach
@@ -2676,6 +2883,7 @@ translations:
     es: DIRECCIÓN
     fr: adresse
     hi: पता
+    it: indirizzo
     ja: 住所
     nl: adres
     pl: adres
@@ -2690,6 +2898,7 @@ translations:
     es: Dirección IP (se puede utilizar varias veces)
     fr: Adresse IP (peut être utilisée plusieurs fois)
     hi: आईपी पता (कई बार इस्तेमाल किया जा सकता है)
+    it: Indirizzo IP (utilizzabile più volte)
     ja: IP アドレス (複数回使用可能)
     nl: IP-adres (kan meerdere keren gebruikt worden)
     pl: Adres IP (może być używany wielokrotnie)
@@ -2704,6 +2913,7 @@ translations:
     es: uso de claves
     fr: utilisation des clés
     hi: कुंजी उपयोग
+    it: utilizzo della chiave
     ja: キーの使用法
     nl: sleutel gebruik
     pl: użycie klucza
@@ -2718,6 +2928,7 @@ translations:
     es: Uso de claves, valores válidos
     fr: Utilisation des clés, valeurs valides
     hi: कुंजी उपयोग, मान्य मान
+    it: Utilizzo della chiave, valori validi
     ja: キーの使用法、有効な値
     nl: Sleutelgebruik, geldige waarden
     pl: Użycie klucza, prawidłowe wartości
@@ -2732,6 +2943,7 @@ translations:
     es: Uso de claves, valores válidos
     fr: Utilisation des clés, valeurs valides
     hi: कुंजी उपयोग, मान्य मान
+    it: Utilizzo della chiave, valori validi
     ja: キーの使用法、有効な値
     nl: Sleutelgebruik, geldige waarden
     pl: Użycie klucza, prawidłowe wartości
@@ -2768,6 +2980,11 @@ translations:
       की निजी कुंजी (स्व-हस्ताक्षरित प्रमाणपत्रों के लिए) निर्दिष्ट करनी होगी। एक
       सार्वजनिक कुंजी निर्दिष्ट की जा सकती है, अन्यथा निजी कुंजी की सार्वजनिक कुंजी
       का उपयोग किया जाएगा।
+    it: Crea un certificato X.509 e invia un output in formato PEM allo standard output.
+      È necessario specificare la chiave privata del firmatario (per i certificati
+      firmati da CA) o la chiave privata del certificato (per i certificati autofirmati).
+      È possibile specificare una chiave pubblica, altrimenti verrà utilizzata la
+      chiave pubblica della chiave privata.
     ja: X.509 証明書を作成し、PEM 形式の証明書を標準出力に出力します。署名者の秘密鍵 (CA 署名証明書の場合) または証明書の秘密鍵 (自己署名証明書の場合)
       を指定する必要があります。公開鍵を指定することもできますが、指定しない場合は秘密鍵の公開鍵が使用されます。
     nl: Maak een X.509-certificaat en voer een PEM-geformatteerd certificaat uit naar

@@ -445,6 +445,21 @@ translations:
     pt: chaveiro/valor a ser usado para descriptografar
     ru: связка ключей/значение, используемое для расшифровки
     zh: 用于解密的密钥环/值
+  DecryptKeysFlagRUsage:
+    ar: اطبع المفتاح الخام إلى الإخراج القياسي (stdout) بدلاً من ذلك.
+    context: Usage for the r flag
+    de: Gib den Rohschlüssel stattdessen auf stdout aus.
+    en: Print the raw key to stdout instead
+    es: Imprime la clave sin procesar en la salida estándar en su lugar.
+    fr: Affichez la clé brute sur la sortie standard à la place.
+    hi: इसके बजाय रॉ कुंजी को stdout पर प्रिंट करें
+    it: Stampa invece la chiave raw su stdout
+    ja: 生のキーを標準出力に出力する
+    nl: Print de onbewerkte sleutel naar de standaarduitvoer in plaats daarvan.
+    pl: Zamiast tego wydrukuj surowy klucz na stdout
+    pt: Imprima a chave bruta na saída padrão em vez disso.
+    ru: Вместо этого выведите необработанный ключ в стандартный поток вывода.
+    zh: 改为将原始密钥打印到标准输出。
   DecryptKeysUsage:
     ar: مصدر هذه الوسيطة باستخدام _1 لتخزين المفاتيح التي تم فك تشفيرها في الذاكرة
       وتجنب كتابتها.

@@ -2338,38 +2338,6 @@ translations:
     pt: Gere uma string aleatória com este comprimento em vez de fornecer um valor
     ru: Создайте случайную строку этой длины вместо предоставления значения.
     zh: 生成具有此长度的随机字符串，而不是提供值
-  ValueAddPrivateArg2:
-    ar: 'معرف المفتاح (الافتراضي: سلسلة عشوائية)'
-    context: value-add-private arg2
-    de: 'Schlüssel-ID (Standard: zufällige Zeichenfolge)'
-    en: 'key ID (default: random string)'
-    es: 'ID de clave (predeterminado: cadena aleatoria)'
-    fr: 'ID de clé (par défaut: chaîne aléatoire)'
-    hi: 'कुंजी आईडी (डिफ़ॉल्ट: यादृच्छिक स्ट्रिंग)'
-    it: 'ID chiave (predefinito: stringa casuale)'
-    ja: 'キーID (デフォルト: ランダム文字列)'
-    nl: 'sleutel-ID (standaard: willekeurige reeks)'
-    pl: 'identyfikator klucza (domyślnie: losowy ciąg)'
-    pt: 'ID da chave (padrão: string aleatória)'
-    ru: 'идентификатор ключа (по умолчанию: случайная строка)'
-    zh: 密钥 ID（默认值：随机字符串）
-  ValueAddPrivateUsage:
-    ar: قم بإنشاء وإضافة مفتاح خاص مشفر إلى قيم Keyring.
-    context: val-add-private usage
-    de: Generieren Sie einen kryptografischen privaten Schlüssel und fügen Sie ihn
-      den Schlüsselbundwerten hinzu.
-    en: Generate and add a cryptographic private key to Keyring Values.
-    es: Genere y agregue una clave privada criptográfica a Keyring Values.
-    fr: Générez et ajoutez une clé privée cryptographique aux valeurs du trousseau
-      de clés.
-    hi: क्रिप्टोग्राफिक निजी कुंजी उत्पन्न करें और उसे कीरिंग मानों में जोड़ें।
-    it: Genera e aggiungi una chiave privata crittografica ai valori del portachiavi.
-    ja: 暗号化秘密キーを生成し、キーリング値に追加します。
-    nl: Genereer een cryptografische privésleutel en voeg deze toe aan sleutelhangerwaarden.
-    pl: Wygeneruj i dodaj kryptograficzny klucz prywatny do wartości pęku kluczy.
-    pt: Gere e adicione uma chave privada criptográfica aos valores do chaveiro.
-    ru: Создайте и добавьте криптографический закрытый ключ в значения набора ключей.
-    zh: 生成加密私钥并将其添加到 Keyring Values。
   ValueAddUsage:
     ar: أضف قيمة إلى حلقة مفاتيح (أو قم بالكتابة فوق قيمة موجودة)، مع إضافة حقول تعريف
       متنوعة إليها بشكل اختياري.
@@ -2541,6 +2509,50 @@ translations:
     ru: Свяжите значение с другими значениями, гарантируя, что другие значения обновляются
       при изменении этого значения.
     zh: 将一个值链接到其他值，确保当该值发生变化时其他值也会更新。
+  ValueMetaArg2:
+    ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
+    context: value-meta arg2
+    de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
+    en: meta fields in the format key=value, can be specified multiple times
+    es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
+    fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
+    hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
+    it: I campi meta, nel formato chiave=valore, possono essere specificati più volte
+    ja: メタフィールドはキー=値の形式で複数回指定できます
+    nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
+    pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
+    pt: metacampos no formato key=value, podem ser especificados diversas vezes
+    ru: метаполя в формате ключ=значение, можно указывать несколько раз
+    zh: 元字段格式为 key=value，可以多次指定
+  ValueMetaUsage:
+    ar: قم بتعيين حقول التعريف لحلقة مفاتيح/قيمة. يمكن تحديد الحقول عدة مرات بتنسيق
+      المفتاح = القيمة. ستؤدي القيمة (key=) إلى حذف المفتاح.
+    context: value-meta usage
+    de: Legen Sie Metafelder für einen Schlüsselbund/Wert fest. Felder können mehrfach
+      im Format Schlüssel=Wert angegeben werden. Ein Wert (Schlüssel=) löscht den
+      Schlüssel.
+    en: Set meta fields for a keyring/value.  Fields can be specified multiple times
+      in the format of key=value.  An value (key=) will delete the key.
+    es: Establezca metacampos para un llavero/valor. Los campos se pueden especificar
+      varias veces en el formato clave=valor. Un valor (key=) eliminará la clave.
+    fr: Définissez des champs méta pour un trousseau/une valeur. Les champs peuvent
+      être spécifiés plusieurs fois au format clé=valeur. Une valeur (key=) supprimera
+      la clé.
+    hi: कीरिंग/वैल्यू के लिए मेटा फ़ील्ड सेट करें। फ़ील्ड को key=value के फ़ॉर्मेट
+      में कई बार निर्दिष्ट किया जा सकता है। एक वैल्यू (key=) कुंजी को हटा देगा।
+    it: Imposta i metadati per un portachiavi/valore. I campi possono essere specificati
+      più volte nel formato chiave=valore. Un valore (chiave=) eliminerà la chiave.
+    ja: キーリング/値のメタフィールドを設定します。フィールドは、key=value の形式で複数回指定できます。値 (key=) はキーを削除します。
+    nl: Stel metavelden in voor een sleutelhanger/waarde. Velden kunnen meerdere keren
+      worden opgegeven in de notatie sleutel=waarde. Een waarde (key=) verwijdert
+      de sleutel.
+    pl: Ustaw pola meta dla pęku kluczy/wartości. Pola można określać wielokrotnie
+      w formacie klucz=wartość. Wartość (klucz=) usunie klucz.
+    pt: Defina metacampos para um chaveiro/valor. Os campos podem ser especificados
+      diversas vezes no formato chave=valor. Um valor (key=) excluirá a chave.
+    ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
+      в формате ключ=значение. Значение (key=) удалит ключ.
+    zh: 设置密钥环/值的元字段。字段可以以 key=value 格式多次指定。值 (key=) 将删除密钥。
   ValueMoveUsage:
     ar: نقل قيمة من حلقة مفاتيح إلى حلقة مفاتيح موجودة.
     context: value-move usage
@@ -2571,50 +2583,38 @@ translations:
     pt: valor, caminho do arquivo ou - para entrada padrão
     ru: значение, путь к файлу или - для стандартного ввода
     zh: 值、文件路径或 - 表示标准输入
-  ValueSetMetaArg2:
-    ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
-    context: value-set-meta arg2
-    de: Metafelder im Format Schlüssel=Wert, können mehrfach angegeben werden
-    en: meta fields in the format key=value, can be specified multiple times
-    es: Los metacampos en el formato clave=valor, se pueden especificar varias veces.
-    fr: champs méta au format clé = valeur, peuvent être spécifiés plusieurs fois
-    hi: कुंजी=मान प्रारूप में मेटा फ़ील्ड को कई बार निर्दिष्ट किया जा सकता है
-    it: I campi meta, nel formato chiave=valore, possono essere specificati più volte
-    ja: メタフィールドはキー=値の形式で複数回指定できます
-    nl: metavelden in het formaat sleutel=waarde kunnen meerdere keren worden opgegeven
-    pl: pola meta w formacie klucz=wartość, można je określić wielokrotnie
-    pt: metacampos no formato key=value, podem ser especificados diversas vezes
-    ru: метаполя в формате ключ=значение, можно указывать несколько раз
-    zh: 元字段格式为 key=value，可以多次指定
-  ValueSetMetaUsage:
-    ar: قم بتعيين حقول التعريف لحلقة مفاتيح/قيمة. يمكن تحديد الحقول عدة مرات بتنسيق
-      المفتاح = القيمة. ستؤدي القيمة (key=) إلى حذف المفتاح.
-    context: value-set-meta usage
-    de: Legen Sie Metafelder für einen Schlüsselbund/Wert fest. Felder können mehrfach
-      im Format Schlüssel=Wert angegeben werden. Ein Wert (Schlüssel=) löscht den
-      Schlüssel.
-    en: Set meta fields for a keyring/value.  Fields can be specified multiple times
-      in the format of key=value.  An value (key=) will delete the key.
-    es: Establezca metacampos para un llavero/valor. Los campos se pueden especificar
-      varias veces en el formato clave=valor. Un valor (key=) eliminará la clave.
-    fr: Définissez des champs méta pour un trousseau/une valeur. Les champs peuvent
-      être spécifiés plusieurs fois au format clé=valeur. Une valeur (key=) supprimera
-      la clé.
-    hi: कीरिंग/वैल्यू के लिए मेटा फ़ील्ड सेट करें। फ़ील्ड को key=value के फ़ॉर्मेट
-      में कई बार निर्दिष्ट किया जा सकता है। एक वैल्यू (key=) कुंजी को हटा देगा।
-    it: Imposta i metadati per un portachiavi/valore. I campi possono essere specificati
-      più volte nel formato chiave=valore. Un valore (chiave=) eliminerà la chiave.
-    ja: キーリング/値のメタフィールドを設定します。フィールドは、key=value の形式で複数回指定できます。値 (key=) はキーを削除します。
-    nl: Stel metavelden in voor een sleutelhanger/waarde. Velden kunnen meerdere keren
-      worden opgegeven in de notatie sleutel=waarde. Een waarde (key=) verwijdert
-      de sleutel.
-    pl: Ustaw pola meta dla pęku kluczy/wartości. Pola można określać wielokrotnie
-      w formacie klucz=wartość. Wartość (klucz=) usunie klucz.
-    pt: Defina metacampos para um chaveiro/valor. Os campos podem ser especificados
-      diversas vezes no formato chave=valor. Um valor (key=) excluirá a chave.
-    ru: Установите метаполя для брелока/значения. Поля можно указывать несколько раз
-      в формате ключ=значение. Значение (key=) удалит ключ.
-    zh: 设置密钥环/值的元字段。字段可以以 key=value 格式多次指定。值 (key=) 将删除密钥。
+  ValuePrivateArg2:
+    ar: 'معرف المفتاح (الافتراضي: سلسلة عشوائية)'
+    context: value-private arg2
+    de: 'Schlüssel-ID (Standard: zufällige Zeichenfolge)'
+    en: 'key ID (default: random string)'
+    es: 'ID de clave (predeterminado: cadena aleatoria)'
+    fr: 'ID de clé (par défaut: chaîne aléatoire)'
+    hi: 'कुंजी आईडी (डिफ़ॉल्ट: यादृच्छिक स्ट्रिंग)'
+    it: 'ID chiave (predefinito: stringa casuale)'
+    ja: 'キーID (デフォルト: ランダム文字列)'
+    nl: 'sleutel-ID (standaard: willekeurige reeks)'
+    pl: 'identyfikator klucza (domyślnie: losowy ciąg)'
+    pt: 'ID da chave (padrão: string aleatória)'
+    ru: 'идентификатор ключа (по умолчанию: случайная строка)'
+    zh: 密钥 ID（默认值：随机字符串）
+  ValuePrivateUsage:
+    ar: قم بإنشاء وإضافة مفتاح خاص مشفر إلى قيم Keyring.
+    context: val-private usage
+    de: Generieren Sie einen kryptografischen privaten Schlüssel und fügen Sie ihn
+      den Schlüsselbundwerten hinzu.
+    en: Generate and add a cryptographic private key to Keyring Values.
+    es: Genere y agregue una clave privada criptográfica a Keyring Values.
+    fr: Générez et ajoutez une clé privée cryptographique aux valeurs du trousseau
+      de clés.
+    hi: क्रिप्टोग्राफिक निजी कुंजी उत्पन्न करें और उसे कीरिंग मानों में जोड़ें।
+    it: Genera e aggiungi una chiave privata crittografica ai valori del portachiavi.
+    ja: 暗号化秘密キーを生成し、キーリング値に追加します。
+    nl: Genereer een cryptografische privésleutel en voeg deze toe aan sleutelhangerwaarden.
+    pl: Wygeneruj i dodaj kryptograficzny klucz prywatny do wartości pęku kluczy.
+    pt: Gere e adicione uma chave privada criptográfica aos valores do chaveiro.
+    ru: Создайте и добавьте криптографический закрытый ключ в значения набора ключей.
+    zh: 生成加密私钥并将其添加到 Keyring Values。
   X509CSRGetArg1:
     ar: قيمة CSR، أو مسار الملف، أو - للإدخال القياسي
     context: x509-csr-get arg1

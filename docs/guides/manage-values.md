@@ -39,15 +39,15 @@ This command would display all Values that start with `prd/postgresql` or `stg/p
 
 Rot Values can optionally be provided with metadata--key/value pairs that can store useful information about the Value, such as where or how the secret was generated, or who owns the secret.
 
-Metadata can be provided using {{% cli value-add %}} and {{% cli value-set-meta %}}.
+Metadata can be provided using {{% cli value-add %}} and {{% cli value-meta %}}.
 
 Certain Rot commands may add data to a Value's meta:
 
-- {{% cli value-add-private %}} will store the public key in the `publicKey` meta field.
+- {{% cli value-private %}} will store the public key in the `publicKey` meta field.
 
 ## Versions
 
-Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli value-add %}} or modifying metadata using {{% cli value-set-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli value-add %}}.
+Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli value-add %}} or modifying metadata using {{% cli value-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli value-add %}}.
 
 You can view all values and versions using {{% cli value-list %}}.  Additionally, you can display a specific version in {{% cli value-get %}} via `@`:
 

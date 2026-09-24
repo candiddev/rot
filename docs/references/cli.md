@@ -99,6 +99,10 @@ Initialize a new Rot configuration.  See [Initialize Rot]({{< ref "/docs/guides/
 
 {{% snippet cli_jq %}}
 
+### `jwks-get`
+
+Convert a Rot key to JWKS or JWKS JSON to Rot.
+
 ### `jwt-get`
 
 Show the contents of a JWT and optionally verify it against a public key.
@@ -189,10 +193,6 @@ Generate SSH certificates.  Visit [Generate SSH]({{< ref "/docs/guides/generate-
 Add a value to a configuration.  Can specify an optional length to have Rot randomly generate a value instead of prompting for it.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
 
 
-### `value-add-private`
-
-Generate and add a private key to a configuration with the specified name.
-
 ### `value-copy`
 
 Copy a value between Keyrings.
@@ -217,9 +217,13 @@ Show the names of {{% config keyrings_values values %}} in a Keyring.
 
 Move a value between Keyrings.
 
-### `value-set-meta`
+### `value-meta`
 
 Modify metadata for an existing Value.
+
+### `value-private`
+
+Generate and add a private key to a configuration with the specified name.
 
 {{% cli_version %}}
 

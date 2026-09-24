@@ -14,7 +14,7 @@ Cryptographic signatures are signed hashes of a message created by a private key
 
 ## Add Private Keys
 
-You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using {{% cli value-add-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
+You'll need to generate a private key for every certificate, including the CA.  The easiest way to do this is using {{% cli value-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we generate certificates.
 
@@ -29,7 +29,7 @@ It supports the following flags:
 Example usage:
 
 {{< highlight bash >}}
-$ rot value-add-private rot/signer
+$ rot value--private rot/signer
 $ rot signature-new rot/signer HelloWorld
 ed25519:C6bcvoOqW+sROArW5EZqoG0W+4/sAKTQzqzsOueGgPBIDpc2uenu4TIXVp2eG2PCzZsavbjlxLaAnWfRZR/6CA==:signer
 {{< /highlight >}}
@@ -49,7 +49,7 @@ Rot creates signatures with this format:
 Some applications require a different base64 encoding, such as JWTs (though [Rot can generate those too]({{< ref "/docs/guides/generate-jwts" >}})).  Rot has a base64 utility that can switch the signature format, {{% cli base64 %}}:
 
 {{< highlight bash >}}
-$ rot value-add-private rot/signer
+$ rot value--private rot/signer
 $ rot signature-new -s rot/signer HelloWorld | rot base64 -d - | rot base64 -u -r -
 C6bcvoOqW-sROArW5EZqoG0W-4_sAKTQzqzsOueGgPBIDpc2uenu4TIXVp2eG2PCzZsavbjlxLaAnWfRZR_6CA
 {{< /highlight >}}
@@ -59,8 +59,8 @@ C6bcvoOqW-sROArW5EZqoG0W-4_sAKTQzqzsOueGgPBIDpc2uenu4TIXVp2eG2PCzZsavbjlxLaAnWfR
 Rot can verify signatures using {{% cli signature-verify %}}:
 
 {{< highlight bash >}}
-$ rot value-add-private rot/goodSigner
-$ rot value-add-private rot/badSigner
+$ rot value-private rot/goodSigner
+$ rot value-private rot/badSigner
 $ rot signature-new rot/goodSigner HelloWorld
 ed25519:s5AFx9ohilblnb1Fu5hlRiHB3qCYkL+rD3vyOF4xgG3CIbura2lcLnmNihVI4zmEyPtat4y4zq3rMv7o+kFDDw==:goodSigner
 $ rot signature-ver rot/goodSigner HelloWorld ed25519:s5AFx9ohilblnb1Fu5hlRiHB3qCYkL+rD3vyOF4xgG3CIbura2lcLnmNihVI4zmEyPtat4y4zq3rMv7o+kFDDw==:goodSigner

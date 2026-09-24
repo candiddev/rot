@@ -18,7 +18,7 @@ A JSON Web Token (JWT) is a string containing three parts:
 
 ## Add Private Keys
 
-You'll need to generate a private key to sign the JWT.  The easiest way to do this is using {{% cli value-add-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
+You'll need to generate a private key to sign the JWT.  The easiest way to do this is using {{% cli value-private %}} (encrypting the keys into Rot) or {{% cli key-new %}} (printing the keys to stdout).
 
 Rot will store the public key in the comment of the encrypted value, we can grab the public key from the comment when we verify the JWT.
 

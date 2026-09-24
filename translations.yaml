@@ -756,6 +756,21 @@ translations:
       получателя или путь к набору ключей/значений (с мета-данными publicKey) для
       использования асимметричного шифрования.
     zh: 加密一个值并将其打印到标准输出。可以指定接收方密钥或密钥环/值路径（使用 publicKey 元数据）以使用非对称加密。
+  FlagsIDPlaceholder:
+    ar: بطاقة تعريف
+    context: -i Flag Placeholder
+    de: Ausweis
+    en: id
+    es: identificación
+    fr: identifiant
+    hi: पहचान
+    it: id
+    ja: id
+    nl: ID kaart
+    pl: id
+    pt: eu ia
+    ru: идентификатор
+    zh: ID
   HashNewArg1:
     ar: مسار الملف أو - للإدخال القياسي
     context: First argument for hash
@@ -931,6 +946,29 @@ translations:
       первый доступный ключ, если ни один не указан в качестве исходного пользовательского
       ключа.
     zh: 初始化新的 Rot 配置。将查找 _1 文件，如果未指定任何可用密钥，则使用第一个可用密钥作为初始用户密钥。
+  JWKSGetUsage:
+    ar: قم بتحويل مفاتيح Rot إلى JWKS، أو مفاتيح JWKS إلى Rot، واطبعها على stdout.
+    context: jwks-get usage
+    de: Konvertiere Rot-Schlüssel in JWKS-Schlüssel oder JWKS-Schlüssel in Rot-Schlüssel
+      und gib das Ergebnis auf stdout aus.
+    en: Convert Rot keys to JWKS, or JWKS keys to Rot, and print it to stdout.
+    es: Convierte las claves Rot a JWKS, o las claves JWKS a Rot, e imprímelas en
+      la salida estándar.
+    fr: Convertissez les clés Rot en JWKS, ou les clés JWKS en Rot, et affichez-les
+      sur la sortie standard.
+    hi: Rot कुंजी को JWKS में या JWKS कुंजी को Rot में परिवर्तित करें और इसे stdout
+      पर प्रिंट करें।
+    it: Converti le chiavi Rot in JWKS, o le chiavi JWKS in Rot, e stampa il risultato
+      sullo standard output.
+    ja: RotキーをJWKSに変換、またはJWKSキーをRotに変換し、標準出力に表示します。
+    nl: Converteer Rot-sleutels naar JWKS, of JWKS-sleutels naar Rot, en print het
+      resultaat naar de standaarduitvoer.
+    pl: Konwertuj klucze Rot na JWKS lub klucze JWKS na Rot i wypisz na stdout.
+    pt: Converter chaves Rot para JWKS, ou chaves JWKS para Rot, e imprimir o resultado
+      na saída padrão.
+    ru: Преобразовать клавиши Rot в JWKS или клавиши JWKS в Rot и вывести результат
+      в стандартный поток вывода.
+    zh: 将 Rot 密钥转换为 JWKS 密钥，或将 JWKS 密钥转换为 Rot 密钥，并将其打印到标准输出。
   JWTGetArg1:
     ar: مسار ملف JWT أو قيمته أو - للإدخال القياسي
     context: Arg 1 for jwt-get
@@ -1062,21 +1100,6 @@ translations:
     ru: Добавьте ключ и значение в JWT. Попытается проанализировать логические и целые
       числа, если они не заключены в кавычки. Может предоставляться несколько раз.
     zh: 向 JWT 添加键和值。将尝试解析布尔值和整数（除非它们被引用）。可以多次提供。
-  JWTNewFlagsIDPlaceholder:
-    ar: بطاقة تعريف
-    context: jwt-new -id Placeholder
-    de: Ausweis
-    en: id
-    es: identificación
-    fr: identifiant
-    hi: पहचान
-    it: id
-    ja: id
-    nl: ID kaart
-    pl: id
-    pt: eu ia
-    ru: идентификатор
-    zh: ID
   JWTNewFlagsIDUsage:
     ar: سيقوم المعرف (_1) الخاص بـ JWT بإنشاء UUID إذا لم يتم توفيره
     context: jwt-new -id Usage
@@ -1337,6 +1360,36 @@ translations:
     pt: Adicione uma chave nova ou existente às chaves de descriptografia.
     ru: Добавьте новый или существующий ключ в Decrypt Keys.
     zh: 添加新密钥或现有密钥来解密密钥。
+  KeyGetArg:
+    ar: مفتاح، أو - للإدخال القياسي
+    context: key-get arg
+    de: Taste oder - für stdin
+    en: key, or - for stdin
+    es: tecla, o - para entrada estándar
+    fr: touche, ou - pour l&#39;entrée standard
+    hi: कुंजी, या - stdin के लिए
+    it: tasto, o - per stdin
+    ja: キー、または標準入力の場合は「-」
+    nl: toets, of - voor stdin
+    pl: klucz lub - dla wejścia standardowego
+    pt: tecla, ou - para stdin
+    ru: клавиша или - для стандартного ввода
+    zh: 键，或 - 表示标准输入
+  KeyGetFlagsIUsage:
+    ar: أضف المعرّف إلى المفتاح المستورد
+    context: key-get -i usage
+    de: Füge dem importierten Schlüssel eine ID hinzu.
+    en: Add id to the imported key
+    es: Agregue el ID a la clave importada.
+    fr: Ajouter l&#39;identifiant à la clé importée
+    hi: आयातित कुंजी में आईडी जोड़ें
+    it: Aggiungi l&#39;ID alla chiave importata
+    ja: インポートしたキーにIDを追加する
+    nl: Voeg de ID toe aan de geïmporteerde sleutel.
+    pl: Dodaj identyfikator do importowanego klucza
+    pt: Adicione o ID à chave importada.
+    ru: Добавьте идентификатор к импортированному ключу.
+    zh: 将 id 添加到导入的键
   KeyGetPublicArg:
     ar: الاسم أو المفتاح الخاص أو حلقة المفاتيح/القيمة أو - لـ stdin
     context: key-get-public arg
@@ -1815,36 +1868,6 @@ translations:
       разрешить ${variables} и $variables перед выполнением команды.
     zh: 运行命令并将值作为环境变量注入。仅当在指定的密钥环/路径下时，才会使用值。从多个路径读取时，如果有重复的名称，将使用最后读取的值。写入 stderr/stdout
       的值将被 *** 屏蔽。转义变量 (\\$) 可用于引用脚本中的值，否则 _1 将在执行命令之前尝试解析 ${variables} 和 $variables。
-  SSHGetArg:
-    ar: مفتاح، أو - للإدخال القياسي
-    context: ssh-get arg
-    de: Taste oder - für stdin
-    en: key, or - for stdin
-    es: tecla, o - para entrada estándar
-    fr: touche, ou - pour l&#39;entrée standard
-    hi: कुंजी, या - stdin के लिए
-    it: tasto, o - per stdin
-    ja: キー、または標準入力の場合は「-」
-    nl: toets, of - voor stdin
-    pl: klucz lub - dla wejścia standardowego
-    pt: tecla, ou - para stdin
-    ru: клавиша или - для стандартного ввода
-    zh: 键，或 - 表示标准输入
-  SSHGetFlagsIUsage:
-    ar: أضف المعرّف إلى المفتاح المستورد من مفتاح SSH
-    context: ssh-get -i usage
-    de: Füge dem aus einem SSH-Schlüssel importierten Schlüssel eine ID hinzu.
-    en: Add id to the key imported from a SSH key
-    es: Agregar ID a la clave importada desde una clave SSH.
-    fr: Ajouter un identifiant à la clé importée depuis une clé SSH
-    hi: SSH कुंजी से आयातित कुंजी में आईडी जोड़ें
-    it: Aggiungi l&#39;ID alla chiave importata da una chiave SSH
-    ja: SSHキーからインポートしたキーにIDを追加する
-    nl: Voeg een ID toe aan de sleutel die is geïmporteerd vanuit een SSH-sleutel.
-    pl: Dodaj identyfikator do klucza zaimportowanego z klucza SSH
-    pt: Adicionar ID à chave importada de uma chave SSH
-    ru: Добавьте идентификатор к ключу, импортированному из SSH-ключа.
-    zh: 为从 SSH 密钥导入的密钥添加 ID
   SSHGetUsage:
     ar: تحويل مفاتيح Rot إلى SSH، أو مفاتيح SSH إلى Rot، وطباعتها إلى stdout.
     context: ssh-get usage

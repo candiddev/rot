@@ -170,7 +170,7 @@ Some special purpose meta keys:
 - `_` Changes the name of the environment variable for the value in [run]({{% ref "/docs/guides/run-commands" %}}).
 - `_links_dst` A comma separated list of paths that will also be updated when this value changes.
 - `_links_src` The path that updates this value.
-- `publicKey` {{% cli value-add-private %}} will store the public key here.
+- `publicKey` {{% cli value-private %}} will store the public key here.
 
 **Default:** `{}`
 

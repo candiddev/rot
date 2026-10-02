@@ -756,6 +756,36 @@ translations:
       получателя или путь к набору ключей/значений (с мета-данными publicKey) для
       использования асимметричного шифрования.
     zh: 加密一个值并将其打印到标准输出。可以指定接收方密钥或密钥环/值路径（使用 publicKey 元数据）以使用非对称加密。
+  EntropyArg1:
+    ar: سلسلة نصية، أو مفتاح/قيمة، أو - للإدخال القياسي
+    context: entropy arg1
+    de: Zeichenkette, Schlüsselring/Wert oder - für stdin
+    en: string, keyring/value or - for stdin
+    es: cadena, llavero/valor o - para entrada estándar
+    fr: chaîne de caractères, trousseau/valeur ou - pour l&#39;entrée standard
+    hi: स्ट्रिंग, कीरिंग/वैल्यू या - stdin के लिए
+    it: stringa, portachiavi/valore o - per stdin
+    ja: 文字列、キーリング/値、または標準入力の場合は「-」
+    nl: tekenreeks, sleutelring/waarde of - voor stdin
+    pl: ciąg, pęk kluczy/wartość lub - dla wejścia standardowego
+    pt: string, chaveiro/valor ou - para entrada padrão
+    ru: строка, брелок/значение или - для стандартного ввода
+    zh: 字符串、键环/值或 - 用于标准输入
+  EntropyUsage:
+    ar: احسب إنتروبيا شانون لسلسلة معينة
+    context: entropy usage
+    de: Berechne die Shannon-Entropie einer gegebenen Zeichenkette
+    en: Calculate the Shannon entropy of a given string
+    es: Calcula la entropía de Shannon de una cadena dada.
+    fr: Calculer l&#39;entropie de Shannon d&#39;une chaîne donnée
+    hi: किसी दी गई स्ट्रिंग की शैनन एन्ट्रॉपी की गणना करें।
+    it: Calcola l&#39;entropia di Shannon di una data stringa
+    ja: 与えられた文字列のシャノンエントロピーを計算する
+    nl: Bereken de Shannon-entropie van een gegeven snaar.
+    pl: Oblicz entropię Shannona danego ciągu
+    pt: Calcule a entropia de Shannon de uma determinada corda.
+    ru: Вычислите энтропию Шеннона для заданной строки.
+    zh: 计算给定弦的香农熵
   FlagsIDPlaceholder:
     ar: بطاقة تعريف
     context: -i Flag Placeholder
@@ -1729,6 +1759,96 @@ translations:
     ru: значение закрытого ключа, связку ключей/значение, путь к файлу или - для стандартного
       ввода
     zh: 私钥值、密钥环/值、文件路径，或 - 表示标准输入
+  RandomFlagsBPlaceholder:
+    ar: أجزاء
+    context: random -b placeholder
+    de: Bits
+    en: bits
+    es: bits
+    fr: morceaux
+    hi: बिट्स
+    it: pezzi
+    ja: ビット
+    nl: stukjes
+    pl: bity
+    pt: pedaços
+    ru: биты
+    zh: 比特
+  RandomFlagsBUsage:
+    ar: حدد قوة التشفير للسلسلة بالبتات
+    context: random -b usage
+    de: Legen Sie die kryptografische Stärke der Zeichenkette in Bits fest.
+    en: Set the cryptographic strength of the string in bits
+    es: Establece la seguridad criptográfica de la cadena en bits.
+    fr: Définissez la robustesse cryptographique de la chaîne en bits
+    hi: स्ट्रिंग की क्रिप्टोग्राफिक शक्ति को बिट्स में सेट करें
+    it: Imposta la robustezza crittografica della stringa in bit
+    ja: 文字列の暗号化強度をビット単位で設定します。
+    nl: Stel de cryptografische sterkte van de tekenreeks in bits in.
+    pl: Ustaw siłę kryptograficzną ciągu w bitach
+    pt: Defina a força criptográfica da string em bits.
+    ru: Установите криптографическую стойкость строки в битах.
+    zh: 设置字符串的加密强度（以比特为单位）
+  RandomFlagsCPlaceholder:
+    ar: الشخصيات
+    context: random -c placeholder
+    de: Charaktere
+    en: characters
+    es: personajes
+    fr: personnages
+    hi: पात्रों
+    it: caratteri
+    ja: キャラクター
+    nl: personages
+    pl: pismo
+    pt: personagens
+    ru: персонажи
+    zh: 人物
+  RandomFlagsCUsage:
+    ar: قم بتعيين مجموعة أحرف مخصصة
+    context: random -c usage
+    de: Einen benutzerdefinierten Zeichensatz festlegen
+    en: Set a custom character set
+    es: Establecer un conjunto de caracteres personalizado
+    fr: Définir un jeu de caractères personnalisé
+    hi: कस्टम कैरेक्टर सेट सेट करें
+    it: Imposta un set di caratteri personalizzato
+    ja: カスタム文字セットを設定する
+    nl: Stel een aangepaste tekenset in.
+    pl: Ustaw niestandardowy zestaw znaków
+    pt: Defina um conjunto de caracteres personalizado
+    ru: Задайте пользовательский набор символов
+    zh: 设置自定义字符集
+  RandomFlagsLPlaceholder:
+    ar: طول
+    context: random -l placeholder
+    de: Länge
+    en: length
+    es: longitud
+    fr: longueur
+    hi: लंबाई
+    it: lunghezza
+    ja: 長さ
+    nl: lengte
+    pl: długość
+    pt: comprimento
+    ru: длина
+    zh: 长度
+  RandomFlagsLUsage:
+    ar: حدد طول السلسلة
+    context: random -l usage
+    de: Stelle die Länge der Zeichenkette ein.
+    en: Set the length of the string
+    es: Establece la longitud de la cadena
+    fr: Définissez la longueur de la chaîne
+    hi: स्ट्रिंग की लंबाई निर्धारित करें
+    it: Imposta la lunghezza della stringa
+    ja: 文字列の長さを設定する
+    nl: Stel de lengte van de tekenreeks in.
+    pl: Ustaw długość ciągu
+    pt: Defina o comprimento da string
+    ru: Задайте длину строки
+    zh: 设置字符串的长度
   RandomUsage:
     ar: قم بإنشاء سلسلة عشوائية وطباعتها إلى stdout
     context: random usage
@@ -2314,6 +2434,381 @@ translations:
     pt: Forneça uma chave simétrica como um sinalizador em vez de um prompt
     ru: Укажите симметричный ключ в качестве флага вместо подсказки
     zh: 提供对称密钥作为标志而不是提示
+  TPMEventLogArg1:
+    ar: تفاعل البوليميراز المتسلسل (PCR)
+    context: tpm-event-log arg1
+    de: PCR
+    en: pcr
+    es: PCR
+    fr: PCR
+    hi: पीसीआर
+    it: PCR
+    ja: PCR
+    nl: pcr
+    pl: PCR
+    pt: PCR
+    ru: ПЦР
+    zh: PCR
+  TPMEventLogFlagsPUsage:
+    ar: مسار سجل أحداث TPM
+    context: tpm-event-log -p usage
+    de: Pfad zum TPM-Ereignisprotokoll
+    en: Path to the TPM event log
+    es: Ruta al registro de eventos de TPM
+    fr: Chemin d&#39;accès au journal des événements TPM
+    hi: टीपीएम इवेंट लॉग का पथ
+    it: Percorso al registro eventi del TPM
+    ja: TPMイベントログへのパス
+    nl: Pad naar het TPM-gebeurtenislogboek
+    pl: Ścieżka do dziennika zdarzeń TPM
+    pt: Caminho para o registro de eventos do TPM
+    ru: Путь к журналу событий TPM
+    zh: TPM 事件日志路径
+  TPMEventLogUsage:
+    ar: استعرض سجل أحداث وحدة TPM لبنك التجزئة
+    context: tpm-event-log usage
+    de: Das TPM-Ereignisprotokoll für eine Hashbank anzeigen
+    en: View the TPM event log for a hash bank
+    es: Consulte el registro de eventos de TPM para un banco de hash.
+    fr: Consultez le journal des événements TPM pour une banque de hachage.
+    hi: किसी हैश बैंक के लिए टीपीएम इवेंट लॉग देखें
+    it: Visualizza il registro eventi TPM per una banca di hash
+    ja: ハッシュバンクのTPMイベントログを表示する
+    nl: Bekijk het TPM-gebeurtenislogboek voor een hashbank.
+    pl: Wyświetl dziennik zdarzeń TPM dla banku skrótów
+    pt: Visualize o registro de eventos do TPM para um banco de hashes.
+    ru: Просмотрите журнал событий TPM для банка хэшей.
+    zh: 查看哈希库的 TPM 事件日志
+  TPMFlagHPlaceholder:
+    ar: بنك التجزئة
+    context: tpm -p placeholder
+    de: Hashbank
+    en: hash bank
+    es: banco hash
+    fr: banque de hachage
+    hi: हैश बैंक
+    it: banca hash
+    ja: ハッシュバンク
+    nl: hashbank
+    pl: bank haszujący
+    pt: banco de hash
+    ru: банк хешей
+    zh: 哈希银行
+  TPMFlagHUsage:
+    ar: حدد بنك تجزئة لعرض الأحداث
+    context: tpm -h usage
+    de: Geben Sie eine Hash-Bank an, um Ereignisse anzuzeigen
+    en: Specify a hash bank to view events
+    es: Especifique un banco hash para ver los eventos.
+    fr: Spécifiez une banque de hachage pour visualiser les événements
+    hi: इवेंट देखने के लिए एक हैश बैंक निर्दिष्ट करें
+    it: Specificare un banco di hash per visualizzare gli eventi
+    ja: イベントを表示するハッシュバンクを指定します。
+    nl: Geef een hashbank op om gebeurtenissen te bekijken.
+    pl: Określ bank skrótów, aby wyświetlić zdarzenia
+    pt: Especifique um banco de hashes para visualizar os eventos.
+    ru: Укажите банк хэшей для просмотра событий.
+    zh: 指定哈希库以查看事件
+  TPMFlagTPlaceholder:
+    ar: مسار إلى TPM
+    context: tpm -t placeholder
+    de: Weg zu TPM
+    en: path to TPM
+    es: ruta hacia TPM
+    fr: chemin vers TPM
+    hi: टीपीएम का पथ
+    it: percorso verso il TPM
+    ja: TPPへの道
+    nl: pad naar TPM
+    pl: ścieżka do TPM
+    pt: caminho para TPM
+    ru: путь к TPM
+    zh: 通往TPM的路径
+  TPMFlagTUsage:
+    ar: قم بتعيين مسار TPM مخصص
+    context: tpm -t usage
+    de: Einen benutzerdefinierten TPM-Pfad festlegen
+    en: Set a custom TPM path
+    es: Establezca una ruta TPM personalizada
+    fr: Définir un chemin TPM personnalisé
+    hi: एक कस्टम टीपीएम पथ सेट करें
+    it: Imposta un percorso TPM personalizzato
+    ja: カスタムTPMパスを設定する
+    nl: Stel een aangepast TPM-pad in.
+    pl: Ustaw niestandardową ścieżkę TPM
+    pt: Defina um caminho TPM personalizado.
+    ru: Задайте пользовательский путь к TPM
+    zh: 设置自定义 TPM 路径
+  TPMPCRArg:
+    ar: تفاعل البوليميراز المتسلسل (PCR)
+    context: TPM pcr arg
+    de: PCR
+    en: pcr
+    es: PCR
+    fr: PCR
+    hi: पीसीआर
+    it: PCR
+    ja: PCR
+    nl: pcr
+    pl: PCR
+    pt: PCR
+    ru: ПЦР
+    zh: PCR
+  TPMPCRExtendArg2:
+    ar: سلسلة نصية، أو قيمة التجزئة، أو مسار الملف
+    context: tpm-pcr-predict arg1
+    de: Zeichenkette, Hash:Wert oder Datei:Pfad
+    en: string, hash:value, or file:path
+    es: cadena, hash:valor o archivo:ruta
+    fr: chaîne de caractères, hachage:valeur ou fichier:chemin
+    hi: स्ट्रिंग, हैश:वैल्यू, या फ़ाइल:पाथ
+    it: stringa, hash:valore o file:percorso
+    ja: 文字列、ハッシュ値、またはファイルパス
+    nl: tekenreeks, hash:waarde of bestand:pad
+    pl: ciąg, hash:wartość lub plik:ścieżka
+    pt: string, hash:valor ou arquivo:caminho
+    ru: строка, хеш:значение или файл:путь
+    zh: 字符串、哈希值或文件路径
+  TPMPCRExtendUsage:
+    ar: قم بتوسيع قيمة TPM PCR باستخدام التجزئة
+    context: tpm-pcr-extend usage
+    de: Erweitere einen TPM-PCR-Wert mithilfe eines Hashwerts
+    en: Extend a TPM PCR value using a hash
+    es: Extienda un valor PCR de TPM usando un hash
+    fr: Étendre une valeur PCR TPM à l&#39;aide d&#39;un hachage
+    hi: हैश का उपयोग करके टीपीएम पीसीआर मान का विस्तार करें
+    it: Estendi un valore PCR TPM utilizzando un hash
+    ja: ハッシュを使用してTPM PCR値を拡張する
+    nl: Breid een TPM PCR-waarde uit met behulp van een hashtag.
+    pl: Rozszerz wartość PCR TPM za pomocą skrótu
+    pt: Estenda um valor de PCR TPM usando um hash
+    ru: Расширьте значение TPM PCR с помощью хеша.
+    zh: 使用哈希值扩展 TPM PCR 值
+  TPMPCRGetUsage:
+    ar: احصل على قيم هضم تفاعل البوليميراز المتسلسل (PCR) الحالية لبنك التجزئة
+    context: tpm-pcr-get usage
+    de: Ermitteln Sie die aktuellen PCR-Digest-Werte für eine Hash-Bank.
+    en: Get current PCR digest values for a hash bank
+    es: Obtenga los valores actuales de digestión PCR para un banco de hashes.
+    fr: Obtenez les valeurs de digestion PCR actuelles pour une banque de hachage
+    hi: किसी हैश बैंक के लिए वर्तमान पीसीआर डाइजेस्ट मान प्राप्त करें
+    it: Ottieni i valori di digest PCR correnti per una banca di hash
+    ja: ハッシュバンクの現在のPCRダイジェスト値を取得する
+    nl: Haal actuele PCR-digestwaarden op voor een hashbank.
+    pl: Pobierz aktualne wartości skrótu PCR dla banku haszującego
+    pt: Obtenha os valores atuais de digestão por PCR para um banco de hashes.
+    ru: Получите текущие значения ПЦР-реакции для банка хэшей.
+    zh: 获取哈希库的当前 PCR 摘要值
+  TPMPCRPredictArg1:
+    ar: سلسلة نصية، أو قيمة التجزئة، أو مسار الملف...
+    context: tpm-pcr-predict arg1
+    de: Zeichenkette, Hash:Wert oder Datei:Pfad...
+    en: string, hash:value, or file:path...
+    es: cadena, hash:valor o archivo:ruta...
+    fr: chaîne de caractères, hachage:valeur ou fichier:chemin...
+    hi: स्ट्रिंग, हैश:वैल्यू, या फ़ाइल:पाथ...
+    it: stringa, hash:valore o file:percorso...
+    ja: 文字列、ハッシュ値、またはファイルパス...
+    nl: tekenreeks, hash:waarde of bestand:pad...
+    pl: string, hash:wartość lub plik:ścieżka...
+    pt: string, hash:valor ou arquivo:caminho...
+    ru: строка, хеш:значение или файл:путь...
+    zh: 字符串、哈希值或文件路径……
+  TPMPCRPredictUsage:
+    ar: توقع قيمة PCR عن طريق حساب تجزئة قائمة من السلاسل النصية أو التجزئات أو الملفات
+    context: tpm-pcr-predict usage
+    de: Berechnen Sie einen PCR-Wert, indem Sie den Digest einer Liste von Zeichenketten,
+      Hashes oder Dateien berechnen.
+    en: Predict a PCR value by calculating the digest of a list of strings, hashes,
+      or files
+    es: Predice un valor PCR calculando el resumen de una lista de cadenas, hashes
+      o archivos.
+    fr: Prédire une valeur PCR en calculant le condensé d&#39;une liste de chaînes
+      de caractères, de hachages ou de fichiers
+    hi: स्ट्रिंग, हैश या फ़ाइलों की सूची के डाइजेस्ट की गणना करके पीसीआर मान का अनुमान
+      लगाएं।
+    it: Prevedi un valore PCR calcolando il digest di un elenco di stringhe, hash
+      o file
+    ja: 文字列、ハッシュ、またはファイルのリストのダイジェストを計算してPCR値を予測します。
+    nl: Voorspel een PCR-waarde door de digest van een lijst met tekenreeksen, hashes
+      of bestanden te berekenen.
+    pl: Przewidywanie wartości PCR poprzez obliczenie skrótu listy ciągów znaków,
+      skrótów lub plików
+    pt: Preveja um valor de PCR calculando o resumo de uma lista de strings, hashes
+      ou arquivos.
+    ru: Спрогнозируйте значение ПЦР, вычислив дайджест списка строк, хешей или файлов.
+    zh: 通过计算字符串、哈希或文件列表的摘要来预测 PCR 值
+  TPMPCRResetUsage:
+    ar: إعادة ضبط قيمة PCR، وعادةً ما يُسمح فقط بالقيمتين 16 و 23.
+    context: tpm-reset usage
+    de: Setzen Sie einen PCR-Wert zurück; typischerweise sind nur 16 und 23 zulässig.
+    en: Reset a PCR value, typically only 16 and 23 are allowed.
+    es: Restablecer un valor PCR; normalmente solo se permiten 16 y 23.
+    fr: Réinitialiser une valeur PCR, généralement seules les valeurs 16 et 23 sont
+      autorisées.
+    hi: पीसीआर मान को रीसेट करें, आमतौर पर केवल 16 और 23 की अनुमति होती है।
+    it: Reimposta un valore PCR, in genere sono consentiti solo 16 e 23.
+    ja: PCR値をリセットします。通常、16と23のみが許可されます。
+    nl: Een PCR-waarde opnieuw instellen; normaal gesproken zijn alleen de waarden
+      16 en 23 toegestaan.
+    pl: Zresetuj wartość PCR, zwykle dozwolone są tylko wartości 16 i 23.
+    pt: Redefina o valor do PCR; normalmente, apenas os valores 16 e 23 são permitidos.
+    ru: Сбросить значение ПЦР, обычно допускаются только значения 16 и 23.
+    zh: 重置 PCR 值，通常只允许 16 和 23。
+  TPMSealValueFlagDPlaceholder:
+    ar: هضم
+    context: tpm-seal-value -d placeholder
+    de: verdauen
+    en: digest
+    es: digerir
+    fr: digérer
+    hi: डाइजेस्ट
+    it: digerire
+    ja: ダイジェスト
+    nl: verteren
+    pl: strawić
+    pt: digerir
+    ru: дайджест
+    zh: 消化
+  TPMSealValueFlagDUsage:
+    ar: سيتم استخدام قيم تفاعل البوليميراز المتسلسل الحالية في حال حذفها. سيتم استخدام
+      قيم تفاعل البوليميراز المتسلسل الحالية في عملية الهضم المتوقعة.
+    context: tpm-seal-value -d usage
+    de: Erwarteter Digest; falls dieser Parameter weggelassen wird, werden die aktuellen
+      PCR-Werte verwendet.
+    en: Expected digest, if omitted will use the current PCR values
+    es: Se espera la digestión; si se omite, se utilizarán los valores de PCR actuales.
+    fr: Digestion attendue ; si elle est omise, les valeurs PCR actuelles seront utilisées.
+    hi: अपेक्षित डाइजेस्ट, यदि इसे छोड़ दिया जाता है तो वर्तमान पीसीआर मानों का उपयोग
+      किया जाएगा
+    it: Il valore di digestione previsto, se omesso, utilizzerà i valori PCR correnti.
+    ja: 省略した場合、予想される消化は現在のPCR値を使用します。
+    nl: Verwachte digestie; indien weggelaten, worden de huidige PCR-waarden gebruikt.
+    pl: Oczekiwany skrót, jeśli zostanie pominięty, zostaną użyte bieżące wartości
+      PCR
+    pt: O resumo esperado, se omitido, utilizará os valores atuais de PCR.
+    ru: Ожидаемый результат анализа, если он отсутствует, будут использованы текущие
+      значения ПЦР.
+    zh: 预期的消化产物（如果省略）将使用当前的PCR值
+  TPMSealValueFlagPPlaceholder:
+    ar: تفاعل البوليميراز المتسلسل (PCR)
+    context: tpm-seal-value -p placeholder
+    de: PCR
+    en: pcr
+    es: PCR
+    fr: PCR
+    hi: पीसीआर
+    it: PCR
+    ja: PCR
+    nl: pcr
+    pl: PCR
+    pt: PCR
+    ru: ПЦР
+    zh: PCR
+  TPMSealValueFlagPUsage:
+    ar: إجراءات PCR للإغلاق ضد
+    context: tpm-seal-value -p usage
+    de: PCRs zum Versiegeln gegen
+    en: PCRs to seal against
+    es: PCR para sellar contra
+    fr: PCR pour sceller contre
+    hi: पीसीआर के खिलाफ सील करने के लिए
+    it: PCR per sigillare contro
+    ja: PCR検査で封じ込める
+    nl: PCR&#39;s om af te dichten tegen
+    pl: PCR do uszczelniania
+    pt: PCRs para selar contra
+    ru: ПЦР-реакции для защиты от
+    zh: PCR 密封
+  TPMSealValueFlagSPlaceholder:
+    ar: مقبض srk
+    context: tpm-seal-value -s placeholder
+    de: srk-Handle
+    en: srk handle
+    es: mango srk
+    fr: poignée srk
+    hi: एसआरके हैंडल
+    it: maniglia srk
+    ja: srkハンドル
+    nl: srk-handvat
+    pl: uchwyt srk
+    pt: alça srk
+    ru: srk handle
+    zh: srk 句柄
+  TPMSealValueFlagSUsage:
+    ar: حدد مُعرّف مفتاح جذر التخزين (SRK). إذا لم يتم تحديده، فسيتم محاولة استخدام
+      مُعرّف ECC SRK الافتراضي (0x81000001)، وإلا فسيتم استخدام مُعرّف مؤقت.
+    context: tpm-seal-value -s usage
+    de: Geben Sie ein Storage Root Key (SRK)-Handle an. Falls kein Handle angegeben
+      wird, wird versucht, das standardmäßige ECC-SRK-Handle (0x81000001) zu verwenden;
+      andernfalls wird ein temporäres Handle verwendet.
+    en: Specify a Storage Root Key (SRK) handle.  If not provided, will try to use
+      the default ECC SRK handle (0x81000001), otherwise a transient handle will be
+      used.
+    es: Especifique un identificador de clave raíz de almacenamiento (SRK). Si no
+      se proporciona, se intentará usar el identificador SRK ECC predeterminado (0x81000001);
+      de lo contrario, se utilizará un identificador transitorio.
+    fr: Spécifiez un descripteur de clé racine de stockage (SRK). À défaut, le descripteur
+      SRK ECC par défaut (0x81000001) sera utilisé; sinon, un descripteur temporaire
+      sera utilisé.
+    hi: स्टोरेज रूट कुंजी (SRK) हैंडल निर्दिष्ट करें। यदि प्रदान नहीं किया जाता है,
+      तो डिफ़ॉल्ट ECC SRK हैंडल (0x81000001) का उपयोग करने का प्रयास किया जाएगा, अन्यथा
+      एक अस्थायी हैंडल का उपयोग किया जाएगा।
+    it: Specificare un handle per la chiave radice di archiviazione (SRK). Se non
+      specificato, verrà utilizzato l&#39;handle SRK ECC predefinito (0x81000001),
+      altrimenti verrà utilizzato un handle temporaneo.
+    ja: ストレージルートキー（SRK）ハンドルを指定してください。指定しない場合は、デフォルトのECC SRKハンドル（0x81000001）が使用され、それ以外の場合は一時的なハンドルが使用されます。
+    nl: Geef een Storage Root Key (SRK) handle op. Indien niet opgegeven, wordt geprobeerd
+      de standaard ECC SRK handle (0x81000001) te gebruiken; anders wordt een tijdelijke
+      handle gebruikt.
+    pl: Podaj uchwyt klucza głównego magazynu (SRK). Jeśli nie zostanie podany, spróbujemy
+      użyć domyślnego uchwytu SRK ECC (0x81000001). W przeciwnym razie zostanie użyty
+      uchwyt przejściowy.
+    pt: Especifique um identificador de chave raiz de armazenamento (SRK). Se não
+      for fornecido, será usado o identificador SRK ECC padrão (0x81000001); caso
+      contrário, será usado um identificador transitório.
+    ru: Укажите дескриптор корневого ключа хранилища (SRK). Если он не указан, будет
+      предпринята попытка использовать дескриптор SRK по умолчанию (0x81000001), в
+      противном случае будет использован временный дескриптор.
+    zh: 指定存储根密钥 (SRK) 句柄。如果未提供，则尝试使用默认的 ECC SRK 句柄 (0x81000001)，否则将使用临时句柄。
+  TPMSealValueUsage:
+    ar: قم بتغليف قيمة سرية في وحدة TPM، مع إمكانية اشتراط عمليات هضم PCR محددة.
+    context: tpm-seal-value usage
+    de: Einen geheimen Wert in ein TPM einbetten, optional unter Einbeziehung spezifischer
+      PCR-Verdauungen.
+    en: Seal a secret value into a TPM, optionally requiring specific PCR digests.
+    es: Selle un valor secreto en un TPM, que opcionalmente requiera digestiones PCR
+      específicas.
+    fr: Sceller une valeur secrète dans un TPM, nécessitant éventuellement des digestions
+      PCR spécifiques.
+    hi: एक गुप्त मान को टीपीएम में सील करें, जिसके लिए वैकल्पिक रूप से विशिष्ट पीसीआर
+      डाइजेस्ट की आवश्यकता हो सकती है।
+    it: Sigillare un valore segreto in un TPM, richiedendo facoltativamente specifici
+      digesti PCR.
+    ja: 秘密の値をTPMに封入する。必要に応じて、特定のPCR消化を要求する。
+    nl: Vergrendel een geheime waarde in een TPM, eventueel met specifieke PCR-digesties.
+    pl: Zamknij tajną wartość w module TPM, opcjonalnie wymagając określonych skrótów
+      PCR.
+    pt: Incorpore um valor secreto em um TPM, opcionalmente exigindo digestões de
+      PCR específicas.
+    ru: Запечатайте секретное значение в TPM, при необходимости используя специальные
+      ПЦР-реакции.
+    zh: 将秘密值密封到 TPM 中，可选择是否需要特定的 PCR 消化。
+  TPMUnsealValueUsage:
+    ar: فك تشفير قيمة سرية من وحدة TPM.
+    context: tpm-unseal-value usage
+    de: Einen geheimen Wert aus einem TPM freigeben.
+    en: Unseal a secret value from a TPM.
+    es: Desbloquea un valor secreto de un TPM.
+    fr: Déverrouiller une valeur secrète d&#39;un TPM.
+    hi: टीपीएम से एक गुप्त मान को अनसील करें।
+    it: Sbloccare un valore segreto da un TPM.
+    ja: TPMから秘密の値を復号化する。
+    nl: Ontgrendel een geheime waarde uit een TPM.
+    pl: Odkryj tajną wartość z modułu TPM.
+    pt: Revelar um valor secreto de um TPM.
+    ru: Расшифровка секретного значения из TPM.
+    zh: 从TPM中解封一个秘密值。
   ValueAddArg2:
     ar: يمكن تحديد حقول التعريف في مفتاح التنسيق = القيمة عدة مرات
     context: value-add arg2
@@ -2329,38 +2824,21 @@ translations:
     pt: metacampos no formato key=value, podem ser especificados diversas vezes
     ru: метаполя в формате ключ=значение, можно указывать несколько раз
     zh: 元字段格式为 key=value，可以多次指定
-  ValueAddFlagsLPlaceholder:
-    ar: طول
-    context: value-add -l placeholder
-    de: Länge
-    en: length
-    es: longitud
-    fr: longueur
-    hi: लंबाई
-    it: lunghezza
-    ja: 長さ
-    nl: lengte
-    pl: długość
-    pt: comprimento
-    ru: длина
-    zh: 长度
-  ValueAddFlagsLUsage:
-    ar: قم بإنشاء سلسلة عشوائية بهذا الطول بدلاً من توفير قيمة
-    context: value-add -l usage
-    de: Erzeuge eine zufällige Zeichenfolge mit dieser Länge, anstatt einen Wert anzugeben
-    en: Generate a random string with this length instead of providing a value
-    es: Genere una cadena aleatoria con esta longitud en lugar de proporcionar un
-      valor
-    fr: Générez une chaîne aléatoire avec cette longueur au lieu de fournir une valeur
-    hi: मान प्रदान करने के बजाय इस लंबाई के साथ एक यादृच्छिक स्ट्रिंग उत्पन्न करें
-    it: Genera una stringa casuale di questa lunghezza invece di fornire un valore
-    ja: 値を指定する代わりに、この長さのランダムな文字列を生成します
-    nl: Genereer een willekeurige tekenreeks met deze lengte in plaats van een waarde
-      op te geven
-    pl: Zamiast podawać wartość, wygeneruj losowy ciąg o tej długości
-    pt: Gere uma string aleatória com este comprimento em vez de fornecer um valor
-    ru: Создайте случайную строку этой длины вместо предоставления значения.
-    zh: 生成具有此长度的随机字符串，而不是提供值
+  ValueAddFlagsRUsage:
+    ar: قم بإنشاء سلسلة عشوائية
+    context: value-add -r flag
+    de: Erzeuge eine zufällige Zeichenkette
+    en: Generate a random string
+    es: Generar una cadena aleatoria
+    fr: Générer une chaîne aléatoire
+    hi: एक यादृच्छिक स्ट्रिंग उत्पन्न करें
+    it: Genera una stringa casuale
+    ja: ランダムな文字列を生成する
+    nl: Genereer een willekeurige tekenreeks
+    pl: Wygeneruj losowy ciąg
+    pt: Gere uma string aleatória
+    ru: Сгенерировать случайную строку
+    zh: 生成随机字符串
   ValueAddUsage:
     ar: أضف قيمة إلى حلقة مفاتيح (أو قم بالكتابة فوق قيمة موجودة)، مع إضافة حقول تعريف
       متنوعة إليها بشكل اختياري.

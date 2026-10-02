@@ -85,6 +85,10 @@ Encrypt a value and print it to stdout without adding it to the config.  Can spe
 
 {{% snippet cli_eula Rot %}}
 
+### `entropy`
+
+Calculate the Shannon entropy of a given string.
+
 ### `hash-new`
 
 Generate a hash of a file or string.
@@ -188,10 +192,37 @@ Convert a Rot key to SSH or a SSH key to Rot.
 
 Generate SSH certificates.  Visit [Generate SSH]({{< ref "/docs/guides/generate-ssh" >}}) for more information.
 
+### `tpm-event-log`
+
+View the TPM event log for a hash bank
+
+### `tpm-pcr-extend`
+
+Extend a TPM PCR value using a hash
+
+### `tpm-pcr-get`
+
+Get current PCR digest values for a hash bank
+
+### `tpm-pcr-predict`
+
+Predict a PCR value by calculating the digest of a list of strings, hashes, or files
+
+### `tpm-pcr-reset`
+
+Get current PCR digest values for a hash bank
+
+### `tpm-seal-value`
+
+Seal a secret value into a TPM, optionally requiring specific PCR digests.
+
+### `tpm-unseal-value`
+
+Seal a secret value into a TPM, optionally requiring specific PCR digests.
+
 ### `value-add`
 
 Add a value to a configuration.  Can specify an optional length to have Rot randomly generate a value instead of prompting for it.  See [Manage Values]({{< ref "/docs/guides/manage-values" >}}) for more information.
-
 
 ### `value-copy`
 

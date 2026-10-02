@@ -233,6 +233,28 @@ String, the path to a file containing Decrypt Private Keys, one per line.  If a 
 
 {{% snippet config_licenseKey Rot %}}
 
+### `random` {#randoma}
+
+Configuration values for controlling how Rot will generate random strings.
+
+{{% snippet config_key "random_characters" %}}
+
+String, the alphabet to use for generating random characters.
+
+**Default:** `"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"`
+
+{{% snippet config_key "random_length" %}}
+
+Number, the length of the random string to generate.  If the {{% config random_strength %}} is >= 0, the length will be adjusted to match the required cryptographic strength based on the {{% config random_alphabet %}} entropy.
+
+**Default:** `43`
+
+{{% snippet config_key "random_strength" %}}
+
+Number, the cryptographic strength of the random string to generate.  If the strength is >= 0, the {{% config random_length %}} will be adjusted to match the required length based on the {{% config random_alphabet %}} entropy.
+
+**Default:** `256`
+
 ### `unmask` {#unmask}
 
 A list of Value names to unmask.

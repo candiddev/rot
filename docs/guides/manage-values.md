@@ -45,6 +45,55 @@ Certain Rot commands may add data to a Value's meta:
 
 - {{% cli value-private %}} will store the public key in the `publicKey` meta field.
 
+## Dynamic Values
+
+Rot can derive dynamic values using Jsonnet scripts.  These values can be used to generate JWTs, communicate with external HTTP servers, run external commands, etc.  With great power comes great responsibility, Rot assumes you know what you're doing when adding these.
+
+These scripts will execute when the value is referenced in {{% cli value-get %}}, or {{% cli run %}}, and they obey the {{% config jsonnet %}} configurations.  They can only be added by editting the `rot.jsonnet` file directly:
+
+```json
+{
+  "keyrings": {
+    "dev": {
+      "values": {
+        "CREDENTIALS": {
+          "": {
+            "jsonnet": "decrypt('mySecret') + 'extraString'"
+          }
+        },
+        "OAUTH_ACCESS_TOKEN": {
+          "": {
+            "jsonnet": "(import './rot/getOAuthToken.jsonnet')('dev')"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+These Jsonnet scripts can use two native functions to reference other secrets and use them to generate other secrets, as well as the [standard Jsonnet native functions]({{% ref "/docs/references/jsonnet" %}}).  __These functions can only reference values within the keyring of the value__.
+
+### `decrypt(path) []string` {#decrypt}
+
+This function decrypts the value at the specified `path`.  This `path` can be a dynamic value, in which case the values will be resolved until one is returned.  Rot will error if there is a dependency cycle between paths.
+
+{{< highlight jsonnet >}}
+local decrypt(path) = std.native('decrypt')(path);
+
+decrypt('a/path/to/a/value')
+{{< /highlight >}}
+
+### `meta(path, field) string` {#meta}
+
+This returns the metadata `field` of the value at the specified `path`.  It will return an empty string if the value does not exist.
+
+{{< highlight jsonnet >}}
+local meta(path, field) = std.native('meta')(path, field);
+
+meta('a/path/to/a/value', 'field1')
+{{< /highlight >}}
+
 ## Versions
 
 Values can be modified after being added to Rot, either by adding a new version of the Value using {{% cli value-add %}} or modifying metadata using {{% cli value-meta %}}.  Rot will create a new timestamped version of a Value when a new version is created using {{% cli value-add %}}.

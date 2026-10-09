@@ -847,22 +847,26 @@ translations:
     ru: Выведите только хеш
     zh: 仅输出哈希值
   HashNewUsage:
-    ar: أنشئ تجزئة من سلسلة أو ملف وأخرجها إلى stdout.
+    ar: قم بإنشاء تجزئة من سلسلة نصية أو ملف أو دليل وقم بإخراجها إلى stdout.
     context: Usage for hash
-    de: Erstellen Sie einen Hash aus einer Zeichenfolge oder Datei und geben Sie ihn
-      an stdout aus.
-    en: Create a hash from a string or file and output it to stdout.
-    es: Cree un hash a partir de una cadena o archivo y envíelo a la salida estándar.
-    fr: Créez un hachage à partir d&#39;une chaîne ou d&#39;un fichier et affichez-le
-      sur la sortie standard.
-    hi: किसी स्ट्रिंग या फ़ाइल से हैश बनाएं और उसे stdout पर आउटपुट करें।
-    it: Crea un hash da una stringa o da un file e invialo allo standard output.
-    ja: 文字列またはファイルからハッシュを作成し、stdout に出力します。
-    nl: Maak een hash van een string of bestand en voer deze uit naar stdout.
-    pl: Utwórz skrót z ciągu znaków lub pliku i wyślij go na stdout.
-    pt: Crie um hash a partir de uma string ou arquivo e envie-o para stdout.
-    ru: Создайте хеш из строки или файла и выведите его на стандартный вывод.
-    zh: 从字符串或文件创建哈希并将其输出到标准输出。
+    de: Erzeugt einen Hash aus einer Zeichenkette, Datei oder einem Verzeichnis und
+      gibt ihn auf stdout aus.
+    en: Create a hash from a string, file, or directory and output it to stdout.
+    es: Crea un hash a partir de una cadena, archivo o directorio y envíalo a la salida
+      estándar.
+    fr: Créez un hachage à partir d&#39;une chaîne de caractères, d&#39;un fichier
+      ou d&#39;un répertoire et affichez-le sur la sortie standard.
+    hi: किसी स्ट्रिंग, फ़ाइल या डायरेक्टरी से हैश बनाएं और उसे stdout पर आउटपुट करें।
+    it: Crea un hash da una stringa, un file o una directory e invialo allo standard
+      output.
+    ja: 文字列、ファイル、またはディレクトリからハッシュを作成し、標準出力に出力します。
+    nl: Maak een hash van een tekenreeks, bestand of map en geef deze weer op de standaarduitvoer.
+    pl: Utwórz skrót z ciągu, pliku lub katalogu i wyślij go na stdout.
+    pt: Crie um hash a partir de uma string, arquivo ou diretório e envie-o para a
+      saída padrão (stdout).
+    ru: Создайте хеш из строки, файла или каталога и выведите его в стандартный поток
+      вывода.
+    zh: 从字符串、文件或目录创建哈希值并将其输出到标准输出。
   HashVerifyArgs2:
     ar: قيمة التجزئة، أو مسار الملف، أو عنوان URL الخاص بـ HTTP
     context: hash-verify arg2

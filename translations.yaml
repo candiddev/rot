@@ -786,6 +786,21 @@ translations:
     pt: Calcule a entropia de Shannon de uma determinada corda.
     ru: Вычислите энтропию Шеннона для заданной строки.
     zh: 计算给定弦的香农熵
+  FlagRUsage:
+    ar: قم بتنسيق الإخراج كمفتاح دوار
+    context: -r flag usage
+    de: Ausgabe als ROT-Schlüssel formatieren
+    en: Format output as a rot key
+    es: Formatear la salida como una clave de rot
+    fr: Format de sortie sous forme de clé rot
+    hi: आउटपुट को रोटेट कुंजी के रूप में प्रारूपित करें
+    it: Formatta l&#39;output come chiave ROT
+    ja: 出力をrotキーとしてフォーマットする
+    nl: Formatteer de uitvoer als een rot-sleutel.
+    pl: Formatuj wyjście jako klucz rot
+    pt: Formate a saída como uma chave rot.
+    ru: Отформатировать вывод как ключ rot
+    zh: 将输出格式化为 rot 键
   FlagsIDPlaceholder:
     ar: بطاقة تعريف
     context: -i Flag Placeholder

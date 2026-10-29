@@ -2929,6 +2929,21 @@ translations:
     pt: Copie um valor de um chaveiro para um chaveiro existente.
     ru: Скопируйте значение из связки ключей в существующую связку ключей.
     zh: 将值从密钥环复制到现有密钥环。
+  ValueGetFlagsCUsage:
+    ar: تحقق مما إذا كانت القيمة موجودة
+    context: value-get -c usage
+    de: Prüfen Sie, ob der Wert existiert
+    en: Check if the value exists
+    es: Comprueba si el valor existe.
+    fr: Vérifier si la valeur existe
+    hi: जांचें कि मान मौजूद है या नहीं
+    it: Verifica se il valore esiste
+    ja: 値が存在するかどうかを確認します
+    nl: Controleer of de waarde bestaat.
+    pl: Sprawdź, czy wartość istnieje
+    pt: Verifique se o valor existe.
+    ru: Проверьте, существует ли значение.
+    zh: 检查该值是否存在
   ValueGetFlagsMPlaceholder:
     ar: value أو &quot;all&quot; لإظهار كافة القيم التعريفية)
     context: value-get -m placeholder

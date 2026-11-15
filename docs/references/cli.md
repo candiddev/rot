@@ -164,6 +164,14 @@ Show the names of {{% config keyrings %}} in the configuration, optionally showi
 
 Rekey a Keyring configuration.  See [Manage Keyrings]({{< ref "/docs/guides/manage-keyrings" >}}) for more information.
 
+### `password-compare`
+
+Compare a password against an existing PHC password hash.
+
+### `password-new`
+
+Generate a new PHC password hash from stdin.
+
 ### `pem`
 
 Convert a Rot key to PEM or a PEM key to Rot.  Can specify an ID for the key when converting from PEM to Rot.

@@ -1757,6 +1757,51 @@ translations:
     ru: Преобразуйте ключи _1 в PEM или ключи PEM в _1 и распечатайте их на стандартный
       вывод.
     zh: 将 _1 密钥转换为 PEM，或将 PEM 密钥转换为 _1，并将其打印到标准输出。
+  PasswordCompareArg1:
+    ar: تجزئة كلمة المرور
+    context: arg 1 for password-compare
+    de: Passwort-Hash
+    en: password hash
+    es: hash de contraseña
+    fr: hachage du mot de passe
+    hi: पासवर्ड हैश
+    it: hash della password
+    ja: パスワードハッシュ
+    nl: wachtwoordhash
+    pl: skrót hasła
+    pt: hash da senha
+    ru: хэш пароля
+    zh: 密码哈希
+  PasswordCompareUsage:
+    ar: قارن كلمة المرور مع تجزئة كلمة مرور PHC موجودة.
+    context: usage for password-compare
+    de: Vergleiche ein Passwort mit einem vorhandenen PHC-Passwort-Hash.
+    en: Compare a password against an existing PHC password hash.
+    es: Compara una contraseña con un hash de contraseña PHC existente.
+    fr: Comparer un mot de passe à un hachage de mot de passe PHC existant.
+    hi: किसी पासवर्ड की तुलना मौजूदा पीएचसी पासवर्ड हैश से करें।
+    it: Confronta una password con l&#39;hash di una password PHC esistente.
+    ja: 既存のPHCパスワードハッシュとパスワードを比較します。
+    nl: Vergelijk een wachtwoord met een bestaande PHC-wachtwoordhash.
+    pl: Porównaj hasło z istniejącym skrótem hasła PHC.
+    pt: Comparar uma senha com um hash de senha PHC existente.
+    ru: Сравните пароль с существующим хешем пароля PHC.
+    zh: 将密码与现有的 PHC 密码哈希值进行比较。
+  PasswordNewUsage:
+    ar: قم بإنشاء تجزئة كلمة مرور PHC جديدة من المدخلات القياسية.
+    context: usage for password-new
+    de: Generieren Sie einen neuen PHC-Passwort-Hash aus stdin.
+    en: Generate a new PHC password hash from stdin.
+    es: Generar un nuevo hash de contraseña PHC desde la entrada estándar.
+    fr: Générer un nouveau hachage de mot de passe PHC à partir de l&#39;entrée standard.
+    hi: स्टैंडर्ड डायमेंशन से एक नया PHC पासवर्ड हैश जनरेट करें।
+    it: Genera un nuovo hash della password PHC dallo standard input.
+    ja: 標準入力から新しいPHCパスワードハッシュを生成します。
+    nl: Genereer een nieuwe PHC-wachtwoordhash vanuit stdin.
+    pl: Wygeneruj nowy skrót hasła PHC ze standardowego wejścia.
+    pt: Gere um novo hash de senha PHC a partir da entrada padrão (stdin).
+    ru: Сгенерировать новый хэш пароля PHC из стандартного ввода.
+    zh: 从标准输入生成新的 PHC 密码哈希值。
   PrivateKeyArg:
     ar: قيمة المفتاح الخاص، أو سلسلة المفاتيح/القيمة، أو مسار الملف، أو - للإدخال
       القياسي

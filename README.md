@@ -2,7 +2,7 @@
 
 > Boring Cryptography Tooling for Humans
 
-**Latest Release Notes: [v2026.10](https://rotx.dev/blog/whats-new-202610/)**
+**Latest Release Notes: [v2026.11](https://rotx.dev/blog/whats-new-202611/)**
 
 [:speech_balloon: Mailing Lists](https://rotx.dev/docs/references/mailing-lists/)\
 [:book: Docs](https://rotx.dev/docs/)\
